@@ -21,12 +21,17 @@ jobs:
           python-version: '3.11'
 
       - name: 의존성 설치
-        run: pip install requests
+        run: pip install requests anthropic
 
-      - name: Perplexity 수집 실행
+      - name: Step 1 - Perplexity 수집
         run: python scripts/fetch_perplexity.py
         env:
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+
+      - name: Step 2 - Claude 재요약
+        run: python scripts/summarize_claude.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: 결과 커밋 & 푸시
         run: |
