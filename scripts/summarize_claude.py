@@ -27,7 +27,7 @@ Perplexity가 Reddit, Hacker News, Twitter에서 수집한 개발자 커뮤니�
 - 각 섹션 3~5개 bullet point로 압축"""
 
 SUMMARY_USER_TEMPLATE = """아래는 오늘({date}) 수집한 AI 기술 커뮤니티 반응 원본입니다.
-두 섹션으로 나눠서 한국어로 요약해주세요.
+세 섹션으로 나눠서 한국어로 요약해주세요.
 
 ---
 
@@ -57,8 +57,21 @@ SUMMARY_USER_TEMPLATE = """아래는 오늘({date}) 수집한 AI 기술 커뮤�
 
 ---
 
+## 섹션 3: 신규 모델/API — 실사용 반응
+
+### 오늘의 신규 릴리즈 반응
+{model_new_release}
+
+### 모델별 실사용 성능 비교
+{model_real_perf}
+
+---
+
 출력 형식:
 # AI Tech Digest 요약 — {date}
+
+## 🤖 신규 모델/API — 오늘의 반응
+(bullet points, 데이터 없으면 섹션 생략)
 
 ## 🔄 AI로 인한 구조/방식 변화
 (bullet points)
@@ -93,6 +106,8 @@ def build_prompt(results: dict) -> str:
         tools_cursor_vs_claude=get("tools_cursor_vs_claude"),
         tools_landscape=get("tools_landscape"),
         tools_new_rising=get("tools_new_rising"),
+        model_new_release=get("model_new_release"),
+        model_real_perf=get("model_real_perf"),
     )
 
 

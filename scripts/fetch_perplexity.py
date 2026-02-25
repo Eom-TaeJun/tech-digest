@@ -19,17 +19,21 @@ TODAY = datetime.now(KST).strftime("%Y-%m-%d")
 SYSTEM_PROMPT = """You are a researcher collecting real user opinions and experiences from developer communities.
 
 Focus ONLY on:
-- Reddit posts/comments (r/LocalLLaMA, r/programming, r/MachineLearning, r/ClaudeAI, r/cursor)
-- Hacker News discussions
+- Reddit posts/comments (r/LocalLLaMA, r/programming, r/MachineLearning, r/ClaudeAI, r/cursor, r/OpenAI, r/GoogleGemini, r/singularity, r/artificial)
+- Hacker News discussions and Show HN posts
 - Twitter/X threads from actual developers
-- GitHub Discussions and Issues
+- GitHub Issues, Discussions, and trending repositories
 
 Exclude:
-- Official announcements or marketing content
-- Benchmark comparisons or feature lists
+- Official press releases and marketing copy
 - Paywalled content
 
-For each topic, find what real users are saying: what's working, what's frustrating, what surprised them, and why they switched tools.
+Include:
+- Community reactions and first impressions of new model/tool releases
+- Real-world usage comparisons between models (specific tasks, not benchmark scores)
+- Honest frustrations, unexpected discoveries, and workflow changes
+
+For each topic, find what real users are saying: what's working, what's frustrating, what surprised them, and why they switched.
 Format your answer in clear sections with source citations."""
 
 QUERIES = {
@@ -64,7 +68,19 @@ QUERIES = {
         {
             "id": "tools_new_rising",
             "title": "새롭게 주목받는 AI 개발 툴",
-            "query": "What new AI development tools or frameworks gained the most positive community reception in the past 2 weeks? Focus on GitHub trending repos with high stars, Reddit posts with high upvotes, or Hacker News Show HN with top comments. Real user reactions only.",
+            "query": "What new AI development tools or frameworks gained the most positive community reception in the past week? Focus on GitHub trending repos with high stars, Reddit posts with high upvotes, or Hacker News Show HN with top comments. Real user reactions only.",
+        },
+    ],
+    "model_reactions": [
+        {
+            "id": "model_new_release",
+            "title": "신규 모델/API 릴리즈 — 커뮤니티 즉각 반응",
+            "query": "What new AI models, APIs, or major updates were released or announced in the past 48 hours? What is the immediate community reaction on Reddit (r/LocalLLaMA, r/OpenAI, r/ClaudeAI, r/GoogleGemini, r/singularity), Hacker News, and Twitter? Capture first impressions, surprises, and disappointments — real user reactions only, not press releases.",
+        },
+        {
+            "id": "model_real_perf",
+            "title": "모델별 실사용 성능 — 개발자 직접 비교",
+            "query": "What are developers saying about real-world differences between current AI models (Claude, GPT-4o, Gemini, Llama, Mistral, DeepSeek, etc.) this week? Focus on practical comparisons people share on Reddit r/LocalLLaMA, r/ClaudeAI, Hacker News — specific tasks where one model clearly beats another, not benchmark scores but actual 'I tried X and it did better/worse at Y than Z' experiences.",
         },
     ],
 }
@@ -77,7 +93,7 @@ def call_perplexity(query: dict) -> dict:
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": query["query"]},
         ],
-        "search_recency_filter": "week",
+        "search_recency_filter": "day",
         "return_citations": True,
     }
     headers = {
@@ -115,6 +131,7 @@ def build_markdown(results: dict) -> str:
     section_meta = {
         "ai_workflow_change": ("## 1. AI로 인한 구조/방식 변화", "🔄"),
         "new_tools": ("## 2. 새로운 AI 툴 — 커뮤니티 반응", "🛠️"),
+        "model_reactions": ("## 3. 신규 모델/API — 실사용 반응", "🤖"),
     }
 
     for section_key, queries in QUERIES.items():
