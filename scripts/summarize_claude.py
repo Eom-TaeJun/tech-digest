@@ -27,7 +27,7 @@ Perplexity가 Reddit, Hacker News, Twitter에서 수집한 개발자 커뮤니�
 - 각 섹션 3~5개 bullet point로 압축"""
 
 SUMMARY_USER_TEMPLATE = """아래는 오늘({date}) 수집한 AI 기술 커뮤니티 반응 원본입니다.
-세 섹션으로 나눠서 한국어로 요약해주세요.
+네 섹션으로 나눠서 한국어로 요약해주세요.
 
 ---
 
@@ -67,6 +67,16 @@ SUMMARY_USER_TEMPLATE = """아래는 오늘({date}) 수집한 AI 기술 커뮤�
 
 ---
 
+## 섹션 4: 토큰 비용 & 컨텍스트 관리
+
+### 토큰 절약 팁
+{token_reduction_tips}
+
+### 컨텍스트 윈도우 관리
+{token_context_management}
+
+---
+
 출력 형식:
 # AI Tech Digest 요약 — {date}
 
@@ -78,6 +88,9 @@ SUMMARY_USER_TEMPLATE = """아래는 오늘({date}) 수집한 AI 기술 커뮤�
 
 ## 🛠️ 새로운 AI 툴 — 커뮤니티 반응
 (bullet points)
+
+## 💰 토큰 비용 & 컨텍스트 관리
+(bullet points, 데이터 없으면 섹션 생략)
 
 ## 💡 오늘의 핵심 인사이트
 (전체를 관통하는 1~3줄 핵심 메시지)
@@ -108,6 +121,8 @@ def build_prompt(results: dict) -> str:
         tools_new_rising=get("tools_new_rising"),
         model_new_release=get("model_new_release"),
         model_real_perf=get("model_real_perf"),
+        token_reduction_tips=get("token_reduction_tips"),
+        token_context_management=get("token_context_management"),
     )
 
 

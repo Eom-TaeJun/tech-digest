@@ -83,6 +83,18 @@ QUERIES = {
             "query": "What are developers saying about real-world differences between current AI models (Claude, GPT-4o, Gemini, Llama, Mistral, DeepSeek, etc.) this week? Focus on practical comparisons people share on Reddit r/LocalLLaMA, r/ClaudeAI, Hacker News — specific tasks where one model clearly beats another, not benchmark scores but actual 'I tried X and it did better/worse at Y than Z' experiences.",
         },
     ],
+    "token_cost": [
+        {
+            "id": "token_reduction_tips",
+            "title": "토큰 절약 — 실제 개발자 팁과 경험",
+            "query": "What are developers actually doing to reduce LLM token usage and API costs in 2026? Real tips and experiences from Reddit (r/ClaudeAI, r/LocalLLaMA, r/MachineLearning), Hacker News, Twitter. Focus on practical tricks: prompt caching, CLAUDE.md optimization, context management, model routing. What surprised people? What actually worked vs. what didn't?",
+        },
+        {
+            "id": "token_context_management",
+            "title": "컨텍스트 윈도우 관리 — 커뮤니티 실전 패턴",
+            "query": "How are developers managing context window limits and preventing token cost blowups in AI agent systems in 2026? Real discussions from Reddit and Hacker News about sliding windows, session summarization, AGENTS.md/CLAUDE.md sizing, and prompt compression tools like LLMLingua. What are the hidden gotchas people discovered?",
+        },
+    ],
 }
 
 
@@ -132,6 +144,7 @@ def build_markdown(results: dict) -> str:
         "ai_workflow_change": ("## 1. AI로 인한 구조/방식 변화", "🔄"),
         "new_tools": ("## 2. 새로운 AI 툴 — 커뮤니티 반응", "🛠️"),
         "model_reactions": ("## 3. 신규 모델/API — 실사용 반응", "🤖"),
+        "token_cost": ("## 4. 토큰 비용 & 컨텍스트 관리", "💰"),
     }
 
     for section_key, queries in QUERIES.items():
