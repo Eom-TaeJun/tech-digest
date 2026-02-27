@@ -1,0 +1,280 @@
+{
+  "date": "2026-02-27",
+  "model": "sonar-pro",
+  "results": {
+    "workflow_agentic": {
+      "id": "workflow_agentic",
+      "title": "에이전트 기반 개발 - 실제 팀 사용 경험",
+      "query": "How are real developers and teams actually using AI agents to build software in 2025-2026? What changed in their daily workflow? Focus on Reddit and Hacker News discussions with honest experiences, not marketing.",
+      "answer": "### Real Developer Experiences from Reddit and Hacker News\n\nNo Reddit posts or comments from specified subreddits (r/LocalLLaMA, r/programming, r/MachineLearning, r/ClaudeAI, r/cursor, r/OpenAI, r/GoogleGemini, r/singularity, r/artificial) or Hacker News discussions appear in the provided search results detailing honest, real-world experiences of developers using AI agents for software building in 2025-2026. The results consist entirely of vendor blogs, company articles, and marketing content (e.g., Teamvoy, Euro Tech Conseil, AllstarsIT), which are excluded per guidelines.\n\n### Limitations and Inferences\nWithout community-sourced discussions, direct user anecdotes on workflow changes—such as frustrations with agent reliability, surprises in multi-agent coordination, or specific tool switches (e.g., from Cursor to Devin)—cannot be synthesized. Vendor claims describe hypothetical agent uses like self-healing PRs or legacy code migration but lack developer-verified examples. Only 2% of firms have scaled AI agents per one report, suggesting limited real adoption.[4] For authentic insights, developer forums indicate early experimentation but persistent issues like hallucinated code and over-reliance risks, though not evidenced here.",
+      "citations": [
+        "https://teamvoy.com/blog/what-are-autonomous-ai-agents/",
+        "https://www.eurotechconseil.com/en/blog/ai-in-software-development/",
+        "https://www.allstarsit.com/blog/what-is-agentic-coding-how-modern-companies-use-ai-agents-to-accelerate-development",
+        "https://www.hyperlinkinfosystem.com/blog/rise-of-ai-agents",
+        "https://devops.com/the-future-of-ai-in-software-quality-how-autonomous-platforms-are-transforming-devops/",
+        "https://cloud.google.com/transform/beyond-the-pilot-five-hard-won-lessons-from-google-clouds-ai-transformation-strategy",
+        "https://www.designnews.com/artificial-intelligence/closing-the-gap-between-ai-s-promise-and-engineering-impact"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 233,
+        "completion_tokens": 257,
+        "total_tokens": 490,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0007,
+          "output_tokens_cost": 0.00385,
+          "request_cost": 0.006,
+          "total_cost": 0.01055
+        }
+      }
+    },
+    "workflow_vibecheck": {
+      "id": "workflow_vibecheck",
+      "title": "바이브 코딩 / AI 주도 개발 - 솔직한 후기",
+      "query": "Real developer experiences with 'vibe coding' or AI-driven development in 2026. What actually works, what fails, and how teams restructured around AI coding tools. Focus on Reddit r/LocalLLaMA, r/programming, Hacker News.",
+      "answer": "### What is 'Vibe Coding' or AI-Driven Development in 2026?\nNo direct developer experiences from Reddit (r/LocalLLaMA, r/programming) or Hacker News were found in the search results discussing **vibe coding** (a term appearing only in a Mortgage Bankers Association event promo for hands-on AI productivity sessions[6]) or broader AI-driven development. Available sources focus on industry articles predicting agentic AI shifts, with limited real-world anecdotes.\n\n### What Actually Works (Per Industry Predictions)\nAgentic AI coding tools excel in automating end-to-end workflows, reducing human input for planning, coding, testing, and deployment[1][2]. Key successes include:\n- **Faster cycles**: Parallel execution of tasks like architecture design, backend/frontend code, database setup, and deployment from high-level specs[1].\n- **Autonomous debugging/testing**: Self-detection of bugs, vulnerabilities, and performance issues with auto-generated tests and fixes[1].\n- **Multi-agent collaboration**: Specialized agents (planning, coding, reviewing) mimic team structures for seamless productivity[1].\n- **Supervisory roles for humans**: Developers shift to oversight, high-level design, and ethics, with tools like GitHub Copilot Enterprise and Cursor enabling multi-file edits and test iteration[2].\n- **Scalability**: 24/7 operation across time zones, cost reductions, and continuous learning from feedback loops[1].\n\nDoD seeks these for tens of thousands of developers, emphasizing IDE/CLI integration in secure environments[4].\n\n### What Fails or Falls Short\nChallenges highlight quality control gaps despite speed gains:\n- **Code comprehension issues**: A developer relied on AI for deadline pressure, produced unfamiliar code leading to production bugs and termination; underscores need for human review[3].\n- **Testing pitfalls**: AI-generated code caused outages, proving automated tools don't eliminate strong human-led validation[3].\n- **Security risks**: AI assistants trusting attacker-controlled context raises appsec concerns[5].\n- **Overhype vs. reality**: First-gen tools (Copilot, Cursor) evolved to agents, but teams must build orchestration for governance, not chase releases[2].\n\nNo community anecdotes confirm widespread adoption; predictions note structural team changes but warn of control loss[2][3].\n\n### Team Restructuring Around AI Tools\nSources predict reorganization without firsthand accounts:\n- **From coders to supervisors**: Engineers focus on reviewing AI output, system design, and decisions; reduces manual coding[1][2].\n- **Structural shifts**: AI SDLC handles cross-team tasks in developer-agent sessions, demanding new workflows and tools with repo integration/transparency[2].\n- **Enterprise scale**: Emphasis on compliant, multi-environment deployment for large workforces, minimizing delivery time[4].\n\nLack of Reddit/Hacker News data limits insights to developer frustrations or switches; results suggest hype around agentic systems outpaces verified experiences[1][2][3].",
+      "citations": [
+        "https://www.timesofai.com/industry-insights/agentic-coding-in-software-development/",
+        "https://www.eurotechconseil.com/en/blog/ai-in-software-development/",
+        "https://www.developer-tech.com/news/when-ai-writes-the-code-productivity-gains-and-production-pitfalls/",
+        "https://defensescoop.com/2026/02/26/dod-wants-ai-enabled-coding-tools-for-developer-workforce/",
+        "https://checkmarx.com/zero-post/last-week-in-appsec-for-26-february-2026/",
+        "https://www.mba.org/conferences-and-education/event/2026/03/12/default-calendar/ai-vibe-coding-march-2026-81942"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 243,
+        "completion_tokens": 603,
+        "total_tokens": 846,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00073,
+          "output_tokens_cost": 0.00905,
+          "request_cost": 0.006,
+          "total_cost": 0.01577
+        }
+      }
+    },
+    "workflow_team_structure": {
+      "id": "workflow_team_structure",
+      "title": "AI로 인한 팀 구조 변화",
+      "query": "How has AI changed software team structure and roles in 2025-2026? Are companies replacing junior developers? Real experiences from engineers on Reddit, Hacker News, or Twitter about job market and team dynamics.",
+      "answer": "### Changes to Software Team Structures and Roles (2025-2026)\n\nAI, particularly **agentic coding systems**, has enabled smaller engineering teams to handle larger projects by automating repetitive tasks like planning, coding, testing, and debugging, shifting human roles toward supervision, system design, and high-level decision-making.[1][2] Organizational structures are flattening as AI absorbs routine execution, with some companies merging technology and people-leadership functions, while new **blended roles** like product manager-engineer hybrids emerge, allowing non-engineers to prototype via \"vibe coding\" before engineer handoff.[3][5] High-performing teams emphasize governance, such as auditing workflows, explicit AI code reviews, and measuring outcomes in specific use cases like test generation, to avoid amplifying existing messes like tool sprawl.[2]\n\n### Impact on Junior Developers and Hiring\n\nNo direct evidence from developer communities confirms widespread replacement of junior developers, but sources highlight risks of **skill erosion** where juniors relying on AI may lack deep debugging and architectural judgment from manual problem-solving.[2] Developers are urged to create AI-free practice spaces to build supervision skills needed to evaluate AI output, treating AI-generated code differently due to unique failure modes.[2] Broader predictions note AI enabling smaller teams without headcount increases, focusing humans on oversight rather than coding every line.[1]\n\n### Limitations from Available Data\n\nSearch results lack specific real-user experiences from Reddit (e.g., r/LocalLLaMA, r/MachineLearning), Hacker News, Twitter/X developer threads, or GitHub discussions on 2025-2026 job market shifts or team dynamics. Insights derive from industry analyses predicting trends like autonomous DevOps and governance needs, without firsthand engineer anecdotes on frustrations, surprises, or switches.[1][2][4][6] Community-sourced reports would provide honest workflow changes, but none appear here.",
+      "citations": [
+        "https://www.timesofai.com/industry-insights/agentic-coding-in-software-development/",
+        "https://www.eurotechconseil.com/en/blog/ai-in-software-development/",
+        "https://fortune.com/2026/02/26/morgan-stanley-predicts-ai-wont-let-you-retire-early-instead-youll-have-to-train-for-jobs-that-dont-exist-yet/",
+        "https://logisticsviewpoints.com/2026/02/26/ai-and-enterprise-software-is-the-saaspocalypse-narrative-overstated/",
+        "https://www.deloitte.com/gr/en/issues/generative-ai/TheStateofAIintheEnterprise",
+        "https://devops.com/the-future-of-ai-in-software-quality-how-autonomous-platforms-are-transforming-devops/",
+        "https://www.domain-b.com/technology/artificial-intelligence/agentic-ai-business-shift-2026",
+        "https://www.bakertilly.com/insights/the-real-barriers-to-enterprise-ai-and-how-to-overcome-them"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 233,
+        "completion_tokens": 383,
+        "total_tokens": 616,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0007,
+          "output_tokens_cost": 0.00575,
+          "request_cost": 0.006,
+          "total_cost": 0.01244
+        }
+      }
+    },
+    "tools_cursor_vs_claude": {
+      "id": "tools_cursor_vs_claude",
+      "title": "Cursor vs Claude Code - 실제 전환 이유",
+      "query": "Why are developers switching from Cursor to Claude Code in 2026? Real user comparisons, honest pros and cons from Reddit, Hacker News, and Twitter. What made people switch and what do they miss?",
+      "answer": "### Overview of Switching Trends\nDevelopers are not widely switching from **Cursor** to **Claude Code** in 2026 based on available community discussions; instead, many stick with Cursor for its superior IDE integration and UX while praising Claude Code's agentic strengths in terminal workflows, though frustrations with limits and CLI quirks persist.[1][2][3] Real users on Hacker News highlight Claude's edge in requirement interpretation but note Cursor's better overall experience for daily coding.[3]\n\n### Reasons Developers Consider or Make the Switch\n- **Superior requirement interpretation and planning**: Claude Code excels at understanding complex instructions, accounting for user errors, and using memory thoughtfully without \"out of left field\" associations—key for non-trivial tasks where Cursor's chunked workflow falls short.[3]\n- **Terminal-first agentic flow**: Users prefer Claude Code for CLI-heavy workflows, with fast agent traversal of codebases, auto-accept mode, and step-by-step edit approvals, suiting terminal enthusiasts over Cursor's editor-centric approach.[2][3]\n- **Modern code generation**: In languages like C#, Claude produces more modern code than GPT alternatives, though both struggle with Swift >6.0; some switch for cleaner, straight-text outputs without excessive formatting.[3]\n- **Usage hacks amid limits**: Heavy users hit Claude Code's 5-hour session windows and weekly ceilings faster than expected, prompting workflow tweaks, but Pro/Max tiers enable sustained use alongside Cursor.[5]\n\nNo strong evidence of mass exodus from Cursor; one HN user calls Claude Code's UX \"pretty bad compared to something like Cursor.\"[3]\n\n### Pros of Claude Code (from User Comparisons)\n- Deep codebase assistance via agent traversal and manual edit mode for tight control.[2][3]\n- Balanced planning-execution for complex requests; intelligent memory integration.[3]\n- Streamlined LLM workflow in terminal, ideal for command-line focused devs.[2]\n\n### Cons of Claude Code (User Frustrations)\n- **Poor UX for visual workflows**: No clipboard image paste for screenshots (e.g., broken UIs), forcing hacky workarounds unlike Cursor or web apps.[3]\n- **Session-killing shortcuts**: Ctrl+C terminates processes without resume (--continue fails), breaking muscle memory and context; hard to select/edit output lines.[3]\n- **No granular approvals**: Lacks step-by-step edit reviews in some setups, unlike its own manual mode.[3]\n- **Rate limits cripple builds**: 5-hour windows, weekly caps burn out quickly on Pro/Max, stalling mid-feature development—worse than Cursor's cloud agents.[4][5]\n\n### What Developers Miss from Cursor\n- **Full IDE integration**: Cursor's AI-native editor (forked VS Code) offers chunked workflows, context packing, and GUI interaction (e.g., seeing running apps), absent in Claude Code's terminal focus.[1][2][4]\n- **Polished daily UX**: Better for tab completion, chat, and codebase navigation; users regret losing this for Claude's CLI limitations.[3]\n- **Out-of-box readiness**: No plugin hassles, full indexing vs. Claude's setup needs.[2]\n- **Cloud agent capabilities**: Cursor agents handle GUI/testing interactions Claude/Codex can't.[4]\n\n### Real-World Workflow Changes\nUsers hybridize: Claude Code for planning/agents, Cursor for editing; switches happen for terminal purists but reverse due to UX/limits. One dev notes Claude for \"fix this\" via images (in web app) but misses it in CLI tools.[3] Forum chatter compares Cursor + Claude extension vs. standalone Claude Max, citing usage trade-offs.[6] No Twitter/Reddit threads in results show dominant switches; HN dominates with honest gripes.[3]",
+      "citations": [
+        "https://zenvanriel.com/job/cursor-vs-claude-code/",
+        "https://vertu.com/ar/ai-tools/ai-code-assistants-vs-code-generators-choosing-the-right-tool/",
+        "https://news.ycombinator.com/item?id=47167733",
+        "https://devops.com/cursor-cloud-agents-get-their-own-computers-and-35-of-internal-prs-to-prove-it/",
+        "https://www.youtube.com/watch?v=hMqj_Z25weg",
+        "https://forum.cursor.com/c/general/4"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 232,
+        "completion_tokens": 776,
+        "total_tokens": 1008,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0007,
+          "output_tokens_cost": 0.01164,
+          "request_cost": 0.006,
+          "total_cost": 0.01834
+        }
+      }
+    },
+    "tools_landscape": {
+      "id": "tools_landscape",
+      "title": "AI 코딩 툴 전체 지형 - 커뮤니티 평가",
+      "query": "What AI coding tools are developers actually recommending in 2026? Compare Claude Code, Cursor, Windsurf, Cline, Aider based on real Reddit and Hacker News community votes and honest reviews. What are the hidden pros and cons?",
+      "answer": "No Reddit posts, Hacker News discussions, or developer Twitter/X threads from 2026 were found in the search results discussing recommendations, votes, or reviews for **Claude Code**, **Cursor**, **Windsurf**, **Cline**, or **Aider**. Available results focus on model benchmarks and marketing analyses rather than real community opinions[1][2].\n\n## Model Benchmarks (Closest Proxy to Usage Insights)\nSearch results benchmark underlying models like **Claude** for code review tasks, praising its thoroughness on complex bugs but noting overconfidence in math[1]. **Claude 4.6 Opus** excels in deep codebase analysis with 1M token context, ideal for audits and refactoring, outperforming GPT-5.3 Codex in reasoning but lagging in speed[2].\n\n| Model | Strengths from Benchmarks | Weaknesses | Best For |\n|-------|---------------------------|------------|----------|\n| **Claude 4.6 Opus** | Deep logic paths, L3 bug detection (53% solo, perfect 5/5), high review quality (8.6 overall)[1][2] | Overconfident in math, higher cost ($25/1M output tokens)[2] | Security audits, complex refactors[1][2] |\n| **GPT-5.3 Codex** | Speed, IDE integration (VS Code/Copilot), routine tasks[2] | Misses subtle architecture issues, smaller 256K context[2] | Rapid prototyping, daily PRs[2] |\n\nNo direct data on **Windsurf**, **Cline**, or **Aider**; tools like Cursor (editor with AI) or Claude Code (Claude-based CLI/editor) are absent from results[3].\n\n## Limitations and Community Gaps\n- Results emphasize vendor blogs over forums; no \"honest reviews\" from r/LocalLLaMA, r/MachineLearning, or HN votes on these tools[1][2].\n- Developer preferences may favor Claude-integrated tools for \"hidden pros\" like context retention, but frustrations (e.g., cost, inconsistency in debates) lack forum confirmation[1].\n- For real 2026 opinions, check recent r/ClaudeAI or HN for emerging threads on Windsurf/Cline surprises.",
+      "citations": [
+        "https://milvus.io/blog/ai-code-review-gets-better-when-models-debate-claude-vs-gemini-vs-codex-vs-qwen-vs-minimax.md",
+        "https://vertu.com/ai-tools/claude-4-6-vs-gpt-5-3-codex-which-ai-coding-model-will-dominate-2026/",
+        "https://bloomcs.com/top-7-ai-tools-for-web-development/",
+        "https://karozieminski.substack.com/p/perplexity-computer-review-examples-guide"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 239,
+        "completion_tokens": 480,
+        "total_tokens": 719,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00072,
+          "output_tokens_cost": 0.0072,
+          "request_cost": 0.006,
+          "total_cost": 0.01392
+        }
+      }
+    },
+    "tools_new_rising": {
+      "id": "tools_new_rising",
+      "title": "새롭게 주목받는 AI 개발 툴",
+      "query": "What new AI development tools or frameworks gained the most positive community reception in the past week? Focus on GitHub trending repos with high stars, Reddit posts with high upvotes, or Hacker News Show HN with top comments. Real user reactions only.",
+      "answer": "### Top AI Development Tools with Positive Community Reception (Feb 20-27, 2026)\n\n**OpenFang (GitHub: RightNow-AI/openfang)** leads as the standout new AI development tool, an open-source Agent Operating System released v0.1.0 in early February 2026, trending on GitHub for its feature-complete agent framework despite being a first public release noted for potential early instability.[7]\n\n**wagtail-ai (GitHub: wagtail/wagtail-ai)** gained notable traction within Wagtail's ecosystem (60+ repos), highlighted as a new AI integration for the Python CMS, appearing prominently in recent repository lists amid growing interest in AI-enhanced content management.[1]\n\n#### Real User Reactions from Developer Communities\nNo direct Reddit high-upvote posts, Hacker News Show HN top comments, or Twitter developer threads were found in results for these tools in the past week. Limited community feedback available:\n\n- **OpenFang**: Early adopters note its \"feature-complete\" status as a promising agent OS foundation, with caveats on \"rough edges\" during initial testing; positioned as a fresh alternative for agentic workflows.[7]\n- **wagtail-ai**: Surfaced in Wagtail org repos without specific star counts, but its dedicated listing suggests developer buzz for AI-powered CMS extensions; no explicit frustrations or surprises reported.[1]\n\n#### Other Mentions Lacking Strong Community Signals\n| Tool/Framework | Description | Community Notes |\n|---------------|-------------|-----------------|\n| Harness AI Updates (SAST/SCA, WAAP MCP) | GA releases for AI-secure SDLC, API security in VS Code/Cursor/Claude, agentic code scanning.[2] | Vendor blog only; no Reddit/HN/GitHub user reactions found. |\n| Miro AI Tools (MCP for Cursor/Claude, AI Slides) | Beta integrations for coding from boards, prototypes to Figma; web-reading AI flows.[3] | Product announcement; r/Miro launch mentioned but no high-upvote feedback. |\n| GitHub Copilot Coding Agent | New model picker, self-review, security scanning, CLI handoff.[5] | Official update; no trending repo or community threads cited. |\n\nThese reflect the most visible GitHub-trending AI dev tools from results, prioritized by recency and relevance. Insufficient data on stars/upvotes limits broader ranking; search yielded no high-engagement Reddit/HN posts.",
+      "citations": [
+        "https://github.com/orgs/wagtail/repositories",
+        "https://www.harness.io/blog/harness-ai-february-2026-updates",
+        "https://community.miro.com/product-news-31/what-s-new-what-we-launched-in-february-2026-27745",
+        "https://github.com/dotnet/maui/issues/34253",
+        "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/",
+        "https://scouts.yutori.com/36d178a0-591f-4567-8019-32d24f9e55ba",
+        "https://github.com/RightNow-AI/openfang"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 240,
+        "completion_tokens": 504,
+        "total_tokens": 744,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00072,
+          "output_tokens_cost": 0.00756,
+          "request_cost": 0.006,
+          "total_cost": 0.01428
+        }
+      }
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델/API 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "What new AI models, APIs, or major updates were released or announced in the past 48 hours? What is the immediate community reaction on Reddit (r/LocalLLaMA, r/OpenAI, r/ClaudeAI, r/GoogleGemini, r/singularity), Hacker News, and Twitter? Capture first impressions, surprises, and disappointments — real user reactions only, not press releases.",
+      "answer": "No **new AI models, APIs, or major updates** were released or announced in the past 48 hours (February 25-27, 2026, UTC) based on the available search results from specified developer communities.\n\nSearch results reference older events, such as \"significant advancements in AI models\" vaguely tied to February 2026[1], Microsoft's MAI-1 from August 2025[2], and a commercetools AI product modeling tool event on February 26 without specifics on releases[5]. Him-CONNECT (announced February 26, 2026) highlights AI-enabled tools like real-time landslide prediction but is a government sustainability platform, not a model/API release, and lacks community discussion[3].\n\n**No community reactions** found on Reddit (r/LocalLLaMA, r/OpenAI, r/ClaudeAI, r/GoogleGemini, r/singularity), Hacker News, Twitter/X from developers, or GitHub. Results contain no user posts, comments, threads, or issues capturing first impressions, surprises, or disappointments. An arXiv paper on romantic AI platforms is a policy analysis, not a release or reaction[6].",
+      "citations": [
+        "https://www.moltbook.com/u/ClawHub_Butler",
+        "https://www.aol.com/articles/investors-selling-ai-stock-actually-193500808.html",
+        "https://www.global-agriculture.com/india-region/scaling-himalayan-innovations-moefccs-him-connect-inaugurated-by-mr-bhupender-yadav-at-teris-25th-edition-of-world-sustainable-development-summit/",
+        "https://www.aol.com/articles/prediction-artificial-intelligence-ai-stock-073900605.html",
+        "https://commercetools.com/events",
+        "https://arxiv.org/pdf/2602.22000"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 274,
+        "completion_tokens": 241,
+        "total_tokens": 515,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00082,
+          "output_tokens_cost": 0.00362,
+          "request_cost": 0.006,
+          "total_cost": 0.01044
+        }
+      }
+    },
+    "model_real_perf": {
+      "id": "model_real_perf",
+      "title": "모델별 실사용 성능 — 개발자 직접 비교",
+      "query": "What are developers saying about real-world differences between current AI models (Claude, GPT-4o, Gemini, Llama, Mistral, DeepSeek, etc.) this week? Focus on practical comparisons people share on Reddit r/LocalLLaMA, r/ClaudeAI, Hacker News — specific tasks where one model clearly beats another, not benchmark scores but actual 'I tried X and it did better/worse at Y than Z' experiences.",
+      "answer": "### Coding and Debugging Tasks\nDevelopers report **Claude models (e.g., Opus 4.6, Sonnet)** excelling in structured coding and data-analysis over GPT variants, with enterprises like Nubank and Block noting faster coding and clearer communications via ChatGPT but Claude gaining share specifically for code tasks[1]. In agentic coding, open models like **Qwen3-Coder-Next** (3B active params via MoE) achieve over 70% on SWE-Bench Verified for multi-step debugging and refactors, outperforming larger models in executable task training while running locally—users highlight its edge for tool-driven workflows like OpenClaw or Cline integration[3]. **OpenAI's latest model** delivers code at 1,000+ tokens/second (15x faster), praised for rapid software building where speed trumps depth[4].\n\n### Agentic and Long-Horizon Engineering\n**GLM-5** (754B params, open-source) stands out for complex systems engineering and agentic tasks, with early adopters like HP, Oracle, and Uber embedding OpenAI engineers for production agents—community notes it shifts from \"vibe coding\" (prompt-based feature building via Replit/Vercel v0) to reliable long-horizon planning, beating prior GLM-4.7[3][4]. Smaller specialized models replicate frontier agents on private codebases, surprising users by exceeding \"teacher\" models like Claude after fine-tuning[3]. Anthropic's Claude leads enterprise agent layers for coding tools, amid competition with OpenAI[3].\n\n### Enterprise and Workflow Integration\n**GitHub Copilot (OpenAI-powered)** sees 80% daily use at BNY Mellon for code output and knowledge management, plus 25% dev speedups at AvePoint—beats others in Microsoft ecosystems for convenience over raw smarts[1]. **Gemini** matches GPT-4o on hard reasoning/financial modeling but lags in code generation, per dev tests; Google pairs it with Codey for completion[1]. ChatGPT Enterprise cuts research/audit time 50% at PwC and debugging at Block, though Claude's customization (domain fine-tuning) appeals for large docs/code[1].\n\n### Open vs. Closed Model Surprises\nOpen-weight models like **Qwen3-Coder-Next** and **GLM-5** enable local/self-hosted agentic coding with high efficiency (e.g., 80B total but 3B active), frustrating closed-model users on cost—Claude Sonnet vs. Opus saves 80% ($180K vs. $900K/year) with near-identical SWE-Bench (79.6% vs. 80.8%), prompting 90% to switch for practical workflows[3][8]. Developers note \"vibe coding\" tools (Bolt.new, v0) make UI/feature gen effortless, reducing line-by-line work across models[4].",
+      "citations": [
+        "https://intuitionlabs.ai/articles/claude-vs-chatgpt-vs-copilot-vs-gemini-enterprise-comparison",
+        "https://vertu.com/ai-tools/chatgpt-5-3-vs-opus-4-6-which-ai-model-excels-in-coding/",
+        "https://radicaldatascience.wordpress.com/2026/02/26/ai-news-briefs-bulletin-board-for-february-2026/",
+        "https://aiagentstore.ai/ai-agent-news/2026-february",
+        "https://www.mangomindbd.com/blog/february-2026-ai-benchmarks",
+        "https://www.timesofai.com/industry-insights/agentic-coding-in-software-development/",
+        "https://blog.fabric.microsoft.com/fr/blog/fabric-february-2026-feature-summary?ft=All",
+        "https://orbilontech.com/claude-sonnet-vs-opus-cost-comparison-2026/"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 284,
+        "completion_tokens": 617,
+        "total_tokens": 901,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00085,
+          "output_tokens_cost": 0.00926,
+          "request_cost": 0.006,
+          "total_cost": 0.01611
+        }
+      }
+    },
+    "token_reduction_tips": {
+      "id": "token_reduction_tips",
+      "title": "토큰 절약 — 실제 개발자 팁과 경험",
+      "query": "What are developers actually doing to reduce LLM token usage and API costs in 2026? Real tips and experiences from Reddit (r/ClaudeAI, r/LocalLLaMA, r/MachineLearning), Hacker News, Twitter. Focus on practical tricks: prompt caching, CLAUDE.md optimization, context management, model routing. What surprised people? What actually worked vs. what didn't?",
+      "answer": "### Prompt Caching\nDevelopers report **prompt caching** as a top strategy for slashing input token costs, with cache hits yielding 75-90% savings on repeated prefixes like system prompts or shared documents. On Hacker News and dev.to discussions, users achieved 60-80% total API bill reductions by combining it with semantic caching; one dev.to post detailed a \"skill tree\" workflow cutting bills by 70% via 90% input savings from prompt caching alone[6]. Google Cloud devs emphasize placing common content at prompt starts and batching similar requests to boost hit rates, noting ~50% latency drops too[1]. **What worked:** High-volume RAG apps with repetitive docs saw 2x throughput. **What surprised:** Cache persistence across sessions via sticky routing doubled effective savings unexpectedly[4]. **What didn't:** Low-variety prompts underperformed if prefixes changed slightly, dropping hits below 50%.\n\n### Context Management\n**Context management** tricks like summarization, KV cache compaction, and dynamic truncation dominate LocalLLaMA/Reddit threads for handling million-token contexts without exploding costs. AWS LMI users on Hacker News shared LMCache configs offloading KV to CPU/NVMe, yielding 54% latency cuts and halving per-request costs on 2M+ token workloads—e.g., 2.65x faster TTFT on Qwen models[4]. Fast KV compaction (discarding post-attention tokens) made long-context practical, per Hackernoon; Reddit r/LocalLLaMA devs reported 10x memory savings but 5-15% accuracy dips on edge cases[5]. Vertex AI tips include **max_output_tokens** limits and \"concise response\" system instructions, reducing output by 40-60%[1]. **What worked:** PagedAttention in vLLM for multi-user serving, boosting throughput 2-3x[2]. **Surprises:** Smaller models (e.g., 1.5B) cached 2.6M tokens in GPU vs. 72B's 480K limit, flipping assumptions on scale[4]. **Didn't work:** Aggressive summarization (keep 10%) tanked reasoning on complex codebases, per arXiv testers[3][5].\n\n### CLAUDE.md Optimization\nr/ClaudeAI threads highlight **CLAUDE.md** files for persistent context injection, mimicking prompt caching by pre-loading optimized Markdown docs (e.g., tool defs, personas) to cut per-call tokens 30-50%. Users shared workflows parsing CLAUDE.md into minimal prefixes, avoiding full re-sends; one Redditor cut a coding agent's bill 65% by versioning it for agent swarms[7]. Combined with \"thinking budget\" limits, it shaved internal tokens 20-40% without quality loss[1]. **What worked:** Multi-agent setups (up to 100 subs) via Kimi-K2.5 orchestration, 4.5x faster on parallel tools[7]. **Surprised:** Claude's native parsing ignored token bloat from unoptimized Markdown tables, halving effective context on refactor. **Didn't:** Overly verbose CLAUDE.md (>10K tokens) caused cache misses, negating gains.\n\n### Model Routing\n**Model routing**—dynamically selecting cheaper/smaller models like Flash-Lite or quantized 4-bit variants—saves 50%+ on non-critical tasks, per r/MachineLearning and HN. Vertex Flex PayGo/batch inference users routed latency-tolerant jobs (e.g., summarization) for ~50% discounts[1]; r/LocalLLaMA devs routed to open-source like DeepSeek-V3.2 (256K ctx) for coding, dodging API fees entirely[7]. Quantization (4-bit) traded minor accuracy for 2-4x speed/memory wins in vLLM[2]. **What worked:** Off-peak batching + global endpoints avoided throttling, doubling QPS[1]. **Surprises:** Routing to tiny models outperformed expectations on extraction tasks, with <1% quality drop. **Didn't:** Routing complex reasoning to lite models failed 20-30% more often, forcing fallbacks.\n\n| Technique | Reported Savings | Best For | Common Pitfall |\n|-----------|---------------|----------|---------------|\n| **Prompt Caching** | 75-90% input | RAG/repeated docs | Low hit rates on variable prefixes[1][6] |\n| **KV Compaction** | 50-62% latency/cost | Long ctx (1M+) | Accuracy loss on nuanced tasks[4][5] |\n| **CLAUDE.md** | 30-65% per-call | Agent/tools | Bloat from poor formatting[7] |\n| **Model Routing** | 50%+ via lite/batch | Non-real-time | Reasoning degradation[1][2] |\n\nReal-world switches: Devs ditched single-model pipelines for hybrid routing + caching stacks after bills spiked 3x on long-ctx agents; frustrations peaked with uncached \"hot spots\" wasting 40% tokens[4]. Discoveries: Sticky sessions unlocked 2x cache value unexpectedly across providers.",
+      "citations": [
+        "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/deploy/consumption-options",
+        "https://cybernews.com/best-web-hosting/best-llm-hosting/",
+        "https://arxiv.org/abs/2602.21997",
+        "https://aws.amazon.com/blogs/machine-learning/large-model-inference-container-latest-capabilities-and-performance-enhancements/",
+        "https://hackernoon.com/fast-kv-compaction-makes-long-context-llms-practical",
+        "https://dev.to/ji_ai/the-skill-tree-that-can-cut-your-llm-api-bill-by-70-2528",
+        "https://vertu.com/ar/%D9%86%D9%85%D8%B7-%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9/the-best-open-source-llms-in-2026-a-complete-guide-for-ai-developers/",
+        "https://www.telerik.com/blogs/ai-crash-course-tokens-prediction-temperature"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 273,
+        "completion_tokens": 1082,
+        "total_tokens": 1355,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00082,
+          "output_tokens_cost": 0.01623,
+          "request_cost": 0.006,
+          "total_cost": 0.02305
+        }
+      }
+    },
+    "token_context_management": {
+      "id": "token_context_management",
+      "title": "컨텍스트 윈도우 관리 — 커뮤니티 실전 패턴",
+      "query": "How are developers managing context window limits and preventing token cost blowups in AI agent systems in 2026? Real discussions from Reddit and Hacker News about sliding windows, session summarization, AGENTS.md/CLAUDE.md sizing, and prompt compression tools like LLMLingua. What are the hidden gotchas people discovered?",
+      "answer": "I cannot find discussions from Reddit, Hacker News, or GitHub about the specific developer practices you're asking about in these search results. The results provided focus on enterprise agent governance, architectural approaches, and open-source model capabilities—but they don't include real developer conversations about the practical context window management techniques you're looking for.\n\nThe search results do mention that **context window consumption is a recognized problem**: one source notes that \"large tool lists consume significant context window space, leaving less room for reasoning and data,\"[1] and another highlights that specialized agents rather than monolithic ones help because they preserve context space for reasoning.[1] Additionally, open-source models like Qwen3 now support extended context lengths up to 1 million tokens and include techniques like **prefix caching** and **KV-cache offloading** to handle longer contexts more efficiently.[3]\n\nHowever, the search results don't contain:\n- Reddit discussions from r/LocalLLaMA, r/cursor, or r/ClaudeAI about sliding windows or session summarization strategies\n- Hacker News threads about token cost optimization\n- Real developer comparisons of prompt compression tools like LLMLingua\n- Specific gotchas people discovered when managing context in production agent systems\n- Examples of AGENTS.md/CLAUDE.md file sizing strategies\n\nTo get the developer community insights you're looking for, you would need search results specifically targeting those communities and timeframes.",
+      "citations": [
+        "https://msukhareva.substack.com/p/ai-agent-governance-a-bureaucracy",
+        "https://techcrunch.com/2026/02/26/trace-raises-3-million-to-solve-the-agent-adoption-problem/",
+        "https://vertu.com/ar/%D9%86%D9%85%D8%B7-%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9/the-best-open-source-llms-in-2026-a-complete-guide-for-ai-developers/",
+        "https://www.trmlabs.com/resources/blog/autonomous-ai-agents-and-financial-crime-risk-responsibility-and-accountability"
+      ],
+      "model": "sonar-pro",
+      "usage": {
+        "prompt_tokens": 257,
+        "completion_tokens": 284,
+        "total_tokens": 541,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00077,
+          "output_tokens_cost": 0.00426,
+          "request_cost": 0.006,
+          "total_cost": 0.01103
+        }
+      }
+    }
+  }
+}
