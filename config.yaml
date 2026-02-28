@@ -12,6 +12,12 @@ claude:
   model: claude-sonnet-4-6
   max_tokens: 3000
 
+github:
+  lookback_days: 7      # 생성 후 N일 이내 레포만 대상
+  min_stars: 50         # 최소 star 수 (노이즈 제거)
+  limit: 30             # API에서 가져올 레포 수 (velocity 재정렬용으로 top_n보다 많게)
+  top_n: 15             # digest에 포함할 최종 레포 수
+
 # ─── 동적 컨텍스트 변수 ──────────────────────────────────────
 # 쿼리 안에서 {tools}, {models}, {companies}, {influencers}, {subreddits} 로 참조
 # 새 툴/모델이 나오면 여기만 업데이트하면 됨

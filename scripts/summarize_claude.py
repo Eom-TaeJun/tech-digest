@@ -21,16 +21,38 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
-def load_raw(date: str) -> dict:
+def load_raw(date: str) -> tuple[dict, list]:
     path = f"raw/{date}.json"
     if not os.path.exists(path):
         raise FileNotFoundError(f"raw 파일 없음: {path}")
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
-    return data["results"]
+    return data["results"], data.get("github_trending", [])
 
 
-def build_prompt(results: dict, config: dict) -> str:
+def build_github_section(trending: list[dict]) -> str:
+    if not trending:
+        return ""
+    lines = [
+        "## [GitHub Trending] 최근 7일 급등 레포 (star velocity 기준)",
+        "",
+    ]
+    for i, r in enumerate(trending, 1):
+        lang = r.get("language") or "Unknown"
+        desc = r.get("description") or ""
+        lines.append(
+            f"{i}. **[{r['name']}]({r['url']})** "
+            f"★{r['stars']:,} ({r['star_velocity']}★/일) | {lang} | {r['days_old']}일차"
+        )
+        if desc:
+            lines.append(f"   > {desc}")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def build_prompt(results: dict, github_trending: list, config: dict) -> str:
     lines = [
         f"아래는 오늘({TODAY}) 수집한 AI 기술 커뮤니티 반응 원본입니다.",
         "섹션별로 나눠서 한국어로 요약해주세요.",
@@ -50,6 +72,10 @@ def build_prompt(results: dict, config: dict) -> str:
         lines.append("---")
         lines.append("")
 
+    github_block = build_github_section(github_trending)
+    if github_block:
+        lines.append(github_block)
+
     lines.append(config["summary"]["output_format"].format(date=TODAY))
     return "\n".join(lines)
 
@@ -62,8 +88,9 @@ def main():
     print(f"[{TODAY}] Claude 재요약 시작 (model: {model})")
 
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-    results = load_raw(TODAY)
-    prompt = build_prompt(results, config)
+    results, github_trending = load_raw(TODAY)
+    print(f"  → GitHub Trending 데이터: {len(github_trending)}개 레포")
+    prompt = build_prompt(results, github_trending, config)
 
     response = client.messages.create(
         model=model,
