@@ -23,12 +23,26 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
+def resolve_query(query_text: str, config: dict) -> str:
+    """config.context 변수를 쿼리 문자열에 치환. {tools}, {models} 등."""
+    ctx = config.get("context", {})
+    vars = {
+        key: ", ".join(val) if isinstance(val, list) else str(val)
+        for key, val in ctx.items()
+    }
+    try:
+        return query_text.format(**vars)
+    except KeyError:
+        return query_text  # 치환 변수가 없으면 원문 그대로
+
+
 def call_perplexity(query: dict, config: dict) -> dict:
+    resolved = resolve_query(query["query"], config)
     payload = {
         "model": config["perplexity"]["model"],
         "messages": [
             {"role": "system", "content": config["system_prompt"]},
-            {"role": "user", "content": query["query"]},
+            {"role": "user", "content": resolved},
         ],
         "search_recency_filter": config["perplexity"]["recency"],
         "return_citations": True,

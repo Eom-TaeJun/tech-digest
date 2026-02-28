@@ -1,6 +1,7 @@
 # ============================================================
 # Tech Digest — 수집 설정
-# 쿼리/섹션 추가·삭제: sections 아래 항목만 편집하면 됨
+# 쿼리/섹션 추가·삭제: sections 아래 항목만 편집
+# 툴/모델/인물 목록 업데이트: context 블록만 편집
 # ============================================================
 
 perplexity:
@@ -11,6 +12,61 @@ claude:
   model: claude-sonnet-4-6
   max_tokens: 3000
 
+# ─── 동적 컨텍스트 변수 ──────────────────────────────────────
+# 쿼리 안에서 {tools}, {models}, {companies}, {influencers}, {subreddits} 로 참조
+# 새 툴/모델이 나오면 여기만 업데이트하면 됨
+context:
+  tools:
+    - Claude Code
+    - Cursor
+    - Windsurf
+    - Cline
+    - Aider
+    - GitHub Copilot
+    - Devin
+    - Bolt
+    - v0
+
+  models:
+    - Claude 3.5 / 3.7 (Anthropic)
+    - GPT-4o / o1 / o3 (OpenAI)
+    - Gemini 2.0 / 2.5 (Google)
+    - Llama 3 (Meta)
+    - DeepSeek V3 / R1
+    - Mistral Large
+    - Grok 3 (xAI)
+
+  companies:
+    - Anthropic
+    - OpenAI
+    - Google DeepMind
+    - Meta AI
+    - Mistral
+    - xAI
+    - Cohere
+
+  influencers:
+    - Theo (t3.gg / @t3dotgg)
+    - swyx (@swyx)
+    - Simon Willison (@simonw)
+    - Andrej Karpathy (@karpathy)
+    - Fireship (@fireship_dev)
+    - yoheinakajima
+    - Harrison Chase (LangChain / @hwchase17)
+    - Greg Kamradt (@GregKamradt)
+
+  subreddits:
+    - r/LocalLLaMA
+    - r/programming
+    - r/MachineLearning
+    - r/ClaudeAI
+    - r/cursor
+    - r/OpenAI
+    - r/GoogleGemini
+    - r/singularity
+    - r/artificial
+    - r/SoftwareEngineering
+
 # ─── Perplexity 시스템 프롬프트 ───────────────────────────────
 system_prompt: |
   You are a researcher tracking the real state of AI technology across developer communities.
@@ -20,7 +76,7 @@ system_prompt: |
      r/OpenAI, r/GoogleGemini, r/singularity, r/artificial, r/SoftwareEngineering
   2. Hacker News — top threads, Show HN, Ask HN
   3. Twitter/X — threads from notable developers and AI researchers
-     (theo-t3.gg, swyx, karpathy, simonw, goodside, yoheinakajima, etc.)
+     (theo-t3.gg, swyx, karpathy, simonw, fireship, yoheinakajima, etc.)
   4. YouTube — recent videos with high views/engagement from tech channels
      (Theo - t3.gg, Fireship, AI Explained, Two Minute Papers, Andrej Karpathy, etc.)
   5. GitHub — trending repositories, Issues, Discussions, READMEs
@@ -76,6 +132,7 @@ summary:
 # ─── 수집 섹션 & 쿼리 ─────────────────────────────────────────
 # 섹션/쿼리 추가: 아래 블록 복사해서 붙여넣기
 # 섹션/쿼리 삭제: 해당 블록 제거 (스크립트 수정 불필요)
+# 툴/모델 이름 수정: context 블록만 수정 (쿼리는 {tools}/{models} 변수 사용)
 sections:
 
   # ── 1. 기업 신기능 & 공식 발표 ──────────────────────────────
@@ -86,34 +143,34 @@ sections:
       - id: company_features_plugins
         title: 신기능·플러그인·제품 발표 (모델 외)
         query: >
-          What did major AI companies (Anthropic, OpenAI, Google DeepMind, Meta AI,
-          Mistral, xAI) announce in the past 48 hours that is NOT just a new model?
-          Include: new plugins (e.g. financial tools, code execution), API features
-          (e.g. prompt caching, extended context), SDK updates, Claude.ai product changes,
-          ChatGPT new capabilities, Gemini integrations, pricing changes, policy updates,
+          What did major AI companies ({companies}) announce in the past 48 hours
+          that is NOT just a new model?
+          Include: new plugins (e.g. financial tools, code execution, integrations),
+          API features (e.g. prompt caching, extended context), SDK updates,
+          product changes, pricing changes, policy updates,
           MCP (Model Context Protocol) server releases.
-          Capture immediate community reactions on Reddit (r/ClaudeAI, r/OpenAI,
-          r/GoogleGemini, r/LocalLLaMA), Hacker News, and Twitter/X.
+          Capture immediate community reactions on Reddit ({subreddits}),
+          Hacker News, and Twitter/X.
           What surprised people? What are developers excited or disappointed about?
 
       - id: model_new_release
         title: 신규 모델 릴리즈 — 커뮤니티 즉각 반응
         query: >
           What new AI models or major model updates were released or announced in the
-          past 48 hours? Focus on immediate community reactions on Reddit
-          (r/LocalLLaMA, r/OpenAI, r/ClaudeAI, r/GoogleGemini, r/singularity),
+          past 48 hours? Focus on immediate community reactions on Reddit ({subreddits}),
           Hacker News, and Twitter/X.
           Capture first impressions, benchmark results people actually tested,
-          and honest disappointments — real user reactions only.
+          and honest disappointments — real user reactions only, not press releases.
 
       - id: model_real_perf
         title: 모델별 실사용 성능 — 개발자 직접 비교
         query: >
           What are developers saying this week about real-world differences between
-          AI models (Claude 3.5/3.7, GPT-4o, o1/o3, Gemini 2.0, Llama, DeepSeek, Mistral)?
-          Focus on practical task comparisons from Reddit r/LocalLLaMA, r/ClaudeAI,
+          AI models ({models})?
+          Focus on practical task comparisons from Reddit ({subreddits}),
           Hacker News, Twitter — "I tried X and it did better/worse at Y than Z."
           Include coding tasks, reasoning, long context, cost-per-result comparisons.
+          No benchmark scores — only actual user experiences.
 
   # ── 2. AI 기법 & 아키텍처 ────────────────────────────────────
   - id: ai_techniques
@@ -124,8 +181,8 @@ sections:
         title: CLAUDE.md / AGENTS.md / 시스템 프롬프트 활용 패턴
         query: >
           What are developers sharing about effective CLAUDE.md, AGENTS.md, or system
-          prompt design patterns in 2026? Real tips from Reddit (r/ClaudeAI, r/cursor,
-          r/LocalLLaMA), Hacker News, GitHub Discussions, and Twitter.
+          prompt design patterns in 2026? Real tips from Reddit ({subreddits}),
+          Hacker News, GitHub Discussions, and Twitter.
           Include: file structure patterns, what to put in vs. leave out,
           how to manage context size, project-level vs. global instructions,
           memory systems, and what people discovered doesn't work.
@@ -134,9 +191,10 @@ sections:
         title: Agent 아키텍처 & 오케스트레이션 패턴
         query: >
           What new agent architecture patterns are developers actually using in 2026?
-          Look for real implementations and discussions on Reddit, Hacker News, GitHub,
-          and Twitter about: multi-agent orchestration (harness patterns, hub-and-spoke,
-          swarm), MCP (Model Context Protocol) server usage, tool-use design,
+          Look for real implementations and discussions on Reddit ({subreddits}),
+          Hacker News, GitHub, and Twitter about:
+          multi-agent orchestration (harness patterns, hub-and-spoke, swarm),
+          MCP (Model Context Protocol) server usage, tool-use design,
           spec-driven agent development, how people structure agent loops and handoffs.
           Include GitHub repos with significant stars that demonstrate these patterns.
           What actually works vs. what looks good on paper but fails in practice?
@@ -145,8 +203,8 @@ sections:
         title: 프롬프트 최적화 & 토큰/비용 절감 기법
         query: >
           What practical prompt engineering and cost optimization techniques are
-          developers sharing in 2026? Real tips from Reddit (r/ClaudeAI, r/LocalLLaMA,
-          r/MachineLearning), Hacker News, and Twitter about:
+          developers sharing in 2026? Real tips from Reddit ({subreddits}),
+          Hacker News, and Twitter about:
           prompt caching strategies, context compression (LLMLingua, etc.),
           model routing (cheap vs. expensive models), batch processing tricks,
           structured output optimization, RAG vs. long context trade-offs.
@@ -156,10 +214,10 @@ sections:
         title: 새로운 개발 방법론 & 워크플로우 패턴
         query: >
           What new software development methodologies or workflow patterns specific to
-          AI-assisted coding are gaining traction in 2026? Real discussions from
-          Reddit, Hacker News, GitHub, and Twitter about:
+          AI-assisted coding are gaining traction in 2026?
+          Real discussions from Reddit ({subreddits}), Hacker News, GitHub, and Twitter about:
           spec-driven development with AI, TDD with AI agents,
-          AI-assisted code review patterns, pair programming with Claude/Cursor,
+          AI-assisted code review, pair programming with tools like {tools},
           how developers structure repos for AI readability (file naming, comments,
           README conventions). What changed in actual team workflows?
 
@@ -172,8 +230,7 @@ sections:
         title: YouTube 인기 AI 기술 영상
         query: >
           What AI or software development YouTube videos went viral or got high engagement
-          in the past week? Focus on channels like Theo (t3.gg), Fireship, AI Explained,
-          Two Minute Papers, Andrej Karpathy, Yannic Kilcher, Lex Fridman, MKBHD (AI topics),
+          in the past week? Focus on channels like {influencers},
           and other notable tech YouTubers.
           What topics did they cover? What was the community reaction in comments?
           Include view counts if available and key takeaways from the videos.
@@ -184,7 +241,7 @@ sections:
           What GitHub repositories gained significant stars or community attention in
           the past week? Focus on: AI/LLM tools and frameworks, developer productivity
           tools, new agent frameworks, interesting Show HN projects, repos discussed on
-          Hacker News or Reddit with strong community reactions.
+          Hacker News or Reddit ({subreddits}) with strong community reactions.
           What problem does each solve? What's the community saying about it?
           Include star counts and key features.
 
@@ -192,10 +249,8 @@ sections:
         title: 인플루언서 & 개발자 인기 포스트
         query: >
           What posts or threads from well-known AI developers and tech influencers got
-          significant engagement in the past week? Focus on Twitter/X from:
-          Theo (t3.gg), swyx (shawn wang), Simon Willison (simonw), Andrej Karpathy,
-          Sam Altman, Dario Amodei, Yann LeCun, Jim Fan, Harrison Chase (LangChain),
-          and other prominent figures in AI/dev community.
+          significant engagement in the past week?
+          Focus on Twitter/X from: {influencers}, and other prominent figures in AI/dev community.
           Also include notable Hacker News Ask HN or Reddit posts with 500+ upvotes
           that sparked meaningful discussions. What were the key arguments or insights?
 
@@ -208,18 +263,18 @@ sections:
         title: AI 코딩 툴 전체 비교 — 실사용 평가
         query: >
           What are developers actually recommending in 2026 for AI-assisted coding?
-          Compare Claude Code, Cursor, Windsurf, Cline, Aider, GitHub Copilot, Devin
-          based on real Reddit and Hacker News community votes and honest reviews.
+          Compare tools like {tools} based on real Reddit ({subreddits})
+          and Hacker News community votes and honest reviews.
           What are the hidden strengths and weaknesses people only discover after
-          extended use? What made people switch tools?
+          extended use? What made people switch tools recently?
 
       - id: tools_workflow_change
         title: AI로 인한 실제 개발 워크플로우 변화
         query: >
           How has AI actually changed day-to-day software development workflows in 2026?
-          Real experiences from developers on Reddit (r/programming, r/LocalLLaMA,
-          r/cursor), Hacker News, Twitter about: what tasks they delegated to AI,
-          what they kept manual, how code review changed, how debugging changed,
+          Real experiences from developers on Reddit ({subreddits}), Hacker News, Twitter
+          about: what tasks they delegated to AI, what they kept manual,
+          how code review changed, how debugging changed,
           what surprised them about working with AI agents long-term.
           Include both individual developers and team-level changes.
 
@@ -230,5 +285,5 @@ sections:
           attention in the past week? Look for GitHub repos with sudden star spikes,
           Show HN posts with strong upvotes, Reddit threads with excited reactions,
           or Twitter threads with significant retweets about new tools.
-          What specific problems do they solve that existing tools don't?
+          What specific problems do they solve that existing tools like {tools} don't?
           Real user first impressions only.
