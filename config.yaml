@@ -120,6 +120,9 @@ summary:
     ## ⚙️ AI 기법 & 아키텍처
     (MD 파일 패턴, agent 구조, 최적화 기법 등)
 
+    ## 🧬 바이브코딩 & 방법론 진화
+    (패러다임 전환, 전문가 구조, 신규 패턴, 실제 결과)
+
     ## 🔥 커뮤니티 인기 콘텐츠
     (YouTube 영상, GitHub 프로젝트, 인플루언서 포스트 등)
 
@@ -221,7 +224,70 @@ sections:
           how developers structure repos for AI readability (file naming, comments,
           README conventions). What changed in actual team workflows?
 
-  # ── 3. 커뮤니티 인기 콘텐츠 ─────────────────────────────────
+  # ── 3. 바이브코딩 & 방법론 진화 ─────────────────────────────
+  - id: vibedev_evolution
+    title: 바이브코딩 & 방법론 진화
+    emoji: "🧬"
+    queries:
+      - id: vibedev_shifting_consensus
+        title: 방법론 패러다임 전환 — "정설"이 바뀌고 있는 것들
+        query: >
+          What developer best practices or "accepted wisdom" around AI-assisted coding
+          are being challenged or reversed in 2026?
+          Look for debates on Reddit ({subreddits}), Hacker News, Twitter, and GitHub Discussions
+          where people are saying "we used to think X was the right way, but now..."
+          Examples of the kind of shift to find:
+          - CLAUDE.md / AGENTS.md: was "write everything in detail" now becoming "less is more"?
+          - Context files: are people moving away from large constraint files?
+          - Spec-first vs. vibe-first: is one approach winning?
+          - Rules and restrictions: are heavily constrained agents losing to free-range agents?
+          Find real community debates where the consensus is actively shifting.
+          Who are the main voices on each side and what's their evidence?
+
+      - id: vibedev_expert_vs_beginner
+        title: 고수 vs 초보 — 전문가들이 실제로 쓰는 구조
+        query: >
+          How do experienced, professional developers use AI coding tools differently
+          from beginners in 2026? Real examples and discussions from Reddit ({subreddits}),
+          Hacker News, Twitter, and GitHub about:
+          - Specific repo structures or file layouts experts use that beginners don't
+          - How experts set up context, memory, or constraint files (or deliberately don't)
+          - Harness patterns, modular agent design, tool orchestration in real projects
+          - How experts handle code review, testing, and safety nets around AI output
+          - What "vibe coding" means to a senior engineer vs. a non-coder
+          Include links to actual repos, blog posts, or threads that show real expert setups.
+
+      - id: vibedev_new_structures
+        title: 신규 등장 구조 & 컨벤션 — 이번 주 처음 보이는 패턴
+        query: >
+          What brand-new structural patterns, repo conventions, or workflow approaches
+          for AI-assisted development appeared or gained significant traction this week?
+          Focus on things that didn't exist or weren't discussed 3-6 months ago.
+          Look on GitHub (new repos with sudden stars), Hacker News (Show HN), Reddit ({subreddits}),
+          and Twitter threads from {influencers} for:
+          - New file/folder naming conventions designed for AI readability
+          - New agent loop structures or harness architectures
+          - New ways to split human vs. AI responsibilities in a codebase
+          - New prompt chaining or context management approaches
+          - Tools or frameworks that enable entirely new workflows
+          What problem does each new pattern solve that old approaches couldn't?
+
+      - id: vibedev_real_project_outcomes
+        title: 실제 프로젝트 결과 — 성공/실패 사례 & 한계
+        query: >
+          What are developers sharing about real project outcomes from AI-assisted
+          or "vibe coding" development in 2026? Look for honest post-mortems, case studies,
+          and candid discussions on Reddit ({subreddits}), Hacker News, Twitter, and YouTube
+          ({influencers}) about:
+          - Projects successfully built end-to-end with AI agents (what worked?)
+          - Where AI-driven development broke down (large codebases, security, performance?)
+          - Surprising failures: things that looked finished but weren't
+          - How teams recovered from AI-generated technical debt
+          - What developers wish they had done differently
+          - The "wall" people hit and how (or if) they got past it
+          Real stories with specific technical details preferred over general opinions.
+
+  # ── 4. 커뮤니티 인기 콘텐츠 ─────────────────────────────────
   - id: community_trending
     title: 커뮤니티 인기 콘텐츠
     emoji: "🔥"
