@@ -28,7 +28,12 @@ jobs:
         env:
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
 
-      - name: Step 2 - Claude 재요약
+      - name: Step 2 - GitHub Trending 수집
+        run: python scripts/fetch_github.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Step 3 - Claude 재요약
         run: python scripts/summarize_claude.py
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
