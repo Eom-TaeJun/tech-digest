@@ -34,13 +34,14 @@ context:
     - v0
 
   models:
-    - Claude 3.5 / 3.7 (Anthropic)
-    - GPT-4o / o1 / o3 (OpenAI)
-    - Gemini 2.0 / 2.5 (Google)
-    - Llama 3 (Meta)
-    - DeepSeek V3 / R1
-    - Mistral Large
-    - Grok 3 (xAI)
+    - Claude 3.5 / 3.7 / 4.x (Anthropic)
+    - GPT-4o / o1 / o3 / 5 (OpenAI)
+    - Gemini 1.5 / 2.0 / 2.5 / 3.0 (Google)
+    - Llama 3.x / 4 (Meta)
+    - DeepSeek V3 / R1 / V4
+    - Mistral Large / Pixtral
+    - Grok 3 / 4 (xAI)
+    - Latest Frontier Models (SOTA LLMs)
 
   companies:
     - Anthropic
@@ -190,7 +191,7 @@ sections:
         title: CLAUDE.md / AGENTS.md / 시스템 프롬프트 활용 패턴
         query: >
           What are developers sharing about effective CLAUDE.md, AGENTS.md, or system
-          prompt design patterns in 2026? Real tips from Reddit ({subreddits}),
+          prompt design patterns recently? Real tips from Reddit ({subreddits}),
           Hacker News, GitHub Discussions, and Twitter.
           Include: file structure patterns, what to put in vs. leave out,
           how to manage context size, project-level vs. global instructions,
@@ -199,7 +200,7 @@ sections:
       - id: technique_agent_architecture
         title: Agent 아키텍처 & 오케스트레이션 패턴
         query: >
-          What new agent architecture patterns are developers actually using in 2026?
+          What new agent architecture patterns are developers actually using recently?
           Look for real implementations and discussions on Reddit ({subreddits}),
           Hacker News, GitHub, and Twitter about:
           multi-agent orchestration (harness patterns, hub-and-spoke, swarm),
@@ -212,7 +213,7 @@ sections:
         title: 프롬프트 최적화 & 토큰/비용 절감 기법
         query: >
           What practical prompt engineering and cost optimization techniques are
-          developers sharing in 2026? Real tips from Reddit ({subreddits}),
+          developers sharing recently? Real tips from Reddit ({subreddits}),
           Hacker News, and Twitter about:
           prompt caching strategies, context compression (LLMLingua, etc.),
           model routing (cheap vs. expensive models), batch processing tricks,
@@ -223,7 +224,7 @@ sections:
         title: 새로운 개발 방법론 & 워크플로우 패턴
         query: >
           What new software development methodologies or workflow patterns specific to
-          AI-assisted coding are gaining traction in 2026?
+          AI-assisted coding are gaining traction recently?
           Real discussions from Reddit ({subreddits}), Hacker News, GitHub, and Twitter about:
           spec-driven development with AI, TDD with AI agents,
           AI-assisted code review, pair programming with tools like {tools},
@@ -239,7 +240,7 @@ sections:
         title: 방법론 패러다임 전환 — "정설"이 바뀌고 있는 것들
         query: >
           What developer best practices or "accepted wisdom" around AI-assisted coding
-          are being challenged or reversed in 2026?
+          are being challenged or reversed recently?
           Look for debates on Reddit ({subreddits}), Hacker News, Twitter, and GitHub Discussions
           where people are saying "we used to think X was the right way, but now..."
           Examples of the kind of shift to find:
@@ -254,7 +255,7 @@ sections:
         title: 고수 vs 초보 — 전문가들이 실제로 쓰는 구조
         query: >
           How do experienced, professional developers use AI coding tools differently
-          from beginners in 2026? Real examples and discussions from Reddit ({subreddits}),
+          from beginners recently? Real examples and discussions from Reddit ({subreddits}),
           Hacker News, Twitter, and GitHub about:
           - Specific repo structures or file layouts experts use that beginners don't
           - How experts set up context, memory, or constraint files (or deliberately don't)
@@ -282,7 +283,7 @@ sections:
         title: 실제 프로젝트 결과 — 성공/실패 사례 & 한계
         query: >
           What are developers sharing about real project outcomes from AI-assisted
-          or "vibe coding" development in 2026? Look for honest post-mortems, case studies,
+          or "vibe coding" development recently? Look for honest post-mortems, case studies,
           and candid discussions on Reddit ({subreddits}), Hacker News, Twitter, and YouTube
           ({influencers}) about:
           - Projects successfully built end-to-end with AI agents (what worked?)
@@ -334,7 +335,7 @@ sections:
       - id: tools_landscape
         title: AI 코딩 툴 전체 비교 — 실사용 평가
         query: >
-          What are developers actually recommending in 2026 for AI-assisted coding?
+          What are developers actually recommending recently for AI-assisted coding?
           Compare tools like {tools} based on real Reddit ({subreddits})
           and Hacker News community votes and honest reviews.
           What are the hidden strengths and weaknesses people only discover after
@@ -343,7 +344,7 @@ sections:
       - id: tools_workflow_change
         title: AI로 인한 실제 개발 워크플로우 변화
         query: >
-          How has AI actually changed day-to-day software development workflows in 2026?
+          How has AI actually changed day-to-day software development workflows recently?
           Real experiences from developers on Reddit ({subreddits}), Hacker News, Twitter
           about: what tasks they delegated to AI, what they kept manual,
           how code review changed, how debugging changed,
