@@ -26,12 +26,20 @@ AI 기술 트렌드를 **실제 사용자 후기** 중심으로 매일 수집하
 
 ```
 config.yaml                   ← 수집 설정 (섹션·쿼리·툴 목록 등)
+baseline_architecture.yaml    ← 아키텍처 설계 기준점 (탐지용)
 scripts/fetch_perplexity.py   ← Step 1: Perplexity 수집
 scripts/summarize_claude.py   ← Step 2: Claude 재요약
+scripts/detect_paradigm_shifts.py ← Step 3: 패러다임 변화 탐지 (NEW)
 raw/YYYY-MM-DD.json           ← Perplexity 원본 JSON
 digest/YYYY-MM-DD.md          ← 마크다운 변환본
 digest/YYYY-MM-DD.summary.md  ← Claude 한국어 요약본
 ```
+
+## 실행 순서
+
+1. `python scripts/fetch_perplexity.py`
+2. `python scripts/summarize_claude.py`
+3. `python scripts/detect_paradigm_shifts.py`  # 매일 아침 아키텍처 위기 감지
 
 ## 커스터마이징
 

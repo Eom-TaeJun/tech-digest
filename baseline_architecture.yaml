@@ -1,0 +1,29 @@
+# ============================================================
+# 현재 프로젝트 아키텍처 가이드라인 (Baseline)
+# 탐지 로직이 이 기준과 최신 트렌드의 충돌을 감시합니다.
+# ============================================================
+
+paradigms:
+  harness:
+    current: "Separation of Logic & Intelligence (Python for raw data, Agent for reasoning)"
+    warning_signs: ["Monolithic Python scripts", "Hardcoded logic for reasoning"]
+
+  agent_orchestration:
+    current: "Hierarchical / Lead-Subagent structure"
+    warning_signs: ["Flat swarm without lead", "Implicit handoffs"]
+
+  mcp:
+    current: "Local-first stdio/HTTP MCP for security"
+    warning_signs: ["Cloud-only MCP", "Third-party hosted tool execution"]
+
+  skills:
+    current: "Description-driven auto-activation"
+    warning_signs: ["Manual trigger-only skills", "Vague skill descriptions"]
+
+  claudemd:
+    current: "Vibe + 3 Examples (Less is more)"
+    warning_signs: ["Rule-heavy 10k+ token files", "No examples provided"]
+
+  code_editing:
+    current: "Hashline / String Replacement"
+    warning_signs: ["Line-number based editing", "Unified diff-only approach"]
