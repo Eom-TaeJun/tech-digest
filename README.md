@@ -37,9 +37,18 @@ digest/YYYY-MM-DD.summary.md  ← Claude 한국어 요약본
 
 ## 실행 순서
 
-1. `python scripts/fetch_perplexity.py`
-2. `python scripts/summarize_claude.py`
-3. `python scripts/detect_paradigm_shifts.py`  # 매일 아침 아키텍처 위기 감지
+1. `python scripts/discover_concepts.py` # Step 0: 신규 툴·모델·개념 자동 발견 (config.yaml 업데이트)
+2. `python scripts/fetch_perplexity.py`   # Step 1: Perplexity 데이터 수집
+3. `python scripts/summarize_claude.py`    # Step 2: Claude 한국어 요약
+4. `python scripts/detect_paradigm_shifts.py` # Step 3: 아키텍처 위기 및 패러다임 변화 탐지
+
+## 핵심 분석 대상
+
+- **Harness Engineering**: AI 에이전트의 안정성을 위한 테스트 및 검증 환경
+- **AI Agent Skills**: 재사용 가능한 에이전트 모듈 및 스킬 셋
+- **AGENTS.md / CLAUDE.md**: 프로젝트별 AI 지침 표준화 패턴
+- **MCP (Model Context Protocol)**: 모델과 도구 간의 연결 표준
+- **Vibe Coding**: 실시간 프롬프트 기반 개발의 패러다임 변화 및 한계 탐색
 
 ## 커스터마이징
 
