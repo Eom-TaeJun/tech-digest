@@ -87,7 +87,7 @@ def build_prompt(results: dict, github_trending: list, config: dict, prev_summar
             "## [전날 요약 — 중복 판단 기준]",
             "아래 내용은 어제 이미 다룬 항목입니다. 오늘 유의미한 변화가 없으면 반복하지 마세요.",
             "",
-            prev_summary[:3000],  # 너무 길면 앞부분만 사용
+            prev_summary[:2000],  # 앞 2000자만 사용 (input 토큰 절약)
             "",
             "---",
             "",
