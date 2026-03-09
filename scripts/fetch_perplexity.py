@@ -199,6 +199,7 @@ def call_perplexity(query: dict, config: dict, existing_raw: dict | None = None)
         ],
         "search_recency_filter": recency,
         "return_citations": True,
+        "max_tokens": config["perplexity"].get("max_tokens", 800),
     }
     headers = {
         "Authorization": f"Bearer {API_KEY}",

@@ -100,7 +100,10 @@ def build_prompt(results: dict, github_trending: list, config: dict, prev_summar
             result = results.get(q["id"], {})
             answer = result.get("answer", "(데이터 없음)")
             evidence = result.get("evidence", {})
-            citations = result.get("citations", [])
+            citations = result.get("citations", [])[:5]  # 출처 최대 5개
+            # 섹션당 답변 2000자 이내로 제한 (전체 input 토큰 절약)
+            if len(answer) > 2000:
+                answer = answer[:2000] + "...(truncated)"
             lines.append(f"### {q['title']}")
             if evidence:
                 lines.append(

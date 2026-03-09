@@ -7,6 +7,7 @@
 perplexity:
   model: sonar-pro
   recency: day          # day | week | month
+  max_tokens: 800       # 섹션당 응답 최대 토큰 (노이즈 제거)
 
 claude:
   model: claude-sonnet-4-6
