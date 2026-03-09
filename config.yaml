@@ -19,7 +19,7 @@ github:
   top_n: 15             # digest에 포함할 최종 레포 수
 
 # ─── 동적 컨텍스트 변수 ──────────────────────────────────────
-# 쿼리 안에서 {tools}, {models}, {companies}, {influencers}, {subreddits} 로 참조
+# 쿼리 안에서 {tools}, {models}, {companies}, {influencers} 로 참조
 # 새 툴/모델이 나오면 여기만 업데이트하면 됨
 context:
   tools:
@@ -75,36 +75,20 @@ context:
     - Harrison Chase (LangChain / @hwchase17)
     - Greg Kamradt (@GregKamradt)
 
-  subreddits:
-    - r/LocalLLaMA
-    - r/programming
-    - r/MachineLearning
-    - r/ClaudeAI
-    - r/cursor
-    - r/OpenAI
-    - r/GoogleGemini
-    - r/singularity
-    - r/artificial
-    - r/SoftwareEngineering
-
 # ─── Perplexity 시스템 프롬프트 ───────────────────────────────
 system_prompt: |
   You are a researcher tracking the real state of AI technology across developer communities.
 
   Primary sources (prioritize in this order):
-  1. Reddit — r/LocalLLaMA, r/programming, r/MachineLearning, r/ClaudeAI, r/cursor,
-     r/OpenAI, r/GoogleGemini, r/singularity, r/artificial, r/SoftwareEngineering
-  2. Hacker News — top threads, Show HN, Ask HN
-  3. Twitter/X — threads from notable developers and AI researchers
-     (theo-t3.gg, swyx, karpathy, simonw, fireship, yoheinakajima, etc.)
-  4. YouTube — recent videos with high views/engagement from tech channels
-     (Theo - t3.gg, Fireship, AI Explained, Two Minute Papers, Andrej Karpathy, etc.)
-  5. GitHub — trending repositories, Issues, Discussions, READMEs
+  1. GitHub — trending repositories, Issues, Discussions, READMEs
+  2. GitHub org/community discussions and maintainer conversations
+  3. Repository documentation or example repos only when directly tied to real usage
 
   Always exclude:
   - Official press releases and marketing copy
   - Paywalled content
   - Benchmark-only comparisons with no real user context
+  - Non-GitHub social/news sources
 
   Always include:
   - Specific examples, quotes, or code snippets when available
@@ -121,11 +105,14 @@ summary:
     수집된 커뮤니티 데이터를 읽고 한국어로 핵심만 간결하게 요약합니다.
 
     요약 원칙:
+    - 최신 모델명/버전/출시일은 official source가 있는 항목만 사실로 단정
     - 실제 사용자 경험, 커뮤니티 반응, 기술적 인사이트 중심
     - 긍정/부정 반응 균형 있게 정리
     - 구체적 이유·사례·수치가 있으면 반드시 포함
     - 중복 내용 통합, 각 섹션 3~5개 bullet point로 압축
     - 특히 실행 가능한(actionable) 인사이트 강조
+    - 직접 커뮤니티 소스가 부족하면 "직접 커뮤니티 반응 부족"을 명시
+    - 벤치마크/서드파티 요약만 있는 항목을 "신규 공식 출시"처럼 쓰지 말 것
 
   output_format: |
     출력 형식:
@@ -144,7 +131,7 @@ summary:
     (패러다임 전환, 전문가 구조, 신규 패턴, 실제 결과)
 
     ## 🔥 커뮤니티 인기 콘텐츠
-    (YouTube 영상, GitHub 프로젝트, 인플루언서 포스트 등)
+    (GitHub 프로젝트, GitHub Discussions, 메인테이너 활동 등)
 
     ## 🛠️ AI 툴 & 워크플로우
     (툴 비교, 워크플로우 변화)
@@ -172,26 +159,45 @@ sections:
           API features (e.g. prompt caching, extended context), SDK updates,
           product changes, pricing changes, policy updates,
           MCP (Model Context Protocol) server releases.
-          Capture immediate community reactions on Reddit ({subreddits}),
-          Hacker News, and Twitter/X.
+          Capture immediate developer reactions from GitHub repositories,
+          GitHub Issues, and GitHub Discussions.
           What surprised people? What are developers excited or disappointed about?
+
+      - id: model_release_official_watch
+        title: 공식 모델 릴리즈 체크 — 최신 버전/날짜 확인
+        recency: week
+        query: >
+          Verify the latest official AI model or major model update releases from
+          {companies} in the past 7 days using official sources first
+          (official blogs, release notes, API docs, model cards, help docs).
+          For each release, give the exact model/version name, exact release date,
+          official source URL, and whether it is a genuinely new release or just
+          later benchmark chatter about an older release.
+          If there is confusion between nearby versions (for example GPT-5.3 vs GPT-5.4),
+          resolve the conflict explicitly and state which version is the latest official one.
 
       - id: model_new_release
         title: 신규 모델 릴리즈 — 커뮤니티 즉각 반응
+        recency: week
         query: >
-          What new AI models or major model updates were released or announced in the
-          past 48 hours? Focus on immediate community reactions on Reddit ({subreddits}),
-          Hacker News, and Twitter/X.
-          Capture first impressions, benchmark results people actually tested,
-          and honest disappointments — real user reactions only, not press releases.
+          For the latest model releases from the past 7 days, gather immediate
+          community reactions from GitHub Discussions, GitHub Issues, and repositories
+          integrating or comparing those models.
+          First confirm which release is actually the newest, then capture first
+          impressions, benchmark results people actually tested, and honest disappointments.
+          Distinguish clearly between:
+          1) the official latest release,
+          2) community reaction to that release,
+          3) benchmark chatter about older versions.
+          Real user reactions only, not press releases.
 
       - id: model_real_perf
         title: 모델별 실사용 성능 — 개발자 직접 비교
         query: >
           What are developers saying this week about real-world differences between
           AI models ({models})?
-          Focus on practical task comparisons from Reddit ({subreddits}),
-          Hacker News, Twitter — "I tried X and it did better/worse at Y than Z."
+          Focus on practical task comparisons from GitHub Discussions, GitHub Issues,
+          and repositories where developers say "I tried X and it did better/worse at Y than Z."
           Include coding tasks, reasoning, long context, cost-per-result comparisons.
           No benchmark scores — only actual user experiences.
 
@@ -204,8 +210,8 @@ sections:
         title: CLAUDE.md / AGENTS.md / 시스템 프롬프트 활용 패턴
         query: >
           What are developers sharing about effective CLAUDE.md, AGENTS.md, or system
-          prompt design patterns recently? Real tips from Reddit ({subreddits}),
-          Hacker News, GitHub Discussions, and Twitter.
+          prompt design patterns recently? Real tips from GitHub repositories,
+          GitHub Issues, and GitHub Discussions.
           Include: file structure patterns, what to put in vs. leave out,
           how to manage context size, project-level vs. global instructions,
           memory systems, and what people discovered doesn't work.
@@ -214,8 +220,8 @@ sections:
         title: Agent 아키텍처 & 오케스트레이션 패턴
         query: >
           What new agent architecture patterns are developers actually using recently?
-          Look for real implementations and discussions on Reddit ({subreddits}),
-          Hacker News, GitHub, and Twitter about:
+          Look for real implementations and discussions on GitHub repositories,
+          GitHub Issues, and GitHub Discussions about:
           multi-agent orchestration (harness patterns, hub-and-spoke, swarm),
           MCP (Model Context Protocol) server usage, tool-use design,
           spec-driven agent development, how people structure agent loops and handoffs.
@@ -226,8 +232,8 @@ sections:
         title: 프롬프트 최적화 & 토큰/비용 절감 기법
         query: >
           What practical prompt engineering and cost optimization techniques are
-          developers sharing recently? Real tips from Reddit ({subreddits}),
-          Hacker News, and Twitter about:
+          developers sharing recently? Real tips from GitHub repositories,
+          GitHub Issues, and GitHub Discussions about:
           prompt caching strategies, context compression (LLMLingua, etc.),
           model routing (cheap vs. expensive models), batch processing tricks,
           structured output optimization, RAG vs. long context trade-offs.
@@ -238,7 +244,7 @@ sections:
         query: >
           What new software development methodologies or workflow patterns specific to
           AI-assisted coding are gaining traction recently?
-          Real discussions from Reddit ({subreddits}), Hacker News, GitHub, and Twitter about:
+          Real discussions from GitHub repositories, GitHub Issues, and GitHub Discussions about:
           spec-driven development with AI, TDD with AI agents,
           AI-assisted code review, pair programming with tools like {tools},
           how developers structure repos for AI readability (file naming, comments,
@@ -254,7 +260,7 @@ sections:
         query: >
           What developer best practices or "accepted wisdom" around AI-assisted coding
           are being challenged or reversed recently?
-          Look for debates on Reddit ({subreddits}), Hacker News, Twitter, and GitHub Discussions
+          Look for debates on GitHub repositories, Issues, and GitHub Discussions
           where people are saying "we used to think X was the right way, but now..."
           Examples of the kind of shift to find:
           - CLAUDE.md / AGENTS.md: was "write everything in detail" now becoming "less is more"?
@@ -268,8 +274,8 @@ sections:
         title: 고수 vs 초보 — 전문가들이 실제로 쓰는 구조
         query: >
           How do experienced, professional developers use AI coding tools differently
-          from beginners recently? Real examples and discussions from Reddit ({subreddits}),
-          Hacker News, Twitter, and GitHub about:
+          from beginners recently? Real examples and discussions from GitHub repositories,
+          GitHub Issues, and GitHub Discussions about:
           - Specific repo structures or file layouts experts use that beginners don't
           - How experts set up context, memory, or constraint files (or deliberately don't)
           - Harness patterns, modular agent design, tool orchestration in real projects
@@ -283,8 +289,8 @@ sections:
           What brand-new structural patterns, repo conventions, or workflow approaches
           for AI-assisted development appeared or gained significant traction this week?
           Focus on things that didn't exist or weren't discussed 3-6 months ago.
-          Look on GitHub (new repos with sudden stars), Hacker News (Show HN), Reddit ({subreddits}),
-          and Twitter threads from {influencers} for:
+          Look on GitHub (new repos with sudden stars), GitHub Discussions,
+          and maintainer/user conversations in repositories for:
           - New file/folder naming conventions designed for AI readability
           - New agent loop structures or harness architectures
           - New ways to split human vs. AI responsibilities in a codebase
@@ -297,8 +303,7 @@ sections:
         query: >
           What are developers sharing about real project outcomes from AI-assisted
           or "vibe coding" development recently? Look for honest post-mortems, case studies,
-          and candid discussions on Reddit ({subreddits}), Hacker News, Twitter, and YouTube
-          ({influencers}) about:
+          and candid discussions on GitHub repositories, Issues, and GitHub Discussions about:
           - Projects successfully built end-to-end with AI agents (what worked?)
           - Where AI-driven development broke down (large codebases, security, performance?)
           - Surprising failures: things that looked finished but weren't
@@ -313,32 +318,29 @@ sections:
     emoji: "🔥"
     queries:
       - id: community_youtube
-        title: YouTube 인기 AI 기술 영상
+        title: GitHub Discussions 인기 기술 토론
         query: >
-          What AI or software development YouTube videos went viral or got high engagement
-          in the past week? Focus on channels like {influencers},
-          and other notable tech YouTubers.
-          What topics did they cover? What was the community reaction in comments?
-          Include view counts if available and key takeaways from the videos.
+          What GitHub Discussions or GitHub issue threads got high engagement
+          in the past week around AI or software development?
+          Focus on highly commented discussions, maintainer replies, and practical takeaways.
+          What topics did they cover and why did developers care?
 
       - id: community_github
         title: GitHub Trending & 주목받는 오픈소스 프로젝트
         query: >
           What GitHub repositories gained significant stars or community attention in
           the past week? Focus on: AI/LLM tools and frameworks, developer productivity
-          tools, new agent frameworks, interesting Show HN projects, repos discussed on
-          Hacker News or Reddit ({subreddits}) with strong community reactions.
+          tools, new agent frameworks, and repos with strong GitHub Discussion or Issue activity.
           What problem does each solve? What's the community saying about it?
           Include star counts and key features.
 
       - id: community_influencers
-        title: 인플루언서 & 개발자 인기 포스트
+        title: 메인테이너 & 개발자 인기 GitHub 포스트
         query: >
-          What posts or threads from well-known AI developers and tech influencers got
-          significant engagement in the past week?
-          Focus on Twitter/X from: {influencers}, and other prominent figures in AI/dev community.
-          Also include notable Hacker News Ask HN or Reddit posts with 500+ upvotes
-          that sparked meaningful discussions. What were the key arguments or insights?
+          What GitHub posts, discussions, or issue threads from well-known AI developers,
+          maintainers, or tool authors got significant engagement in the past week?
+          Focus on maintainers of tools like {tools}, major AI repos, and popular GitHub Discussions.
+          What were the key arguments, insights, or implementation tips?
 
   # ── 4. AI 툴 & 워크플로우 ────────────────────────────────────
   - id: ai_tools
@@ -349,8 +351,8 @@ sections:
         title: AI 코딩 툴 전체 비교 — 실사용 평가
         query: >
           What are developers actually recommending recently for AI-assisted coding?
-          Compare tools like {tools} based on real Reddit ({subreddits})
-          and Hacker News community votes and honest reviews.
+          Compare tools like {tools} based on real GitHub Issues, GitHub Discussions,
+          and repository usage reports.
           What are the hidden strengths and weaknesses people only discover after
           extended use? What made people switch tools recently?
 
@@ -358,7 +360,7 @@ sections:
         title: AI로 인한 실제 개발 워크플로우 변화
         query: >
           How has AI actually changed day-to-day software development workflows recently?
-          Real experiences from developers on Reddit ({subreddits}), Hacker News, Twitter
+          Real experiences from developers on GitHub Issues, GitHub Discussions, and repositories
           about: what tasks they delegated to AI, what they kept manual,
           how code review changed, how debugging changed,
           what surprised them about working with AI agents long-term.
@@ -369,7 +371,6 @@ sections:
         query: >
           What new AI development tools, frameworks, or integrations gained community
           attention in the past week? Look for GitHub repos with sudden star spikes,
-          Show HN posts with strong upvotes, Reddit threads with excited reactions,
-          or Twitter threads with significant retweets about new tools.
+          GitHub Discussions with active comments, and GitHub Issues with strong developer interest.
           What specific problems do they solve that existing tools like {tools} don't?
           Real user first impressions only.

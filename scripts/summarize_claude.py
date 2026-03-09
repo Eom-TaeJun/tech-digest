@@ -56,6 +56,12 @@ def build_prompt(results: dict, github_trending: list, config: dict) -> str:
     lines = [
         f"아래는 오늘({TODAY}) 수집한 AI 기술 커뮤니티 반응 원본입니다.",
         "섹션별로 나눠서 한국어로 요약해주세요.",
+        "중요 규칙:",
+        "1. 최신 모델 버전/출시일은 official source가 있는 항목을 우선 사실로 사용하세요.",
+        "2. community source가 부족하면 '직접 커뮤니티 반응 부족'이라고 명시하세요.",
+        "3. benchmark chatter나 서드파티 요약만 있는 항목을 최신 공식 출시처럼 쓰지 마세요.",
+        "4. 공식 출시 체크와 커뮤니티 반응이 충돌하면 공식 출시 체크를 기준으로 정리하세요.",
+        "5. github.com discussion 링크가 직접 소스로 있으면 GitHub Discussions 반응도 명시하세요.",
         "",
         "---",
         "",
@@ -65,8 +71,23 @@ def build_prompt(results: dict, github_trending: list, config: dict) -> str:
         lines.append(f"## 섹션 {i}: {section['title']}")
         lines.append("")
         for q in section["queries"]:
-            answer = results.get(q["id"], {}).get("answer", "(데이터 없음)")
+            result = results.get(q["id"], {})
+            answer = result.get("answer", "(데이터 없음)")
+            evidence = result.get("evidence", {})
+            citations = result.get("citations", [])
             lines.append(f"### {q['title']}")
+            if evidence:
+                lines.append(
+                    "Evidence Summary: "
+                    f"official={evidence.get('official_source_count', 0)}, "
+                    f"community={evidence.get('community_source_count', 0)}, "
+                    f"has_official={evidence.get('has_official_sources', False)}, "
+                    f"has_community={evidence.get('has_direct_community_sources', False)}"
+                )
+            if citations:
+                lines.append("Sources:")
+                for idx, url in enumerate(citations, 1):
+                    lines.append(f"{idx}. {url}")
             lines.append(answer)
             lines.append("")
         lines.append("---")

@@ -1,8 +1,8 @@
 # AI Tech Digest
 
-AI 기술 트렌드를 **실제 사용자 후기** 중심으로 매일 수집하는 자동화 다이제스트.
+AI 기술 트렌드를 **GitHub 기반 실제 사용자 신호** 중심으로 매일 수집하는 자동화 다이제스트.
 
-> Reddit / Hacker News / Twitter / YouTube / GitHub 커뮤니티의 실제 반응을 수집합니다.
+> GitHub Trending, GitHub Discussions, README, 이슈/토론의 실제 반응을 수집합니다.
 
 ---
 
@@ -13,7 +13,7 @@ AI 기술 트렌드를 **실제 사용자 후기** 중심으로 매일 수집하
 | 🏢 기업 신기능 & 공식 발표 | 모델 외 플러그인·API·정책 발표, 신규 모델 반응, 모델별 실사용 비교 |
 | ⚙️ AI 기법 & 아키텍처 | CLAUDE.md/AGENTS.md 패턴, Agent 오케스트레이션, 최적화, 새로운 방법론 |
 | 🧬 바이브코딩 & 방법론 진화 | 패러다임 전환 추적, 전문가 구조, 신규 패턴, 실제 프로젝트 결과 |
-| 🔥 커뮤니티 인기 콘텐츠 | YouTube 인기 영상, GitHub Trending, 인플루언서 포스트 |
+| 🔥 커뮤니티 인기 콘텐츠 | GitHub Discussions, GitHub Trending, 메인테이너 활동 |
 | 🛠️ AI 툴 & 워크플로우 | 툴 전체 비교, 워크플로우 변화, 새롭게 주목받는 툴 |
 
 ## 업데이트
@@ -38,9 +38,13 @@ digest/YYYY-MM-DD.summary.md  ← Claude 한국어 요약본
 ## 실행 순서
 
 1. `python scripts/discover_concepts.py` # Step 0: 신규 툴·모델·개념 자동 발견 (config.yaml 업데이트)
-2. `python scripts/fetch_perplexity.py`   # Step 1: Perplexity 데이터 수집
-3. `python scripts/summarize_claude.py`    # Step 2: Claude 한국어 요약
-4. `python scripts/detect_paradigm_shifts.py` # Step 3: 아키텍처 위기 및 패러다임 변화 탐지
+2. `python scripts/fetch_official_sources.py` # Step 0.5: 공식 모델 릴리즈 직접 확인
+3. `python scripts/fetch_github.py` # Step 0.6: GitHub Trending/star velocity 수집
+4. `python scripts/fetch_practice_signals.py` # Step 0.75: GitHub 직접 방법론 신호 수집
+5. `python scripts/fetch_perplexity.py`   # Step 1: Perplexity 데이터 수집 (직접 신호 기반 맥락 보강)
+6. `python scripts/fetch_community_sources.py` # Step 1.5: GitHub Discussions 직접 반응 수집
+7. `python scripts/summarize_claude.py`    # Step 2: Claude 한국어 요약
+8. `python scripts/detect_paradigm_shifts.py` # Step 3: 아키텍처 위기 및 패러다임 변화 탐지
 
 ## 핵심 분석 대상
 
