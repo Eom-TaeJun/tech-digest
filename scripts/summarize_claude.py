@@ -2,6 +2,7 @@
 Daily Tech Digest - Step 2: Claude 재요약
 - config.yaml에서 설정/프롬프트 로드
 - raw/{date}.json 읽어서 Claude로 핵심 요약
+- 전날 summary를 로드해 중복 항목 필터링
 - 결과: digest/{date}.summary.md
 """
 
@@ -9,7 +10,7 @@ import os
 import json
 import yaml
 import anthropic
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone, timedelta, date
 
 KST = timezone(timedelta(hours=9))
 TODAY = datetime.now(KST).strftime("%Y-%m-%d")
@@ -28,6 +29,17 @@ def load_raw(date: str) -> tuple[dict, list]:
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
     return data["results"], data.get("github_trending", [])
+
+
+def load_prev_summary(today_str: str) -> str:
+    """전날 summary.md를 읽어 반환. 없으면 빈 문자열."""
+    today_date = datetime.strptime(today_str, "%Y-%m-%d").date()
+    prev_date = today_date - timedelta(days=1)
+    path = f"digest/{prev_date.strftime('%Y-%m-%d')}.summary.md"
+    if not os.path.exists(path):
+        return ""
+    with open(path, encoding="utf-8") as f:
+        return f.read()
 
 
 def build_github_section(trending: list[dict]) -> str:
@@ -52,20 +64,34 @@ def build_github_section(trending: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def build_prompt(results: dict, github_trending: list, config: dict) -> str:
+def build_prompt(results: dict, github_trending: list, config: dict, prev_summary: str = "") -> str:
     lines = [
         f"아래는 오늘({TODAY}) 수집한 AI 기술 커뮤니티 반응 원본입니다.",
         "섹션별로 나눠서 한국어로 요약해주세요.",
+        "",
         "중요 규칙:",
         "1. 최신 모델 버전/출시일은 official source가 있는 항목을 우선 사실로 사용하세요.",
         "2. community source가 부족하면 '직접 커뮤니티 반응 부족'이라고 명시하세요.",
         "3. benchmark chatter나 서드파티 요약만 있는 항목을 최신 공식 출시처럼 쓰지 마세요.",
         "4. 공식 출시 체크와 커뮤니티 반응이 충돌하면 공식 출시 체크를 기준으로 정리하세요.",
         "5. github.com discussion 링크가 직접 소스로 있으면 GitHub Discussions 반응도 명시하세요.",
+        "6. 전날 요약에 이미 등장한 항목(모델명, 레포, 이슈, 방법론 등)은 오늘 유의미한 업데이트가 없으면 생략하세요.",
+        "7. 오늘 처음 등장하거나 전날 대비 수치·상태·반응이 크게 바뀐 항목은 '신규' 또는 '업데이트'로 명시하세요.",
         "",
         "---",
         "",
     ]
+
+    if prev_summary:
+        lines += [
+            "## [전날 요약 — 중복 판단 기준]",
+            "아래 내용은 어제 이미 다룬 항목입니다. 오늘 유의미한 변화가 없으면 반복하지 마세요.",
+            "",
+            prev_summary[:3000],  # 너무 길면 앞부분만 사용
+            "",
+            "---",
+            "",
+        ]
 
     for i, section in enumerate(config["sections"], 1):
         lines.append(f"## 섹션 {i}: {section['title']}")
@@ -110,8 +136,10 @@ def main():
 
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     results, github_trending = load_raw(TODAY)
+    prev_summary = load_prev_summary(TODAY)
     print(f"  → GitHub Trending 데이터: {len(github_trending)}개 레포")
-    prompt = build_prompt(results, github_trending, config)
+    print(f"  → 전날 요약: {'로드됨' if prev_summary else '없음'}")
+    prompt = build_prompt(results, github_trending, config, prev_summary)
 
     response = client.messages.create(
         model=model,
