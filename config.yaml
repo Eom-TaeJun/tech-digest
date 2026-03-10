@@ -54,38 +54,44 @@ rendering:
     truncation_notice: '[truncated in raw md; see raw JSON for full response]'
 official_sources:
   lookback_days: 14
+  include_latest_if_no_recent: true
+  latest_per_vendor: 1
   date_search_chars: 6000
   model_search_chars: 8000
   vendors:
-  - company: OpenAI
-    note: Official OpenAI release post
-    list_urls:
-    - https://openai.com/index/
-    link_patterns:
-    - /index/introducing-gpt-
-    - /index/introducing-o
-    - /index/introducing-codex
-    model_patterns:
-    - \bGPT-\d+(?:\.\d+)?(?:\.\d+)?\b
-    - \bo\d+(?:-[a-z0-9]+)?\b
-    - \bCodex\b
-    max_candidate_links: 30
-    api_listing:
-      url: https://api.openai.com/v1/models
-      auth_env: OPENAI_API_KEY
-      model_regex: ^(gpt-\d|o\d|codex)
-      source_url: https://api.openai.com/v1/models
-      note: Official OpenAI models API listing
-  - company: Anthropic
-    note: Official Anthropic news post
-    list_urls:
-    - https://www.anthropic.com/news
-    link_patterns:
-    - /news/claude
-    - /news/introducing
-    model_patterns:
-    - \bClaude\s+(?:Sonnet|Opus)\s+\d+(?:\.\d+)?\b
-    max_candidate_links: 25
+    - company: OpenAI
+      note: Official OpenAI release post
+      list_urls:
+        - https://openai.com/index/
+      link_patterns:
+        - /index/introducing-gpt-
+        - /index/introducing-o
+        - /index/introducing-codex
+      model_patterns:
+        - \bGPT-\d+(?:\.\d+)?(?:\.\d+)?\b
+        - \bo\d+(?:-[a-z0-9]+)?\b
+        - \bCodex\b
+      max_candidate_links: 30
+      api_listing:
+        url: https://api.openai.com/v1/models
+        auth_env: OPENAI_API_KEY
+        model_regex: ^(gpt-\d|o\d|codex)
+        source_url: https://api.openai.com/v1/models
+        note: Official OpenAI models API listing
+        normalize:
+          strip_date_suffix: true
+          strip_latest_suffix: true
+          dedupe_aliases: true
+    - company: Anthropic
+      note: Official Anthropic news post
+      list_urls:
+        - https://www.anthropic.com/news
+      link_patterns:
+        - /news/claude
+        - /news/introducing
+      model_patterns:
+        - \bClaude\s+(?:Sonnet|Opus)\s+\d+(?:\.\d+)?\b
+      max_candidate_links: 25
 context:
   tools:
   - Claude Code
@@ -222,7 +228,13 @@ summary:
     high_min_community_sources: 3
     low_confidence_max_chars: 900
     suppress_low_confidence_headlines: true
+    low_confidence_prompt_mode: note_only
+    include_low_confidence_sources: false
     low_confidence_notice: LOW confidence 항목은 승인된 공식/직접 커뮤니티 근거가 부족하므로 배경 정보로만 사용
+    source_rules:
+      official-direct: official_only
+      direct-community: community_only
+      direct-practice: community_only
   output_format: '출력 형식 (전체 분량 목표: 섹션당 3~4 bullet, 총 30~40줄 이내):
 
     # AI Tech Digest 요약 — {date}

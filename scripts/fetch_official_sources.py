@@ -36,6 +36,8 @@ class OfficialRelease:
     released_at: str
     source_url: str
     note: str
+    is_within_lookback: bool = True
+    selection_reason: str = "recent"
 
 
 class LinkExtractor(HTMLParser):
@@ -165,6 +167,64 @@ def extract_models_from_patterns(text: str, patterns: list[str]) -> list[str]:
     return found
 
 
+def parse_iso_date(date_str: str) -> datetime:
+    return datetime.fromisoformat(date_str).replace(tzinfo=UTC)
+
+
+def normalize_api_model_name(model_id: str, normalize_cfg: dict) -> str:
+    normalized = model_id.strip()
+    if normalize_cfg.get("strip_date_suffix"):
+        normalized = re.sub(r"-\d{4}-\d{2}-\d{2}$", "", normalized)
+    if normalize_cfg.get("strip_latest_suffix"):
+        normalized = re.sub(r"-latest$", "", normalized)
+    return normalized
+
+
+def dedupe_vendor_models(items: list[OfficialRelease]) -> list[OfficialRelease]:
+    best_by_key: dict[tuple[str, str], OfficialRelease] = {}
+    for item in items:
+        key = (item.company.lower(), item.model.lower())
+        current = best_by_key.get(key)
+        if current is None:
+            best_by_key[key] = item
+            continue
+        current_date = parse_iso_date(current.released_at)
+        item_date = parse_iso_date(item.released_at)
+        if item_date > current_date:
+            best_by_key[key] = item
+    return sorted(
+        best_by_key.values(),
+        key=lambda x: (x.released_at, x.company.lower(), x.model.lower()),
+        reverse=True,
+    )
+
+
+def select_vendor_releases(
+    vendor: dict,
+    releases: list[OfficialRelease],
+    cutoff: datetime,
+    include_latest_if_no_recent: bool,
+    latest_per_vendor: int,
+) -> list[OfficialRelease]:
+    deduped = dedupe_vendor_models(releases)
+    recent = []
+    older = []
+    for item in deduped:
+        release_date = parse_iso_date(item.released_at)
+        if release_date >= cutoff:
+            item.is_within_lookback = True
+            item.selection_reason = "recent"
+            recent.append(item)
+        else:
+            item.is_within_lookback = False
+            item.selection_reason = "latest-known"
+            older.append(item)
+
+    if recent or not include_latest_if_no_recent:
+        return recent
+    return older[:latest_per_vendor]
+
+
 def collect_vendor_releases(
     vendor: dict,
     cutoff: datetime,
@@ -201,7 +261,7 @@ def collect_vendor_releases(
             continue
         text = html_to_text(page_html)
         release_date = find_date(text[:date_search_chars])
-        if not release_date or release_date < cutoff:
+        if not release_date:
             continue
         models = extract_models_from_patterns(text[:model_search_chars], model_patterns)
         if not models:
@@ -248,6 +308,7 @@ def collect_api_listing_releases(vendor: dict, cutoff: datetime) -> list[Officia
     model_regex = api_listing.get("model_regex", "")
     source_url = api_listing.get("source_url", api_listing["url"])
     note = api_listing.get("note", "Official vendor API listing")
+    normalize_cfg = api_listing.get("normalize", {})
     releases: list[OfficialRelease] = []
 
     for item in data:
@@ -258,12 +319,11 @@ def collect_api_listing_releases(vendor: dict, cutoff: datetime) -> list[Officia
         if model_regex and not re.match(model_regex, model_id):
             continue
         release_date = datetime.fromtimestamp(created, tz=UTC)
-        if release_date < cutoff:
-            continue
+        model_name = normalize_api_model_name(model_id, normalize_cfg)
         releases.append(
             OfficialRelease(
                 company=vendor.get("company", "Unknown"),
-                model=model_id,
+                model=model_name,
                 released_at=release_date.date().isoformat(),
                 source_url=source_url,
                 note=note,
@@ -296,8 +356,14 @@ def build_answer(releases: list[OfficialRelease], lookback_days: int) -> str:
         "",
     ]
     for item in releases:
+        if item.is_within_lookback:
+            recency_note = f"release date: **{item.released_at}**"
+        else:
+            recency_note = (
+                f"latest known official release outside lookback: **{item.released_at}**"
+            )
         lines.append(
-            f"- **{item.company} — {item.model}** | release date: **{item.released_at}** | source: {item.source_url}"
+            f"- **{item.company} — {item.model}** | {recency_note} | source: {item.source_url}"
         )
     lines.append("")
     lines.append(
@@ -324,6 +390,8 @@ def main():
     config = load_config()
     official_config = config.get("official_sources", {})
     lookback_days = official_config.get("lookback_days", DEFAULT_LOOKBACK_DAYS)
+    include_latest_if_no_recent = official_config.get("include_latest_if_no_recent", True)
+    latest_per_vendor = official_config.get("latest_per_vendor", 1)
     date_search_chars = official_config.get("date_search_chars", DEFAULT_DATE_SEARCH_CHARS)
     model_search_chars = official_config.get("model_search_chars", DEFAULT_MODEL_SEARCH_CHARS)
     vendors = official_config.get("vendors", [])
@@ -332,10 +400,19 @@ def main():
     cutoff = datetime.now(UTC) - timedelta(days=lookback_days)
     releases = []
     for vendor in vendors:
-        releases.extend(
-            collect_vendor_releases(vendor, cutoff, date_search_chars, model_search_chars)
+        vendor_releases = collect_vendor_releases(
+            vendor, cutoff, date_search_chars, model_search_chars
         )
-        releases.extend(collect_api_listing_releases(vendor, cutoff))
+        vendor_releases.extend(collect_api_listing_releases(vendor, cutoff))
+        releases.extend(
+            select_vendor_releases(
+                vendor,
+                vendor_releases,
+                cutoff,
+                include_latest_if_no_recent,
+                latest_per_vendor,
+            )
+        )
     releases = dedupe_releases(releases)
     print(f"  → official releases found: {len(releases)}")
 

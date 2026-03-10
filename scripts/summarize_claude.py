@@ -78,15 +78,19 @@ def classify_confidence(result: dict, gate: dict) -> str:
 
     high_min = gate.get("high_min_community_sources", 3)
     medium_min = gate.get("medium_min_community_sources", 1)
+    source_rules = gate.get("source_rules", {})
+    source_rule = source_rules.get(source)
 
-    if source == "official-direct" or official > 0 or evidence.get("has_official_sources"):
-        return "HIGH"
-    if source in {"direct-community", "direct-practice"}:
+    if source_rule == "official_only":
+        return "HIGH" if official > 0 or evidence.get("has_official_sources") else "LOW"
+    if source_rule == "community_only":
         if community >= high_min:
             return "HIGH"
         if community >= medium_min:
             return "MEDIUM"
         return "LOW"
+    if official > 0 or evidence.get("has_official_sources"):
+        return "HIGH"
     if community >= high_min and filtered == 0:
         return "HIGH"
     if community >= medium_min:
@@ -100,19 +104,22 @@ def format_result_for_summary(result: dict, config: dict) -> tuple[str, str]:
     gate = confidence_gate(config)
     confidence = classify_confidence(result, gate)
     answer = result.get("answer", "(데이터 없음)")
+    notice = gate.get(
+        "low_confidence_notice",
+        "LOW confidence 항목은 승인된 공식/직접 커뮤니티 근거가 부족하므로 배경 정보로만 사용",
+    )
 
     max_chars = 2000
     if confidence == "LOW":
         max_chars = gate.get("low_confidence_max_chars", 900)
 
+    if confidence == "LOW" and gate.get("low_confidence_prompt_mode") == "note_only":
+        return confidence, f"[LOW CONFIDENCE] {notice}"
+
     if len(answer) > max_chars:
         answer = answer[:max_chars] + "...(truncated)"
 
     if confidence == "LOW":
-        notice = gate.get(
-            "low_confidence_notice",
-            "LOW confidence 항목은 승인된 공식/직접 커뮤니티 근거가 부족하므로 배경 정보로만 사용",
-        )
         answer = f"[LOW CONFIDENCE] {notice}\n\n{answer}"
 
     return confidence, answer
@@ -159,6 +166,8 @@ def build_prompt(results: dict, github_trending: list, config: dict, prev_summar
             confidence, answer = format_result_for_summary(result, config)
             evidence = result.get("evidence", {})
             citations = result.get("citations", [])[:5]  # 출처 최대 5개
+            if confidence == "LOW" and not gate.get("include_low_confidence_sources", False):
+                citations = []
             lines.append(f"### {q['title']}")
             lines.append(f"Confidence: {confidence}")
             if confidence == "LOW" and gate.get("suppress_low_confidence_headlines", True):
