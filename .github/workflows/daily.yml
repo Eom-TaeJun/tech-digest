@@ -23,18 +23,43 @@ jobs:
       - name: 의존성 설치
         run: pip install requests anthropic pyyaml
 
+      - name: Step 0 - 신규 개념 탐색
+        run: python scripts/discover_concepts.py
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+
+      - name: Step 0.5 - 공식 릴리즈 수집
+        run: python scripts/fetch_official_sources.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Step 0.6 - GitHub Trending 수집
+        run: python scripts/fetch_github.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Step 0.75 - 직접 방법론 신호 수집
+        run: python scripts/fetch_practice_signals.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Step 1 - Perplexity 수집
         run: python scripts/fetch_perplexity.py
         env:
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
 
-      - name: Step 2 - GitHub Trending 수집
-        run: python scripts/fetch_github.py
+      - name: Step 1.5 - 직접 커뮤니티 반응 수집
+        run: python scripts/fetch_community_sources.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Step 3 - Claude 재요약
+      - name: Step 2 - Claude 재요약
         run: python scripts/summarize_claude.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Step 3 - 패러다임 변화 감지
+        run: python scripts/detect_paradigm_shifts.py
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
@@ -42,6 +67,6 @@ jobs:
         run: |
           git config user.name "digest-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add raw/ digest/
+          git add config.yaml raw/ digest/
           git diff --staged --quiet || git commit -m "digest: $(date -u +%Y-%m-%d) [auto]"
           git push

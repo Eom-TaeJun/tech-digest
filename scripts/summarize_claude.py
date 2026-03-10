@@ -64,7 +64,62 @@ def build_github_section(trending: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def confidence_gate(config: dict) -> dict:
+    return config.get("summary", {}).get("confidence_gate", {})
+
+
+def classify_confidence(result: dict, gate: dict) -> str:
+    evidence = result.get("evidence", {})
+    source = result.get("source", "")
+    official = evidence.get("official_source_count", 0)
+    community = evidence.get("community_source_count", 0)
+    filtered = evidence.get("filtered_out_citation_count", 0)
+    raw_citations = evidence.get("raw_citation_count", 0)
+
+    high_min = gate.get("high_min_community_sources", 3)
+    medium_min = gate.get("medium_min_community_sources", 1)
+
+    if source == "official-direct" or official > 0 or evidence.get("has_official_sources"):
+        return "HIGH"
+    if source in {"direct-community", "direct-practice"}:
+        if community >= high_min:
+            return "HIGH"
+        if community >= medium_min:
+            return "MEDIUM"
+        return "LOW"
+    if community >= high_min and filtered == 0:
+        return "HIGH"
+    if community >= medium_min:
+        return "MEDIUM"
+    if raw_citations and filtered >= raw_citations and official == 0 and community == 0:
+        return "LOW"
+    return "LOW"
+
+
+def format_result_for_summary(result: dict, config: dict) -> tuple[str, str]:
+    gate = confidence_gate(config)
+    confidence = classify_confidence(result, gate)
+    answer = result.get("answer", "(데이터 없음)")
+
+    max_chars = 2000
+    if confidence == "LOW":
+        max_chars = gate.get("low_confidence_max_chars", 900)
+
+    if len(answer) > max_chars:
+        answer = answer[:max_chars] + "...(truncated)"
+
+    if confidence == "LOW":
+        notice = gate.get(
+            "low_confidence_notice",
+            "LOW confidence 항목은 승인된 공식/직접 커뮤니티 근거가 부족하므로 배경 정보로만 사용",
+        )
+        answer = f"[LOW CONFIDENCE] {notice}\n\n{answer}"
+
+    return confidence, answer
+
+
 def build_prompt(results: dict, github_trending: list, config: dict, prev_summary: str = "") -> str:
+    gate = confidence_gate(config)
     lines = [
         f"아래는 오늘({TODAY}) 수집한 AI 기술 커뮤니티 반응 원본입니다.",
         "섹션별로 나눠서 한국어로 요약해주세요.",
@@ -77,6 +132,9 @@ def build_prompt(results: dict, github_trending: list, config: dict, prev_summar
         "5. github.com discussion 링크가 직접 소스로 있으면 GitHub Discussions 반응도 명시하세요.",
         "6. 전날 요약에 이미 등장한 항목(모델명, 레포, 이슈, 방법론 등)은 오늘 유의미한 업데이트가 없으면 생략하세요.",
         "7. 오늘 처음 등장하거나 전날 대비 수치·상태·반응이 크게 바뀐 항목은 '신규' 또는 '업데이트'로 명시하세요.",
+        "8. HIGH confidence만 headline/오늘의 핵심/액션 아이템의 직접 근거로 사용하세요.",
+        "9. MEDIUM confidence는 보조 설명으로만 사용하고, 단정적 표현은 피하세요.",
+        "10. LOW confidence는 headline/키워드/액션 아이템에 올리지 말고, 필요하면 '근거 약함' 또는 '직접 커뮤니티 반응 부족'으로만 짧게 언급하세요.",
         "",
         "---",
         "",
@@ -98,18 +156,20 @@ def build_prompt(results: dict, github_trending: list, config: dict, prev_summar
         lines.append("")
         for q in section["queries"]:
             result = results.get(q["id"], {})
-            answer = result.get("answer", "(데이터 없음)")
+            confidence, answer = format_result_for_summary(result, config)
             evidence = result.get("evidence", {})
             citations = result.get("citations", [])[:5]  # 출처 최대 5개
-            # 섹션당 답변 2000자 이내로 제한 (전체 input 토큰 절약)
-            if len(answer) > 2000:
-                answer = answer[:2000] + "...(truncated)"
             lines.append(f"### {q['title']}")
+            lines.append(f"Confidence: {confidence}")
+            if confidence == "LOW" and gate.get("suppress_low_confidence_headlines", True):
+                lines.append("Summary Rule: 이 항목은 headline/오늘의 핵심/액션 아이템에 사용 금지")
             if evidence:
                 lines.append(
                     "Evidence Summary: "
                     f"official={evidence.get('official_source_count', 0)}, "
                     f"community={evidence.get('community_source_count', 0)}, "
+                    f"other={evidence.get('other_source_count', 0)}, "
+                    f"filtered={evidence.get('filtered_out_citation_count', 0)}, "
                     f"has_official={evidence.get('has_official_sources', False)}, "
                     f"has_community={evidence.get('has_direct_community_sources', False)}"
                 )

@@ -19,6 +19,86 @@ github:
   limit: 30             # API에서 가져올 레포 수 (velocity 재정렬용으로 top_n보다 많게)
   top_n: 15             # digest에 포함할 최종 레포 수
 
+query_defaults:
+  source_policy: github-only
+  use_official_context: false
+  use_practice_context: false
+  raw_markdown_chars: 550
+
+source_filters:
+  official_group: official_vendor
+  domain_groups:
+    github_community:
+      - github.com
+      - www.github.com
+    official_vendor:
+      - openai.com
+      - www.openai.com
+      - help.openai.com
+      - platform.openai.com
+      - anthropic.com
+      - www.anthropic.com
+      - docs.anthropic.com
+      - ai.google.dev
+      - deepmind.google
+      - blog.google
+      - developers.googleblog.com
+      - meta.com
+      - ai.meta.com
+      - mistral.ai
+      - docs.mistral.ai
+      - x.ai
+      - www.x.ai
+      - cohere.com
+      - docs.cohere.com
+  policies:
+    github-only:
+      - github_community
+    official+github:
+      - official_vendor
+      - github_community
+
+rendering:
+  raw_markdown:
+    max_answer_lines: 8
+    max_sources: 2
+    truncation_notice: "[truncated in raw md; see raw JSON for full response]"
+
+official_sources:
+  lookback_days: 14
+  date_search_chars: 6000
+  model_search_chars: 8000
+  vendors:
+    - company: OpenAI
+      note: Official OpenAI release post
+      list_urls:
+        - https://openai.com/index/
+      link_patterns:
+        - /index/introducing-gpt-
+        - /index/introducing-o
+        - /index/introducing-codex
+      model_patterns:
+        - \bGPT-\d+(?:\.\d+)?(?:\.\d+)?\b
+        - \bo\d+(?:-[a-z0-9]+)?\b
+        - \bCodex\b
+      max_candidate_links: 30
+      api_listing:
+        url: https://api.openai.com/v1/models
+        auth_env: OPENAI_API_KEY
+        model_regex: ^(gpt-\d|o\d|codex)
+        source_url: https://api.openai.com/v1/models
+        note: Official OpenAI models API listing
+    - company: Anthropic
+      note: Official Anthropic news post
+      list_urls:
+        - https://www.anthropic.com/news
+      link_patterns:
+        - /news/claude
+        - /news/introducing
+      model_patterns:
+        - \bClaude\s+(?:Sonnet|Opus)\s+\d+(?:\.\d+)?\b
+      max_candidate_links: 25
+
 # ─── 동적 컨텍스트 변수 ──────────────────────────────────────
 # 쿼리 안에서 {tools}, {models}, {companies}, {influencers} 로 참조
 # 새 툴/모델이 나오면 여기만 업데이트하면 됨
@@ -114,11 +194,19 @@ summary:
     - 특히 실행 가능한(actionable) 인사이트 강조
     - 직접 커뮤니티 소스가 부족하면 "직접 커뮤니티 반응 부족"을 명시
     - 벤치마크/서드파티 요약만 있는 항목을 "신규 공식 출시"처럼 쓰지 말 것
+    - LOW confidence 항목은 배경 정보로만 취급하고, headline/키워드/액션 아이템에 올리지 말 것
 
     중복 제거 원칙:
     - 프롬프트에 [전날 요약]이 제공된 경우, 이미 다룬 모델·레포·방법론은 오늘 유의미한 업데이트 없으면 생략
     - 오늘 처음 등장하는 항목은 [신규], 전날 대비 수치·상태·반응이 크게 바뀐 항목은 [업데이트] 태그 사용
     - 반복 항목이 많을수록 ⚡ 오늘의 핵심 섹션을 더 짧게 유지 (3개 이하도 무방)
+
+  confidence_gate:
+    medium_min_community_sources: 1
+    high_min_community_sources: 3
+    low_confidence_max_chars: 900
+    suppress_low_confidence_headlines: true
+    low_confidence_notice: LOW confidence 항목은 승인된 공식/직접 커뮤니티 근거가 부족하므로 배경 정보로만 사용
 
   output_format: |
     출력 형식 (전체 분량 목표: 섹션당 3~4 bullet, 총 30~40줄 이내):
@@ -164,6 +252,8 @@ sections:
     queries:
       - id: company_features_plugins
         title: 신기능·플러그인·제품 발표 (모델 외)
+        source_policy: official+github
+        use_official_context: true
         query: >
           What did major AI companies ({companies}) announce in the past 48 hours
           that is NOT just a new model?
@@ -178,6 +268,7 @@ sections:
       - id: model_release_official_watch
         title: 공식 모델 릴리즈 체크 — 최신 버전/날짜 확인
         recency: week
+        source_policy: official+github
         query: >
           Verify the latest official AI model or major model update releases from
           {companies} in the past 7 days using official sources first
@@ -191,6 +282,8 @@ sections:
       - id: model_new_release
         title: 신규 모델 릴리즈 — 커뮤니티 즉각 반응
         recency: week
+        source_policy: official+github
+        use_official_context: true
         query: >
           For the latest model releases from the past 7 days, gather immediate
           community reactions from GitHub Discussions, GitHub Issues, and repositories
@@ -220,6 +313,7 @@ sections:
     queries:
       - id: technique_md_patterns
         title: CLAUDE.md / AGENTS.md / 시스템 프롬프트 활용 패턴
+        use_practice_context: true
         query: >
           What are developers sharing about effective CLAUDE.md, AGENTS.md, or system
           prompt design patterns recently? Real tips from GitHub repositories,
@@ -230,6 +324,7 @@ sections:
 
       - id: technique_agent_architecture
         title: Agent 아키텍처 & 오케스트레이션 패턴
+        use_practice_context: true
         query: >
           What new agent architecture patterns are developers actually using recently?
           Look for real implementations and discussions on GitHub repositories,
@@ -242,6 +337,7 @@ sections:
 
       - id: technique_optimization
         title: 프롬프트 최적화 & 토큰/비용 절감 기법
+        use_practice_context: true
         query: >
           What practical prompt engineering and cost optimization techniques are
           developers sharing recently? Real tips from GitHub repositories,
@@ -253,6 +349,7 @@ sections:
 
       - id: technique_new_patterns
         title: 새로운 개발 방법론 & 워크플로우 패턴
+        use_practice_context: true
         query: >
           What new software development methodologies or workflow patterns specific to
           AI-assisted coding are gaining traction recently?
@@ -269,6 +366,7 @@ sections:
     queries:
       - id: vibedev_shifting_consensus
         title: 방법론 패러다임 전환 — "정설"이 바뀌고 있는 것들
+        use_practice_context: true
         query: >
           What developer best practices or "accepted wisdom" around AI-assisted coding
           are being challenged or reversed recently?
@@ -284,6 +382,7 @@ sections:
 
       - id: vibedev_expert_vs_beginner
         title: 고수 vs 초보 — 전문가들이 실제로 쓰는 구조
+        use_practice_context: true
         query: >
           How do experienced, professional developers use AI coding tools differently
           from beginners recently? Real examples and discussions from GitHub repositories,
@@ -297,6 +396,7 @@ sections:
 
       - id: vibedev_new_structures
         title: 신규 등장 구조 & 컨벤션 — 이번 주 처음 보이는 패턴
+        use_practice_context: true
         query: >
           What brand-new structural patterns, repo conventions, or workflow approaches
           for AI-assisted development appeared or gained significant traction this week?
@@ -312,6 +412,7 @@ sections:
 
       - id: vibedev_real_project_outcomes
         title: 실제 프로젝트 결과 — 성공/실패 사례 & 한계
+        use_practice_context: true
         query: >
           What are developers sharing about real project outcomes from AI-assisted
           or "vibe coding" development recently? Look for honest post-mortems, case studies,
@@ -339,6 +440,7 @@ sections:
 
       - id: community_github
         title: GitHub Trending & 주목받는 오픈소스 프로젝트
+        use_practice_context: true
         query: >
           What GitHub repositories gained significant stars or community attention in
           the past week? Focus on: AI/LLM tools and frameworks, developer productivity
@@ -370,6 +472,7 @@ sections:
 
       - id: tools_workflow_change
         title: AI로 인한 실제 개발 워크플로우 변화
+        use_practice_context: true
         query: >
           How has AI actually changed day-to-day software development workflows recently?
           Real experiences from developers on GitHub Issues, GitHub Discussions, and repositories
@@ -380,6 +483,7 @@ sections:
 
       - id: tools_new_rising
         title: 새롭게 주목받는 AI 개발 툴 & 프레임워크
+        use_practice_context: true
         query: >
           What new AI development tools, frameworks, or integrations gained community
           attention in the past week? Look for GitHub repos with sudden star spikes,

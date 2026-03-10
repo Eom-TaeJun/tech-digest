@@ -14,11 +14,14 @@ from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
 
 import requests
+import yaml
 
 KST = timezone(timedelta(hours=9))
 UTC = timezone.utc
 TODAY = datetime.now(KST).strftime("%Y-%m-%d")
-LOOKBACK_DAYS = 14
+DEFAULT_LOOKBACK_DAYS = 14
+DEFAULT_DATE_SEARCH_CHARS = 6000
+DEFAULT_MODEL_SEARCH_CHARS = 8000
 
 MONTH_PATTERNS = [
     "%B %d, %Y",
@@ -46,6 +49,12 @@ class LinkExtractor(HTMLParser):
         href = dict(attrs).get("href")
         if href:
             self.links.append(href)
+
+
+def load_config() -> dict:
+    config_path = os.path.join(os.path.dirname(__file__), "..", "config.yaml")
+    with open(config_path, encoding="utf-8") as f:
+        return yaml.safe_load(f)
 
 
 def fetch_html(url: str) -> str:
@@ -132,81 +141,134 @@ def extract_models(text: str, pattern: str) -> list[str]:
     return found
 
 
-def collect_openai_releases() -> list[OfficialRelease]:
-    releases: list[OfficialRelease] = []
-    cutoff = datetime.now(UTC) - timedelta(days=LOOKBACK_DAYS)
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key:
-        return releases
+def unique_preserving_order(items: list[str]) -> list[str]:
+    seen = set()
+    unique = []
+    for item in items:
+        if item in seen:
+            continue
+        seen.add(item)
+        unique.append(item)
+    return unique
 
-    resp = requests.get(
-        "https://api.openai.com/v1/models",
-        timeout=30,
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-        },
-    )
-    resp.raise_for_status()
+
+def extract_models_from_patterns(text: str, patterns: list[str]) -> list[str]:
+    found = []
+    seen = set()
+    for pattern in patterns:
+        for model in extract_models(text, pattern):
+            key = model.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            found.append(model)
+    return found
+
+
+def collect_vendor_releases(
+    vendor: dict,
+    cutoff: datetime,
+    date_search_chars: int,
+    model_search_chars: int,
+) -> list[OfficialRelease]:
+    company = vendor.get("company", "Unknown")
+    note = vendor.get("note", "Official vendor release post")
+    link_patterns = vendor.get("link_patterns", [])
+    model_patterns = vendor.get("model_patterns", [])
+    max_candidate_links = vendor.get("max_candidate_links", 20)
+    candidate_links = []
+
+    for list_url in vendor.get("list_urls", []):
+        try:
+            html = fetch_html(list_url)
+        except requests.RequestException as exc:
+            print(f"  ! {company} index fetch failed: {list_url} ({exc})")
+            continue
+        links = extract_same_host_links(list_url, html)
+        if link_patterns:
+            links = [
+                link for link in links
+                if any(pattern in link for pattern in link_patterns)
+            ]
+        candidate_links.extend(links)
+
+    releases: list[OfficialRelease] = []
+    for link in unique_preserving_order(candidate_links)[:max_candidate_links]:
+        try:
+            page_html = fetch_html(link)
+        except requests.RequestException as exc:
+            print(f"  ! {company} release fetch failed: {link} ({exc})")
+            continue
+        text = html_to_text(page_html)
+        release_date = find_date(text[:date_search_chars])
+        if not release_date or release_date < cutoff:
+            continue
+        models = extract_models_from_patterns(text[:model_search_chars], model_patterns)
+        if not models:
+            continue
+        for model in models:
+            releases.append(
+                OfficialRelease(
+                    company=company,
+                    model=model,
+                    released_at=release_date.date().isoformat(),
+                    source_url=link.rstrip("/"),
+                    note=note,
+                )
+            )
+    return releases
+
+
+def collect_api_listing_releases(vendor: dict, cutoff: datetime) -> list[OfficialRelease]:
+    api_listing = vendor.get("api_listing")
+    if not api_listing:
+        return []
+
+    auth_env = api_listing.get("auth_env")
+    token = os.environ.get(auth_env) if auth_env else None
+    if auth_env and not token:
+        return []
+
+    headers = {"Content-Type": "application/json"}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    try:
+        resp = requests.get(
+            api_listing["url"],
+            timeout=30,
+            headers=headers,
+        )
+        resp.raise_for_status()
+    except requests.RequestException as exc:
+        print(f"  ! {vendor.get('company', 'Unknown')} API listing fetch failed: {exc}")
+        return []
+
     data = resp.json().get("data", [])
+    model_regex = api_listing.get("model_regex", "")
+    source_url = api_listing.get("source_url", api_listing["url"])
+    note = api_listing.get("note", "Official vendor API listing")
+    releases: list[OfficialRelease] = []
 
     for item in data:
         model_id = item.get("id", "")
         created = item.get("created")
         if not model_id or not created:
             continue
-        if not re.match(r"^(gpt-\d|o\d|codex)", model_id):
+        if model_regex and not re.match(model_regex, model_id):
             continue
         release_date = datetime.fromtimestamp(created, tz=UTC)
         if release_date < cutoff:
             continue
         releases.append(
             OfficialRelease(
-                company="OpenAI",
+                company=vendor.get("company", "Unknown"),
                 model=model_id,
                 released_at=release_date.date().isoformat(),
-                source_url="https://api.openai.com/v1/models",
-                note="Official OpenAI models API listing",
+                source_url=source_url,
+                note=note,
             )
         )
-    return releases
-
-
-def collect_anthropic_releases() -> list[OfficialRelease]:
-    news_url = "https://www.anthropic.com/news"
-    html = fetch_html(news_url)
-    links = extract_same_host_links(news_url, html)
-    candidate_links = [
-        link
-        for link in links
-        if "/news/claude" in link or "/news/introducing" in link
-    ]
-
-    releases: list[OfficialRelease] = []
-    cutoff = datetime.now(UTC) - timedelta(days=LOOKBACK_DAYS)
-
-    for link in candidate_links[:25]:
-        page_html = fetch_html(link)
-        text = html_to_text(page_html)
-        release_date = find_date(text[:6000])
-        if not release_date or release_date < cutoff:
-            continue
-        models = extract_models(
-            text[:8000],
-            r"\bClaude\s+(?:Sonnet|Opus)\s+\d+(?:\.\d+)?\b",
-        )
-        if not models:
-            continue
-        for model in models:
-            releases.append(
-                OfficialRelease(
-                    company="Anthropic",
-                    model=model,
-                    released_at=release_date.date().isoformat(),
-                    source_url=link.rstrip("/"),
-                    note="Official Anthropic news post",
-                )
-            )
     return releases
 
 
@@ -222,11 +284,11 @@ def dedupe_releases(items: list[OfficialRelease]) -> list[OfficialRelease]:
     return unique
 
 
-def build_answer(releases: list[OfficialRelease]) -> str:
+def build_answer(releases: list[OfficialRelease], lookback_days: int) -> str:
     if not releases:
         return (
             "No official model releases were found on the configured official source pages "
-            f"in the last {LOOKBACK_DAYS} days."
+            f"in the last {lookback_days} days."
         )
 
     lines = [
@@ -259,8 +321,22 @@ def save_raw(path: str, data: dict) -> None:
 
 
 def main():
+    config = load_config()
+    official_config = config.get("official_sources", {})
+    lookback_days = official_config.get("lookback_days", DEFAULT_LOOKBACK_DAYS)
+    date_search_chars = official_config.get("date_search_chars", DEFAULT_DATE_SEARCH_CHARS)
+    model_search_chars = official_config.get("model_search_chars", DEFAULT_MODEL_SEARCH_CHARS)
+    vendors = official_config.get("vendors", [])
+
     print(f"[{TODAY}] Official release sources fetch 시작")
-    releases = dedupe_releases(collect_openai_releases() + collect_anthropic_releases())
+    cutoff = datetime.now(UTC) - timedelta(days=lookback_days)
+    releases = []
+    for vendor in vendors:
+        releases.extend(
+            collect_vendor_releases(vendor, cutoff, date_search_chars, model_search_chars)
+        )
+        releases.extend(collect_api_listing_releases(vendor, cutoff))
+    releases = dedupe_releases(releases)
     print(f"  → official releases found: {len(releases)}")
 
     raw_path = os.path.join("raw", f"{TODAY}.json")
@@ -280,7 +356,7 @@ def main():
         "id": "model_release_official_watch",
         "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
         "query": "Official sources direct fetch",
-        "answer": build_answer(releases),
+        "answer": build_answer(releases, lookback_days),
         "citations": [item.source_url for item in releases],
         "model": "direct-official-fetch",
         "recency": "week",
@@ -288,6 +364,7 @@ def main():
             "domains": sorted({urlparse(item.source_url).netloc for item in releases}),
             "community_source_count": 0,
             "official_source_count": len(releases),
+            "other_source_count": 0,
             "has_direct_community_sources": False,
             "has_official_sources": bool(releases),
         },

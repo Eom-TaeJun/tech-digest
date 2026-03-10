@@ -19,10 +19,11 @@ config.yaml                   ← 쿼리·모델·섹션 설정
    - 🔑 핵심 키워드 & 방향성 확인
    - 대부분의 판단은 summary만으로 충분
 
-2. **원문(.md)은 이유가 있을 때만** — `digest/YYYY-MM-DD.md`
+2. **압축 원문(.md)은 이유가 있을 때만** — `digest/YYYY-MM-DD.md`
    - summary에 수치·출처가 없는데 정확한 데이터가 필요한 경우
    - 특정 레포·모델·기법의 세부 내용을 깊이 파악해야 하는 경우
    - 사용자가 특정 항목에 대해 추가 질문을 하는 경우
+   - 이 파일은 읽기용 압축본이므로, 전체 응답이 필요하면 `raw/YYYY-MM-DD.json` 확인
 
 > **원칙**: summary로 중요성을 먼저 판단 → 원문 접근이 필요한 이유가 명확할 때만 .md 열기
 
@@ -41,7 +42,7 @@ python scripts/summarize_claude.py        # Step 2:   Claude 한국어 요약 (�
 python scripts/detect_paradigm_shifts.py  # Step 3:   패러다임 변화 탐지
 ```
 
-자동 실행: GitHub Actions (매일 KST 01:00)
+자동 실행: GitHub Actions (매일 KST 09:00)
 수동 실행: `gh workflow run "Daily Tech Digest"`
 
 ---

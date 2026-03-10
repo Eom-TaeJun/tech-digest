@@ -12,6 +12,8 @@ with open("baseline_architecture.yaml", "r", encoding="utf-8") as f:
     baseline = yaml.safe_load(f)
 
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+ALERT_START = "<!-- PARADIGM_SHIFT_START -->"
+ALERT_END = "<!-- PARADIGM_SHIFT_END -->"
 
 def get_latest_digest():
     files = sorted(glob.glob("digest/*.md"))
@@ -63,12 +65,25 @@ def detect():
     )
 
     alert_content = response.content[0].text
+    wrapped_alert = f"{ALERT_START}\n{alert_content}\n{ALERT_END}"
     
     # 요약본 파일 하단에 추가
     summary_path = digest_path.replace(".md", ".summary.md")
     if os.path.exists(summary_path):
-        with open(summary_path, "a", encoding="utf-8") as f:
-            f.write("\n\n---\n" + alert_content)
+        with open(summary_path, "r", encoding="utf-8") as f:
+            summary_content = f.read()
+
+        if ALERT_START in summary_content and ALERT_END in summary_content:
+            start = summary_content.index(ALERT_START)
+            end = summary_content.index(ALERT_END) + len(ALERT_END)
+            summary_content = (
+                summary_content[:start].rstrip() + "\n" + summary_content[end:].lstrip()
+            )
+        else:
+            summary_content = summary_content.rstrip() + "\n\n---\n"
+
+        with open(summary_path, "w", encoding="utf-8") as f:
+            f.write(summary_content.rstrip() + "\n\n" + wrapped_alert + "\n")
         print(f"  ✓ 패러다임 변화 감지 결과가 {summary_path}에 추가되었습니다.")
     else:
         print(f"  [Error] 요약본 파일을 찾을 수 없습니다: {summary_path}")

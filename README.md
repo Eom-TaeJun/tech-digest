@@ -19,20 +19,25 @@ AI 기술 트렌드를 **GitHub 기반 실제 사용자 신호** 중심으로 �
 ## 업데이트
 
 - **수집**: 매일 오전 9시 KST (Perplexity `sonar-pro`)
-- **원본**: [`raw/`](./raw/) — Perplexity 원본 JSON
-- **다이제스트**: [`digest/`](./digest/) — 마크다운 정리본 + Claude 재요약본
+- **원본**: [`raw/`](./raw/) — 공식 소스 + GitHub 직접 신호 + Perplexity 결과가 합쳐진 원본 JSON
+- **다이제스트**: [`digest/`](./digest/) — 읽기용 압축 마크다운 + Claude 재요약본
 
 ## 구조
 
 ```
-config.yaml                   ← 수집 설정 (섹션·쿼리·툴 목록 등)
-baseline_architecture.yaml    ← 아키텍처 설계 기준점 (탐지용)
-scripts/fetch_perplexity.py   ← Step 1: Perplexity 수집
-scripts/summarize_claude.py   ← Step 2: Claude 재요약
-scripts/detect_paradigm_shifts.py ← Step 3: 패러다임 변화 탐지 (NEW)
-raw/YYYY-MM-DD.json           ← Perplexity 원본 JSON
-digest/YYYY-MM-DD.md          ← 마크다운 변환본
-digest/YYYY-MM-DD.summary.md  ← Claude 한국어 요약본
+config.yaml                        ← 수집 설정 (섹션·쿼리·툴 목록 등)
+baseline_architecture.yaml         ← 아키텍처 설계 기준점 (탐지용)
+scripts/discover_concepts.py       ← Step 0: 신규 툴/모델/개념 발견
+scripts/fetch_official_sources.py  ← Step 0.5: 공식 릴리즈 직접 확인
+scripts/fetch_github.py            ← Step 0.6: GitHub Trending 수집
+scripts/fetch_practice_signals.py  ← Step 0.75: GitHub 직접 방법론 신호 수집
+scripts/fetch_perplexity.py        ← Step 1: Perplexity 수집
+scripts/fetch_community_sources.py ← Step 1.5: GitHub Discussions 직접 반응 수집
+scripts/summarize_claude.py        ← Step 2: Claude 재요약
+scripts/detect_paradigm_shifts.py  ← Step 3: 패러다임 변화 탐지
+raw/YYYY-MM-DD.json                ← 병합 원본 JSON (전체 응답 보관)
+digest/YYYY-MM-DD.md               ← 읽기용 압축 마크다운
+digest/YYYY-MM-DD.summary.md       ← Claude 한국어 요약본 + 패러다임 감지 결과
 ```
 
 ## 실행 순서
