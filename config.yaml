@@ -51,6 +51,8 @@ rendering:
   raw_markdown:
     max_answer_lines: 8
     max_sources: 2
+    separate_low_confidence_items: true
+    low_confidence_section_title: '참고: 근거가 약한 항목'
     truncation_notice: '[truncated in raw md; see raw JSON for full response]'
 official_sources:
   lookback_days: 14
@@ -71,6 +73,11 @@ official_sources:
         - \bGPT-\d+(?:\.\d+)?(?:\.\d+)?\b
         - \bo\d+(?:-[a-z0-9]+)?\b
         - \bCodex\b
+      release_signal_patterns:
+        - \bintroducing\b
+        - \bannouncing\b
+        - \breleased\b
+        - \bavailable\b
       max_candidate_links: 30
       api_listing:
         url: https://api.openai.com/v1/models
@@ -89,8 +96,15 @@ official_sources:
       link_patterns:
         - /news/claude
         - /news/introducing
+      exclude_link_patterns:
+        - /news/claude-code-security
       model_patterns:
         - \bClaude\s+(?:Sonnet|Opus)\s+\d+(?:\.\d+)?\b
+      release_signal_patterns:
+        - \bintroducing\b
+        - \bannouncing\b
+        - \bavailable\b
+        - \bnow available\b
       max_candidate_links: 25
 context:
   tools:

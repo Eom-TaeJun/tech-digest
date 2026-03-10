@@ -167,6 +167,12 @@ def extract_models_from_patterns(text: str, patterns: list[str]) -> list[str]:
     return found
 
 
+def has_release_signal(text: str, patterns: list[str]) -> bool:
+    if not patterns:
+        return True
+    return any(re.search(pattern, text, flags=re.I) for pattern in patterns)
+
+
 def parse_iso_date(date_str: str) -> datetime:
     return datetime.fromisoformat(date_str).replace(tzinfo=UTC)
 
@@ -234,7 +240,9 @@ def collect_vendor_releases(
     company = vendor.get("company", "Unknown")
     note = vendor.get("note", "Official vendor release post")
     link_patterns = vendor.get("link_patterns", [])
+    exclude_link_patterns = vendor.get("exclude_link_patterns", [])
     model_patterns = vendor.get("model_patterns", [])
+    release_signal_patterns = vendor.get("release_signal_patterns", [])
     max_candidate_links = vendor.get("max_candidate_links", 20)
     candidate_links = []
 
@@ -250,6 +258,11 @@ def collect_vendor_releases(
                 link for link in links
                 if any(pattern in link for pattern in link_patterns)
             ]
+        if exclude_link_patterns:
+            links = [
+                link for link in links
+                if not any(pattern in link for pattern in exclude_link_patterns)
+            ]
         candidate_links.extend(links)
 
     releases: list[OfficialRelease] = []
@@ -262,6 +275,8 @@ def collect_vendor_releases(
         text = html_to_text(page_html)
         release_date = find_date(text[:date_search_chars])
         if not release_date:
+            continue
+        if not has_release_signal(text[:model_search_chars], release_signal_patterns):
             continue
         models = extract_models_from_patterns(text[:model_search_chars], model_patterns)
         if not models:

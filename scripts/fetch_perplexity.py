@@ -11,6 +11,8 @@ import requests
 from urllib.parse import urlparse
 from datetime import datetime, timezone, timedelta
 
+from confidence_utils import classify_confidence, confidence_gate
+
 KST = timezone(timedelta(hours=9))
 TODAY = datetime.now(KST).strftime("%Y-%m-%d")
 
@@ -291,6 +293,11 @@ def build_markdown(results: dict, config: dict) -> str:
         "truncation_notice",
         "[truncated in raw md; see raw JSON for full response]",
     )
+    low_confidence_title = raw_md_config.get(
+        "low_confidence_section_title",
+        "참고: 근거가 약한 항목",
+    )
+    gate = confidence_gate(config)
     lines = [
         f"# AI Tech Digest — {TODAY}",
         "",
@@ -300,19 +307,20 @@ def build_markdown(results: dict, config: dict) -> str:
         "---",
         "",
     ]
+    low_confidence_items = []
 
     merged_queries = iter_queries(config)
     for i, section in enumerate(config["sections"], 1):
-        lines.append(f"## {i}. {section['title']}")
-        lines.append("")
+        section_lines = [f"## {i}. {section['title']}", ""]
+        section_has_content = False
 
         for q in [item for item in merged_queries if item["_section_id"] == section["id"]]:
             if q["id"] not in results:
                 continue
             r = results[q["id"]]
-            lines.append(f"### {section['emoji']} {r['title']}")
-            lines.append("")
-            lines.append(
+            confidence = classify_confidence(r, gate)
+            item_lines = [f"### {section['emoji']} {r['title']}", ""]
+            item_lines.append(
                 compact_markdown_answer(
                     r["answer"],
                     q.get("raw_markdown_chars", config.get("query_defaults", {}).get("raw_markdown_chars", 700)),
@@ -320,29 +328,45 @@ def build_markdown(results: dict, config: dict) -> str:
                     truncation_notice,
                 )
             )
-            lines.append("")
+            item_lines.append("")
 
             if r.get("evidence"):
                 ev = r["evidence"]
-                lines.append(
+                item_lines.append(
                     f"> Evidence: official={ev['official_source_count']} / "
                     f"community={ev['community_source_count']} / "
                     f"other={ev.get('other_source_count', 0)} / "
                     f"filtered={ev.get('filtered_out_citation_count', 0)} / "
-                    f"recency={r.get('recency', config['perplexity']['recency'])}"
+                    f"recency={r.get('recency', config['perplexity']['recency'])} / "
+                    f"confidence={confidence}"
                 )
-                lines.append("")
+                item_lines.append("")
 
             if r.get("citations"):
-                lines.append("**Sources:**")
+                item_lines.append("**Sources:**")
                 for j, url in enumerate(r["citations"][:max_sources], 1):
-                    lines.append(f"{j}. {url}")
+                    item_lines.append(f"{j}. {url}")
                 if len(r["citations"]) > max_sources:
-                    lines.append(f"- ... {len(r['citations']) - max_sources} more")
-                lines.append("")
+                    item_lines.append(f"- ... {len(r['citations']) - max_sources} more")
+                item_lines.append("")
 
-            lines.append("---")
-            lines.append("")
+            item_lines.append("---")
+            item_lines.append("")
+
+            if confidence == "LOW" and raw_md_config.get("separate_low_confidence_items", True):
+                low_confidence_items.extend(item_lines)
+                continue
+
+            section_lines.extend(item_lines)
+            section_has_content = True
+
+        if section_has_content:
+            lines.extend(section_lines)
+
+    if low_confidence_items:
+        lines.append(f"## {low_confidence_title}")
+        lines.append("")
+        lines.extend(low_confidence_items)
 
     lines.append(
         f"*Generated at {datetime.now(KST).strftime('%Y-%m-%d %H:%M KST')} "
