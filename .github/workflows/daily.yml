@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write       # 결과 파일 커밋 권한
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
@@ -23,10 +25,7 @@ jobs:
       - name: 의존성 설치
         run: pip install requests anthropic pyyaml
 
-      - name: Step 0 - 신규 개념 탐색
-        run: python scripts/discover_concepts.py
-        env:
-          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+      # ── 무료 API 수집 (항상 실행) ──────────────────────
 
       - name: Step 0.5 - 공식 릴리즈 수집
         run: python scripts/fetch_official_sources.py
@@ -43,15 +42,26 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Step 1 - Perplexity 수집
-        run: python scripts/fetch_perplexity.py
-        env:
-          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+      - name: Step 0.8 - Hacker News AI 트렌드 수집
+        run: python scripts/fetch_hackernews.py
+
+      - name: Step 0 - 신규 개념 탐색 (GitHub Trending 기반)
+        run: python scripts/discover_concepts.py
 
       - name: Step 1.5 - 직접 커뮤니티 반응 수집
         run: python scripts/fetch_community_sources.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── Perplexity 수집 (선택, 실패해도 계속) ──────────
+
+      - name: Step 1 - Perplexity 수집 (optional)
+        run: python scripts/fetch_perplexity.py
+        continue-on-error: true
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+
+      # ── 요약 & 분석 ───────────────────────────────────
 
       - name: Step 2 - Claude 재요약
         run: python scripts/summarize_claude.py
