@@ -29,6 +29,7 @@ jobs:
 
       - name: Step 0.5 - 공식 릴리즈 수집
         run: python scripts/fetch_official_sources.py
+        continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
@@ -39,17 +40,21 @@ jobs:
 
       - name: Step 0.75 - 직접 방법론 신호 수집
         run: python scripts/fetch_practice_signals.py
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Step 0.8 - Hacker News AI 트렌드 수집
         run: python scripts/fetch_hackernews.py
+        continue-on-error: true
 
       - name: Step 0 - 신규 개념 탐색 (GitHub Trending 기반)
         run: python scripts/discover_concepts.py
+        continue-on-error: true
 
       - name: Step 1.5 - 직접 커뮤니티 반응 수집
         run: python scripts/fetch_community_sources.py
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
