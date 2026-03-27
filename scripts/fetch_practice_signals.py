@@ -169,6 +169,28 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
+def configured_groups(config: dict) -> list[dict]:
+    github = config.get("github", {})
+    groups = []
+    for raw_group in github.get("practice_signal_groups", []):
+        label = raw_group.get("label") or raw_group.get("id") or "Unnamed"
+        terms = [term for term in raw_group.get("terms", []) if term]
+        if not terms:
+            continue
+        groups.append(
+            {
+                "id": raw_group.get("id") or slugify(label)[:40],
+                "label": label,
+                "terms": terms,
+                "source": "configured",
+                "score": 0.0,
+                "require_any": raw_group.get("require_any", []),
+                "exclude_any": raw_group.get("exclude_any", []),
+            }
+        )
+    return groups
+
+
 def load_raw() -> dict:
     path = os.path.join("raw", f"{TODAY}.json")
     if not os.path.exists(path):
@@ -186,6 +208,10 @@ def save_raw(data: dict) -> None:
 
 def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+
+def group_text_matches(text: str, keywords: list[str]) -> bool:
+    return any(term_matches_text(text, keyword) for keyword in keywords)
 
 
 def term_matches_text(text: str, term: str) -> bool:
@@ -338,7 +364,42 @@ def safe_post(url: str, **kwargs):
         return None
 
 
-def fetch_github_repos(term: str) -> list[dict]:
+def repo_matches_group(item: dict, term: str, group: dict) -> bool:
+    searchable = " ".join(
+        [
+            item.get("full_name", ""),
+            item.get("name", ""),
+            item.get("description") or "",
+            " ".join(item.get("topics", [])),
+        ]
+    )
+    if not term_matches_text(searchable, term):
+        return False
+
+    require_any = group.get("require_any", [])
+    exclude_any = group.get("exclude_any", [])
+    if require_any and not group_text_matches(searchable, require_any):
+        return False
+    if exclude_any and group_text_matches(searchable, exclude_any):
+        return False
+    return True
+
+
+def discussion_matches_group(title: str, body: str, repository: str, term: str, group: dict) -> bool:
+    searchable = f"{title} {body} {repository}"
+    if not term_matches_text(searchable, term):
+        return False
+
+    require_any = group.get("require_any", [])
+    exclude_any = group.get("exclude_any", [])
+    if require_any and not group_text_matches(searchable, require_any):
+        return False
+    if exclude_any and group_text_matches(searchable, exclude_any):
+        return False
+    return True
+
+
+def fetch_github_repos(term: str, group: dict) -> list[dict]:
     since = (datetime.now(UTC) - timedelta(days=30)).strftime("%Y-%m-%d")
     resp = safe_get(
         GITHUB_SEARCH_API,
@@ -362,15 +423,7 @@ def fetch_github_repos(term: str) -> list[dict]:
     results = []
     now = datetime.now(UTC)
     for item in items:
-        searchable = " ".join(
-            [
-                item.get("full_name", ""),
-                item.get("name", ""),
-                item.get("description") or "",
-                " ".join(item.get("topics", [])),
-            ]
-        )
-        if not term_matches_text(searchable, term):
+        if not repo_matches_group(item, term, group):
             continue
         created = datetime.fromisoformat(item["created_at"].replace("Z", "+00:00"))
         days_old = max((now - created).total_seconds() / 86400, 0.1)
@@ -378,6 +431,7 @@ def fetch_github_repos(term: str) -> list[dict]:
             {
                 "source": "github_repo",
                 "term": term,
+                "group_id": group.get("id", ""),
                 "name": item["full_name"],
                 "title": item["full_name"],
                 "description": item.get("description") or "",
@@ -393,7 +447,7 @@ def fetch_github_repos(term: str) -> list[dict]:
     return results
 
 
-def fetch_github_discussions(term: str) -> list[dict]:
+def fetch_github_discussions(term: str, group: dict) -> list[dict]:
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
         return []
@@ -422,15 +476,17 @@ def fetch_github_discussions(term: str) -> list[dict]:
         node = edge.get("node") or {}
         title = node.get("title") or ""
         body = node.get("bodyText") or ""
-        if not term_matches_text(f"{title} {body}", term):
+        repository = (node.get("repository") or {}).get("nameWithOwner", "")
+        if not discussion_matches_group(title, body, repository, term, group):
             continue
         results.append(
             {
                 "source": "github_discussion",
                 "term": term,
+                "group_id": group.get("id", ""),
                 "title": title,
                 "url": node.get("url"),
-                "repository": (node.get("repository") or {}).get("nameWithOwner", ""),
+                "repository": repository,
                 "comments": node.get("comments", {}).get("totalCount", 0),
                 "upvotes": node.get("upvoteCount", 0),
                 "author": (node.get("author") or {}).get("login", ""),
@@ -484,6 +540,7 @@ def summarize_groups(groups: list[dict]) -> tuple[str, list[str], dict]:
         total_items += repo_count + discussion_count
 
         lines.append(f"### {group['label']}")
+        lines.append(f"- Tracked queries: {', '.join(group['terms'])}")
         lines.append(
             f"- Signal counts: GitHub repos={repo_count}, GitHub Discussions={discussion_count}"
         )
@@ -514,8 +571,10 @@ def summarize_groups(groups: list[dict]) -> tuple[str, list[str], dict]:
 
 def main():
     print(f"[{TODAY}] Direct practice signals fetch 시작")
+    config = load_config()
     raw = load_raw()
 
+    static_groups = configured_groups(config)
     dynamic_groups = discover_dynamic_groups(raw)
     fallback_groups = [
         {**group, "source": "fallback", "score": 0.0} for group in FALLBACK_GROUPS
@@ -524,6 +583,15 @@ def main():
     groups_to_scan = []
     seen_ids = set()
     seen_labels = set()
+    for group in static_groups:
+        gid = group["id"]
+        label = group["label"].lower()
+        if gid in seen_ids or label in seen_labels:
+            continue
+        seen_ids.add(gid)
+        seen_labels.add(label)
+        groups_to_scan.append(group)
+
     for group in dynamic_groups:
         gid = group["id"]
         label = group["label"].lower()
@@ -532,11 +600,11 @@ def main():
         seen_ids.add(gid)
         seen_labels.add(label)
         groups_to_scan.append(group)
-        if len(groups_to_scan) >= 5:
+        if len(groups_to_scan) >= max(5, len(static_groups) + 3):
             break
 
     for group in fallback_groups:
-        if len(groups_to_scan) >= 7:
+        if len(groups_to_scan) >= max(7, len(static_groups) + 5):
             break
         gid = group["id"]
         label = group["label"].lower()
@@ -552,8 +620,8 @@ def main():
         github_discussions = []
 
         for term in group["terms"]:
-            github_repos.extend(fetch_github_repos(term))
-            github_discussions.extend(fetch_github_discussions(term))
+            github_repos.extend(fetch_github_repos(term, group))
+            github_discussions.extend(fetch_github_discussions(term, group))
 
         github_repos = [
             item for item in rank_repos(github_repos) if item["stars"] >= MIN_REPO_STARS
@@ -582,7 +650,10 @@ def main():
         )
 
     answer, citations, evidence = summarize_groups(groups)
-    raw["practice_signals"] = {"groups": groups}
+    raw["practice_signals"] = {
+        "groups": groups,
+        "configured_groups": static_groups,
+    }
 
     results = raw.setdefault("results", {})
     results["community_practice_signals"] = {

@@ -24,13 +24,18 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
-def load_raw(date: str) -> tuple[dict, list]:
+def load_raw(date: str) -> tuple[dict, list, list, dict]:
     path = f"raw/{date}.json"
     if not os.path.exists(path):
         raise FileNotFoundError(f"raw 파일 없음: {path}")
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
-    return data["results"], data.get("github_trending", [])
+    return (
+        data["results"],
+        data.get("github_trending", []),
+        data.get("hackernews_trending", []),
+        data.get("practice_signals", {}),
+    )
 
 
 def load_prev_summary(today_str: str) -> str:
@@ -66,6 +71,54 @@ def build_github_section(trending: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def build_hackernews_section(hn_trending: list[dict]) -> str:
+    if not hn_trending:
+        return ""
+    lines = [
+        "## [Hacker News] AI 관련 인기 토론 (최근 72시간)",
+        "",
+    ]
+    for i, s in enumerate(hn_trending[:10], 1):
+        lines.append(
+            f"{i}. **[{s['title']}]({s['hn_url']})** "
+            f"↑{s['points']} 💬{s['comments']}"
+        )
+        if s.get("url") and s["url"] != s["hn_url"]:
+            lines.append(f"   원문: {s['url']}")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def build_practice_section(practice_signals: dict) -> str:
+    groups = practice_signals.get("groups", [])
+    if not groups:
+        return ""
+    lines = [
+        "## [Practice Signals] GitHub 방법론 신호",
+        "",
+    ]
+    for g in groups[:6]:
+        repos = g.get("github_repos", [])
+        discussions = g.get("github_discussions", [])
+        if not repos and not discussions:
+            continue
+        lines.append(f"### {g.get('label', 'Unknown')}")
+        for r in repos[:2]:
+            lines.append(
+                f"- Repo: [{r['name']}]({r['url']}) ★{r['stars']} ({r.get('star_velocity', 0)}★/일)"
+            )
+        for d in discussions[:2]:
+            lines.append(
+                f"- Discussion: [{d['title']}]({d['url']}) ↑{d.get('upvotes', 0)} 💬{d.get('comments', 0)}"
+            )
+        lines.append("")
+    lines.append("---")
+    lines.append("")
+    return "\n".join(lines)
+
+
 def format_result_for_summary(result: dict, config: dict) -> tuple[str, str]:
     gate = confidence_gate(config)
     confidence = classify_confidence(result, gate)
@@ -91,7 +144,8 @@ def format_result_for_summary(result: dict, config: dict) -> tuple[str, str]:
     return confidence, answer
 
 
-def build_prompt(results: dict, github_trending: list, config: dict, prev_summary: str = "") -> str:
+def build_prompt(results: dict, github_trending: list, config: dict, prev_summary: str = "",
+                 hn_trending: list = None, practice_signals: dict = None) -> str:
     gate = confidence_gate(config)
     lines = [
         f"아래는 오늘({TODAY}) 수집한 AI 기술 커뮤니티 반응 원본입니다.",
@@ -161,6 +215,14 @@ def build_prompt(results: dict, github_trending: list, config: dict, prev_summar
     if github_block:
         lines.append(github_block)
 
+    hn_block = build_hackernews_section(hn_trending or [])
+    if hn_block:
+        lines.append(hn_block)
+
+    practice_block = build_practice_section(practice_signals or {})
+    if practice_block:
+        lines.append(practice_block)
+
     lines.append(config["summary"]["output_format"].format(date=TODAY))
     return "\n".join(lines)
 
@@ -173,11 +235,13 @@ def main():
     print(f"[{TODAY}] Claude 재요약 시작 (model: {model})")
 
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-    results, github_trending = load_raw(TODAY)
+    results, github_trending, hn_trending, practice_signals = load_raw(TODAY)
     prev_summary = load_prev_summary(TODAY)
-    print(f"  → GitHub Trending 데이터: {len(github_trending)}개 레포")
+    print(f"  → GitHub Trending: {len(github_trending)}개 레포")
+    print(f"  → Hacker News: {len(hn_trending)}건")
+    print(f"  → Practice Signals: {len(practice_signals.get('groups', []))}개 그룹")
     print(f"  → 전날 요약: {'로드됨' if prev_summary else '없음'}")
-    prompt = build_prompt(results, github_trending, config, prev_summary)
+    prompt = build_prompt(results, github_trending, config, prev_summary, hn_trending, practice_signals)
 
     response = client.messages.create(
         model=model,

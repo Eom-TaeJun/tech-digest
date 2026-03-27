@@ -35,6 +35,7 @@ scripts/fetch_perplexity.py        ← Step 1: Perplexity 수집
 scripts/fetch_community_sources.py ← Step 1.5: GitHub Discussions 직접 반응 수집
 scripts/summarize_claude.py        ← Step 2: Claude 재요약
 scripts/detect_paradigm_shifts.py  ← Step 3: 패러다임 변화 탐지
+docs/github-search-playbook.md     ← GitHub 직접 링크 재수집 플레이북
 raw/YYYY-MM-DD.json                ← 병합 원본 JSON (전체 응답 보관)
 digest/YYYY-MM-DD.md               ← 읽기용 압축 마크다운
 digest/YYYY-MM-DD.summary.md       ← Claude 한국어 요약본 + 패러다임 감지 결과
@@ -66,6 +67,7 @@ digest/YYYY-MM-DD.summary.md       ← Claude 한국어 요약본 + 패러다임
 - **툴/모델 목록 업데이트** → `context.tools` / `context.models`
 - **섹션/쿼리 추가·삭제** → `sections` 블록
 - **수집 모델·빈도 변경** → `perplexity.model` / `perplexity.recency`
+- **GitHub 직접 탐색 그룹 조정** → `github.practice_signal_groups`
 
 ## 목적
 

@@ -8,6 +8,7 @@ digest/YYYY-MM-DD.md          ← 원문 전체 (레퍼런스용, 필요 시만 
 raw/YYYY-MM-DD.json           ← 수집 원본 데이터
 scripts/                      ← 수집·요약 파이프라인
 config.yaml                   ← 쿼리·모델·섹션 설정
+docs/github-search-playbook.md ← GitHub 직접 탐색 쿼리와 링크 수집 기준
 ```
 
 ---
@@ -44,6 +45,13 @@ python scripts/detect_paradigm_shifts.py  # Step 3:   패러다임 변화 탐지
 
 자동 실행: GitHub Actions (매일 KST 09:00)
 수동 실행: `gh workflow run "Daily Tech Digest"`
+
+`harness`, `skills`, `CLAUDE.md`, `AGENTS.md` 관련 직접 링크를 다시 찾을 때는:
+
+1. `config.yaml -> github.practice_signal_groups`
+2. `docs/github-search-playbook.md`
+
+를 먼저 본다. 요약이 아니라 **GitHub 직접 링크 재수집 기준**이 들어 있다.
 
 ---
 

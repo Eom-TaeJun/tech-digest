@@ -1,97 +1,139 @@
 """
 Daily Tech Digest - Step 0: New Concepts Discovery
-- GitHub 스타 수 / 커뮤니티 언급량 기반 새로운 도구, 모델, 개념 자동 발견
+- GitHub Trending 데이터에서 새로운 도구/모델/개념 자동 발견
+- Perplexity 의존 제거 → raw/{date}.json의 github_trending 기반
 - config.yaml의 context 섹션을 동적으로 업데이트
 """
 
 import os
+import json
 import re
 import yaml
-import requests
 from datetime import datetime, timezone, timedelta
 
 KST = timezone(timedelta(hours=9))
 TODAY = datetime.now(KST).strftime("%Y-%m-%d")
 
-BASE_URL = "https://api.perplexity.ai/chat/completions"
-API_KEY = os.environ.get("PERPLEXITY_API_KEY")
-
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "..", "config.yaml")
+
+# AI/개발도구 관련 여부 판별 — topics 기반 (가장 정확)
+AI_TOPICS = {
+    "ai", "llm", "gpt", "claude", "gemini", "agent", "mcp", "prompt",
+    "embedding", "rag", "transformer", "openai", "anthropic", "langchain",
+    "machine-learning", "deep-learning", "nlp", "chatbot", "copilot",
+    "ai-agent", "llm-agent", "coding-assistant",
+}
+# description 기반 보조 키워드 (최소 2개 이상 매칭)
+AI_DESC_KEYWORDS = {
+    "ai", "llm", "agent", "claude", "gpt", "prompt", "model",
+    "embedding", "mcp", "anthropic", "openai",
+}
+
+# 카테고리 분류용 키워드
+TOOL_SIGNALS = {"tool", "framework", "cli", "sdk", "editor", "ide", "agent", "plugin", "extension", "mcp", "skill"}
+MODEL_SIGNALS = {"model", "llm", "gpt", "claude", "gemini", "llama", "mistral", "deepseek", "embedding", "fine-tun"}
+CONCEPT_SIGNALS = {"pattern", "methodology", "architecture", "protocol", "workflow", "paradigm", "harness"}
+
 
 def load_config() -> dict:
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
+
 def save_config(config: dict):
     with open(CONFIG_PATH, "w", encoding="utf-8") as f:
         yaml.dump(config, f, allow_unicode=True, sort_keys=False)
 
-def discover_new_items(config: dict) -> dict:
-    """Perplexity를 사용하여 새로운 아이템 발견"""
-    existing_tools = config["context"].get("tools", [])
-    existing_models = config["context"].get("models", [])
-    existing_concepts = config["context"].get("concepts", [])
-    
-    prompt = f"""
-    Identify the most trending NEW AI engineering tools, models, and methodology concepts from the past 7 days.
-    Focus on items with high GitHub star velocity (>100 stars/day) or significant mentions on Reddit/Hacker News.
-    
-    EXCLUDE these items (already tracked):
-    Tools: {", ".join(existing_tools)}
-    Models: {", ".join(existing_models)}
-    Concepts: {", ".join(existing_concepts)}
-    
-    Provide the response in the following JSON-like format:
-    NEW_TOOLS: [item1, item2, ...]
-    NEW_MODELS: [item1, item2, ...]
-    NEW_CONCEPTS: [item1, item2, ...]
-    
-    Only include items that are genuinely new or reached a major milestone/spike this week.
-    For each item, ensure it's a specific name (e.g., "OpenClaw" not "Agent Frameworks").
-    """
 
-    payload = {
-        "model": "sonar-pro",
-        "messages": [
-            {"role": "system", "content": "You are a specialized discovery agent for AI technology trends. Extract specific names of new tools and models."},
-            {"role": "user", "content": prompt},
-        ],
-        "search_recency_filter": "week",
-    }
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json",
+def load_trending(date: str) -> list[dict]:
+    raw_path = f"raw/{date}.json"
+    if not os.path.exists(raw_path):
+        return []
+    with open(raw_path, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("github_trending", [])
+
+
+def classify_repo(repo: dict) -> str:
+    """레포 이름/설명/토픽에서 카테고리 추론"""
+    text = f"{repo.get('name', '')} {repo.get('description', '')} {' '.join(repo.get('topics', []))}".lower()
+
+    model_score = sum(1 for kw in MODEL_SIGNALS if kw in text)
+    tool_score = sum(1 for kw in TOOL_SIGNALS if kw in text)
+    concept_score = sum(1 for kw in CONCEPT_SIGNALS if kw in text)
+
+    if model_score > tool_score and model_score > concept_score:
+        return "models"
+    if concept_score > tool_score:
+        return "concepts"
+    return "tools"
+
+
+def extract_name(repo: dict) -> str:
+    """레포에서 프로젝트명 추출 (org/repo → repo)"""
+    name = repo.get("name", "")
+    if "/" in name:
+        name = name.split("/")[-1]
+    return name
+
+
+def is_ai_relevant(repo: dict) -> bool:
+    """AI/개발도구 관련 레포인지 판별 — topics 우선, description 보조"""
+    topics = {t.lower() for t in repo.get("topics", [])}
+    if topics & AI_TOPICS:
+        return True
+    # topics 없으면 description에서 키워드 2개 이상 매칭
+    desc = f"{repo.get('name', '')} {repo.get('description', '')}".lower()
+    matches = sum(1 for kw in AI_DESC_KEYWORDS if kw in desc)
+    return matches >= 2
+
+
+def discover_from_trending(trending: list[dict], config: dict) -> dict:
+    """GitHub Trending 데이터에서 새 아이템 발견"""
+    existing = {
+        "tools": set(config["context"].get("tools", [])),
+        "models": set(config["context"].get("models", [])),
+        "concepts": set(config["context"].get("concepts", [])),
     }
 
-    print(f"[{TODAY}] Discovering new AI concepts via Perplexity...")
-    resp = requests.post(BASE_URL, headers=headers, json=payload, timeout=60)
-    resp.raise_for_status()
-    content = resp.json()["choices"][0]["message"]["content"]
-    
     new_items = {"tools": [], "models": [], "concepts": []}
-    
-    # 텍스트 결과에서 리스트 추출 (정규표현식 사용)
-    tool_match = re.search(r"NEW_TOOLS:\s*\[(.*?)\]", content)
-    model_match = re.search(r"NEW_MODELS:\s*\[(.*?)\]", content)
-    concept_match = re.search(r"NEW_CONCEPTS:\s*\[(.*?)\]", content)
-    
-    if tool_match:
-        new_items["tools"] = [i.strip().strip('"').strip("'") for i in tool_match.group(1).split(",") if i.strip()]
-    if model_match:
-        new_items["models"] = [i.strip().strip('"').strip("'") for i in model_match.group(1).split(",") if i.strip()]
-    if concept_match:
-        new_items["concepts"] = [i.strip().strip('"').strip("'") for i in concept_match.group(1).split(",") if i.strip()]
-        
+
+    for repo in trending:
+        velocity = repo.get("star_velocity", 0)
+        if velocity < 200:  # 높은 기준으로 노이즈 제거
+            continue
+
+        if not is_ai_relevant(repo):
+            continue
+
+        name = extract_name(repo)
+        category = classify_repo(repo)
+
+        # 기존 context에 이미 있는지 체크 (대소문자 무시)
+        existing_lower = {item.lower() for item in existing[category]}
+        if name.lower() in existing_lower:
+            continue
+
+        new_items[category].append(name)
+
     return new_items
 
+
 def main():
-    if not API_KEY:
-        print("Error: PERPLEXITY_API_KEY not found in environment.")
+    config = load_config()
+
+    # 먼저 오늘의 GitHub trending 데이터 확인
+    trending = load_trending(TODAY)
+
+    if not trending:
+        print(f"[{TODAY}] GitHub Trending 데이터 없음 — Step 0.6 이후 실행 필요")
+        print("Skip: discover_concepts (no trending data yet)")
         return
 
-    config = load_config()
-    new_found = discover_new_items(config)
-    
+    print(f"[{TODAY}] GitHub Trending 기반 신규 개념 탐색 ({len(trending)}개 레포)")
+
+    new_found = discover_from_trending(trending, config)
+
     updated = False
     for category in ["tools", "models", "concepts"]:
         for item in new_found[category]:
@@ -99,12 +141,13 @@ def main():
                 print(f"  + New {category} found: {item}")
                 config["context"][category].append(item)
                 updated = True
-    
+
     if updated:
         save_config(config)
-        print(f"Successfully updated config.yaml with new items.")
+        print("Successfully updated config.yaml with new items.")
     else:
         print("No new significant items found this time.")
+
 
 if __name__ == "__main__":
     main()

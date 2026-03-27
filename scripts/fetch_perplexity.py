@@ -380,10 +380,21 @@ def main():
     model = config["perplexity"]["model"]
     print(f"[{TODAY}] Daily Tech Digest 수집 시작 (model: {model})")
 
+    if not API_KEY:
+        print("  ⚠ PERPLEXITY_API_KEY 없음 — Perplexity 수집 스킵 (GitHub/HN 데이터만 사용)")
+        return
+
     all_queries = iter_queries(config)
+    # source: perplexity 마크된 쿼리만 실행 (나머지는 다른 Step에서 채움)
+    perplexity_queries = [q for q in all_queries if q.get("source") == "perplexity"]
+    skip_queries = [q for q in all_queries if q.get("source") != "perplexity"]
+
+    if skip_queries:
+        print(f"  → Perplexity 스킵 (다른 Step에서 수집): {[q['id'] for q in skip_queries]}")
+
     existing_raw = load_existing_raw(TODAY)
     raw_results = existing_raw.get("results", {})
-    for q in all_queries:
+    for q in perplexity_queries:
         if q["id"] in raw_results:
             print(f"    ↷ skip existing: {q['id']}")
             continue
