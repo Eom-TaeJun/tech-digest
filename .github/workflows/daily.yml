@@ -38,6 +38,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Step 0.65 - GitHub Trending Ranked (일별/주별 top5)
+        run: python scripts/fetch_trending_ranked.py
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Step 0.75 - 직접 방법론 신호 수집
         run: python scripts/fetch_practice_signals.py
         continue-on-error: true
