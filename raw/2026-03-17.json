@@ -1,0 +1,2143 @@
+{
+  "date": "2026-03-17",
+  "official_releases": [
+    {
+      "company": "OpenAI",
+      "model": "gpt-5.4",
+      "released_at": "2026-03-05",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    },
+    {
+      "company": "OpenAI",
+      "model": "gpt-5.4-pro",
+      "released_at": "2026-03-04",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    },
+    {
+      "company": "Anthropic",
+      "model": "Claude Sonnet 4.6",
+      "released_at": "2026-02-17",
+      "source_url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+      "note": "Official Anthropic news post"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "garrytan/gstack",
+      "description": "Use Garry Tan's exact Claude Code setup: 10 opinionated tools that serve as CEO, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "stars": 17212,
+      "forks": 1927,
+      "language": "TypeScript",
+      "url": "https://github.com/garrytan/gstack",
+      "created_at": "2026-03-11T21:22:45Z",
+      "days_old": 5.2,
+      "star_velocity": 3340.1,
+      "topics": []
+    },
+    {
+      "name": "aiming-lab/AutoResearchClaw",
+      "description": "Fully autonomous research from idea to paper. Chat an Idea. Get a Paper. Fully Autonomous. 🦞",
+      "stars": 1419,
+      "forks": 189,
+      "language": "Python",
+      "url": "https://github.com/aiming-lab/AutoResearchClaw",
+      "created_at": "2026-03-15T03:38:49Z",
+      "days_old": 1.9,
+      "star_velocity": 750.0,
+      "topics": [
+        "autonomous-research",
+        "citation-verification",
+        "llm-agents",
+        "multi-agent-debate",
+        "openclaw",
+        "paper-generation",
+        "scientific-discovery"
+      ]
+    },
+    {
+      "name": "Infatoshi/OpenSquirrel",
+      "description": "For people who get distracted by agents. A native Rust/GPUI control plane for running Claude Code, Codex, Cursor, and OpenCode side by side — because if you're going to be squirrely, you might as well optimize for it.",
+      "stars": 809,
+      "forks": 47,
+      "language": "Rust",
+      "url": "https://github.com/Infatoshi/OpenSquirrel",
+      "created_at": "2026-03-15T21:54:35Z",
+      "days_old": 1.1,
+      "star_velocity": 715.3,
+      "topics": []
+    },
+    {
+      "name": "calesthio/Crucix",
+      "description": "Your personal intelligence agent. Watches the world from multiple data sources and pings you when something changes.",
+      "stars": 1844,
+      "forks": 231,
+      "language": "JavaScript",
+      "url": "https://github.com/calesthio/Crucix",
+      "created_at": "2026-03-14T07:33:06Z",
+      "days_old": 2.7,
+      "star_velocity": 675.6,
+      "topics": []
+    },
+    {
+      "name": "NVIDIA/NemoClaw",
+      "description": "NVIDIA plugin for secure installation of OpenClaw",
+      "stars": 739,
+      "forks": 98,
+      "language": "TypeScript",
+      "url": "https://github.com/NVIDIA/NemoClaw",
+      "created_at": "2026-03-15T17:04:09Z",
+      "days_old": 1.3,
+      "star_velocity": 554.5,
+      "topics": []
+    },
+    {
+      "name": "rasbt/llm-architecture-gallery",
+      "description": "LLM Architecture Gallery source data",
+      "stars": 529,
+      "forks": 36,
+      "language": "Unknown",
+      "url": "https://github.com/rasbt/llm-architecture-gallery",
+      "created_at": "2026-03-15T22:50:46Z",
+      "days_old": 1.1,
+      "star_velocity": 484.4,
+      "topics": [
+        "ai",
+        "llms"
+      ]
+    },
+    {
+      "name": "pasky/chrome-cdp-skill",
+      "description": "Give your AI agent access to your live Chrome session — works out of the box, connects to tabs you already have open",
+      "stars": 1869,
+      "forks": 101,
+      "language": "JavaScript",
+      "url": "https://github.com/pasky/chrome-cdp-skill",
+      "created_at": "2026-03-13T00:35:39Z",
+      "days_old": 4.0,
+      "star_velocity": 465.0,
+      "topics": []
+    },
+    {
+      "name": "MoonshotAI/Attention-Residuals",
+      "description": "",
+      "stars": 658,
+      "forks": 38,
+      "language": "Unknown",
+      "url": "https://github.com/MoonshotAI/Attention-Residuals",
+      "created_at": "2026-03-15T13:29:15Z",
+      "days_old": 1.5,
+      "star_velocity": 444.0,
+      "topics": []
+    },
+    {
+      "name": "jackwener/opencli",
+      "description": "Make any website your CLI. A powerful, AI-native runtime for seamless browser automation and dynamic web data extraction.",
+      "stars": 895,
+      "forks": 78,
+      "language": "TypeScript",
+      "url": "https://github.com/jackwener/opencli",
+      "created_at": "2026-03-14T22:10:23Z",
+      "days_old": 2.1,
+      "star_velocity": 422.2,
+      "topics": []
+    },
+    {
+      "name": "skernelx/tavily-key-generator",
+      "description": "Multi-service toolkit for Tavily and Firecrawl signup automation, key validation, and isolated proxy pools.",
+      "stars": 1142,
+      "forks": 771,
+      "language": "Python",
+      "url": "https://github.com/skernelx/tavily-key-generator",
+      "created_at": "2026-03-14T04:12:22Z",
+      "days_old": 2.9,
+      "star_velocity": 398.1,
+      "topics": [
+        "api-key-generator",
+        "browser-automation",
+        "camoufox",
+        "cloudflare",
+        "duckmail",
+        "email-automation",
+        "fastapi",
+        "firecrawl",
+        "mcp",
+        "playwright",
+        "proxy-server",
+        "tavily"
+      ]
+    },
+    {
+      "name": "davebcn87/pi-autoresearch",
+      "description": "Autonomous experiment loop extension for pi",
+      "stars": 1986,
+      "forks": 98,
+      "language": "TypeScript",
+      "url": "https://github.com/davebcn87/pi-autoresearch",
+      "created_at": "2026-03-11T20:25:53Z",
+      "days_old": 5.2,
+      "star_velocity": 382.5,
+      "topics": []
+    },
+    {
+      "name": "TianyiDataScience/openclaw-control-center",
+      "description": "Turn OpenClaw from a black box into a local control center you can see, trust, and control.",
+      "stars": 1887,
+      "forks": 263,
+      "language": "TypeScript",
+      "url": "https://github.com/TianyiDataScience/openclaw-control-center",
+      "created_at": "2026-03-11T11:52:02Z",
+      "days_old": 5.5,
+      "star_velocity": 340.0,
+      "topics": []
+    },
+    {
+      "name": "THU-MAIC/OpenMAIC",
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "stars": 1854,
+      "forks": 244,
+      "language": "TypeScript",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "created_at": "2026-03-11T10:13:16Z",
+      "days_old": 5.6,
+      "star_velocity": 330.0,
+      "topics": []
+    },
+    {
+      "name": "novatic14/MANPADS-System-Launcher-and-Rocket",
+      "description": "",
+      "stars": 1390,
+      "forks": 357,
+      "language": "Unknown",
+      "url": "https://github.com/novatic14/MANPADS-System-Launcher-and-Rocket",
+      "created_at": "2026-03-11T22:44:44Z",
+      "days_old": 5.1,
+      "star_velocity": 272.8,
+      "topics": []
+    },
+    {
+      "name": "gsd-build/gsd-2",
+      "description": "A powerful meta-prompting, context engineering and spec-driven development system that enables agents to work for long periods of time autonomously without losing track of the big picture",
+      "stars": 1543,
+      "forks": 131,
+      "language": "TypeScript",
+      "url": "https://github.com/gsd-build/gsd-2",
+      "created_at": "2026-03-11T04:28:49Z",
+      "days_old": 5.9,
+      "star_velocity": 263.4,
+      "topics": [
+        "context-engineering",
+        "meta-prompting",
+        "spec-driven-development"
+      ]
+    }
+  ],
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "modelcontextprotocol",
+        "label": "Model Context Protocol",
+        "terms": [
+          "Model Context Protocol",
+          "mcp"
+        ],
+        "source": "dynamic",
+        "discovery_score": 409.5,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "name": "affaan-m/everything-claude-code",
+            "title": "affaan-m/everything-claude-code",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/everything-claude-code",
+            "stars": 80446,
+            "forks": 10327,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-03-17T01:02:18Z",
+            "star_velocity": 1386.8
+          },
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "name": "punkpeye/awesome-mcp-servers",
+            "title": "punkpeye/awesome-mcp-servers",
+            "description": "A collection of MCP servers.",
+            "url": "https://github.com/punkpeye/awesome-mcp-servers",
+            "stars": 83285,
+            "forks": 8247,
+            "topics": [
+              "ai",
+              "mcp"
+            ],
+            "created_at": "2024-11-30T04:49:10Z",
+            "updated_at": "2026-03-17T01:02:47Z",
+            "star_velocity": 176.5
+          },
+          {
+            "source": "github_repo",
+            "term": "Model Context Protocol",
+            "name": "modelcontextprotocol/servers",
+            "title": "modelcontextprotocol/servers",
+            "description": "Model Context Protocol Servers",
+            "url": "https://github.com/modelcontextprotocol/servers",
+            "stars": 81248,
+            "forks": 9930,
+            "topics": [],
+            "created_at": "2024-11-19T01:10:17Z",
+            "updated_at": "2026-03-17T00:47:53Z",
+            "star_velocity": 168.2
+          },
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "name": "open-webui/open-webui",
+            "title": "open-webui/open-webui",
+            "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+            "url": "https://github.com/open-webui/open-webui",
+            "stars": 127462,
+            "forks": 18024,
+            "topics": [
+              "ai",
+              "llm",
+              "llm-ui",
+              "llm-webui",
+              "llms",
+              "mcp",
+              "ollama",
+              "ollama-webui",
+              "open-webui",
+              "openai",
+              "openapi",
+              "rag",
+              "self-hosted",
+              "ui",
+              "webui"
+            ],
+            "created_at": "2023-10-06T22:08:27Z",
+            "updated_at": "2026-03-17T01:01:36Z",
+            "star_velocity": 142.9
+          },
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "name": "langgenius/dify",
+            "title": "langgenius/dify",
+            "description": "Production-ready platform for agentic workflow development.",
+            "url": "https://github.com/langgenius/dify",
+            "stars": 133082,
+            "forks": 20725,
+            "topics": [
+              "agent",
+              "agentic-ai",
+              "agentic-framework",
+              "agentic-workflow",
+              "ai",
+              "automation",
+              "gemini",
+              "genai",
+              "gpt",
+              "gpt-4",
+              "llm",
+              "low-code",
+              "mcp",
+              "nextjs",
+              "no-code",
+              "openai",
+              "orchestration",
+              "python",
+              "rag",
+              "workflow"
+            ],
+            "created_at": "2023-04-12T07:40:24Z",
+            "updated_at": "2026-03-17T00:55:02Z",
+            "star_velocity": 124.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "title": "v1.6.0",
+            "url": "https://github.com/outline/outline/discussions/11761",
+            "repository": "outline/outline",
+            "comments": 1,
+            "upvotes": 2,
+            "author": "admin",
+            "created_at": "2026-03-15T16:18:17Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "mcp",
+            "title": "Made MCP server with RAG semantic search to work with Ai-Assistant-Hub",
+            "url": "https://github.com/FlamxGames/godot-ai-assistant-hub/discussions/70",
+            "repository": "FlamxGames/godot-ai-assistant-hub",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "Etrinque",
+            "created_at": "2026-03-14T18:59:46Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "mcp",
+            "title": "Developer Documentation Consolidation - 2026-03-15",
+            "url": "https://github.com/github/gh-aw/discussions/21139",
+            "repository": "github/gh-aw",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-03-16T00:02:33Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "mcp",
+            "title": "FLASH Index: 「知っていることを知らない」問題への対策と認知科学パターン",
+            "url": "https://github.com/lifemate-ai/embodied-claude/discussions/58",
+            "repository": "lifemate-ai/embodied-claude",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "fruitriin",
+            "created_at": "2026-03-17T00:21:37Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "mcp",
+            "title": "Welcome to FinClaw! 🦀",
+            "url": "https://github.com/NeuZhou/finclaw/discussions/9",
+            "repository": "NeuZhou/finclaw",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "NeuZhou",
+            "created_at": "2026-03-16T23:28:28Z"
+          }
+        ]
+      },
+      {
+        "id": "specdrivendevelopment",
+        "label": "Spec-Driven Development",
+        "terms": [
+          "Spec-Driven Development",
+          "spec driven development"
+        ],
+        "source": "dynamic",
+        "discovery_score": 278.8,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "Spec-Driven Development",
+            "name": "github/spec-kit",
+            "title": "github/spec-kit",
+            "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+            "url": "https://github.com/github/spec-kit",
+            "stars": 77498,
+            "forks": 6585,
+            "topics": [
+              "ai",
+              "copilot",
+              "development",
+              "engineering",
+              "prd",
+              "spec",
+              "spec-driven"
+            ],
+            "created_at": "2025-08-21T22:54:31Z",
+            "updated_at": "2026-03-17T01:02:35Z",
+            "star_velocity": 374.2
+          },
+          {
+            "source": "github_repo",
+            "term": "Spec-Driven Development",
+            "name": "gsd-build/get-shit-done",
+            "title": "gsd-build/get-shit-done",
+            "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+            "url": "https://github.com/gsd-build/get-shit-done",
+            "stars": 31125,
+            "forks": 2614,
+            "topics": [
+              "claude-code",
+              "context-engineering",
+              "meta-prompting",
+              "spec-driven-development"
+            ],
+            "created_at": "2025-12-14T14:17:12Z",
+            "updated_at": "2026-03-17T01:00:38Z",
+            "star_velocity": 336.7
+          },
+          {
+            "source": "github_repo",
+            "term": "Spec-Driven Development",
+            "name": "gsd-build/gsd-2",
+            "title": "gsd-build/gsd-2",
+            "description": "A powerful meta-prompting, context engineering and spec-driven development system that enables agents to work for long periods of time autonomously without losing track of the big picture",
+            "url": "https://github.com/gsd-build/gsd-2",
+            "stars": 1543,
+            "forks": 131,
+            "topics": [
+              "context-engineering",
+              "meta-prompting",
+              "spec-driven-development"
+            ],
+            "created_at": "2026-03-11T04:28:49Z",
+            "updated_at": "2026-03-17T01:00:49Z",
+            "star_velocity": 263.4
+          },
+          {
+            "source": "github_repo",
+            "term": "Spec-Driven Development",
+            "name": "Fission-AI/OpenSpec",
+            "title": "Fission-AI/OpenSpec",
+            "description": "Spec-driven development (SDD) for AI coding assistants.",
+            "url": "https://github.com/Fission-AI/OpenSpec",
+            "stars": 31154,
+            "forks": 2053,
+            "topics": [
+              "ai",
+              "context-engineering",
+              "engineering",
+              "planning",
+              "prd",
+              "sdd",
+              "sdlc",
+              "spec",
+              "spec-driven-development",
+              "specification"
+            ],
+            "created_at": "2025-08-05T10:37:45Z",
+            "updated_at": "2026-03-17T01:02:44Z",
+            "star_velocity": 139.3
+          },
+          {
+            "source": "github_repo",
+            "term": "Spec-Driven Development",
+            "name": "Pimzino/spec-workflow-mcp",
+            "title": "Pimzino/spec-workflow-mcp",
+            "description": "A Model Context Protocol (MCP) server that provides structured spec-driven development workflow tools for AI-assisted software development, featuring a real-time web dashboard and VSCode extension for monitoring and managing your project's progress directly in your development environment.",
+            "url": "https://github.com/Pimzino/spec-workflow-mcp",
+            "stars": 4014,
+            "forks": 329,
+            "topics": [],
+            "created_at": "2025-08-07T13:18:06Z",
+            "updated_at": "2026-03-17T00:52:56Z",
+            "star_velocity": 18.1
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Spec-Driven Development",
+            "title": "Adding policies on LLM usage to BeeWare projects",
+            "url": "https://github.com/beeware/beeware/discussions/621",
+            "repository": "beeware/beeware",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "freakboy3742",
+            "created_at": "2026-03-11T07:03:12Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Spec-Driven Development",
+            "title": "Strategy for managing superseded/obsolete specs?",
+            "url": "https://github.com/github/spec-kit/discussions/1818",
+            "repository": "github/spec-kit",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "BriceAubert",
+            "created_at": "2026-03-12T12:04:41Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Spec-Driven Development",
+            "title": "How I force Copilot to write deterministic React UI (using a custom Markdown Skill)",
+            "url": "https://github.com/orgs/community/discussions/189283",
+            "repository": "community/community",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "MegaByteMark",
+            "created_at": "2026-03-11T21:59:15Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Spec-Driven Development",
+            "title": "Should specification files generated by OpenSpec pushed to the remote git repository?",
+            "url": "https://github.com/Fission-AI/OpenSpec/discussions/837",
+            "repository": "Fission-AI/OpenSpec",
+            "comments": 0,
+            "upvotes": 4,
+            "author": "govi20",
+            "created_at": "2026-03-12T18:31:26Z"
+          }
+        ]
+      },
+      {
+        "id": "contextengineering",
+        "label": "Context Engineering",
+        "terms": [
+          "Context Engineering",
+          "context engineering"
+        ],
+        "source": "dynamic",
+        "discovery_score": 278.8,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "name": "gsd-build/get-shit-done",
+            "title": "gsd-build/get-shit-done",
+            "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+            "url": "https://github.com/gsd-build/get-shit-done",
+            "stars": 31125,
+            "forks": 2614,
+            "topics": [
+              "claude-code",
+              "context-engineering",
+              "meta-prompting",
+              "spec-driven-development"
+            ],
+            "created_at": "2025-12-14T14:17:12Z",
+            "updated_at": "2026-03-17T01:00:38Z",
+            "star_velocity": 336.7
+          },
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "name": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "title": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+            "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "stars": 13916,
+            "forks": 1076,
+            "topics": [],
+            "created_at": "2025-12-21T02:43:42Z",
+            "updated_at": "2026-03-17T00:56:21Z",
+            "star_velocity": 161.9
+          },
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "name": "dair-ai/Prompt-Engineering-Guide",
+            "title": "dair-ai/Prompt-Engineering-Guide",
+            "description": "🐙 Guides, papers, lessons, notebooks and resources for prompt engineering, context engineering, RAG, and AI Agents.",
+            "url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
+            "stars": 71734,
+            "forks": 7661,
+            "topics": [
+              "agent",
+              "agents",
+              "ai-agents",
+              "chatgpt",
+              "deep-learning",
+              "generative-ai",
+              "language-model",
+              "llms",
+              "openai",
+              "prompt-engineering",
+              "rag"
+            ],
+            "created_at": "2022-12-16T16:04:50Z",
+            "updated_at": "2026-03-17T00:42:53Z",
+            "star_velocity": 60.5
+          },
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "name": "coleam00/context-engineering-intro",
+            "title": "coleam00/context-engineering-intro",
+            "description": "Context engineering is the new vibe coding - it's the way to actually make AI coding assistants work. Claude Code is the best for this so that's what this repo is centered around, but you can apply this strategy with any AI coding assistant!",
+            "url": "https://github.com/coleam00/context-engineering-intro",
+            "stars": 12757,
+            "forks": 2653,
+            "topics": [],
+            "created_at": "2025-07-02T11:54:47Z",
+            "updated_at": "2026-03-17T00:57:46Z",
+            "star_velocity": 49.5
+          },
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "name": "davidkimai/Context-Engineering",
+            "title": "davidkimai/Context-Engineering",
+            "description": "\"Context engineering is the delicate art and science of filling the context window with just the right information for the next step.\" — Andrej Karpathy. A frontier, first-principles handbook inspired by Karpathy and 3Blue1Brown for moving beyond prompt engineering to the wider discipline of context design, orchestration, and optimization.",
+            "url": "https://github.com/davidkimai/Context-Engineering",
+            "stars": 8564,
+            "forks": 961,
+            "topics": [],
+            "created_at": "2025-06-29T00:16:36Z",
+            "updated_at": "2026-03-16T14:38:15Z",
+            "star_velocity": 32.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "title": "posts/context_engineering_from_the_inside_out/",
+            "url": "https://github.com/gongyisheng/blog/discussions/4",
+            "repository": "gongyisheng/blog",
+            "comments": 2,
+            "upvotes": 0,
+            "author": "giscus",
+            "created_at": "2026-03-16T09:32:30Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "title": "[Design Discussion] Interactive OU Selection via OUResolver Prompt Strategy",
+            "url": "https://github.com/asgardeo/thunder/discussions/1816",
+            "repository": "asgardeo/thunder",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "ThaminduDilshan",
+            "created_at": "2026-03-15T18:28:56Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "title": "📚 Seldon Knowledge Digest — 2026-03-15",
+            "url": "https://github.com/orgs/GuitarAlchemist/discussions/10",
+            "repository": "GuitarAlchemist/Demerzel",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "spareilleux",
+            "created_at": "2026-03-15T22:07:14Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "title": "🤖 Seldon Knowledge Digest — 2026-03-15",
+            "url": "https://github.com/GuitarAlchemist/.github/discussions/3",
+            "repository": "GuitarAlchemist/.github",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "spareilleux",
+            "created_at": "2026-03-15T21:54:00Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "title": "Logging System",
+            "url": "https://github.com/Ives-algorhym/MySkillo/discussions/29",
+            "repository": "Ives-algorhym/MySkillo",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "Ives-algorhym",
+            "created_at": "2026-03-12T04:53:33Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "name": "affaan-m/everything-claude-code",
+            "title": "affaan-m/everything-claude-code",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/everything-claude-code",
+            "stars": 80446,
+            "forks": 10327,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-03-17T01:02:18Z",
+            "star_velocity": 1386.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo; the best agent harness - previously oh-my-opencode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 40528,
+            "forks": 3053,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "amp",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-code",
+              "claude-skills",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-03-17T01:02:12Z",
+            "star_velocity": 389.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "name": "peteromallet/desloppify",
+            "title": "peteromallet/desloppify",
+            "description": "Agent harness to make your slop code well-engineered and beautiful.",
+            "url": "https://github.com/peteromallet/desloppify",
+            "stars": 2435,
+            "forks": 147,
+            "topics": [
+              "agent-harness"
+            ],
+            "created_at": "2026-02-11T17:27:42Z",
+            "updated_at": "2026-03-17T00:56:24Z",
+            "star_velocity": 73.1
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "name": "lobehub/lobehub",
+            "title": "lobehub/lobehub",
+            "description": "The ultimate space for work and life — to find, build, and collaborate with agent teammates that grow with you. We are taking agent harness to the next level — enabling multi-agent collaboration, effortless agent team design, and introducing agents as the unit of work interaction.",
+            "url": "https://github.com/lobehub/lobehub",
+            "stars": 73774,
+            "forks": 14787,
+            "topics": [
+              "agent",
+              "agent-collaboration",
+              "agent-harness",
+              "ai",
+              "chatgpt",
+              "claude",
+              "deepseek",
+              "gemini",
+              "gpt",
+              "knowledge-base",
+              "mcp",
+              "openai"
+            ],
+            "created_at": "2023-05-21T07:19:12Z",
+            "updated_at": "2026-03-17T00:26:50Z",
+            "star_velocity": 71.6
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "name": "langchain-ai/deepagents",
+            "title": "langchain-ai/deepagents",
+            "description": "Agent harness built with LangChain and LangGraph. Equipped with a planning tool, a filesystem backend, and the ability to spawn subagents - well-equipped to handle complex agentic tasks.",
+            "url": "https://github.com/langchain-ai/deepagents",
+            "stars": 12915,
+            "forks": 2012,
+            "topics": [
+              "ai",
+              "deepagents",
+              "langchain",
+              "langgraph"
+            ],
+            "created_at": "2025-07-27T23:07:53Z",
+            "updated_at": "2026-03-17T01:01:23Z",
+            "star_velocity": 55.6
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "test harness",
+            "title": "Quest Arc XXIV — The Engine That Waited",
+            "url": "https://github.com/kody-w/rappterbook/discussions/5948",
+            "repository": "kody-w/rappterbook",
+            "comments": 14,
+            "upvotes": 1,
+            "author": "kody-w",
+            "created_at": "2026-03-16T17:48:24Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "title": "[REVIEW] market_maker.py — 736 Lines, 100 Predictions, Zero Resolved: Four Bugs and a Proposal",
+            "url": "https://github.com/kody-w/rappterbook/discussions/5890",
+            "repository": "kody-w/rappterbook",
+            "comments": 12,
+            "upvotes": 1,
+            "author": "kody-w",
+            "created_at": "2026-03-16T13:45:44Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "coding harness",
+            "title": "Dynamic subagent creation",
+            "url": "https://github.com/cloudflare/agents/discussions/1101",
+            "repository": "cloudflare/agents",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "timdp",
+            "created_at": "2026-03-12T13:50:07Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "test harness",
+            "title": "v0.4.3",
+            "url": "https://github.com/3dg1luk43/ha_washdata/discussions/174",
+            "repository": "3dg1luk43/ha_washdata",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "3dg1luk43",
+            "created_at": "2026-03-16T15:49:11Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "title": "[11.03.2026] PR Analysis",
+            "url": "https://github.com/paperclipai/paperclip/discussions/609",
+            "repository": "paperclipai/paperclip",
+            "comments": 0,
+            "upvotes": 2,
+            "author": "kiliczsh",
+            "created_at": "2026-03-11T13:07:53Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "name": "googleworkspace/cli",
+            "title": "googleworkspace/cli",
+            "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+            "url": "https://github.com/googleworkspace/cli",
+            "stars": 20940,
+            "forks": 974,
+            "topics": [
+              "agent-skills",
+              "ai-agent",
+              "automation",
+              "cli",
+              "discovery-api",
+              "gemini-cli-extension",
+              "google-admin",
+              "google-api",
+              "google-calendar",
+              "google-chat",
+              "google-docs",
+              "google-drive",
+              "google-sheets",
+              "google-workspace",
+              "oauth2",
+              "rust"
+            ],
+            "created_at": "2026-03-02T19:46:06Z",
+            "updated_at": "2026-03-17T00:49:05Z",
+            "star_velocity": 1472.5
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 88621,
+            "forks": 7002,
+            "topics": [],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-03-17T01:02:29Z",
+            "star_velocity": 560.1
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 95070,
+            "forks": 10208,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-03-17T01:00:17Z",
+            "star_velocity": 542.1
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "name": "sickn33/antigravity-awesome-skills",
+            "title": "sickn33/antigravity-awesome-skills",
+            "description": "The Ultimate Collection of 1000+ Agentic Skills for Claude Code/Antigravity/Cursor. Battle-tested, high-performance skills for AI agents including official skills from Anthropic and Vercel.",
+            "url": "https://github.com/sickn33/antigravity-awesome-skills",
+            "stars": 24964,
+            "forks": 4276,
+            "topics": [
+              "agentic-skills",
+              "ai-agents",
+              "ai-workflows",
+              "antigravity",
+              "autonomous-coding",
+              "claude-code",
+              "codex-cli",
+              "developer-tools",
+              "gemini-cli",
+              "mcp",
+              "prompt-engineering",
+              "skill-library"
+            ],
+            "created_at": "2026-01-14T17:48:09Z",
+            "updated_at": "2026-03-17T00:50:11Z",
+            "star_velocity": 407.2
+          },
+          {
+            "source": "github_repo",
+            "term": "claude code skill",
+            "name": "wanshuiyin/Auto-claude-code-research-in-sleep",
+            "title": "wanshuiyin/Auto-claude-code-research-in-sleep",
+            "description": "ARIS ⚔️ (Auto-Research-In-Sleep) — Claude Code skills for autonomous ML research: cross-model review loops, idea discovery, and experiment automation via Codex MCP",
+            "url": "https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep",
+            "stars": 1667,
+            "forks": 155,
+            "topics": [
+              "ai-research",
+              "ai-tools",
+              "aris",
+              "autonomous-agent",
+              "claude",
+              "claude-code",
+              "claude-code-skills",
+              "codex",
+              "deep-learning",
+              "gpt",
+              "idea-generation",
+              "llm",
+              "machine-learning",
+              "mcp",
+              "mcp-server",
+              "ml-research",
+              "openai",
+              "paper-review",
+              "paper-writing",
+              "research-automation"
+            ],
+            "created_at": "2026-03-10T07:31:45Z",
+            "updated_at": "2026-03-17T01:02:59Z",
+            "star_velocity": 247.7
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "subagents",
+            "title": "2026-03-12-claude",
+            "url": "https://github.com/tw93/tw93.github.io/discussions/248",
+            "repository": "tw93/tw93.github.io",
+            "comments": 7,
+            "upvotes": 0,
+            "author": "giscus",
+            "created_at": "2026-03-12T07:50:56Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "title": "Proposal: Skill parameterization — declaring what a skill needs from its environment",
+            "url": "https://github.com/agentskills/agentskills/discussions/246",
+            "repository": "agentskills/agentskills",
+            "comments": 1,
+            "upvotes": 3,
+            "author": "jackchuka",
+            "created_at": "2026-03-14T18:30:42Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "title": "Skills appear to mislead agents into doing work the server already handles",
+            "url": "https://github.com/vectorize-io/hindsight/discussions/592",
+            "repository": "vectorize-io/hindsight",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "soichisumi",
+            "created_at": "2026-03-16T15:09:04Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "claude code skill",
+            "title": "Protocol for bundling Agent Skills with DevContainer features",
+            "url": "https://github.com/devcontainers/spec/discussions/719",
+            "repository": "devcontainers/spec",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "sliekens",
+            "created_at": "2026-03-13T20:41:24Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "title": "PRD: Agent Context Store — OpenViking + Dev Container",
+            "url": "https://github.com/worqen/hub/discussions/2",
+            "repository": "worqen/hub",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "yuna-agent",
+            "created_at": "2026-03-16T20:35:36Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "name": "agentsmd/agents.md",
+            "title": "agentsmd/agents.md",
+            "description": "AGENTS.md — a simple, open format for guiding coding agents",
+            "url": "https://github.com/agentsmd/agents.md",
+            "stars": 19032,
+            "forks": 1374,
+            "topics": [],
+            "created_at": "2025-08-19T17:22:54Z",
+            "updated_at": "2026-03-16T23:39:27Z",
+            "star_velocity": 90.9
+          },
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 18 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 5972,
+            "forks": 832,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-03-16T23:56:37Z",
+            "star_velocity": 50.5
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "name": "microsoft/skills",
+            "title": "microsoft/skills",
+            "description": "Skills, MCP servers, Custom Agents, Agents.md for SDKs to ground Coding Agents",
+            "url": "https://github.com/microsoft/skills",
+            "stars": 1747,
+            "forks": 188,
+            "topics": [
+              "agent-skills",
+              "agents",
+              "azure",
+              "foundry",
+              "mcp",
+              "sdk",
+              "skills"
+            ],
+            "created_at": "2026-01-16T18:34:20Z",
+            "updated_at": "2026-03-17T00:53:23Z",
+            "star_velocity": 29.5
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "name": "win4r/openclaw-workspace",
+            "title": "win4r/openclaw-workspace",
+            "description": "Claude Code skill for maintaining and optimizing OpenClaw workspace files (AGENTS.md, SOUL.md, TOOLS.md, MEMORY.md, checklists)",
+            "url": "https://github.com/win4r/openclaw-workspace",
+            "stars": 173,
+            "forks": 20,
+            "topics": [
+              "openclaw",
+              "openclaw-skills"
+            ],
+            "created_at": "2026-03-11T03:48:04Z",
+            "updated_at": "2026-03-16T21:29:14Z",
+            "star_velocity": 29.4
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "name": "wasp-lang/open-saas",
+            "title": "wasp-lang/open-saas",
+            "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+            "url": "https://github.com/wasp-lang/open-saas",
+            "stars": 13589,
+            "forks": 1559,
+            "topics": [
+              "ai",
+              "authentication",
+              "aws-s3",
+              "boilerplate",
+              "chatgpt",
+              "full-stack",
+              "google-auth",
+              "hacktoberfest",
+              "nodejs",
+              "open-source",
+              "openai-api",
+              "postgresql",
+              "prisma",
+              "react",
+              "saas",
+              "saas-boilerplate",
+              "saas-starter",
+              "saas-template",
+              "typesafe",
+              "typescript"
+            ],
+            "created_at": "2023-12-01T13:54:36Z",
+            "updated_at": "2026-03-16T20:59:50Z",
+            "star_velocity": 16.2
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "title": "[PROPOSAL] noopolis.mk — The Constitution Is a Makefile",
+            "url": "https://github.com/kody-w/rappterbook/discussions/5515",
+            "repository": "kody-w/rappterbook",
+            "comments": 24,
+            "upvotes": 1,
+            "author": "kody-w",
+            "created_at": "2026-03-15T06:48:57Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "title": "🔍 Claude Code User Documentation Review - 2026-03-15",
+            "url": "https://github.com/github/gh-aw/discussions/21127",
+            "repository": "github/gh-aw",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-03-15T22:37:26Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agents md",
+            "title": "[copilot-cli-research] Copilot CLI Deep Research - 2026-03-15",
+            "url": "https://github.com/github/gh-aw/discussions/21122",
+            "repository": "github/gh-aw",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-03-15T21:25:06Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "title": "[copilot-agent-analysis] Daily Copilot Agent Analysis - 2026-03-15",
+            "url": "https://github.com/github/gh-aw/discussions/21120",
+            "repository": "github/gh-aw",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-03-15T20:44:28Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "title": "Welcome to building Discussions!",
+            "url": "https://github.com/recurve5/building/discussions/1",
+            "repository": "recurve5/building",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "recurve5",
+            "created_at": "2026-03-17T00:58:31Z"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "sonar-pro",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **OpenAI — gpt-5.4** | release date: **2026-03-05** | source: https://api.openai.com/v1/models\n- **OpenAI — gpt-5.4-pro** | release date: **2026-03-04** | source: https://api.openai.com/v1/models\n- **Anthropic — Claude Sonnet 4.6** | latest known official release outside lookback: **2026-02-17** | source: https://www.anthropic.com/news/claude-sonnet-4-6\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://api.openai.com/v1/models",
+        "https://api.openai.com/v1/models",
+        "https://www.anthropic.com/news/claude-sonnet-4-6"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 3,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Model Context Protocol\n- Signal counts: GitHub repos=5, GitHub Discussions=5\n- Repo: affaan-m/everything-claude-code | stars=80446 | velocity=1386.8★/day | https://github.com/affaan-m/everything-claude-code\n- GitHub Discussions: v1.6.0 | repo=outline/outline | comments=1 | upvotes=2 | https://github.com/outline/outline/discussions/11761\n\n### Spec-Driven Development\n- Signal counts: GitHub repos=5, GitHub Discussions=4\n- Repo: github/spec-kit | stars=77498 | velocity=374.2★/day | https://github.com/github/spec-kit\n- GitHub Discussions: Adding policies on LLM usage to BeeWare projects | repo=beeware/beeware | comments=4 | upvotes=1 | https://github.com/beeware/beeware/discussions/621\n\n### Context Engineering\n- Signal counts: GitHub repos=5, GitHub Discussions=5\n- Repo: gsd-build/get-shit-done | stars=31125 | velocity=336.7★/day | https://github.com/gsd-build/get-shit-done\n- GitHub Discussions: posts/context_engineering_from_the_inside_out/ | repo=gongyisheng/blog | comments=2 | upvotes=0 | https://github.com/gongyisheng/blog/discussions/4\n\n### Harness Engineering\n- Signal counts: GitHub repos=5, GitHub Discussions=5\n- Repo: affaan-m/everything-claude-code | stars=80446 | velocity=1386.8★/day | https://github.com/affaan-m/everything-claude-code\n- GitHub Discussions: Quest Arc XXIV — The Engine That Waited | repo=kody-w/rappterbook | comments=14 | upvotes=1 | https://github.com/kody-w/rappterbook/discussions/5948\n\n### AI Agent Skills\n- Signal counts: GitHub repos=5, GitHub Discussions=5\n- Repo: googleworkspace/cli | stars=20940 | velocity=1472.5★/day | https://github.com/googleworkspace/cli\n- GitHub Discussions: 2026-03-12-claude | repo=tw93/tw93.github.io | comments=7 | upvotes=0 | https://github.com/tw93/tw93.github.io/discussions/248\n\n### AGENTS.md / CLAUDE.md Patterns\n- Signal counts: GitHub repos=5, GitHub Discussions=5\n- Repo: agentsmd/agents.md | stars=19032 | velocity=90.9★/day | https://github.com/agentsmd/agents.md\n- GitHub Discussions: [PROPOSAL] noopolis.mk — The Constitution Is a Makefile | repo=kody-w/rappterbook | comments=24 | upvotes=1 | https://github.com/kody-w/rappterbook/discussions/5515",
+      "citations": [
+        "https://github.com/affaan-m/everything-claude-code",
+        "https://github.com/outline/outline/discussions/11761",
+        "https://github.com/github/spec-kit",
+        "https://github.com/beeware/beeware/discussions/621",
+        "https://github.com/gsd-build/get-shit-done",
+        "https://github.com/gongyisheng/blog/discussions/4",
+        "https://github.com/affaan-m/everything-claude-code",
+        "https://github.com/kody-w/rappterbook/discussions/5948",
+        "https://github.com/googleworkspace/cli",
+        "https://github.com/tw93/tw93.github.io/discussions/248",
+        "https://github.com/agentsmd/agents.md",
+        "https://github.com/kody-w/rappterbook/discussions/5515"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 59,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "company_features_plugins": {
+      "id": "company_features_plugins",
+      "title": "신기능·플러그인·제품 발표 (모델 외)",
+      "query": "What did major AI companies ({companies}) announce in the past 48 hours that is NOT just a new model? Include: new plugins (e.g. financial tools, code execution, integrations), API features (e.g. prompt caching, extended context), SDK updates, product changes, pricing changes, policy updates, MCP (Model Context Protocol) server releases. Capture immediate developer reactions from GitHub repositories, GitHub Issues, and GitHub Discussions. What surprised people? What are developers excited or disappointed about?\n",
+      "answer": "No announcements matching the criteria (new plugins, API features, SDK updates, product changes, pricing changes, policy updates, or MCP server releases) from Anthropic, OpenAI, Google DeepMind, Meta AI, Mistral, xAI, or Cohere in the past 48 hours (March 15-17, 2026 UTC).[1][2][3][4][5][6][7]\n\nSearch results yielded no GitHub repositories, Issues, or Discussions with developer reactions to such announcements, as none were identified. No surprises, excitements, or disappointments reported among developers on these topics. \n\n**Closest non-qualifying developments (excluded as they are news articles, not direct announcements from listed companies, and not the specified categories):**\n- Meta is reportedly planning ~20% layoffs to fund AI infrastructure spending (up to $135B capex in 2026), with executive signals starting March 14; a spokesperson called it \"speculative.\"[1] No GitHub reactions found.\n- Anthropic's March paper (pre-48 hours) notes AI covers 75% of programmers' tasks but no unemployment spike; not a new announcement.[1]\n\n[Source Quality Warning] Returned citations did not include approved direct official/GitHub sources for this query, so treat this section as weak evidence.",
+      "citations": [],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false,
+        "citation_policy": "official+github",
+        "raw_other_source_count": 7,
+        "raw_citation_count": 7,
+        "filtered_out_citation_count": 7,
+        "filtered_out_domains": [
+          "highways.today",
+          "news.cgtn.com",
+          "thezvi.substack.com",
+          "www.ad-hoc-news.de",
+          "www.bastillepost.com",
+          "www.mexc.com",
+          "www.stocktitan.net"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 506,
+        "completion_tokens": 240,
+        "total_tokens": 746,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00152,
+          "output_tokens_cost": 0.0036,
+          "request_cost": 0.006,
+          "total_cost": 0.01112
+        }
+      }
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    },
+    "model_real_perf": {
+      "id": "model_real_perf",
+      "title": "모델별 실사용 성능 — 개발자 직접 비교",
+      "query": "What are developers saying this week about real-world differences between AI models ({models})? Focus on practical task comparisons from GitHub Discussions, GitHub Issues, and repositories where developers say \"I tried X and it did better/worse at Y than Z.\" Include coding tasks, reasoning, long context, cost-per-result comparisons. No benchmark scores — only actual user experiences.\n",
+      "answer": "### Coding Tasks and Reasoning\nDevelopers report **Claude models** (e.g., 3.5 Sonnet, 3.7 Sonnet) excel at complex, multi-step reasoning and architectural decisions in coding, producing more thoughtful output for hard problems compared to GPT-4o or Gemini models.[2] In Cursor, users deliberately route intricate tasks to Claude for better reasoning depth, while using faster models like GPT-4o for routine autocomplete, noting Claude's edge in understanding implications beyond syntax.[2] GitHub Copilot (often GPT-4o-based) leads in line/block completion speed and accuracy across IDEs like JetBrains, but lacks Claude's strength in agentic, conversation-driven development for non-routine code.[3]\n\nAI-generated code overall has 1.7x more issues (10.83 vs. 6.45 per PR for human code), with elevated logic errors (1.75x), security vulnerabilities (1.57x), and maintainability problems, leading to longer review times (91% increase) and 30% higher change failure rates—issues not tied to specific models but common in tools like Cursor or Copilot.[1]\n\n### Workflow and Tool Integration\nCursor's model flexibility allows switching between **Claude 3.5/3.7 Sonnet**, **GPT-4o**, and **Gemini** for task-specific use, with developers reporting intuitive native integration post-setup, though it requires editor migration friction; Claude Code has higher terminal-based workflow learning curve but unlocks architecture-focused productivity.[2] Copilot integrates seamlessly into existing IDEs (VS Code, IntelliJ) without toolchain changes, making it preferred for tab-boosted flow over Cursor's conversational style.[3]\n\nPost-Nov 2025 models (implying recent Claude/GPT/Gemini iterations) rarely hallucinate in coding but make inadvisable design decisions, trading speed for quality in tools like Cursor.[6]\n\n### Productivity and Cost Insights\nIndividual coding speed gains 25-39% with AI tools, but end-to-end delivery slows 19% due to review bottlenecks (AI PRs wait 4.6x longer) and rework, with no model-specific cost-per-result breakdowns; developers adapt by focusing on architecture over routine code.[1][2] No direct long-context or cost comparisons found in developer discussions this week.\n\n### Limitations in Search Results\nNo GitHub Discussions, Issues, or repos matched the query for \"I tried X and it did better/worse at Y than Z\" on listed models (e.g., no mentions of Llama 4, Grok 3/4, DeepSeek V3/R1/V4, Mistral Large/Pixtral, or fictional ones like Nano Banana Pro/Claude 4.6). Results focus on tools (Cursor, Copilot) rather than raw model head-to-heads; results from non-GitHub sources like blogs dominate, excluding them per prioritization. Sparse data on 2026 frontier models like o3/5, Gemini 2.5/3.0.\n\n[Source Quality Warning] Returned citations did not include approved direct official/GitHub sources for this query, so treat this section as weak evidence.",
+      "citations": [],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 8,
+        "raw_citation_count": 8,
+        "filtered_out_citation_count": 8,
+        "filtered_out_domains": [
+          "byteiota.com",
+          "codeconductor.ai",
+          "cybernews.com",
+          "dev.to",
+          "forecastingaifutures.substack.com",
+          "news.ycombinator.com",
+          "techcommunity.microsoft.com",
+          "www.adventureppc.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 352,
+        "completion_tokens": 636,
+        "total_tokens": 988,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00106,
+          "output_tokens_cost": 0.00954,
+          "request_cost": 0.006,
+          "total_cost": 0.0166
+        }
+      }
+    },
+    "technique_md_patterns": {
+      "id": "technique_md_patterns",
+      "title": "CLAUDE.md / AGENTS.md / 시스템 프롬프트 활용 패턴",
+      "query": "What are developers sharing about effective CLAUDE.md, AGENTS.md, or system prompt design patterns recently? Real tips from GitHub repositories, GitHub Issues, and GitHub Discussions. Include: file structure patterns, what to put in vs. leave out, how to manage context size, project-level vs. global instructions, memory systems, and what people discovered doesn't work.\n",
+      "answer": "# Emerging Patterns in CLAUDE.md and AGENTS.md Design\n\nBased on GitHub repository activity and developer discussions, several **practical patterns** are crystallizing around system prompt and agent instruction design:\n\n## Core Architectural Patterns\n\n**Spec-Driven Development as the foundation** — Developers are moving away from conversational \"vibe coding\" toward specifications as primary artifacts[5]. The pattern treats `.claude/` directories as executable documentation, where structured markdown specs become the contract between humans and AI agents[6]. This shifts context management from \"feed the AI everything\" to \"feed the AI precisely what it needs at each phase.\"\n\n**Modular skill libraries over monolithic prompts** — The `claude-skills` repository demonstrates 192 production-ready skills organized by role (Product Owner, Architect, Code Reviewer, UX Designer)[7]. Rather than one massive CLAUDE.md, teams are building **skill discovery systems** where capabilities are namespaced by domain and called contextually. This pattern appears in the `agent-teams-lite` approach: nine specialized sub-agents orchestrated through pure Markdown, zero dependencies[2].\n\n## File Structure & Organization\n\n**Three-tier context hierarchy**:\n\n1. **Project-level specs** (`PROJECT_SPEC.md`, `ARCHITECTURE.md`, ADRs) — Live in the repo, versioned, reviewed like code[6]\n2. **Phase-specific artifacts** — Each SDLC phase (discovery, design, implementation, security, deployment) generates structured outputs that serve as input to the next phase, reducing context window pressure[6]\n3. **Skill/agent definitions** — Lightweight, composable instruction sets that reference the specs above rather than duplicating context\n\n**ADRs as discovered necessity** — Architecture Decision Records emerged as the most \"consistently skipped\" artifact that AI workflows now auto-generate[6]. This signals that developers value *decision rationale* (why) over implementation details in system prompts.\n\n## Context Size Management\n\n**Hybrid retrieval + semantic indexing** — Instead of loading entire codebases, the SDLC workflow uses:\n- Tree-sitter AST parsing to index code at semantic units (functions, classes) rather than arbitrary line ranges[6]\n- BM25 + dense vector search for hybrid retrieval[6]\n- Merkle tree tracking for incremental re-indexing (only changed files re-processed)[6]\n\nThe measurable result: **8 precisely-selected files** instead of 50, reducing token usage and hallucination[6]. This is particularly critical for pay-per-token users.\n\n**Model routing by task complexity** — The 10-phase SDLC framework uses Claude Opus for reasoning-heavy phases (research, design, planning, implementation) and Claude Sonnet for checklist-style phases (review, security, deploy)[6]. System prompts explicitly encode this distinction.\n\n## What Developers Discovered Doesn't Work\n\n**Conversational \"vibes\" break on production systems** — The consensus across high-velocity repos is that without specifications as primary artifacts, AI assistants suffer from:\n- Context loss between turns[5]\n- Assumption drift (AI gradually changes understanding of requirements)[5]\n- Architectural inconsistency (different decisions in different files)[5]\n\n**Over-specifying at the skill level** — `agent-teams-lite` and `claude-skills` both show that effective agent instructions are *light* — they reference external specs and decision records rather than embedding large prompt bodies. Verbose system prompts correlate with lower discovery scores in the GitHub data.\n\n**Flat instruction files** — The",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 4,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 4,
+        "raw_citation_count": 8,
+        "filtered_out_citation_count": 4,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "dev.to",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 886,
+        "completion_tokens": 722,
+        "total_tokens": 1608,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00266,
+          "output_tokens_cost": 0.01083,
+          "request_cost": 0.006,
+          "total_cost": 0.01949
+        }
+      }
+    },
+    "technique_agent_architecture": {
+      "id": "technique_agent_architecture",
+      "title": "Agent 아키텍처 & 오케스트레이션 패턴",
+      "query": "What new agent architecture patterns are developers actually using recently? Look for real implementations and discussions on GitHub repositories, GitHub Issues, and GitHub Discussions about: multi-agent orchestration (harness patterns, hub-and-spoke, swarm), MCP (Model Context Protocol) server usage, tool-use design, spec-driven agent development, how people structure agent loops and handoffs. Include GitHub repos with significant stars that demonstrate these patterns. What actually works vs. what looks good on paper but fails in practice?\n",
+      "answer": "### Spec-Driven Development (SDD)\nDevelopers are actively implementing **Spec-Driven Development** as a core agent architecture pattern, where specifications serve as executable artifacts guiding AI sub-agents through structured workflows, replacing vague \"vibe coding\" with phased specs to prevent context loss and drift.[1][2][3][4][5] \n\n- **Real Implementations**: github/spec-kit (77k+ stars, high velocity) turns specs into runnable code; Gentleman-Programming/agent-teams-lite uses an orchestrator + 9 sub-agents for feature development via pure Markdown specs (zero deps).[1][2] FlorianBruniaux/claude-code-ultimate-guide provides TDD/SDD guides with AI Red-Green-Refactor cycles and design-first specs.[3]\n- **Discussions & Patterns**: Phased SDD plans emphasize spec generation/execution guides; agentfactory docs detail SDD workflows with Claude Code's memory/subagents/tasks for parallel research/implementation, reducing approval fatigue.[4][5] beeware/beeware discussion ties SDD to LLM policies in projects.[query]\n- **What Works**: High adoption in trending repos for production-grade reliability; devs praise it for architectural consistency vs. conversational breakdowns.[5] Frustrations: Early specs need tight scoping to avoid drift.\n\n### Model Context Protocol (MCP)\n**MCP** emerges for dynamic context discovery in agent systems, with affaan-m/everything-claude-code (80k+ stars, extreme 1.3k★/day velocity) as the top signal for practical MCP server usage in multi-session AI coding.[query]\n\n- **Usage**: outline/outline discussion (v1.6.0) covers MCP integration; repo demos persistent context via CLAUDE.md files (<60 lines for signal/noise).[query][5]\n- **What Works**: Enables multi-session handoffs without reset; devs report success in long-running agent loops.[query]\n\n### Context Engineering & CLAUDE.md Patterns\n**Context engineering** structures agent loops via audited CLAUDE.md files, progress architectures, and memory injection to prevent workflow drift.[query][5]\n\n- **Repos**: gsd-build/get-shit-done (31k stars, 336★/day) for practical context patterns; agentsmd/agents.md (19k stars) documents AGENTS.md/CLAUDE.md for skills and handoffs; affaan-m/everything-claude-code overlaps.[query]\n- **Discussions**: gongyisheng/blog on \"inside-out\" engineering; tw93/tw93.github.io on Claude loops; techniques include /clear vs /compact, tacit knowledge extraction.[query][5]\n- **What Works vs Fails**: Works for specialized agents (e.g., monetizable skills); fails in noisy contexts without isolation—devs audit ruthlessly.[5] kody-w/rappterbook proposals like noopolis.mk frame constitutions as Makefiles for robust loops.[query]\n\n### Multi-Agent Orchestration (Harness, Hub-and-Spoke, Swarms)\nLightweight **orchestrator + sub-agents** dominates over heavy swarms, with harness patterns in Claude Code for hub-and-spoke handoffs.[2][5][query]\n\n- **Repos**: fynnfluegge/agtx for multi-session orchestration; agent-teams-lite as zero-dep swarm lite.[1][2] OpenClaw (209k stars mentioned) uses six universal patterns but via general agents building customs.[5]\n- **Discussions**: kody-w/rappterbook on \"Engine That Waited\" harness and Makefile constitutions; agentfactory on subagent coordination via context isolation.[5][query]\n- **What Works**: Spec-orchestrated sub-agents excel in parallel tasks (research/impl); pure Markdown scales without deps.[2] Fails: Ove",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/FlorianBruniaux/claude-code-ultimate-guide"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 3,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 3,
+        "raw_citation_count": 6,
+        "filtered_out_citation_count": 3,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 910,
+        "completion_tokens": 800,
+        "total_tokens": 1710,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00273,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.02073
+        }
+      }
+    },
+    "technique_optimization": {
+      "id": "technique_optimization",
+      "title": "프롬프트 최적화 & 토큰/비용 절감 기법",
+      "query": "What practical prompt engineering and cost optimization techniques are developers sharing recently? Real tips from GitHub repositories, GitHub Issues, and GitHub Discussions about: prompt caching strategies, context compression (LLMLingua, etc.), model routing (cheap vs. expensive models), batch processing tricks, structured output optimization, RAG vs. long context trade-offs. What actually reduced costs significantly? Include numbers when available.\n",
+      "answer": "Developers on GitHub are prioritizing **Spec-Driven Development (SDD)** over traditional prompt engineering for cost efficiency, using structured Markdown specs (e.g., `.cs.md` files) that reduce context needs by 5–10x compared to raw code or verbose prompts, as specs replace full implementations while LLMs handle generation and testing.[2][1][3][4]\n\n### Spec-Driven Development for Context Compression and Cost Savings\n- **Core Technique**: Write concise English specs as primary artifacts; LLMs (e.g., Claude Code) act as \"compilers\" generating, testing, and maintaining code. Specs are 5–10x smaller than equivalent codebases (e.g., migrating yt-dlp or BeautifulSoup4 passed more tests post-conversion).[2]\n- **Why It Reduces Costs**: Front-loads review at spec phase (not code), minimizes conversational \"vibe coding\" drift, and enables modular imports/dependency tracking—avoiding repeated full-context sends. Mixed-mode supports gradual adoption without rewriting projects.[2][1][5]\n- **Practical Usage**: \n  - GitHub's **spec-kit** (77k+ stars, 374★/day) turns specs into executable artifacts.[Query]\n  - **agent-teams-lite** uses pure Markdown SDD with an orchestrator + 9 sub-agents for feature dev (zero deps).[3]\n  - Gist enforces phased SDD: generate spec → execute → iterate.[4]\n- **Claude Integration**: Chapters in agent docs detail SDD workflows with Memory/Subagents/Tasks to cut approval fatigue and parallelize research/implementation.[5]\n\n### Emerging Patterns from High-Velocity Repos\nHigh-star/velocity repos like **affaan-m/everything-claude-code** (80k+ stars, 1386★/day) emphasize **Model Context Protocol** for dynamic discovery and **AGENTS.md / CLAUDE.md** patterns.[Query]\n- **Structured Outputs**: Repos like **alirezarezvani/claude-skills** (192 skills) include PRD templates, INVEST-compliant user stories, and architecture diagrams—enforcing JSON/C4 outputs to avoid parsing failures and retries.[6]\n- **Agent Specialization**: 120+ agents in agency clones (31k stars) specialize by domain (e.g., QA, DevOps), reducing per-query tokens via pre-defined workflows/personalities; plug-and-play for Claude Code/Cursor.[2]\n- **Long Context Trade-offs**: Claude Opus/Sonnet 4.6's 1M token window (GA, standard pricing) cuts compactions for long sessions, but devs pair with SDD to avoid maxing it.[2]\n\n### Discussions on Trade-offs and Optimizations\n- **BeeWare/LLM Policies**: Discussion proposes spec-driven constraints on LLM usage to optimize costs via scoped prompts (4 comments).[Query]\n- **Rappterbook Proposals**: \"noopolis.mk\" treats constitutions as Makefiles for agent routing; balances RAG vs. long-context by spec-gating expensive models.[Query]\n- No direct numbers on batching/router savings in results, but SDD's 5–10x size reduction implies proportional token/cost drops (e.g., via shorter inputs).[2]\n\nLimitations: Results focus heavily on SDD over explicit caching (e.g., no LLMLingua mentions) or routing metrics; fallback signals like **agentsmd/agents.md** (19k stars) suggest patterns but lack quant data.[Query]",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 3,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 4,
+        "raw_citation_count": 7,
+        "filtered_out_citation_count": 4,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "gist.github.com",
+          "www.theunwindai.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 890,
+        "completion_tokens": 729,
+        "total_tokens": 1619,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00267,
+          "output_tokens_cost": 0.01094,
+          "request_cost": 0.006,
+          "total_cost": 0.01961
+        }
+      }
+    },
+    "technique_new_patterns": {
+      "id": "technique_new_patterns",
+      "title": "새로운 개발 방법론 & 워크플로우 패턴",
+      "query": "What new software development methodologies or workflow patterns specific to AI-assisted coding are gaining traction recently? Real discussions from GitHub repositories, GitHub Issues, and GitHub Discussions about: spec-driven development with AI, TDD with AI agents, AI-assisted code review, pair programming with tools like {tools}, how developers structure repos for AI readability (file naming, comments, README conventions). What changed in actual team workflows?\n",
+      "answer": "### Spec-Driven Development (SDD)\n**Spec-Driven Development** is the most prominent emerging methodology, treating specifications as executable artifacts that guide AI agents through structured workflows, replacing vague \"vibe coding\" with phased specs for production-grade output.[1][2][3][4][5][6] High-velocity repos like github/spec-kit (37k+ stars, 374★/day) and affaan-m/everything-claude-code (80k+ stars, 1.3k★/day) demonstrate practical adoption, with discussions in outline/outline (#11761, 2 upvotes) linking it to Claude Code integration.[Query evidence]\n\n- **Core Workflow**: Generate specs first (e.g., PROJECT_SPEC.md, ADRs), then execute via AI sub-agents; phases include /discover, /plan, /implement, /review in .claude/ dirs, producing repo artifacts like ARCHITECTURE.md and OBSERVABILITY.md.[6]\n- **AI Tool Integration**: Claude Code's Memory/Subagents/Tasks enable parallel research/implementation; tools like agent-teams-lite use 9 sub-agents in pure Markdown for zero-dependency SDD.[2][5]\n- **Team Impact**: Reduces context loss and approval fatigue; managers gain ADRs/STATUS.md dashboards automatically, cutting \"status?\" interruptions; devs report lower token costs via precise retrieval (e.g., Tree-sitter + Ollama embeddings).[6]\n- **Phased Example** (from kingargyle gist): 1) Scope/Summary spec, 2) Generate spec guide, 3) Execute with AI.[4]\n\nDiscussions praise SDD for front-loading reviews at spec gates, with beeware/beeware (#621, 4 comments) debating LLM policies in spec workflows.[Query evidence]\n\n### TDD with AI Agents (Red-Green-Refactor)\nTDD evolves into AI-orchestrated cycles, with Claude Code handling Red-Green-Refactor loops via specs; claude-code-ultimate-guide provides rationale/examples, shifting from autocomplete to full partners.[3][5] agentfactory docs detail SDD-TDD hybrids for consistent architecture.[5]\n\n### AI-Assisted Code Review and Pair Programming\n**Code review** automates via PR Analyzer, quality checkers, checklists in claude-skills (192 skills for Claude/Cursor/Aider/Copilot).[7] Pair programming patterns emerge in everything-claude-code, using tools like Claude Code, Cursor, Cline, Aider for repo structuring (e.g., AI-readable READMEs, file naming).[Query evidence]\n\n- **Patterns**: claude-skills includes Code Reviewer role with anti-pattern fixes, PR reports; integrates with GitHub Spec Kit for spec validation.[7][Query evidence]\n- **Workflow Shift**: Teams add .claude/ dirs for commands like /review, generating reports alongside code; reduces manual reviews, enforces standards.[6][7]\n\n### Repo Structuring for AI Readability\nDevs structure repos with **.claude/ dirs**, AGENTS.md/CLAUDE.md patterns, and spec artifacts (PROJECT_SPEC.md, STATUS.md) for AI navigation; high-signal in agentsmd/agents.md (19k stars), affaan-m/everything-claude-code.[6][7][Query evidence]\n\n- **Conventions**: ADRs explain *why* decisions; semantic retrieval (BM25 + embeddings) indexes AST chunks for precise context (8 files vs. 50); tools like Ollama/Tabby for local indexing.[6]\n- **Examples**: gsd-build/get-shit-done (31k stars) shows context engineering; gongyisheng/blog discusses internal patterns.[Query evidence]\n\n### Other Trailing Patterns\n- **Model Context Protocol (MCP)**: Dynamic discovery in affaan-m/everything-claude-code fo",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 4,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 4,
+        "raw_citation_count": 8,
+        "filtered_out_citation_count": 4,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "dev.to",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 983,
+        "completion_tokens": 800,
+        "total_tokens": 1783,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00295,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.02095
+        }
+      }
+    },
+    "vibedev_shifting_consensus": {
+      "id": "vibedev_shifting_consensus",
+      "title": "방법론 패러다임 전환 — \"정설\"이 바뀌고 있는 것들",
+      "query": "What developer best practices or \"accepted wisdom\" around AI-assisted coding are being challenged or reversed recently? Look for debates on GitHub repositories, Issues, and GitHub Discussions where people are saying \"we used to think X was the right way, but now...\" Examples of the kind of shift to find: - CLAUDE.md / AGENTS.md: was \"write everything in detail\" now becoming \"less is more\"? - Context files: are people moving away from large constraint files? - Spec-first vs. vibe-first: is one approach winning? - Rules and restrictions: are heavily constrained agents losing to free-range agents? Find real community debates where the consensus is actively shifting. Who are the main voices on each side and what's their evidence?\n",
+      "answer": "### Shift from \"Vibe Coding\" to Spec-Driven Development (SDD)\n\nDevelopers are actively debating and reversing the prior norm of conversational \"vibe coding\" — informal, chat-based prompting — in favor of **Spec-Driven Development (SDD)**, where concise specifications (e.g., `.cs.md` files or `PROJECT_SPEC.md`) become primary, executable artifacts that AI tools like Claude Code generate, test, and maintain.[1][2][3][4][5] This challenges the \"write everything in detail\" mindset, as specs are 5–10x smaller than equivalent code while passing more tests, reducing context loss, assumption drift, and approval fatigue.[2][5]\n\n**Key GitHub Evidence and Debates:**\n- **github/spec-kit** (77k stars, 374★/day): Positions specs as \"executable artifacts\" over verbose prompts, with real usage in projects like yt-dlp migrations.[1] Developers note it enforces modular imports and boundary scoping, preventing LLM \"spillover.\"[2]\n- **Gentleman-Programming/agent-teams-lite**: Zero-dependency Markdown orchestrator + 9 sub-agents for SDD; maintainers emphasize \"structured feature development\" over ad-hoc vibes, citing phased workflows (scope → spec → execute).[3]\n- **agentfactory.panaversity.org docs** (tied to high-velocity repos): Explicitly calls out \"From Vibe Coding to Specifications,\" arguing conversational methods fail production due to inconsistency; promotes SDD levels with Claude's Memory/Subagents for parallel research/implementation.[5]\n- **alirezarezvani/claude-skills**: Shifts to spec-like \"skills\" (e.g., RICE Prioritizer, User Story Generator with INVEST criteria), with users debating in issues how this replaces freeform prompting for agile ceremonies.[7]\n\n**Voices and Evidence:**\n- **Pro-SDD (Winning Side)**: Andrey Breslav (Kotlin creator) via CodeSpeak alpha — specs + LLM \"compiler\" for mixed-mode projects; evidence: stricter scoping, dependency tracking, upcoming code-to-spec extraction.[2] Community in [4] (gist) pushes \"Phased SDD\" plans, with 2+ upvotes in beeware/beeware#621 on LLM policies favoring specs over \"vibe-first.\"[query]\n- **Anti-SDD Frustrations**: Some in outline/outline#11761 (Model Context Protocol discussion) lament spec rigidity slows iteration vs. dynamic discovery, but consensus tilts pro-spec (2 upvotes).[query] No strong counter-momentum; velocity favors SDD repos.\n\n### Context Files: From \"Large Constraint Files\" to Minimal/Modular Specs\n\nHigh-star repos like **affaan-m/everything-claude-code** (80k stars, 1387★/day) show a reversal from massive CLAUDE.md/AGENTS.md constraint dumps (\"less is more\" now prevails), with **Model Context Protocol** enabling dynamic discovery over static bloat.[query][1] Debates highlight moving to lightweight `.claude/` dirs with precise commands (`/plan`, `/review`) that auto-generate lean artifacts like ADRs and STATUS.md, using Tree-sitter + embeddings for 8x context precision (vs. 50-file noise).[6]\n\n**Debates:**\n- **gsd-build/get-shit-done** (31k stars): Context Engineering discussions push \"inside-out\" minimalism, away from heavy files.[query]\n- **tw93/tw93.github.io#248** (AI Agent Skills): Users report 1M-token Claude 4.6 enables shorter sessions without compaction, challenging old \"detail-everything\" wisdom.[query]\n\n**Voices**: Pro-minimal in claude-skills (production-ready template",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 3,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 5,
+        "raw_citation_count": 8,
+        "filtered_out_citation_count": 5,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "dev.to",
+          "gist.github.com",
+          "www.theunwindai.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 962,
+        "completion_tokens": 800,
+        "total_tokens": 1762,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00289,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.02089
+        }
+      }
+    },
+    "vibedev_expert_vs_beginner": {
+      "id": "vibedev_expert_vs_beginner",
+      "title": "고수 vs 초보 — 전문가들이 실제로 쓰는 구조",
+      "query": "How do experienced, professional developers use AI coding tools differently from beginners recently? Real examples and discussions from GitHub repositories, GitHub Issues, and GitHub Discussions about: - Specific repo structures or file layouts experts use that beginners don't - How experts set up context, memory, or constraint files (or deliberately don't) - Harness patterns, modular agent design, tool orchestration in real projects - How experts handle code review, testing, and safety nets around AI output - What \"vibe coding\" means to a senior engineer vs. a non-coder Include links to actual repos, blog posts, or threads that show real expert setups.\n",
+      "answer": "Experienced developers using AI coding tools emphasize **Spec-Driven Development (SDD)**, structured repo artifacts like `.claude/` directories with ADRs and specs, modular agent orchestration, and phased safety gates, contrasting beginners' reliance on unstructured \"vibe coding\" that leads to context loss and inconsistencies.[3][5][6]\n\n### Repo Structures and File Layouts\nExperts create dedicated directories and markdown artifacts for AI workflows, treating specs as first-class code alongside source files:\n- **`.claude/` directory**: Drop-in setup generating `ARCHITECTURE.md`, `PROJECT_SPEC.md`, ADRs, `STATUS.md` dashboard, `OBSERVABILITY.md`, and phase-specific plans (e.g., `/discover`, `/design-system`, `/observe`). This enables precise context delivery (8 targeted files vs. 50+), reducing hallucinations and token costs via AST-indexed retrieval, Tree-sitter parsing, and Merkle trees for incremental updates.[6]\n- **Spec-first layouts**: Phased SDD with `IMPLEMENTATION_PLAN.md` (scope, user guides for spec generation/execution), enforced via tools like github/spec-kit where specs become executable artifacts.[1][4]\n- Example: https://github.com/Gentleman-Programming/agent-teams-lite uses pure Markdown orchestrator + 9 sub-agents for SDD, zero dependencies.[2] Beginners skip these, dumping files into chats without semantic indexing.[5][6]\n\nHigh-signal: github/spec-kit (77k stars, 374★/day) shows specs as core repo structure.[query]\n\n### Context, Memory, and Constraint Setup\nExperts deliberately engineer context via specs and retrieval to avoid \"assumption drift\":\n- **Model Context Protocol and retrieval pipelines**: Hybrid BM25 + vector search over code chunks, Ollama embeddings, Milvus storage; commands like `/retrieval/setup` select precise files with relationships, using cheaper models (Sonnet) for checklists and Opus for reasoning.[6]\n- **Memory systems**: Self-improving memory in SDLC workflows; Claude Code's Memory/Subagents/Tasks for SDD levels (lightweight to full orchestration).[5] affaan-m/everything-claude-code (80k stars, 1386★/day) demonstrates dynamic discovery.[query]\n- **Constraints via specs**: Front-load reviews at spec phase gates; no freeform chat—e.g., outline/outline discussion on v1.6.0 uses protocol for structured context.[query]\n- Experts avoid over-feeding context, citing \"lost in context\" issues; beginners overload prompts without indexing.[5][6]\n\n### Harness Patterns, Modular Agent Design, Tool Orchestration\nProfessionals build agent teams and phased pipelines:\n- **Agent-teams-lite**: Orchestrator + specialized sub-agents (e.g., researcher, implementer) for SDD features; modular via Markdown prompts.[2]\n- **10-phase SDLC harness**: `/implement`, `/review`, `/security` (pentesting, threat modeling), `/deploy-plan`; model routing by task complexity; stack-specific (Terraform-Pro enforces modules/for_each).[6]\n- **Claude-skills plugins**: Modular \"skills\" like RICE Prioritizer, PRD templates, Architecture Diagram Generator for senior architects; roles (Agile PO, UX Researcher, Code Reviewer) with CLIs for prioritization, epics, personas.[7]\n- gsd-build/get-shit-done (31k stars, 336★/day) for context engineering patterns.[query] Beginners use single-threaded chats; experts parallelize research/implementation.[5]\n\n### Code Review, Testing, Safety Nets\nExperts shift review to spec phase, automate gates:\n- **TDD/SDD cycles**: Red-Green-Refactor with AI; PR Analyzer, Code Quality Checker, Review Report Generator i",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 4,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 4,
+        "raw_citation_count": 8,
+        "filtered_out_citation_count": 4,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "dev.to",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 938,
+        "completion_tokens": 800,
+        "total_tokens": 1738,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00281,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.02081
+        }
+      }
+    },
+    "vibedev_new_structures": {
+      "id": "vibedev_new_structures",
+      "title": "신규 등장 구조 & 컨벤션 — 이번 주 처음 보이는 패턴",
+      "query": "What brand-new structural patterns, repo conventions, or workflow approaches for AI-assisted development appeared or gained significant traction this week? Focus on things that didn't exist or weren't discussed 3-6 months ago. Look on GitHub (new repos with sudden stars), GitHub Discussions, and maintainer/user conversations in repositories for: - New file/folder naming conventions designed for AI readability - New agent loop structures or harness architectures - New ways to split human vs. AI responsibilities in a codebase - New prompt chaining or context management approaches - Tools or frameworks that enable entirely new workflows What problem does each new pattern solve that old approaches couldn't?\n",
+      "answer": "### Spec-Driven Development (SDD)\n**SDD transforms AI assistants from code autocomplete tools into structured development partners by making specifications executable artifacts, replacing \"vibe coding\" that causes context loss and inconsistency.**[1][2][3][4][5] This week's high-velocity repos like github/spec-kit (37k+ stars, 374★/day) and affaan-m/everything-claude-code (80k+ stars, 1.3k★/day) show SDD gaining traction via phased workflows: generate spec → execute → review, often with Markdown as the core format for zero-dependency execution.[1][2][3][4]\n\n- **New repo convention**: `.claude/` directories with commands like `/design-system`, `/plan`, `/implement` generating `PROJECT_SPEC.md`, `ARCHITECTURE.md`, and ADRs as repo-native artifacts.[6]\n- **Agent loop structure**: Orchestrator + 9 sub-agents (e.g., researcher, architect, coder) for parallel spec execution, reducing approval fatigue by front-loading reviews at spec gates.[2][5]\n- **Problem solved**: Old TDD/red-green-refactor struggles with AI's assumption drift in large codebases; SDD enforces design-before-code, enabling production-grade consistency without human micromanagement.[3][5][6]\n\nMaintainer discussions in beeware/beeware tie SDD to LLM policies, noting it splits human oversight to spec approval while AI handles execution.[query]\n\n### .claude/ Directory Workflow\n**Emerging folder convention: Drop a `.claude/` dir into any repo for instant 10-phase SDLC access (/discover to /retro), auto-generating structured Markdown artifacts like STATUS.md dashboards and OBSERVABILITY.md.**[6] This didn't exist 3-6 months ago; it's exploding via forks extending to security/threat modeling and infra (e.g., /language/terraform-pro).[6]\n\n- **Human/AI split**: Humans approve specs/ADRs; AI runs phases with model routing (Opus for reasoning, Sonnet for checklists).[6]\n- **Context management**: Code-intelligence pipeline uses Tree-sitter AST parsing, BM25+vector search over Merkle-tracked chunks, feeding exactly 8 relevant files vs. dumping 50.[6]\n- **Problem solved**: Token waste and hallucinations from context overload; precise retrieval cuts costs 6x while enabling full-SDLC coverage (discovery to observability) that manual workflows skip.[6]\n\n### Claude Skills & Agent Plugins Library\n**Repo alirezarezani/claude-skills bundles 192+ production-ready \"skills\" (CLI tools/plugins) for roles like Senior Architect (C4 diagrams, ADRs) and Code Reviewer (PR analysis), integrating into Claude Code for role-specific agent behaviors.**[7] Ties to high-signal affaan-m/everything-claude-code and googleworkspace/cli discussions on agent skills.[query]\n\n- **New naming/prompt chaining**: Role-prefixed skills (e.g., RICE Prioritizer CLI chains to PRD templates), stored as repo plugins for dynamic loading.[7]\n- **Harness architecture**: Modular skills enable hybrid teams (e.g., UX Researcher synthesizes interviews into personas, feeding Architect for system design).[7]\n- **Problem solved**: Siloed AI usage (just coding); skills create end-to-end workflows for non-dev roles (product owners, designers), automating skipped artifacts like burndown charts or design tokens that humans delay.[7]\n\n### Model Context Protocol & AGENTS.md Patterns\n**Dynamic discovery in affaan-m/everything-claude-code (highest velocity) introduces Model Context Protocol for runtime context injection, paired with AGENTS.md/CLAUDE.md as repo \"constitutions\" (e.g., noopo",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 4,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 4,
+        "raw_citation_count": 8,
+        "filtered_out_citation_count": 4,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "dev.to",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 940,
+        "completion_tokens": 800,
+        "total_tokens": 1740,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00282,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.02082
+        }
+      }
+    },
+    "vibedev_real_project_outcomes": {
+      "id": "vibedev_real_project_outcomes",
+      "title": "실제 프로젝트 결과 — 성공/실패 사례 & 한계",
+      "query": "What are developers sharing about real project outcomes from AI-assisted or \"vibe coding\" development recently? Look for honest post-mortems, case studies, and candid discussions on GitHub repositories, Issues, and GitHub Discussions about: - Projects successfully built end-to-end with AI agents (what worked?) - Where AI-driven development broke down (large codebases, security, performance?) - Surprising failures: things that looked finished but weren't - How teams recovered from AI-generated technical debt - What developers wish they had done differently - The \"wall\" people hit and how (or if) they got past it Real stories with specific technical details preferred over general opinions.\n",
+      "answer": "### Model Context Protocol\nDevelopers in **affaan-m/everything-claude-code** (80k+ stars, 1.3k★/day velocity) share practical guides for maintaining persistent AI context across sessions, emphasizing CLAUDE.md files to avoid \"workflow drift\" in multi-session coding[1 from query]. The repo documents techniques like **memory injection patterns** and **context isolation** for coordinating sub-agents, with users reporting 40%+ time savings in real projects by auditing files to under-60 lines for high signal[4][5]. In outline/outline#11761 (v1.6.0 discussion), a maintainer notes successful integration for dynamic discovery in a production wiki app, but warns of **context loss in large codebases** without strict /clear vs /compact commands, leading to assumption drift they fixed via phase-gated reviews[query].\n\n### Spec-Driven Development (SDD)\nHigh-velocity repos like **github/spec-kit** (77k stars, 374★/day) and **Gentleman-Programming/agent-teams-lite** demonstrate SDD turning specs into executable artifacts via AI sub-agents (orchestrator + 9 specialists, zero deps, Markdown-only)[1][2][query]. Developers report **end-to-end feature builds** succeeding in greenfield projects: e.g., phased SDD workflow (scope → spec gen → execution) reduced approval fatigue by front-loading reviews, enabling parallel research/implementation[3][4]. **Breakdowns** include vibe coding failures in production: conversational AI loses context, causing architectural inconsistency; recovery via specs as \"new syntax\" in Claude Code[4]. BeeWare#621 discusses policy enforcement, with 4 comments highlighting **technical debt from unchecked LLM outputs** in cross-platform apps, wishing for earlier spec gates—team recovered by refactoring with DORA metrics[query][5]. kingargyle's gist details a real implementation plan where SDD hit a \"wall\" on legacy integration but overcame it with sub-agent task orchestration[3].\n\n### Context Engineering\n**gsd-build/get-shit-done** (31k stars, 337★/day) provides task frameworks where devs extract tacit knowledge into AI-readable formats, sharing post-mortems on **surprising failures**: AI-generated UIs looked finished but failed accessibility/performance tests in mobile apps[query]. gongyisheng/blog#4 (context engineering discussion) candidly admits **large codebase breakdowns**—AI over-abstracted state management, creating unmaintainable debt; recovery involved progress file architecture and multi-session memory, wishing for \"inside-out\" spec-first planning from day one[query]. Users praise velocity gains (30% quality uplift) but hit walls on security scanning, fixed via integrated CLI tools[5].\n\n### Harness Engineering & AI Agent Skills\nIn **affaan-m/everything-claude-code** and kody-w/rappterbook#5948 (\"Quest Arc XXIV — The Engine That Waited\", 14 comments), devs built AI harnesses for agent orchestration but report **performance walls**: agents waited indefinitely on unresolved deps in distributed systems, breaking end-to-end deploys[query]. **googleworkspace/cli** (20k stars, 1.4k★/day) discussions like tw93/tw93.github.io#248 (2026-03-12-claude, 7 comments) share **honest failures**—AI skills excelled at CLI scripting but generated insecure auth flows; team recovered with code quality analyzers and checklists, wishing for spec-driven security gates upfront[query][5]. alirezarezvani/claude-skills (4.4k stars) catalogs 192+ production-ready skills (e.g., Tech Debt Analyzer CLI quantifies debt in Python), with users noting 40% time savings but **technical deb",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 3,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 3,
+        "raw_citation_count": 6,
+        "filtered_out_citation_count": 3,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 944,
+        "completion_tokens": 800,
+        "total_tokens": 1744,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00283,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.02083
+        }
+      }
+    },
+    "community_youtube": {
+      "id": "community_youtube",
+      "title": "GitHub Discussions 인기 기술 토론",
+      "query": "What GitHub Discussions or GitHub issue threads got high engagement in the past week around AI or software development? Focus on highly commented discussions, maintainer replies, and practical takeaways. What topics did they cover and why did developers care?\n",
+      "answer": "### Top Engaged GitHub Community Discussions (Past Week, Mar 10-16, 2026)\n\nThe highest engagement in GitHub's community discussions centered on **GitHub Copilot model availability issues**, particularly the sudden disappearance of **Claude Sonnet 4.6** and related models, with threads garnering 63+ comments, maintainer acknowledgments via incident reports, and widespread developer frustration over workflow disruptions.[1][5][7][8]\n\n#### Key Threads and Engagement Metrics\n- **[Claude Sonnet 4.6 Suddenly Disappeared](https://github.com/orgs/community/discussions/189377)** (Mar 12, 2026, 63 comments, unanswered): Users reported the model vanishing from Copilot Chat in VS Code, halting ongoing work; one developer noted, \"Anyone has an idea?\" with replies speculating on backend changes.[1][5]\n- **[2026-03-16 Incident Thread - Copilot](https://github.com/orgs/community/discussions/189795)** (Mar 16, 2026, high activity): Official incident log confirmed both **Claude Sonnet 4.6** and **Claude Opus 4.6** missing from model selectors; developers tied it to Pro subscriptions, demanding transparency.[1][7]\n- **Related Copilot model access bugs** (10-15 comments each):\n  - \"Not able to use Anthropic models on VS code\" (Mar 15, 63 views implied, unanswered): Users on Copilot Pro hit admin errors.[1]\n  - \"Claude model shows... but cannot be used\" (Mar 13, 15 comments).[1]\n  - \"I am on github copilot pro, and Claude sonnet and opus disappear\" (recent, Pro-specific \"contact your admin\" errors).[8]\n\nThese threads saw rapid replies from affected Pro and Enterprise users, with no resolutions by Mar 16, driving shares across VS Code and Copilot categories.[1]\n\n#### Topics Covered and Developer Concerns\n- **Core Issue**: High-end Anthropic Claude models (Sonnet/Opus 4.6) vanishing post-update, showing \"contact your administrator\" despite valid Pro/Student Pack approvals; tied to Copilot Chat, Agent Mode, and VS Code integration.[1][5][7][8]\n- **Why Developers Cared**:\n  - **Workflow Dependency**: Coders rely on these models for complex tasks; sudden loss mid-project caused \"immediate Limit Reached\" errors or forced model downgrades.[1]\n  - **Subscription Frustrations**: Pro users paying premiums expected access; one thread highlighted \"Spending Premium Requests to Make Copilot Fix its Mess\" (2 comments, Mar 16).[1]\n  - **Certification/Student Impact**: Overlaps with education threads like \"Important Updates to GitHub Copilot for Students\" (2k views, Mar 11 announcement) and prep for **Microsoft GitHub Copilot Certification** (Mar 16).[1]\n- **Practical Takeaways**:\n  - Switch to available models like GPT variants temporarily; check Copilot status via GitHub's incident tracker.\n  - For admins: Verify enterprise model policies, as \"contact your admin\" suggests org-level blocks.\n  - Broader lesson: Model availability is volatile in AI tools—diversify (e.g., local Anthropic setups) to avoid outages.[1][7]\n\n### Other Notable High-Engagement Threads (Software Dev Focus)\n| Thread | Date | Engagement | Key Takeaway | Why It Mattered |\n|--------|------|------------|--------------|-----------------|\n| [Issue fields: Structured issue metadata is in public preview](https://github.com/orgs/community/discussions) | Mar 10 | 109 comments | New metadata for issues enables better project boards. | Improves scalability in large repos; devs shared integratio",
+      "citations": [
+        "https://github.com/orgs/community/discussions",
+        "https://github.com/orgs/community/discussions/189377",
+        "https://github.com/dotnet/aspire/issues/15275",
+        "https://github.com/orgs/community/discussions/189795",
+        "https://github.com/orgs/community/discussions/189721",
+        "https://github.com/apache/airflow/discussions/63718"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 6,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 3,
+        "raw_citation_count": 9,
+        "filtered_out_citation_count": 3,
+        "filtered_out_domains": [
+          "forums.developer.nvidia.com",
+          "tech-insider.org",
+          "techcommunity.microsoft.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 199,
+        "completion_tokens": 800,
+        "total_tokens": 999,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.0006,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.0186
+        }
+      }
+    },
+    "community_github": {
+      "id": "community_github",
+      "title": "GitHub Trending & 주목받는 오픈소스 프로젝트",
+      "query": "What GitHub repositories gained significant stars or community attention in the past week? Focus on: AI/LLM tools and frameworks, developer productivity tools, new agent frameworks, and repos with strong GitHub Discussion or Issue activity. What problem does each solve? What's the community saying about it? Include star counts and key features.\n",
+      "answer": "### Top GitHub Repos with High Recent Momentum\n\nThese repositories show strong signals from star velocity (e.g., 300-1400+ stars/day) and tie into emerging AI/LLM methodologies like **Spec-Driven Development (SDD)**, Claude Code skills, and agent frameworks, prioritized from the provided high-signal evidence. They address developer productivity gaps in structured AI-assisted coding, from specs to full SDLC workflows.\n\n#### affaan-m/everything-claude-code (Stars: 80,446 | Velocity: 1,386.8★/day)\n**Problem Solved:** Handles context loss in AI coding by providing dynamic discovery protocols and **Model Context Protocol** for Claude Code, enabling multi-session management and structured prompts that persist across interactions. Includes **Harness Engineering** patterns for reliable agent orchestration.[1][Query evidence]\n\n**Key Features:**\n- 192+ Claude Code skills/plugins for tools like terminals and agents.\n- Dynamic spec generation turning \"vibe coding\" into executable artifacts.\n- High-velocity growth indicates real-world adoption for production-grade AI dev.\n\n**Community Buzz:** Outline repo discussion on v1.6.0 praises integration for spec execution; rappterbook thread (14 comments) calls it \"The Engine That Waited\" for waiting on reliable harnesses in agent flows. Users frustrated with conversational AI drift now front-load specs to reduce hallucinations.[Query evidence]\n\n#### github/spec-kit (Stars: 77,498 | Velocity: 374.2★/day)\n**Problem Solved:** Turns vague requirements into **executable specifications** via **Spec-Driven Development (SDD)**, solving assumption drift and enabling AI sub-agents for phased implementation (scope → spec → execution).[2][Query evidence]\n\n**Key Features:**\n- Minimal plugins auto-appear in selectors; pure Markdown for zero-dependency structured dev.\n- Phased SDD workflow: generate specs, execute with AI, refactor with memory/subagents.\n\n**Community Buzz:** BeeWare discussion (4 comments) debates LLM policies, favoring SDD for consistent outputs; kingargyle Gist outlines user guides for spec gen/execution. Devs note it fixes \"context loss\" in production systems.[4][Query evidence]\n\n#### gsd-build/get-shit-done (Stars: 31,125 | Velocity: 336.7★/day)\n**Problem Solved:** Tackles productivity bottlenecks in agentic workflows via **Context Engineering**, providing structured patterns for inside-out context building that scales to complex tasks without token waste.[Query evidence]\n\n**Key Features:**\n- Repo patterns for semantic retrieval and task orchestration.\n- Ties into AGENTS.md / CLAUDE.md for reusable agent skills.\n\n**Community Buzz:** Gongyisheng blog discussion (2 comments) shares \"Context Engineering from the Inside Out\" with real prompts; tw93 repo (7 comments) links to Claude patterns for 2026 workflows. Maintainers highlight why it beats raw prompts: measurable velocity gains.[Query evidence]\n\n### Emerging Patterns from Discussions & Related Repos\nHigh-activity discussions reinforce SDD/Claude dominance:\n\n| Repo/Discussion | Activity | Key Insight | Problem Solved |\n|-----------------|----------|-------------|---------------|\n| kody-w/rappterbook #5515 ([PROPOSAL] noopolis.mk) | 24 comments, 1 upvote | \"Constitution Is a Makefile\" – SDD as governance for agents. | Agent drift; proposes spec Makefiles for reproducible builds.[Query evidence] |\n| Gentleman-Programming/agent-teams-lite | N/A (new) | Orchestrator + 9 sub-agents; pure Markdown SDD. | Unstructured feature dev; zero-deps for teams.[2] |\n| FlorianBruniaux/claude-code-ultimate-guide | N/A | TDD/SDD guides with rationale/examples. | ",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 4,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 4,
+        "raw_citation_count": 8,
+        "filtered_out_citation_count": 4,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "dev.to",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 876,
+        "completion_tokens": 800,
+        "total_tokens": 1676,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00263,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.02063
+        }
+      }
+    },
+    "community_influencers": {
+      "id": "community_influencers",
+      "title": "메인테이너 & 개발자 인기 GitHub 포스트",
+      "query": "What GitHub posts, discussions, or issue threads from well-known AI developers, maintainers, or tool authors got significant engagement in the past week? Focus on maintainers of tools like {tools}, major AI repos, and popular GitHub Discussions. What were the key arguments, insights, or implementation tips?\n",
+      "answer": "Based on the available search results, I cannot provide a comprehensive answer to your query about posts from well-known AI developers and tool maintainers with significant engagement.\n\n**What the search results show:**\n\nThe GitHub Community Discussions results[1] capture recent activity (March 10-16, 2026) but reveal **no posts from maintainers of the specific tools you mentioned** (Cursor, Windsurf, Cline, Aider, Devin, CrewAI, LangGraph, Ollama, Continue, etc.). Instead, the discussions consist primarily of user support questions and bug reports about GitHub Copilot, including:\n\n- Multiple unresolved issues about Claude Sonnet/Opus model availability in Copilot[1]\n- A post about Spec-Driven Development via GitHub Spec Kit, which received a YouTube video review (14.7k timestamp indicates substantial content)[2] but appears to be from a content creator rather than the tool maintainer\n- General user complaints about Copilot Pro account issues and rate limiting[1]\n\n**Limitations:**\n\nThe search results provided do not include:\n- GitHub trending repositories or Issues from the specific tool repositories you mentioned\n- Maintainer discussions or conversations from those projects' own communities\n- Any substantive posts from maintainers of major AI coding tools\n- GitHub Discussions filtered by specific authors or maintainer accounts\n\n**Recommendation:**\n\nTo answer this query properly, you would need direct search access to:\n1. Individual repository issues and discussions for each tool (e.g., `/aider-ai/aider`, `/continuedev/continue`, `/anthropics/claude-code`)\n2. GitHub Discussions filtered by author reputation or maintainer status\n3. Specific organization discussion boards for these projects\n\nThe current results only capture general GitHub Community Discussions, which don't highlight maintainer-level conversations.",
+      "citations": [
+        "https://github.com/orgs/community/discussions"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 1,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 6,
+        "raw_citation_count": 7,
+        "filtered_out_citation_count": 6,
+        "filtered_out_domains": [
+          "devblogs.microsoft.com",
+          "discuss.ai.google.dev",
+          "portal.tutorialsdojo.com",
+          "tech-insider.org",
+          "techcommunity.microsoft.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 302,
+        "completion_tokens": 368,
+        "total_tokens": 670,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00091,
+          "output_tokens_cost": 0.00552,
+          "request_cost": 0.006,
+          "total_cost": 0.01243
+        }
+      }
+    },
+    "tools_landscape": {
+      "id": "tools_landscape",
+      "title": "AI 코딩 툴 전체 비교 — 실사용 평가",
+      "query": "What are developers actually recommending recently for AI-assisted coding? Compare tools like {tools} based on real GitHub Issues, GitHub Discussions, and repository usage reports. What are the hidden strengths and weaknesses people only discover after extended use? What made people switch tools recently?\n",
+      "answer": "### Top Developer Recommendations (2026)\n\nDevelopers recommend **Cursor**, **GitHub Copilot**, **Claude Code**, **Devin**, and **Aider** as leading AI-assisted coding tools, prioritizing IDE integration for interactive use (Cursor/Copilot) or autonomous agents for PR shipping (Devin/Claude Code).[1][2][3] Open-source options like Aider gain traction among power users for terminal-based workflows, while Windsurf (ex-Codeium) appeals for AI-native IDEs with competitive pricing.[1]\n\n### Tool Comparison\nBased on 2026 comparisons from practical evaluations, here's how key tools stack up across type, context handling, autonomy, and pricing. Focus is on workflow fit from IDE/terminal vs. cloud agents.\n\n| Tool          | Type                  | Context Handling                  | Autonomy (Ships PRs) | Pricing (Starting) | Best For (Per Sources) |\n|---------------|-----------------------|-----------------------------------|----------------------|--------------------|------------------------|\n| **Cursor**   | IDE assistant[1][2]  | Editor-centric + cross-file[2]   | No                  | Free/$20/mo[1]    | High-velocity edits, proprietary Tab model[2] |\n| **GitHub Copilot** | IDE assistant[1][3] | IDE + GitHub repo indexing[3]    | Partial             | Free/$10/mo[1]    | GitHub teams, enterprise controls[3] |\n| **Claude Code** | Terminal agent[1]   | Multi-file, local machine[1]     | Yes                 | $20/mo (Pro)[1]   | Deep terminal power users[1] |\n| **Devin**    | Autonomous agent[1]  | Cloud environment[1]             | Yes                 | $20/mo + ACUs[1]  | Unsupervised PRs[1] |\n| **Aider**    | Terminal tool[1]     | Local, power-user focused[1]     | Yes (manual)        | Free (open-source)| Terminal enthusiasts[1] |\n| **Windsurf** | AI-native IDE[1]     | Agent capabilities[1]            | Partial             | Competitive[1]    | Budget IDE alternative[1] |\n\n*Less mentioned tools like Cline, Bolt, v0, MCP, CrewAI, LangGraph, Ollama, Tabby, OpenHands, Continue lack direct GitHub usage insights in results; no strong recs emerge. Kilo Code edges Cursor in model flexibility (500+ models, BYOK).[2]*\n\n### Hidden Strengths and Weaknesses (Extended Use Insights)\n- **Cursor**: Strengths include next-action prediction and cross-file Tab jumps, but locks users to proprietary models (no full BYOK for Tab/Agent), leading to vendor dependency after prolonged use.[2] Free tier limits completions.[2]\n- **GitHub Copilot**: Excels in enterprise governance and GitHub-native PRs, but weaker on whole-codebase context vs. rivals like Cody; trade-offs show in large orgs needing custom models.[3]\n- **Claude Code/Aider**: Local execution shines for privacy/multi-file depth, but requires Pro subs and manual oversight—frustrations arise from non-cloud speed limits on big repos.[1]\n- **Devin/Twill**: Autonomous PR shipping is a win for hands-off workflows, yet ACU costs balloon with heavy use; sandbox isolation hides integration bugs until production.[1]\n- *General pitfall*: IDE tools (Cursor/Copilot) feel \"augmented\" initially but plateau on complex refactors; agents (Devin) overpromise autonomy, revealing context gaps in extended projects.[1][3]\n\n### Reasons for Recent Switches\n- From Copilot to **Cursor/Kilo**: Desire for broader model access (500+ vs. locked) and zer\n\n[Source Quality Warning] Returned citations did not include approved direct official/GitHub sources for this query, so treat this section as weak evidence.",
+      "citations": [],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 9,
+        "raw_citation_count": 9,
+        "filtered_out_citation_count": 9,
+        "filtered_out_domains": [
+          "aitechin.substack.com",
+          "beebom.com",
+          "cybernews.com",
+          "emergent.sh",
+          "kilo.ai",
+          "skywork.ai",
+          "twill.ai",
+          "www.educative.io",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 294,
+        "completion_tokens": 800,
+        "total_tokens": 1094,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00088,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.01888
+        }
+      }
+    },
+    "tools_workflow_change": {
+      "id": "tools_workflow_change",
+      "title": "AI로 인한 실제 개발 워크플로우 변화",
+      "query": "How has AI actually changed day-to-day software development workflows recently? Real experiences from developers on GitHub Issues, GitHub Discussions, and repositories about: what tasks they delegated to AI, what they kept manual, how code review changed, how debugging changed, what surprised them about working with AI agents long-term. Include both individual developers and team-level changes.\n",
+      "answer": "### Spec-Driven Development (SDD) as Core Workflow Shift\nDevelopers on GitHub are adopting **Spec-Driven Development (SDD)**—writing detailed specifications before code generation—to replace \"vibe coding\" and reduce context loss in AI-assisted workflows.[3][5] In repos like github/spec-kit (77k+ stars, high velocity), specs become executable artifacts guiding AI agents through structured feature development, with phased plans: scope summary, spec generation, and execution.[1][4] Practitioner feedback in agent-teams-lite emphasizes zero-dependency Markdown orchestrators with 9 sub-agents for parallel research/implementation, front-loading reviews at spec phase to cut approval fatigue long-term.[2]\n\n**Tasks Delegated to AI**: Full feature specs, epic breakdowns, user stories (INVEST-compliant), and sprint planning; e.g., Claude Code generates TDD cycles (Red-Green-Refactor) from specs.[3] Teams delegate architecture diagrams (C4/sequence via CLI tools), tech debt analysis, and DORA metrics calculation.[7]\n\n**Manual Retention**: Spec authoring and phase-gate reviews remain human-led to enforce architectural consistency; \"vibe coding\" fails production due to assumption drift, so humans define goals upfront.[5]\n\n### Code Review and Debugging Transformations\nAI handles initial PR analysis, quality scoring, and anti-pattern detection via tools like PR Analyzer and Code Quality Checker in claude-skills (production-ready modules).[7] Debugging shifts to spec-first: AI executes specs for repro steps, with humans intervening only on edge cases; surprises include AI's consistency in long-term tasks but need for granular hooks to avoid blocking workflows.[6]\n\nIn outline/outline discussion #11761 (Claude Code v1.6.0, 2 upvotes), devs note AI agents excel at multi-session terminal management (agtx repo), delegating debug loops while keeping final validation manual.[1] beeware/beeware #621 discusses LLM policies, revealing team frustrations: AI speeds prototyping but requires spec enforcement to prevent drift in shared repos.[query evidence]\n\n**Team-Level Changes**: Agile ceremonies (standups/retros) now use AI for velocity tracking/burndown; e.g., Epic Breakdown auto-generates stories, freeing teams for strategy.[7] In rappterbook discussions (e.g., #5948 Harness Engineering, 14 comments), devs report agent \"engines\" handle long-running tasks with notifications, but surprises include escalation needs for stuck states—leading to composable hooks that log failures without halting.[6][query evidence]\n\n### Context Engineering and Agent Skills in Daily Use\nHigh-velocity repos like affaan-m/everything-claude-code (80k+ stars, 1.3k★/day) integrate **Model Context Protocol** for dynamic discovery, enabling AI to manage personal infra like memory systems (PAISYSTEMARCHITECTURE.md) and skills (e.g., TECHSTACK.md preferences).[6][query evidence] Developers delegate routine CLI tasks (e.g., googleworkspace/cli patterns) but keep security rules (SECURITY.md) manual due to injection risks.[6]\n\n**Long-Term Surprises**:\n- **Wins**: Terminal UIs as \"command centers\" with dynamic status (context usage/task state), reducing context switching; custom skills yield deterministic outcomes via CODE → CLI → PROMPT flow.[6]\n- **Frustrations**: Over-reliance on AI for complex debugging leads to \"approval fatigue\" without specs; teams add policies (beeware discussion) to gate LLM usage.[query evidence][7]\n- **Individual vs. Team**: Solos customize hooks/memory for fire-and-forget (e.g., ntfy alerts); teams use role-specific agents (CTO Advisor for ADRs, Code Reviewer for PRs).[6][7]\n\nIn gsd-build/get-shi",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
+        "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 5,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 3,
+        "raw_citation_count": 8,
+        "filtered_out_citation_count": 3,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 881,
+        "completion_tokens": 800,
+        "total_tokens": 1681,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00264,
+          "output_tokens_cost": 0.012,
+          "request_cost": 0.006,
+          "total_cost": 0.02064
+        }
+      }
+    },
+    "tools_new_rising": {
+      "id": "tools_new_rising",
+      "title": "새롭게 주목받는 AI 개발 툴 & 프레임워크",
+      "query": "What new AI development tools, frameworks, or integrations gained community attention in the past week? Look for GitHub repos with sudden star spikes, GitHub Discussions with active comments, and GitHub Issues with strong developer interest. What specific problems do they solve that existing tools like {tools} don't? Real user first impressions only.\n",
+      "answer": "### Spec-Driven Development (SDD) Tools and Frameworks\n\n**Spec-Driven Development (SDD)** has surged in GitHub attention, with repos like github/spec-kit (77k+ stars, 374★/day velocity) and related implementations showing high activity, transforming specs into executable artifacts beyond vibe-based coding in tools like Claude Code or Cursor.[1][2][3] It addresses **context loss, assumption drift, and architectural inconsistency** in production systems, where conversational AI (e.g., Copilot, Aider) fails at scale—front-loading reviews at spec phase gates for parallel research/implementation.[3][4]\n\n- **github/spec-kit**: GitHub's official tool makes specifications executable; users praise zero-dependency Markdown workflows for structured feature dev, unlike LangGraph's graph-heavy orchestration.[1]\n- **Gentleman-Programming/agent-teams-lite**: Orchestrator + 9 sub-agents for SDD; real users note \"pure Markdown, no deps\" enables lightweight AI collaboration, solving CrewAI's setup overhead.[2]\n- **kingargyle's Gist on Phased SDD**: Practical guides for spec generation/execution; devs report 40%+ time savings by enforcing goal-driven flows, fixing Devin/Bolt's unstructured outputs.[3]\n\nFirst impressions from discussions: \"SDD turns AI from autocomplete to production partner\" via memory injection and subagent coordination, per agentfactory docs—high signal in beeware/beeware#621 (policies on LLM usage).[4]\n\n### Claude Code Skills Libraries\n\n**alirezarezvani/claude-skills** (4.4k stars) gained traction as the largest open-source skill library (+192 skills for Claude Code agents), with CLI tools for roles like CTO Advisor and Senior Architect.[5] Solves **domain-specific expertise gaps** in generalists like OpenHands, Continue, or Gemini CLI—no external APIs needed, yielding \"30%+ quality improvements\" via production-ready scaffolds (e.g., Tech Debt Analyzer, PRD Templates).[5]\n\nUser feedback highlights:\n- **ROI focus**: \"Battle-tested frameworks\" for metrics like DORA/velocity, unlike Tabby/Ollama's raw inference.[5]\n- **Role-based modularity**: E.g., UX Researcher (Persona Generator CLI) or Code Reviewer (PR Analyzer), filling voids in v0/Lovable AI's UI-only focus.[5]\n\nTies to high-velocity affaan-m/everything-claude-code (80k+ stars, 1.3k★/day), emphasizing skills over raw prompting.[query]\n\n### Emerging Patterns from High-Velocity Repos\n\n- **agtx (fynnfluegge/agtx)**: Multi-session AI terminal manager; pairs with spec-kit for persistent workflows, solving Cline/Windsurf's single-session limits.[1]\n- **agentfactory.panaversity.org Foundations**: SDD chapters stress CLAUDE.md under-60-line rule to cut noise, plus multi-agent coordination—validates vs. nanobot/Google Workspace CLI's lack of workflow drift prevention.[4]\n\nThese outperform listed tools by prioritizing **specifications as syntax** and **modular skills** for enterprise-scale, per GitHub Discussions like outline/outline#11761 (MCP integration) and rappterbook threads on agent engines.[query] Activity spikes align with past-week velocity leaders.",
+      "citations": [
+        "https://github.com/fynnfluegge/agtx",
+        "https://github.com/Gentleman-Programming/agent-teams-lite",
+        "https://github.com/alirezarezvani/claude-skills"
+      ],
+      "model": "sonar-pro",
+      "recency": "day",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 3,
+        "official_source_count": 0,
+        "other_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false,
+        "citation_policy": "github-only",
+        "raw_other_source_count": 3,
+        "raw_citation_count": 6,
+        "filtered_out_citation_count": 3,
+        "filtered_out_domains": [
+          "agentfactory.panaversity.org",
+          "gist.github.com",
+          "www.youtube.com"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 964,
+        "completion_tokens": 699,
+        "total_tokens": 1663,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00289,
+          "output_tokens_cost": 0.01048,
+          "request_cost": 0.006,
+          "total_cost": 0.01938
+        }
+      }
+    },
+    "model_new_release_perplexity_backup": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "For the latest model releases from the past 7 days, gather immediate community reactions from GitHub Discussions, GitHub Issues, and repositories integrating or comparing those models. First confirm which release is actually the newest, then capture first impressions, benchmark results people actually tested, and honest disappointments. Distinguish clearly between: 1) the official latest release, 2) community reaction to that release, 3) benchmark chatter about older versions. Real user reactions only, not press releases.\n",
+      "answer": "### Official Latest Releases (Source of Truth)\nThe newest verified official releases are **OpenAI gpt-5.4-pro** (2026-03-04) and **gpt-5.4** (2026-03-05), per direct API listings, with Anthropic's **Claude Sonnet 4.6** (2026-02-17) as the prior benchmark. These fall 12-13 days outside the past 7 days (as of March 17, 2026), so no models qualify for \"latest releases from the past 7 days.\"\n\nNo GitHub Discussions, Issues, or integrating repos were found reacting to releases within the past 7 days, as no such official releases occurred.\n\n### Community Context on Recent Releases (Pre-7 Days)\nGitHub-sourced reactions are unavailable in results, which instead highlight third-party recaps of gpt-5.4/gpt-5.4-pro (e.g., configurable reasoning levels, 272K context, Computer Use API for screen interaction).[1][2][3] Users in non-GitHub notes report frustrations with Computer Use API latency, misclicks on dense UIs, and security needs for sandboxing—describing it as \"first-generation\" with no pixel-perfect precision.[1] Pricing praised as aggressive ($10/$30 per 1M input/output tokens) vs. Claude Sonnet 4.6 ($3/$15).[1]\n\nBenchmark chatter focuses on older versions like gpt-5.3 or Claude Sonnet 4.6 comparisons, not fresh tests (e.g., gpt-5.4 matching Claude Opus 4.6 scores, 33% fewer factual errors vs. gpt-5.2).[1][2] No real-user GitHub examples, code snippets, or maintainer discussions captured; results lack primary GitHub data.",
+      "citations": [
+        "https://help.openai.com/es-es/articles/6825453-chatgpt-release-notes",
+        "https://help.openai.com/en/articles/11909943-gpt-53-and-54-in-chatgpt"
+      ],
+      "model": "sonar-pro",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "help.openai.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true,
+        "citation_policy": "official+github",
+        "raw_other_source_count": 4,
+        "raw_citation_count": 6,
+        "filtered_out_citation_count": 4,
+        "filtered_out_domains": [
+          "developers.openai.com",
+          "milvus.io",
+          "releasebot.io",
+          "www.nxcode.io"
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 482,
+        "completion_tokens": 383,
+        "total_tokens": 865,
+        "search_context_size": "low",
+        "cost": {
+          "input_tokens_cost": 0.00145,
+          "output_tokens_cost": 0.00575,
+          "request_cost": 0.006,
+          "total_cost": 0.01319
+        }
+      }
+    }
+  },
+  "community_release_reactions": {}
+}

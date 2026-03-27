@@ -61,51 +61,51 @@ official_sources:
   date_search_chars: 6000
   model_search_chars: 8000
   vendors:
-    - company: OpenAI
-      note: Official OpenAI release post
-      list_urls:
-        - https://openai.com/index/
-      link_patterns:
-        - /index/introducing-gpt-
-        - /index/introducing-o
-        - /index/introducing-codex
-      model_patterns:
-        - \bGPT-\d+(?:\.\d+)?(?:\.\d+)?\b
-        - \bo\d+(?:-[a-z0-9]+)?\b
-        - \bCodex\b
-      release_signal_patterns:
-        - \bintroducing\b
-        - \bannouncing\b
-        - \breleased\b
-        - \bavailable\b
-      max_candidate_links: 30
-      api_listing:
-        url: https://api.openai.com/v1/models
-        auth_env: OPENAI_API_KEY
-        model_regex: ^(gpt-\d|o\d|codex)
-        source_url: https://api.openai.com/v1/models
-        note: Official OpenAI models API listing
-        normalize:
-          strip_date_suffix: true
-          strip_latest_suffix: true
-          dedupe_aliases: true
-    - company: Anthropic
-      note: Official Anthropic news post
-      list_urls:
-        - https://www.anthropic.com/news
-      link_patterns:
-        - /news/claude
-        - /news/introducing
-      exclude_link_patterns:
-        - /news/claude-code-security
-      model_patterns:
-        - \bClaude\s+(?:Sonnet|Opus)\s+\d+(?:\.\d+)?\b
-      release_signal_patterns:
-        - \bintroducing\b
-        - \bannouncing\b
-        - \bavailable\b
-        - \bnow available\b
-      max_candidate_links: 25
+  - company: OpenAI
+    note: Official OpenAI release post
+    list_urls:
+    - https://openai.com/index/
+    link_patterns:
+    - /index/introducing-gpt-
+    - /index/introducing-o
+    - /index/introducing-codex
+    model_patterns:
+    - \bGPT-\d+(?:\.\d+)?(?:\.\d+)?\b
+    - \bo\d+(?:-[a-z0-9]+)?\b
+    - \bCodex\b
+    release_signal_patterns:
+    - \bintroducing\b
+    - \bannouncing\b
+    - \breleased\b
+    - \bavailable\b
+    max_candidate_links: 30
+    api_listing:
+      url: https://api.openai.com/v1/models
+      auth_env: OPENAI_API_KEY
+      model_regex: ^(gpt-\d|o\d|codex)
+      source_url: https://api.openai.com/v1/models
+      note: Official OpenAI models API listing
+      normalize:
+        strip_date_suffix: true
+        strip_latest_suffix: true
+        dedupe_aliases: true
+  - company: Anthropic
+    note: Official Anthropic news post
+    list_urls:
+    - https://www.anthropic.com/news
+    link_patterns:
+    - /news/claude
+    - /news/introducing
+    exclude_link_patterns:
+    - /news/claude-code-security
+    model_patterns:
+    - \bClaude\s+(?:Sonnet|Opus)\s+\d+(?:\.\d+)?\b
+    release_signal_patterns:
+    - \bintroducing\b
+    - \bannouncing\b
+    - \bavailable\b
+    - \bnow available\b
+    max_candidate_links: 25
 context:
   tools:
   - Claude Code
@@ -128,6 +128,22 @@ context:
   - Tabby
   - Goose
   - OpenHands
+  - GitHub Spec Kit
+  - OpenCode
+  - Continue
+  - Antigravity
+  - Lovable AI
+  - Codex CLI
+  - Codex
+  - Kimi Code
+  - NanoClaw
+  - memU
+  - NullClaw
+  - ZeroClaw
+  - OpenFang
+  - Moltworker
+  - SuperAGI
+  - PicoClaw
   models:
   - Claude 3.5 / 3.7 / 4.x (Anthropic)
   - GPT-4o / o1 / o3 / 5 (OpenAI)
@@ -138,6 +154,8 @@ context:
   - Grok 3 / 4 (xAI)
   - Latest Frontier Models (SOTA LLMs)
   - Nano Banana Pro
+  - Claude 4.6 Opus
+  - Gemini 3.1 Pro
   concepts:
   - Harness Engineering
   - AI Agent Skills
