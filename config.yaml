@@ -1,15 +1,11 @@
-perplexity:
-  model: sonar-pro
-  recency: day
-  max_tokens: 800
 claude:
   model: claude-sonnet-4-6
-  max_tokens: 5000
+  max_tokens: 1800
 github:
   lookback_days: 7
   min_stars: 50
-  limit: 30
-  top_n: 15
+  limit: 15
+  top_n: 5
 query_defaults:
   source_policy: github-only
   use_official_context: false
@@ -313,6 +309,17 @@ summary:
     - 반복 항목이 많을수록 ⚡ 오늘의 핵심 섹션을 더 짧게 유지 (3개 이하도 무방)
 
     '
+  input_limits:
+    previous_summary_chars: 900
+    max_direct_results: 6
+    max_answer_chars_high: 900
+    max_answer_chars_medium: 500
+    max_citations_per_result: 2
+    github_trending: 5
+    hackernews: 5
+    practice_groups: 3
+    practice_items_per_group: 1
+    include_low_confidence: false
   confidence_gate:
     medium_min_community_sources: 1
     high_min_community_sources: 3
@@ -325,44 +332,44 @@ summary:
       official-direct: official_only
       direct-community: community_only
       direct-practice: community_only
-  output_format: '출력 형식 (전체 분량 목표: 섹션당 3~4 bullet, 총 30~40줄 이내):
+  output_format: '출력 형식 (전체 분량 목표: 총 20~25줄 이내):
 
     # AI Tech Digest 요약 — {date}
 
 
     ## ⚡ 오늘의 핵심 (전날 대비 NEW & 주목)
 
-    (3~5개 bullet. [신규] 또는 [업데이트] 태그 필수. 임팩트 큰 것 우선)
+    (2~3개 bullet. [신규] 또는 [업데이트] 태그 필수. 임팩트 큰 것 우선)
 
 
     ## 🔑 핵심 키워드 & 방향성
 
-    (키워드 5~8개 볼드 나열 후, 방향성 2줄 이내)
+    (키워드 4~6개 볼드 나열 후, 방향성 1줄)
 
 
     ## 🏢 기업 신기능 & 공식 발표
 
-    (전날과 다른 내용만, 3bullet 이하. 없으면 생략)
+    (전날과 다른 내용만, 2bullet 이하. 없으면 생략)
 
 
     ## 🤖 신규 모델 & 커뮤니티 반응
 
-    (전날과 다른 내용만, 3bullet 이하. 없으면 생략)
+    (전날과 다른 내용만, 2bullet 이하. 없으면 생략)
 
 
     ## ⚙️ AI 기법 & 아키텍처
 
-    (전날과 다른 내용만, 3bullet 이하. 없으면 생략)
+    (전날과 다른 내용만, 2bullet 이하. 없으면 생략)
 
 
     ## 🧬 바이브코딩 & 방법론 진화
 
-    (전날과 다른 내용만, 3bullet 이하. 없으면 생략)
+    (전날과 다른 내용만, 2bullet 이하. 없으면 생략)
 
 
     ## 🔥 커뮤니티 인기 콘텐츠
 
-    (GitHub Trending 전날과 다른 레포만, 5개 이하 표 형식)
+    (GitHub Trending 전날과 다른 레포만, 3개 이하 표 형식)
 
 
     ## 🛠️ AI 툴 & 워크플로우
@@ -372,7 +379,7 @@ summary:
 
     ## 💡 오늘의 액션 아이템
 
-    (당장 써먹을 수 있는 것 2~3가지. 한 줄씩 구체적으로.)
+    (당장 써먹을 수 있는 것 1~2가지. 한 줄씩 구체적으로.)
 
     '
 sections:

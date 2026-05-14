@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: '0 0 * * *'   # 매일 09:00 KST (00:00 UTC)
   workflow_dispatch:        # 수동 실행 버튼
+    inputs:
+      detect_paradigm_shifts:
+        description: 'Run optional Claude paradigm shift detection'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   digest:
@@ -64,13 +70,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # ── Perplexity 수집 (선택, 실패해도 계속) ──────────
-
-      - name: Step 1 - Perplexity 수집 (optional)
-        run: python scripts/fetch_perplexity.py
-        continue-on-error: true
-        env:
-          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+      - name: Step 1.6 - 직접 수집 다이제스트 렌더링
+        run: python scripts/render_digest.py
 
       # ── 요약 & 분석 ───────────────────────────────────
 
@@ -80,6 +81,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Step 3 - 패러다임 변화 감지
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.detect_paradigm_shifts == 'true' }}
         run: python scripts/detect_paradigm_shifts.py
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

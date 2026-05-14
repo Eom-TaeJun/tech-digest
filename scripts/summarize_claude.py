@@ -49,14 +49,36 @@ def load_prev_summary(today_str: str) -> str:
         return f.read()
 
 
-def build_github_section(trending: list[dict]) -> str:
+def summary_input_limits(config: dict) -> dict:
+    return config.get("summary", {}).get("input_limits", {})
+
+
+def should_include_result(result: dict, confidence: str, config: dict) -> bool:
+    if not result:
+        return False
+
+    limits = summary_input_limits(config)
+    if confidence == "LOW" and not limits.get("include_low_confidence", False):
+        return False
+
+    source = result.get("source", "")
+    if source in {"official-direct", "direct-community", "direct-practice"}:
+        return True
+
+    # Keep the summarizer on directly collected data only. Historical generated
+    # answers generally have no direct source marker, so they are intentionally skipped.
+    return str(result.get("model", "")).startswith("direct-")
+
+
+def build_github_section(trending: list[dict], config: dict) -> str:
     if not trending:
         return ""
+    limit = summary_input_limits(config).get("github_trending", 5)
     lines = [
         "## [GitHub Trending] 최근 7일 급등 레포 (star velocity 기준)",
         "",
     ]
-    for i, r in enumerate(trending, 1):
+    for i, r in enumerate(trending[:limit], 1):
         lang = r.get("language") or "Unknown"
         desc = r.get("description") or ""
         lines.append(
@@ -71,14 +93,15 @@ def build_github_section(trending: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def build_hackernews_section(hn_trending: list[dict]) -> str:
+def build_hackernews_section(hn_trending: list[dict], config: dict) -> str:
     if not hn_trending:
         return ""
+    limit = summary_input_limits(config).get("hackernews", 5)
     lines = [
         "## [Hacker News] AI 관련 인기 토론 (최근 72시간)",
         "",
     ]
-    for i, s in enumerate(hn_trending[:10], 1):
+    for i, s in enumerate(hn_trending[:limit], 1):
         lines.append(
             f"{i}. **[{s['title']}]({s['hn_url']})** "
             f"↑{s['points']} 💬{s['comments']}"
@@ -91,25 +114,28 @@ def build_hackernews_section(hn_trending: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def build_practice_section(practice_signals: dict) -> str:
+def build_practice_section(practice_signals: dict, config: dict) -> str:
     groups = practice_signals.get("groups", [])
     if not groups:
         return ""
+    limits = summary_input_limits(config)
+    group_limit = limits.get("practice_groups", 3)
+    item_limit = limits.get("practice_items_per_group", 1)
     lines = [
         "## [Practice Signals] GitHub 방법론 신호",
         "",
     ]
-    for g in groups[:6]:
+    for g in groups[:group_limit]:
         repos = g.get("github_repos", [])
         discussions = g.get("github_discussions", [])
         if not repos and not discussions:
             continue
         lines.append(f"### {g.get('label', 'Unknown')}")
-        for r in repos[:2]:
+        for r in repos[:item_limit]:
             lines.append(
                 f"- Repo: [{r['name']}]({r['url']}) ★{r['stars']} ({r.get('star_velocity', 0)}★/일)"
             )
-        for d in discussions[:2]:
+        for d in discussions[:item_limit]:
             lines.append(
                 f"- Discussion: [{d['title']}]({d['url']}) ↑{d.get('upvotes', 0)} 💬{d.get('comments', 0)}"
             )
@@ -121,6 +147,7 @@ def build_practice_section(practice_signals: dict) -> str:
 
 def format_result_for_summary(result: dict, config: dict) -> tuple[str, str]:
     gate = confidence_gate(config)
+    limits = summary_input_limits(config)
     confidence = classify_confidence(result, gate)
     answer = result.get("answer", "(데이터 없음)")
     notice = gate.get(
@@ -128,9 +155,11 @@ def format_result_for_summary(result: dict, config: dict) -> tuple[str, str]:
         "LOW confidence 항목은 승인된 공식/직접 커뮤니티 근거가 부족하므로 배경 정보로만 사용",
     )
 
-    max_chars = 2000
-    if confidence == "LOW":
-        max_chars = gate.get("low_confidence_max_chars", 900)
+    max_chars = {
+        "HIGH": limits.get("max_answer_chars_high", 900),
+        "MEDIUM": limits.get("max_answer_chars_medium", 500),
+        "LOW": gate.get("low_confidence_max_chars", 900),
+    }.get(confidence, 500)
 
     if confidence == "LOW" and gate.get("low_confidence_prompt_mode") == "note_only":
         return confidence, f"[LOW CONFIDENCE] {notice}"
@@ -147,9 +176,10 @@ def format_result_for_summary(result: dict, config: dict) -> tuple[str, str]:
 def build_prompt(results: dict, github_trending: list, config: dict, prev_summary: str = "",
                  hn_trending: list = None, practice_signals: dict = None) -> str:
     gate = confidence_gate(config)
+    limits = summary_input_limits(config)
     lines = [
-        f"아래는 오늘({TODAY}) 수집한 AI 기술 커뮤니티 반응 원본입니다.",
-        "섹션별로 나눠서 한국어로 요약해주세요.",
+        f"아래는 오늘({TODAY}) 직접 수집한 AI 기술 신호입니다.",
+        "검색 생성 답변은 제외했습니다. 직접 수집된 근거만 한국어로 짧게 요약해주세요.",
         "",
         "중요 규칙:",
         "1. 최신 모델 버전/출시일은 official source가 있는 항목을 우선 사실로 사용하세요.",
@@ -172,28 +202,38 @@ def build_prompt(results: dict, github_trending: list, config: dict, prev_summar
             "## [전날 요약 — 중복 판단 기준]",
             "아래 내용은 어제 이미 다룬 항목입니다. 오늘 유의미한 변화가 없으면 반복하지 마세요.",
             "",
-            prev_summary[:2000],  # 앞 2000자만 사용 (input 토큰 절약)
+            prev_summary[:limits.get("previous_summary_chars", 900)],
             "",
             "---",
             "",
         ]
 
+    included_results = 0
+    max_direct_results = limits.get("max_direct_results", 6)
     for i, section in enumerate(config["sections"], 1):
-        lines.append(f"## 섹션 {i}: {section['title']}")
-        lines.append("")
+        section_lines = [f"## 섹션 {i}: {section['title']}", ""]
+        section_has_content = False
         for q in section["queries"]:
-            result = results.get(q["id"], {})
+            if included_results >= max_direct_results:
+                break
+            result = results.get(q["id"])
+            if not result:
+                continue
             confidence, answer = format_result_for_summary(result, config)
+            if not should_include_result(result, confidence, config):
+                continue
             evidence = result.get("evidence", {})
-            citations = result.get("citations", [])[:5]  # 출처 최대 5개
+            citations = result.get("citations", [])[
+                :limits.get("max_citations_per_result", 2)
+            ]
             if confidence == "LOW" and not gate.get("include_low_confidence_sources", False):
                 citations = []
-            lines.append(f"### {q['title']}")
-            lines.append(f"Confidence: {confidence}")
+            section_lines.append(f"### {q['title']}")
+            section_lines.append(f"Confidence: {confidence}")
             if confidence == "LOW" and gate.get("suppress_low_confidence_headlines", True):
-                lines.append("Summary Rule: 이 항목은 headline/오늘의 핵심/액션 아이템에 사용 금지")
+                section_lines.append("Summary Rule: 이 항목은 headline/오늘의 핵심/액션 아이템에 사용 금지")
             if evidence:
-                lines.append(
+                section_lines.append(
                     "Evidence Summary: "
                     f"official={evidence.get('official_source_count', 0)}, "
                     f"community={evidence.get('community_source_count', 0)}, "
@@ -203,23 +243,27 @@ def build_prompt(results: dict, github_trending: list, config: dict, prev_summar
                     f"has_community={evidence.get('has_direct_community_sources', False)}"
                 )
             if citations:
-                lines.append("Sources:")
+                section_lines.append("Sources:")
                 for idx, url in enumerate(citations, 1):
-                    lines.append(f"{idx}. {url}")
-            lines.append(answer)
+                    section_lines.append(f"{idx}. {url}")
+            section_lines.append(answer)
+            section_lines.append("")
+            section_has_content = True
+            included_results += 1
+        if section_has_content:
+            lines.extend(section_lines)
+            lines.append("---")
             lines.append("")
-        lines.append("---")
-        lines.append("")
 
-    github_block = build_github_section(github_trending)
+    github_block = build_github_section(github_trending, config)
     if github_block:
         lines.append(github_block)
 
-    hn_block = build_hackernews_section(hn_trending or [])
+    hn_block = build_hackernews_section(hn_trending or [], config)
     if hn_block:
         lines.append(hn_block)
 
-    practice_block = build_practice_section(practice_signals or {})
+    practice_block = build_practice_section(practice_signals or {}, config)
     if practice_block:
         lines.append(practice_block)
 

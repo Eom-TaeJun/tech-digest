@@ -20,15 +20,14 @@ SEARCH_QUERIES = [
     "Claude Code",
     "LLM agent",
     "AI coding",
-    "vibe coding",
-    "GPT API",
     "MCP protocol",
-    "AI workflow",
 ]
 
-MIN_POINTS = 10
-MIN_COMMENTS = 3
+MIN_POINTS = 20
+MIN_COMMENTS = 5
 LOOKBACK_HOURS = 72
+HITS_PER_QUERY = 5
+MAX_RESULTS = 5
 
 
 def fetch_hn_stories(query: str, lookback_hours: int = LOOKBACK_HOURS) -> list[dict]:
@@ -38,7 +37,7 @@ def fetch_hn_stories(query: str, lookback_hours: int = LOOKBACK_HOURS) -> list[d
         "query": query,
         "tags": "story",
         "numericFilters": f"created_at_i>{since},points>{MIN_POINTS}",
-        "hitsPerPage": 10,
+        "hitsPerPage": HITS_PER_QUERY,
     }
     try:
         resp = requests.get(HN_SEARCH_API, params=params, timeout=15)
@@ -79,7 +78,7 @@ def collect_hn_trending() -> list[dict]:
     unique.sort(key=lambda x: x["_score"], reverse=True)
 
     results = []
-    for s in unique[:15]:
+    for s in unique[:MAX_RESULTS]:
         results.append({
             "title": s.get("title", ""),
             "url": s.get("url") or f"https://news.ycombinator.com/item?id={s['objectID']}",

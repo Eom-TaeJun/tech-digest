@@ -20,9 +20,12 @@ LOOKBACK_DAYS = 7
 GITHUB_GRAPHQL_API = "https://api.github.com/graphql"
 MIN_GH_DISCUSSION_COMMENTS = 1
 MIN_GH_DISCUSSION_UPVOTES = 1
+MAX_RELEASE_FAMILIES = 2
+MAX_DISCUSSIONS_PER_FAMILY = 3
+MAX_CITATIONS = 10
 GITHUB_DISCUSSION_QUERY = """
 query($query:String!) {
-  search(query:$query, type:DISCUSSION, first:8) {
+  search(query:$query, type:DISCUSSION, first:5) {
     edges {
       node {
         ... on Discussion {
@@ -86,7 +89,9 @@ def extract_release_families(official_releases: list[dict]) -> list[dict]:
                 "released_at": released_at,
             }
 
-    return sorted(families.values(), key=lambda x: x["released_at"], reverse=True)[:4]
+    return sorted(
+        families.values(), key=lambda x: x["released_at"], reverse=True
+    )[:MAX_RELEASE_FAMILIES]
 
 
 def normalize_family(model: str) -> str:
@@ -245,7 +250,7 @@ def build_answer(families: list[dict], grouped_items: dict[str, list[dict]]) -> 
             lines.append("")
             continue
 
-        for item in items[:6]:
+        for item in items[:MAX_DISCUSSIONS_PER_FAMILY]:
             lines.append(
                 f"- [GitHub Discussions/{item.get('repository', '')}] {item['title']} | comments={item.get('comments', 0)} | upvotes={item.get('upvotes', 0)} | {item['url']}"
             )
@@ -288,11 +293,11 @@ def main():
 
     all_items = [item for items in grouped_items.values() for item in items]
     answer = build_answer(families, grouped_items)
-    citations = [item["url"] for item in all_items[:30]]
+    citations = [item["url"] for item in all_items[:MAX_CITATIONS]]
 
     results = data.setdefault("results", {})
     if "model_new_release" in results:
-        results["model_new_release_perplexity_backup"] = results["model_new_release"]
+        results["model_new_release_previous_backup"] = results["model_new_release"]
 
     results["model_new_release"] = {
         "id": "model_new_release",

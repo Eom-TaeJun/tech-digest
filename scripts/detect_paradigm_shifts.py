@@ -14,6 +14,8 @@ with open("baseline_architecture.yaml", "r", encoding="utf-8") as f:
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 ALERT_START = "<!-- PARADIGM_SHIFT_START -->"
 ALERT_END = "<!-- PARADIGM_SHIFT_END -->"
+MAX_DIGEST_CHARS = 6000
+MAX_OUTPUT_TOKENS = 700
 
 def get_latest_digest():
     files = sorted(glob.glob("digest/*.md"))
@@ -28,7 +30,7 @@ def detect():
         return
 
     with open(digest_path, "r", encoding="utf-8") as f:
-        today_news = f.read()
+        today_news = f.read()[:MAX_DIGEST_CHARS]
 
     print(f"  [Detecting] {digest_path} 분석 중...")
 
@@ -60,7 +62,7 @@ def detect():
 
     response = client.messages.create(
         model=config["claude"]["model"],
-        max_tokens=1000,
+        max_tokens=MAX_OUTPUT_TOKENS,
         messages=[{"role": "user", "content": prompt}]
     )
 

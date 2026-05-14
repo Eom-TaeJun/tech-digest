@@ -26,8 +26,8 @@ def fetch_trending(config: dict) -> list[dict]:
     gh = config.get("github", {})
     lookback_days = gh.get("lookback_days", 7)
     min_stars = gh.get("min_stars", 50)
-    limit = gh.get("limit", 30)
-    top_n = gh.get("top_n", 15)
+    limit = gh.get("limit", 15)
+    top_n = gh.get("top_n", 5)
 
     since = (datetime.now() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
 

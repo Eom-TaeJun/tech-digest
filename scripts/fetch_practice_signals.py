@@ -24,6 +24,9 @@ MIN_REPO_STARS = 10
 MIN_DISCUSSION_UPVOTES = 1
 MIN_DISCUSSION_COMMENTS = 1
 REQUEST_TIMEOUT = 20
+MAX_GROUPS_TO_SCAN = 4
+MAX_TERMS_PER_GROUP = 2
+MAX_ITEMS_PER_GROUP = 3
 
 FALLBACK_GROUPS = [
     {
@@ -600,11 +603,11 @@ def main():
         seen_ids.add(gid)
         seen_labels.add(label)
         groups_to_scan.append(group)
-        if len(groups_to_scan) >= max(5, len(static_groups) + 3):
+        if len(groups_to_scan) >= MAX_GROUPS_TO_SCAN:
             break
 
     for group in fallback_groups:
-        if len(groups_to_scan) >= max(7, len(static_groups) + 5):
+        if len(groups_to_scan) >= MAX_GROUPS_TO_SCAN:
             break
         gid = group["id"]
         label = group["label"].lower()
@@ -619,19 +622,19 @@ def main():
         github_repos = []
         github_discussions = []
 
-        for term in group["terms"]:
+        for term in group["terms"][:MAX_TERMS_PER_GROUP]:
             github_repos.extend(fetch_github_repos(term, group))
             github_discussions.extend(fetch_github_discussions(term, group))
 
         github_repos = [
             item for item in rank_repos(github_repos) if item["stars"] >= MIN_REPO_STARS
-        ][:5]
+        ][:MAX_ITEMS_PER_GROUP]
         github_discussions = [
             item
             for item in rank_posts(github_discussions, ("comments", "upvotes"))
             if item["comments"] >= MIN_DISCUSSION_COMMENTS
             or item["upvotes"] >= MIN_DISCUSSION_UPVOTES
-        ][:5]
+        ][:MAX_ITEMS_PER_GROUP]
 
         groups.append(
             {

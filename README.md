@@ -6,7 +6,7 @@ AI 기술 트렌드를 **GitHub 기반 실제 사용자 신호** 중심으로 �
 
 ---
 
-## 수집 섹션 (5개 섹션 / 17개 쿼리)
+## 분석 섹션 (5개 섹션)
 
 | 섹션 | 내용 |
 |---|---|
@@ -18,9 +18,9 @@ AI 기술 트렌드를 **GitHub 기반 실제 사용자 신호** 중심으로 �
 
 ## 업데이트
 
-- **수집**: 매일 오전 9시 KST (Perplexity `sonar-pro`)
-- **원본**: [`raw/`](./raw/) — 공식 소스 + GitHub 직접 신호 + Perplexity 결과가 합쳐진 원본 JSON
-- **다이제스트**: [`digest/`](./digest/) — 읽기용 압축 마크다운 + Claude 재요약본
+- **수집**: 매일 오전 9시 KST (GitHub/Hacker News/공식 소스 직접 수집)
+- **원본**: [`raw/`](./raw/) — 공식 소스 + GitHub 직접 신호 + Hacker News 결과가 합쳐진 원본 JSON
+- **다이제스트**: [`digest/`](./digest/) — 읽기용 압축 마크다운 + Claude 단문 요약본
 
 ## 구조
 
@@ -31,10 +31,10 @@ scripts/discover_concepts.py       ← Step 0: 신규 툴/모델/개념 발견
 scripts/fetch_official_sources.py  ← Step 0.5: 공식 릴리즈 직접 확인
 scripts/fetch_github.py            ← Step 0.6: GitHub Trending 수집
 scripts/fetch_practice_signals.py  ← Step 0.75: GitHub 직접 방법론 신호 수집
-scripts/fetch_perplexity.py        ← Step 1: Perplexity 수집
 scripts/fetch_community_sources.py ← Step 1.5: GitHub Discussions 직접 반응 수집
+scripts/render_digest.py           ← Step 1.6: 직접 수집 다이제스트 렌더링
 scripts/summarize_claude.py        ← Step 2: Claude 재요약
-scripts/detect_paradigm_shifts.py  ← Step 3: 패러다임 변화 탐지
+scripts/detect_paradigm_shifts.py  ← 수동 옵션: 패러다임 변화 탐지
 docs/github-search-playbook.md     ← GitHub 직접 링크 재수집 플레이북
 raw/YYYY-MM-DD.json                ← 병합 원본 JSON (전체 응답 보관)
 digest/YYYY-MM-DD.md               ← 읽기용 압축 마크다운
@@ -47,10 +47,10 @@ digest/YYYY-MM-DD.summary.md       ← Claude 한국어 요약본 + 패러다임
 2. `python scripts/fetch_official_sources.py` # Step 0.5: 공식 모델 릴리즈 직접 확인
 3. `python scripts/fetch_github.py` # Step 0.6: GitHub Trending/star velocity 수집
 4. `python scripts/fetch_practice_signals.py` # Step 0.75: GitHub 직접 방법론 신호 수집
-5. `python scripts/fetch_perplexity.py`   # Step 1: Perplexity 데이터 수집 (직접 신호 기반 맥락 보강)
-6. `python scripts/fetch_community_sources.py` # Step 1.5: GitHub Discussions 직접 반응 수집
-7. `python scripts/summarize_claude.py`    # Step 2: Claude 한국어 요약
-8. `python scripts/detect_paradigm_shifts.py` # Step 3: 아키텍처 위기 및 패러다임 변화 탐지
+5. `python scripts/fetch_community_sources.py` # Step 1.5: GitHub Discussions 직접 반응 수집
+6. `python scripts/render_digest.py`       # Step 1.6: 직접 수집 다이제스트 렌더링
+7. `python scripts/summarize_claude.py`    # Step 2: Claude 한국어 단문 요약
+8. `python scripts/detect_paradigm_shifts.py` # 수동 옵션: 아키텍처 위기 및 패러다임 변화 탐지
 
 ## 핵심 분석 대상
 
@@ -66,7 +66,7 @@ digest/YYYY-MM-DD.summary.md       ← Claude 한국어 요약본 + 패러다임
 
 - **툴/모델 목록 업데이트** → `context.tools` / `context.models`
 - **섹션/쿼리 추가·삭제** → `sections` 블록
-- **수집 모델·빈도 변경** → `perplexity.model` / `perplexity.recency`
+- **Claude 요약 길이 변경** → `claude.max_tokens` / `summary.input_limits`
 - **GitHub 직접 탐색 그룹 조정** → `github.practice_signal_groups`
 
 ## 목적

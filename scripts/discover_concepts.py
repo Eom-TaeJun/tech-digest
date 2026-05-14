@@ -1,7 +1,7 @@
 """
 Daily Tech Digest - Step 0: New Concepts Discovery
 - GitHub Trending 데이터에서 새로운 도구/모델/개념 자동 발견
-- Perplexity 의존 제거 → raw/{date}.json의 github_trending 기반
+- 외부 검색 의존 제거 → raw/{date}.json의 github_trending 기반
 - config.yaml의 context 섹션을 동적으로 업데이트
 """
 
