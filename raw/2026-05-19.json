@@ -1,0 +1,811 @@
+{
+  "date": "2026-05-19",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **OpenAI — GPT-5.5** | latest known official release outside lookback: **2026-04-23** | source: https://openai.com/index/introducing-gpt-5-5\n- **Anthropic — Claude Opus 4.7** | latest known official release outside lookback: **2026-04-17** | source: https://www.anthropic.com/news/claude-design-anthropic-labs\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://openai.com/index/introducing-gpt-5-5",
+        "https://www.anthropic.com/news/claude-design-anthropic-labs"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Model Context Protocol\n- Tracked queries: Model Context Protocol, mcp\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/everything-claude-code | stars=186605 | velocity=1541.6★/day | https://github.com/affaan-m/everything-claude-code\n- GitHub Discussions: 🤝 Open for Collaboration — Build AI Agent Governance With Us | repo=agentguard-ai/tealtiger | comments=2 | upvotes=1 | https://github.com/orgs/agentguard-ai/discussions/40\n\n### AI Agent Skills\n- Tracked queries: AI Agent Skills, codex skill\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: op7418/guizang-ppt-skill | stars=9851 | velocity=385.9★/day | https://github.com/op7418/guizang-ppt-skill\n- GitHub Discussions: New GitHub Certified: Agentic AI Developer | repo=community/community | comments=4 | upvotes=1 | https://github.com/orgs/community/discussions/195743\n\n### Agent Workflow / Orchestration\n- Tracked queries: Agent Workflow / Orchestration, agentic workflow\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: langgenius/dify | stars=141817 | velocity=125.2★/day | https://github.com/langgenius/dify\n- GitHub Discussions: Built an Autonomous Cognitive Engineering System for Gemini CLI (EGC) - Looking for Advanced Feedback | repo=community/community | comments=1 | upvotes=1 | https://github.com/orgs/community/discussions/196100\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/everything-claude-code | stars=186605 | velocity=1541.6★/day | https://github.com/affaan-m/everything-claude-code\n- GitHub Discussions: PAI Integration into a Nix Devenv environment | repo=danielmiessler/Personal_AI_Infrastructure | comments=2 | upvotes=2 | https://github.com/danielmiessler/Personal_AI_Infrastructure/discussions/1257",
+      "citations": [
+        "https://github.com/affaan-m/everything-claude-code",
+        "https://github.com/orgs/agentguard-ai/discussions/40",
+        "https://github.com/op7418/guizang-ppt-skill",
+        "https://github.com/orgs/community/discussions/195743",
+        "https://github.com/langgenius/dify",
+        "https://github.com/orgs/community/discussions/196100",
+        "https://github.com/affaan-m/everything-claude-code",
+        "https://github.com/danielmiessler/Personal_AI_Infrastructure/discussions/1257"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "OpenAI",
+      "model": "GPT-5.5",
+      "released_at": "2026-04-23",
+      "source_url": "https://openai.com/index/introducing-gpt-5-5",
+      "note": "Official OpenAI release post"
+    },
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 4.7",
+      "released_at": "2026-04-17",
+      "source_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "note": "Official Anthropic news post"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "DuskMosquito/Lossless-Scaling-Desktop-2026",
+      "description": "⭐️ Lossless Scaling Desktop 2026 | Setup Installer v1.0 | Patch Activator Keygen | License Key Pre-Activated | Full Version Latest Build Pro | Optimize Resolution Scaling | Enhance Performance Graphics | Get Desktop App Windows 10/11 PC | Direct Genuine Original x64 | Download Install Loader Mod ⭐️",
+      "stars": 776,
+      "forks": 0,
+      "language": "C",
+      "url": "https://github.com/DuskMosquito/Lossless-Scaling-Desktop-2026",
+      "created_at": "2026-05-18T15:21:49Z",
+      "days_old": 0.4,
+      "star_velocity": 1749.6,
+      "topics": [
+        "gaming-booster",
+        "lossless-scaling",
+        "lossless-scaling-2026",
+        "lossless-scaling-download",
+        "lossless-scaling-high-resolution",
+        "lossless-scaling-isfg",
+        "lossless-scaling-pc",
+        "lossless-scaling-software",
+        "lossless-scaling-v3",
+        "universal-frame-gen",
+        "upscale-tool"
+      ]
+    },
+    {
+      "name": "vercel-labs/zero",
+      "description": "The programming language for agents",
+      "stars": 2306,
+      "forks": 148,
+      "language": "C",
+      "url": "https://github.com/vercel-labs/zero",
+      "created_at": "2026-05-15T16:55:16Z",
+      "days_old": 3.4,
+      "star_velocity": 682.5,
+      "topics": []
+    },
+    {
+      "name": "yetone/native-feel-skill",
+      "description": "An Agent Skill for designing cross-platform desktop apps that feel native — distilled from Raycast's 2.0 deep-dive and reverse engineering of Raycast Beta.app. Eight architectural tenets, four-layer architecture, WebKit/WebView2 survival guide, 75-item ship audit.",
+      "stars": 1310,
+      "forks": 61,
+      "language": "Unknown",
+      "url": "https://github.com/yetone/native-feel-skill",
+      "created_at": "2026-05-14T19:28:43Z",
+      "days_old": 4.3,
+      "star_velocity": 306.6,
+      "topics": []
+    },
+    {
+      "name": "DenisSergeevitch/agents-best-practices",
+      "description": "Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design.",
+      "stars": 816,
+      "forks": 71,
+      "language": "Unknown",
+      "url": "https://github.com/DenisSergeevitch/agents-best-practices",
+      "created_at": "2026-05-15T21:32:21Z",
+      "days_old": 3.2,
+      "star_velocity": 256.1,
+      "topics": [
+        "agent-skill",
+        "agent-skills",
+        "agentic-workflows",
+        "agents",
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "codex",
+        "codex-skill",
+        "mcp",
+        "prompt-engineering"
+      ]
+    },
+    {
+      "name": "zigabratun/Umbrella-HWID-Tool",
+      "description": "Umbrella Spoofer: HWID changer, hardware identifier modification, disk serial number spoofing, MAC address changer. Kernel-level driver, SMBIOS UUID update, registry cleanup, motherboard serials. Anti-cheat integrity, EAC validation, BattlEye status, hardware ban removal, permanent spoofing.",
+      "stars": 588,
+      "forks": 0,
+      "language": "TypeScript",
+      "url": "https://github.com/zigabratun/Umbrella-HWID-Tool",
+      "created_at": "2026-05-16T16:30:05Z",
+      "days_old": 2.4,
+      "star_velocity": 245.4,
+      "topics": [
+        "device-shadow-mode",
+        "disk-serial-spoof",
+        "game-spoofing",
+        "hardware-id-change",
+        "hardware-spoof",
+        "hardware-spoof-suite",
+        "hardware-spoofing",
+        "identity-shift",
+        "mac-address-changer",
+        "mac-spoofing",
+        "machine-spoof-core",
+        "spoof",
+        "spoof-detected",
+        "spoofer-hwid-premium",
+        "spoofer-tools",
+        "spoofing",
+        "spoofing-detection",
+        "system-anonymizer",
+        "system-reconfiguration"
+      ]
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [
+      {
+        "name": "he4rt/marketing-extension",
+        "stars": 21,
+        "star_velocity": 210.0,
+        "url": "https://github.com/he4rt/marketing-extension",
+        "description": "Chrome extension that passively captures X/Twitter GraphQL responses to track community engagement. Exports structured JSON for He4rt Hub ingestion.",
+        "language": "JavaScript",
+        "created_at": "2026-05-19T00:26:35Z"
+      }
+    ],
+    "weekly_top5": [
+      {
+        "name": "DuskMosquito/Lossless-Scaling-Desktop-2026",
+        "stars": 776,
+        "star_velocity": 1749.6,
+        "url": "https://github.com/DuskMosquito/Lossless-Scaling-Desktop-2026",
+        "description": "⭐️ Lossless Scaling Desktop 2026 | Setup Installer v1.0 | Patch Activator Keygen | License Key Pre-Activated | Full Version Latest Build Pro | Optimize Resolution Scaling | Enhance Performance Graphics | Get Desktop App Windows 10/11 PC | Direct Genuine Original x64 | Download Install Loader Mod ⭐️",
+        "language": "C",
+        "created_at": "2026-05-18T15:21:49Z"
+      },
+      {
+        "name": "vercel-labs/zero",
+        "stars": 2306,
+        "star_velocity": 682.5,
+        "url": "https://github.com/vercel-labs/zero",
+        "description": "The programming language for agents",
+        "language": "C",
+        "created_at": "2026-05-15T16:55:16Z"
+      },
+      {
+        "name": "Doorman11991/smallcode",
+        "stars": 515,
+        "star_velocity": 628.1,
+        "url": "https://github.com/Doorman11991/smallcode",
+        "description": "AI coding agent optimized for small LLMs. 87% benchmark with 4B-active model.",
+        "language": "JavaScript",
+        "created_at": "2026-05-18T06:19:44Z"
+      },
+      {
+        "name": "DenisSergeevitch/agents-best-practices",
+        "stars": 816,
+        "star_velocity": 256.1,
+        "url": "https://github.com/DenisSergeevitch/agents-best-practices",
+        "description": "Provider-neutral Agent Skill for Codex, Claude Code, and agentic harness design.",
+        "language": "Unknown",
+        "created_at": "2026-05-15T21:32:21Z"
+      },
+      {
+        "name": "zigabratun/Umbrella-HWID-Tool",
+        "stars": 588,
+        "star_velocity": 245.4,
+        "url": "https://github.com/zigabratun/Umbrella-HWID-Tool",
+        "description": "Umbrella Spoofer: HWID changer, hardware identifier modification, disk serial number spoofing, MAC address changer. Kernel-level driver, SMBIOS UUID update, registry cleanup, motherboard serials. Anti-cheat integrity, EAC validation, BattlEye status, hardware ban removal, permanent spoofing.",
+        "language": "TypeScript",
+        "created_at": "2026-05-16T16:30:05Z"
+      }
+    ],
+    "excluded_yesterday_count": 5
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "modelcontextprotocol",
+        "label": "Model Context Protocol",
+        "terms": [
+          "Model Context Protocol",
+          "mcp"
+        ],
+        "source": "dynamic",
+        "discovery_score": 264.3,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "name": "affaan-m/everything-claude-code",
+            "title": "affaan-m/everything-claude-code",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/everything-claude-code",
+            "stars": 186605,
+            "forks": 28896,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-05-19T01:59:06Z",
+            "star_velocity": 1541.6
+          },
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "name": "punkpeye/awesome-mcp-servers",
+            "title": "punkpeye/awesome-mcp-servers",
+            "description": "A collection of MCP servers.",
+            "url": "https://github.com/punkpeye/awesome-mcp-servers",
+            "stars": 87115,
+            "forks": 10382,
+            "topics": [
+              "ai",
+              "mcp"
+            ],
+            "created_at": "2024-11-30T04:49:10Z",
+            "updated_at": "2026-05-19T01:53:31Z",
+            "star_velocity": 162.9
+          },
+          {
+            "source": "github_repo",
+            "term": "Model Context Protocol",
+            "group_id": "modelcontextprotocol",
+            "name": "modelcontextprotocol/servers",
+            "title": "modelcontextprotocol/servers",
+            "description": "Model Context Protocol Servers",
+            "url": "https://github.com/modelcontextprotocol/servers",
+            "stars": 85888,
+            "forks": 10746,
+            "topics": [],
+            "created_at": "2024-11-19T01:10:17Z",
+            "updated_at": "2026-05-19T01:30:56Z",
+            "star_velocity": 157.3
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "group_id": "modelcontextprotocol",
+            "title": "🤝 Open for Collaboration — Build AI Agent Governance With Us",
+            "url": "https://github.com/orgs/agentguard-ai/discussions/40",
+            "repository": "agentguard-ai/tealtiger",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "nagasatish007",
+            "created_at": "2026-05-14T05:03:42Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "title": "Surface PACER free-opinion descriptions on the Opinion / OpinionCluster",
+            "url": "https://github.com/freelawproject/foresight/discussions/106",
+            "repository": "freelawproject/foresight",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "rlfordon",
+            "created_at": "2026-05-12T21:02:21Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "group_id": "modelcontextprotocol",
+            "title": "本パッケージについて",
+            "url": "https://github.com/shuji-bonji/rxjs-mcp-server/discussions/11",
+            "repository": "shuji-bonji/rxjs-mcp-server",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "shuji-bonji",
+            "created_at": "2026-05-17T02:21:49Z"
+          }
+        ]
+      },
+      {
+        "id": "aiagentskills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "AI Agent Skills",
+          "codex skill"
+        ],
+        "source": "dynamic",
+        "discovery_score": 264.3,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "op7418/guizang-ppt-skill",
+            "title": "op7418/guizang-ppt-skill",
+            "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
+            "url": "https://github.com/op7418/guizang-ppt-skill",
+            "stars": 9851,
+            "forks": 796,
+            "topics": [
+              "ai-agent",
+              "claude-code",
+              "codex",
+              "html-deck",
+              "image-generation",
+              "ppt",
+              "presentation",
+              "skill",
+              "skills",
+              "swiss-design",
+              "web-ppt"
+            ],
+            "created_at": "2026-04-23T13:23:07Z",
+            "updated_at": "2026-05-19T01:58:46Z",
+            "star_velocity": 385.9
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "googleworkspace/cli",
+            "title": "googleworkspace/cli",
+            "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+            "url": "https://github.com/googleworkspace/cli",
+            "stars": 26381,
+            "forks": 1377,
+            "topics": [
+              "agent-skills",
+              "ai-agent",
+              "automation",
+              "cli",
+              "discovery-api",
+              "gemini-cli-extension",
+              "google-admin",
+              "google-api",
+              "google-calendar",
+              "google-chat",
+              "google-docs",
+              "google-drive",
+              "google-sheets",
+              "google-workspace",
+              "oauth2",
+              "rust"
+            ],
+            "created_at": "2026-03-02T19:46:06Z",
+            "updated_at": "2026-05-19T01:56:33Z",
+            "star_velocity": 341.5
+          },
+          {
+            "source": "github_repo",
+            "term": "codex skill",
+            "group_id": "aiagentskills",
+            "name": "Kappaemme-git/codex-complexity-optimizer",
+            "title": "Kappaemme-git/codex-complexity-optimizer",
+            "description": "Codex skill for safe codebase complexity analysis and performance optimization reports",
+            "url": "https://github.com/Kappaemme-git/codex-complexity-optimizer",
+            "stars": 750,
+            "forks": 40,
+            "topics": [],
+            "created_at": "2026-05-15T13:33:28Z",
+            "updated_at": "2026-05-19T01:42:12Z",
+            "star_velocity": 213.1
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "New GitHub Certified: Agentic AI Developer",
+            "url": "https://github.com/orgs/community/discussions/195743",
+            "repository": "community/community",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "giulianogemero",
+            "created_at": "2026-05-13T18:07:01Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "codex skill",
+            "group_id": "aiagentskills",
+            "title": "Show and tell: options flow skill that caught XLI P/C = 5.32 live (free, SKILL.md)",
+            "url": "https://github.com/affaan-m/everything-claude-code/discussions/1868",
+            "repository": "affaan-m/everything-claude-code",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "tellmefrankie",
+            "created_at": "2026-05-13T12:52:41Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "[RFC] OpenViking Skill 子命令提案",
+            "url": "https://github.com/volcengine/OpenViking/discussions/2106",
+            "repository": "volcengine/OpenViking",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "MaojiaSheng",
+            "created_at": "2026-05-18T05:35:57Z"
+          }
+        ]
+      },
+      {
+        "id": "agentworkfloworchestration",
+        "label": "Agent Workflow / Orchestration",
+        "terms": [
+          "Agent Workflow / Orchestration",
+          "agentic workflow"
+        ],
+        "source": "dynamic",
+        "discovery_score": 264.3,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agentic workflow",
+            "group_id": "agentworkfloworchestration",
+            "name": "langgenius/dify",
+            "title": "langgenius/dify",
+            "description": "Production-ready platform for agentic workflow development.",
+            "url": "https://github.com/langgenius/dify",
+            "stars": 141817,
+            "forks": 22292,
+            "topics": [
+              "agent",
+              "agentic-ai",
+              "agentic-framework",
+              "agentic-workflow",
+              "ai",
+              "automation",
+              "gemini",
+              "genai",
+              "gpt",
+              "gpt-4",
+              "llm",
+              "low-code",
+              "mcp",
+              "nextjs",
+              "no-code",
+              "openai",
+              "orchestration",
+              "python",
+              "rag",
+              "workflow"
+            ],
+            "created_at": "2023-04-12T07:40:24Z",
+            "updated_at": "2026-05-19T01:55:03Z",
+            "star_velocity": 125.2
+          },
+          {
+            "source": "github_repo",
+            "term": "agentic workflow",
+            "group_id": "agentworkfloworchestration",
+            "name": "opendatalab/MinerU",
+            "title": "opendatalab/MinerU",
+            "description": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
+            "url": "https://github.com/opendatalab/MinerU",
+            "stars": 63618,
+            "forks": 5380,
+            "topics": [
+              "ai4science",
+              "document-analysis",
+              "docx",
+              "extract-data",
+              "layout-analysis",
+              "ocr",
+              "parser",
+              "pdf",
+              "pdf-converter",
+              "pdf-extractor-llm",
+              "pdf-extractor-pretrain",
+              "pdf-extractor-rag",
+              "pdf-parser",
+              "pptx",
+              "python",
+              "xlsx"
+            ],
+            "created_at": "2024-02-29T08:52:34Z",
+            "updated_at": "2026-05-19T01:58:18Z",
+            "star_velocity": 78.6
+          },
+          {
+            "source": "github_repo",
+            "term": "agentic workflow",
+            "group_id": "agentworkfloworchestration",
+            "name": "conductor-oss/conductor",
+            "title": "conductor-oss/conductor",
+            "description": "Conductor is an event driven agentic workflow engine providing durable and highly resilient execution engine for applications and AI Agents",
+            "url": "https://github.com/conductor-oss/conductor",
+            "stars": 31836,
+            "forks": 897,
+            "topics": [
+              "distributed-systems",
+              "durable-execution",
+              "grpc",
+              "java",
+              "javascript",
+              "microservice-orchestration",
+              "orchestration-engine",
+              "orchestrator",
+              "reactjs",
+              "spring-boot",
+              "workflow-automation",
+              "workflow-engine",
+              "workflow-management",
+              "workflows"
+            ],
+            "created_at": "2023-12-08T06:06:09Z",
+            "updated_at": "2026-05-19T01:16:25Z",
+            "star_velocity": 35.7
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Agent Workflow / Orchestration",
+            "group_id": "agentworkfloworchestration",
+            "title": "Built an Autonomous Cognitive Engineering System for Gemini CLI (EGC) - Looking for Advanced Feedback",
+            "url": "https://github.com/orgs/community/discussions/196100",
+            "repository": "community/community",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "Fmarzochi",
+            "created_at": "2026-05-17T02:04:45Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agentic workflow",
+            "group_id": "agentworkfloworchestration",
+            "title": "Daily QA2026-05-18 (run 8)",
+            "url": "https://github.com/TheLarkInn/aipm/discussions/933",
+            "repository": "TheLarkInn/aipm",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-05-18T21:40:15Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Agent Workflow / Orchestration",
+            "group_id": "agentworkfloworchestration",
+            "title": "Welcome to Agentic AI Discussions — Share Ideas, Projects & Questions",
+            "url": "https://github.com/zkzkGamal/Agentic-AI-Tutorial/discussions/1",
+            "repository": "zkzkGamal/Agentic-AI-Tutorial",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "zkzkGamal",
+            "created_at": "2026-05-18T13:01:06Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/everything-claude-code",
+            "title": "affaan-m/everything-claude-code",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/everything-claude-code",
+            "stars": 186605,
+            "forks": 28896,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-05-19T01:59:06Z",
+            "star_velocity": 1541.6
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo; the best agent harness - previously oh-my-opencode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 58425,
+            "forks": 4742,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "amp",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-code",
+              "claude-skills",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-05-19T01:52:57Z",
+            "star_velocity": 349.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "HKUDS/OpenHarness",
+            "title": "HKUDS/OpenHarness",
+            "description": "\"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\"",
+            "url": "https://github.com/HKUDS/OpenHarness",
+            "stars": 12703,
+            "forks": 2109,
+            "topics": [],
+            "created_at": "2026-04-01T15:37:13Z",
+            "updated_at": "2026-05-19T01:57:37Z",
+            "star_velocity": 267.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "PAI Integration into a Nix Devenv environment",
+            "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure/discussions/1257",
+            "repository": "danielmiessler/Personal_AI_Infrastructure",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "nick-walt",
+            "created_at": "2026-05-14T05:24:55Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "Task Proposal: agent-eval-migrator",
+            "url": "https://github.com/harbor-framework/terminal-bench-3/discussions/680",
+            "repository": "harbor-framework/terminal-bench-3",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "heli-qi",
+            "created_at": "2026-05-17T12:11:05Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "An idea for testing fixture-based eval harness for skill steps",
+            "url": "https://github.com/apache/airflow-steward/discussions/159",
+            "repository": "apache/airflow-steward",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "justinmclean",
+            "created_at": "2026-05-15T00:27:52Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+      "url": "https://github.com/MinishLab/semble",
+      "hn_url": "https://news.ycombinator.com/item?id=48169874",
+      "points": 427,
+      "comments": 138,
+      "author": "Bibabomas",
+      "created_at": "2026-05-17T15:37:07Z",
+      "score": 703
+    },
+    {
+      "title": "Reverse engineering Android malware from popular Chinese projectors",
+      "url": "https://zanestjohn.com/blog/reing-with-claude-code",
+      "hn_url": "https://news.ycombinator.com/item?id=48174465",
+      "points": 83,
+      "comments": 14,
+      "author": "3abiton",
+      "created_at": "2026-05-18T00:36:10Z",
+      "score": 111
+    },
+    {
+      "title": "AI Wearables Are Coming but They'll Need to Pass the Coffee Shop Test to Survive",
+      "url": "https://www.inc.com/connor-jewiss/ai-wearables-are-coming-but-theyll-need-to-pass-this-crucial-coffee-shop-test-to-survive/91345526",
+      "hn_url": "https://news.ycombinator.com/item?id=48173501",
+      "points": 21,
+      "comments": 15,
+      "author": "connorjewiss",
+      "created_at": "2026-05-17T21:49:44Z",
+      "score": 51
+    },
+    {
+      "title": "Show HN: InsForge – Open-source Heroku for coding agents",
+      "url": "https://github.com/InsForge/InsForge",
+      "hn_url": "https://news.ycombinator.com/item?id=48181342",
+      "points": 33,
+      "comments": 6,
+      "author": "mrcoldbrew",
+      "created_at": "2026-05-18T15:40:42Z",
+      "score": 45
+    }
+  ],
+  "community_release_reactions": {}
+}
