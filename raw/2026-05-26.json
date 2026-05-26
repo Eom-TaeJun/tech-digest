@@ -1,0 +1,727 @@
+{
+  "date": "2026-05-26",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **OpenAI — GPT-5.5** | latest known official release outside lookback: **2026-04-23** | source: https://openai.com/index/introducing-gpt-5-5\n- **Anthropic — Claude Opus 4.7** | latest known official release outside lookback: **2026-04-17** | source: https://www.anthropic.com/news/claude-design-anthropic-labs\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://openai.com/index/introducing-gpt-5-5",
+        "https://www.anthropic.com/news/claude-design-anthropic-labs"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Spec-Driven Development\n- Tracked queries: Spec-Driven Development, spec driven development\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: gsd-build/get-shit-done | stars=63705 | velocity=392.1★/day | https://github.com/gsd-build/get-shit-done\n- GitHub Discussions: El universo descubre la ingeniería de software 😄 | repo=mmasias/25-26-IDSW2 | comments=0 | upvotes=3 | https://github.com/mmasias/25-26-IDSW2/discussions/116\n\n### Context Engineering\n- Tracked queries: Context Engineering, context engineering\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: gsd-build/get-shit-done | stars=63705 | velocity=392.1★/day | https://github.com/gsd-build/get-shit-done\n- GitHub Discussions: [Feature] Privileged Access Management (PAM) — agent-side elevation with mobile-app approval | repo=LanternOps/breeze | comments=5 | upvotes=1 | https://github.com/LanternOps/breeze/discussions/858\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=192433 | velocity=1502.9★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: [claude-code-user-docs-review] Claude Code User Documentation Review - 2026-05-24 | repo=github/gh-aw | comments=2 | upvotes=0 | https://github.com/github/gh-aw/discussions/34426\n\n### AI Agent Skills\n- Tracked queries: agent skills, claude code skill, codex skill, subagents\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: JuliusBrussee/caveman | stars=64726 | velocity=1252.9★/day | https://github.com/JuliusBrussee/caveman\n- GitHub Discussions: An important update: Transitioning Gemini CLI to Antigravity CLI | repo=google-gemini/gemini-cli | comments=57 | upvotes=8 | https://github.com/google-gemini/gemini-cli/discussions/27274",
+      "citations": [
+        "https://github.com/gsd-build/get-shit-done",
+        "https://github.com/mmasias/25-26-IDSW2/discussions/116",
+        "https://github.com/gsd-build/get-shit-done",
+        "https://github.com/LanternOps/breeze/discussions/858",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/github/gh-aw/discussions/34426",
+        "https://github.com/JuliusBrussee/caveman",
+        "https://github.com/google-gemini/gemini-cli/discussions/27274"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "OpenAI",
+      "model": "GPT-5.5",
+      "released_at": "2026-04-23",
+      "source_url": "https://openai.com/index/introducing-gpt-5-5",
+      "note": "Official OpenAI release post"
+    },
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 4.7",
+      "released_at": "2026-04-17",
+      "source_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "note": "Official Anthropic news post"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "perplexityai/bumblebee",
+      "description": "Read-only developer endpoint scanner for on-disk package, extension, and developer-tool metadata, built to check exposure to known software supply-chain compromises.",
+      "stars": 2586,
+      "forks": 205,
+      "language": "Go",
+      "url": "https://github.com/perplexityai/bumblebee",
+      "created_at": "2026-05-20T18:11:37Z",
+      "days_old": 5.3,
+      "star_velocity": 485.9,
+      "topics": [
+        "golang",
+        "package-inventory",
+        "supply-chain-security"
+      ]
+    },
+    {
+      "name": "thananon/9arm-skills",
+      "description": "",
+      "stars": 2172,
+      "forks": 300,
+      "language": "Shell",
+      "url": "https://github.com/thananon/9arm-skills",
+      "created_at": "2026-05-20T00:49:37Z",
+      "days_old": 6.0,
+      "star_velocity": 359.3,
+      "topics": []
+    },
+    {
+      "name": "open-gsd/get-shit-done-redux",
+      "description": "Getting Shit Done, the Aftermath",
+      "stars": 859,
+      "forks": 57,
+      "language": "JavaScript",
+      "url": "https://github.com/open-gsd/get-shit-done-redux",
+      "created_at": "2026-05-22T11:36:21Z",
+      "days_old": 3.6,
+      "star_velocity": 238.8,
+      "topics": [
+        "claude-code",
+        "context-engineering",
+        "meta-prompting",
+        "spec-driven-development"
+      ]
+    },
+    {
+      "name": "0xSero/codex-shim",
+      "description": "Local Responses-API shim that exposes Factory BYOK models (and optional ChatGPT GPT-5.5 passthrough) to Codex Desktop.",
+      "stars": 593,
+      "forks": 51,
+      "language": "Python",
+      "url": "https://github.com/0xSero/codex-shim",
+      "created_at": "2026-05-22T07:38:07Z",
+      "days_old": 3.8,
+      "star_velocity": 157.6,
+      "topics": []
+    },
+    {
+      "name": "Tong89/smartNode",
+      "description": "",
+      "stars": 707,
+      "forks": 60,
+      "language": "Python",
+      "url": "https://github.com/Tong89/smartNode",
+      "created_at": "2026-05-21T07:31:35Z",
+      "days_old": 4.8,
+      "star_velocity": 148.3,
+      "topics": []
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [
+      {
+        "name": "vaamonde/ai-network-senac-tit",
+        "stars": 12,
+        "star_velocity": 120.0,
+        "url": "https://github.com/vaamonde/ai-network-senac-tit",
+        "description": "Repositório do Curso de IA para Redes de Computadores do SENAC Lapa Tito",
+        "language": "Unknown",
+        "created_at": "2026-05-26T00:51:22Z"
+      },
+      {
+        "name": "WoodHelmsman/Macrium-Reflect-Crack",
+        "stars": 11,
+        "star_velocity": 110.0,
+        "url": "https://github.com/WoodHelmsman/Macrium-Reflect-Crack",
+        "description": "Software repository — parsed from GitHub.",
+        "language": "Unknown",
+        "created_at": "2026-05-26T00:24:03Z"
+      },
+      {
+        "name": "PoolSocialTower/Folx-Pro-Crack",
+        "stars": 11,
+        "star_velocity": 110.0,
+        "url": "https://github.com/PoolSocialTower/Folx-Pro-Crack",
+        "description": "Software repository — parsed from GitHub.",
+        "language": "Unknown",
+        "created_at": "2026-05-26T00:05:48Z"
+      }
+    ],
+    "weekly_top5": [
+      {
+        "name": "perplexityai/bumblebee",
+        "stars": 2586,
+        "star_velocity": 485.9,
+        "url": "https://github.com/perplexityai/bumblebee",
+        "description": "Read-only developer endpoint scanner for on-disk package, extension, and developer-tool metadata, built to check exposure to known software supply-chain compromises.",
+        "language": "Go",
+        "created_at": "2026-05-20T18:11:37Z"
+      },
+      {
+        "name": "Tong89/smartNode",
+        "stars": 707,
+        "star_velocity": 148.3,
+        "url": "https://github.com/Tong89/smartNode",
+        "description": "",
+        "language": "Python",
+        "created_at": "2026-05-21T07:31:35Z"
+      },
+      {
+        "name": "bonus-2026/casino-bonus",
+        "stars": 347,
+        "star_velocity": 138.6,
+        "url": "https://github.com/bonus-2026/casino-bonus",
+        "description": "Casino Bonus guide featuring a $250 USD no deposit welcome reward for new users with promo code DROP. Explore crypto casino bonuses, cashback systems, welcome offers, and gaming platform features",
+        "language": "Unknown",
+        "created_at": "2026-05-23T13:50:00Z"
+      },
+      {
+        "name": "MoonshotAI/kimi-code",
+        "stars": 511,
+        "star_velocity": 136.4,
+        "url": "https://github.com/MoonshotAI/kimi-code",
+        "description": "The Starting Point for Next-Gen Agents",
+        "language": "TypeScript",
+        "created_at": "2026-05-22T08:02:03Z"
+      },
+      {
+        "name": "kageroumado/phosphene",
+        "stars": 673,
+        "star_velocity": 132.0,
+        "url": "https://github.com/kageroumado/phosphene",
+        "description": "A video wallpaper engine for macOS Tahoe",
+        "language": "Swift",
+        "created_at": "2026-05-20T23:33:59Z"
+      }
+    ],
+    "excluded_yesterday_count": 7
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "specdrivendevelopment",
+        "label": "Spec-Driven Development",
+        "terms": [
+          "Spec-Driven Development",
+          "spec driven development"
+        ],
+        "source": "dynamic",
+        "discovery_score": 247.4,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "Spec-Driven Development",
+            "group_id": "specdrivendevelopment",
+            "name": "gsd-build/get-shit-done",
+            "title": "gsd-build/get-shit-done",
+            "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+            "url": "https://github.com/gsd-build/get-shit-done",
+            "stars": 63705,
+            "forks": 5415,
+            "topics": [
+              "claude-code",
+              "context-engineering",
+              "meta-prompting",
+              "spec-driven-development"
+            ],
+            "created_at": "2025-12-14T14:17:12Z",
+            "updated_at": "2026-05-26T01:47:37Z",
+            "star_velocity": 392.1
+          },
+          {
+            "source": "github_repo",
+            "term": "Spec-Driven Development",
+            "group_id": "specdrivendevelopment",
+            "name": "github/spec-kit",
+            "title": "github/spec-kit",
+            "description": "💫 Toolkit to help you get started with Spec-Driven Development",
+            "url": "https://github.com/github/spec-kit",
+            "stars": 105881,
+            "forks": 9364,
+            "topics": [
+              "ai",
+              "copilot",
+              "development",
+              "engineering",
+              "prd",
+              "spec",
+              "spec-driven"
+            ],
+            "created_at": "2025-08-21T22:54:31Z",
+            "updated_at": "2026-05-26T01:53:19Z",
+            "star_velocity": 382.1
+          },
+          {
+            "source": "github_repo",
+            "term": "Spec-Driven Development",
+            "group_id": "specdrivendevelopment",
+            "name": "Fission-AI/OpenSpec",
+            "title": "Fission-AI/OpenSpec",
+            "description": "Spec-driven development (SDD) for AI coding assistants.",
+            "url": "https://github.com/Fission-AI/OpenSpec",
+            "stars": 50716,
+            "forks": 3558,
+            "topics": [
+              "ai",
+              "context-engineering",
+              "engineering",
+              "planning",
+              "prd",
+              "sdd",
+              "sdlc",
+              "spec",
+              "spec-driven-development",
+              "specification"
+            ],
+            "created_at": "2025-08-05T10:37:45Z",
+            "updated_at": "2026-05-26T01:54:51Z",
+            "star_velocity": 172.7
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Spec-Driven Development",
+            "group_id": "specdrivendevelopment",
+            "title": "El universo descubre la ingeniería de software 😄",
+            "url": "https://github.com/mmasias/25-26-IDSW2/discussions/116",
+            "repository": "mmasias/25-26-IDSW2",
+            "comments": 0,
+            "upvotes": 3,
+            "author": "mmasias",
+            "created_at": "2026-05-19T12:28:51Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Spec-Driven Development",
+            "group_id": "specdrivendevelopment",
+            "title": "Feature Request: Provider-Agnostic Multi-Agent Orchestration (Inspired by Anthropic's feature-dev)",
+            "url": "https://github.com/Fission-AI/OpenSpec/discussions/1124",
+            "repository": "Fission-AI/OpenSpec",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "rodrigotanco",
+            "created_at": "2026-05-25T14:24:37Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Spec-Driven Development",
+            "group_id": "specdrivendevelopment",
+            "title": "Agent-selection feedback for Spec Kit docs?",
+            "url": "https://github.com/github/spec-kit/discussions/2684",
+            "repository": "github/spec-kit",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "SpeedRanger",
+            "created_at": "2026-05-23T09:24:26Z"
+          }
+        ]
+      },
+      {
+        "id": "contextengineering",
+        "label": "Context Engineering",
+        "terms": [
+          "Context Engineering",
+          "context engineering"
+        ],
+        "source": "dynamic",
+        "discovery_score": 247.4,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "name": "gsd-build/get-shit-done",
+            "title": "gsd-build/get-shit-done",
+            "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+            "url": "https://github.com/gsd-build/get-shit-done",
+            "stars": 63705,
+            "forks": 5415,
+            "topics": [
+              "claude-code",
+              "context-engineering",
+              "meta-prompting",
+              "spec-driven-development"
+            ],
+            "created_at": "2025-12-14T14:17:12Z",
+            "updated_at": "2026-05-26T01:47:37Z",
+            "star_velocity": 392.1
+          },
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "name": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "title": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+            "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "stars": 15950,
+            "forks": 1292,
+            "topics": [],
+            "created_at": "2025-12-21T02:43:42Z",
+            "updated_at": "2026-05-25T22:49:00Z",
+            "star_velocity": 102.3
+          },
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "name": "gsd-build/gsd-2",
+            "title": "gsd-build/gsd-2",
+            "description": "A powerful meta-prompting, context engineering and spec-driven development system that enables agents to work for long periods of time autonomously without losing track of the big picture",
+            "url": "https://github.com/gsd-build/gsd-2",
+            "stars": 7736,
+            "forks": 781,
+            "topics": [
+              "context-engineering",
+              "meta-prompting",
+              "spec-driven-development"
+            ],
+            "created_at": "2026-03-11T04:28:49Z",
+            "updated_at": "2026-05-26T00:53:49Z",
+            "star_velocity": 101.9
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "title": "[Feature] Privileged Access Management (PAM) — agent-side elevation with mobile-app approval",
+            "url": "https://github.com/LanternOps/breeze/discussions/858",
+            "repository": "LanternOps/breeze",
+            "comments": 5,
+            "upvotes": 1,
+            "author": "bdunncompany",
+            "created_at": "2026-05-23T09:26:35Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "title": "Reading: Context Engineering article",
+            "url": "https://github.com/orgs/coo-labs/discussions/250",
+            "repository": "coo-labs/vade-canvas",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "venpopov",
+            "created_at": "2026-05-22T19:21:36Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "title": "Mindset For Consistent Algo-trading",
+            "url": "https://github.com/alanvito1/ORSTAC/discussions/607",
+            "repository": "alanvito1/ORSTAC",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "alanvito1",
+            "created_at": "2026-05-25T12:05:06Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 192433,
+            "forks": 29781,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-05-26T01:55:22Z",
+            "star_velocity": 1502.9
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo; the best agent harness - previously oh-my-opencode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 59464,
+            "forks": 4841,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "amp",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-code",
+              "claude-skills",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-05-26T01:42:26Z",
+            "star_velocity": 341.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "HKUDS/OpenHarness",
+            "title": "HKUDS/OpenHarness",
+            "description": "\"OpenHarness: Open Agent Harness with a Built-in Personal Agent--Ohmo!\"",
+            "url": "https://github.com/HKUDS/OpenHarness",
+            "stars": 13084,
+            "forks": 2164,
+            "topics": [],
+            "created_at": "2026-04-01T15:37:13Z",
+            "updated_at": "2026-05-26T01:45:38Z",
+            "star_velocity": 240.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "[claude-code-user-docs-review] Claude Code User Documentation Review - 2026-05-24",
+            "url": "https://github.com/github/gh-aw/discussions/34426",
+            "repository": "github/gh-aw",
+            "comments": 2,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-05-24T12:52:23Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "ECC 2.0 preview: meta-harness, optimization skills, and gated prediction-market workflows",
+            "url": "https://github.com/affaan-m/ECC/discussions/2055",
+            "repository": "affaan-m/ECC",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "affaan-m",
+            "created_at": "2026-05-25T18:02:32Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Eval harness for hashline_edit (after #105)",
+            "url": "https://github.com/adolfousier/opencrabs/discussions/116",
+            "repository": "adolfousier/opencrabs",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "leshchenko1979",
+            "created_at": "2026-05-23T15:25:42Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "name": "JuliusBrussee/caveman",
+            "title": "JuliusBrussee/caveman",
+            "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "stars": 64726,
+            "forks": 3655,
+            "topics": [
+              "ai",
+              "anthropic",
+              "caveman",
+              "claude",
+              "claude-code",
+              "llm",
+              "meme",
+              "prompt-engineering",
+              "skill",
+              "tokens"
+            ],
+            "created_at": "2026-04-04T10:03:00Z",
+            "updated_at": "2026-05-26T01:53:04Z",
+            "star_velocity": 1252.9
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 206419,
+            "forks": 18400,
+            "topics": [],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-05-26T01:55:42Z",
+            "star_velocity": 904.3
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 140717,
+            "forks": 16623,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-05-26T01:54:15Z",
+            "star_velocity": 573.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "An important update: Transitioning Gemini CLI to Antigravity CLI",
+            "url": "https://github.com/google-gemini/gemini-cli/discussions/27274",
+            "repository": "google-gemini/gemini-cli",
+            "comments": 57,
+            "upvotes": 8,
+            "author": "LyalinDotCom",
+            "created_at": "2026-05-19T20:03:19Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "MCP vs Skills: 什么时候用哪个？",
+            "url": "https://github.com/orgs/VoltAgent/discussions/1299",
+            "repository": "VoltAgent/voltagent",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "jingchang0623-crypto",
+            "created_at": "2026-05-25T06:03:39Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "Agent Context Debt: 为什么你的Agent越跑越慢？",
+            "url": "https://github.com/orgs/VoltAgent/discussions/1298",
+            "repository": "VoltAgent/voltagent",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "jingchang0623-crypto",
+            "created_at": "2026-05-25T06:03:38Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "Constraint Decay: The Fragility of LLM Agents in Back End Code Generation",
+      "url": "https://arxiv.org/abs/2605.06445",
+      "hn_url": "https://news.ycombinator.com/item?id=48256912",
+      "points": 278,
+      "comments": 187,
+      "author": "wek",
+      "created_at": "2026-05-24T12:55:53Z",
+      "score": 652
+    },
+    {
+      "title": "There's Never Been a Better Time to Study Computer Science",
+      "url": "https://www.theatlantic.com/technology/2026/05/computer-science-major-coding-ai/687279/",
+      "hn_url": "https://news.ycombinator.com/item?id=48261753",
+      "points": 30,
+      "comments": 19,
+      "author": "zekrioca",
+      "created_at": "2026-05-24T22:44:29Z",
+      "score": 68
+    }
+  ],
+  "community_release_reactions": {}
+}
