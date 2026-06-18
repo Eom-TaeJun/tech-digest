@@ -1,0 +1,708 @@
+{
+  "date": "2026-06-18",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **OpenAI — Codex** | release date: **2026-06-14** | source: https://openai.com/index/introducing-openai-partner-network\n- **Anthropic — Claude Opus 4.8** | release date: **2026-06-09** | source: https://www.anthropic.com/news/claude-fable-5-mythos-5\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://openai.com/index/introducing-openai-partner-network",
+        "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Harness / Eval Patterns\n- Tracked queries: Harness / Eval Patterns, harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=217331 | velocity=1438.7★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: [audit-workflows] 🔍 Agentic Workflow Audit — 2026-06-16 (prod-main 84.4%; day-10 sdk-lockout + NEW upload_assets false-red) | repo=github/gh-aw | comments=1 | upvotes=0 | https://github.com/github/gh-aw/discussions/39691\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=217331 | velocity=1438.7★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: The Institution Cockpit: the Agent Harness as a Team-of-Teams common operating picture (post-v13.1 vision + design language) | repo=neomjs/neo | comments=15 | upvotes=1 | https://github.com/orgs/neomjs/discussions/13441\n\n### AI Agent Skills\n- Tracked queries: agent skills, claude code skill, codex skill, subagents\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: JuliusBrussee/caveman | stars=74114 | velocity=992.5★/day | https://github.com/JuliusBrussee/caveman\n- GitHub Discussions: Agent Coordination Ledger | repo=nklisch/skills | comments=12 | upvotes=1 | https://github.com/nklisch/skills/discussions/12\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: drona23/claude-token-efficient | stars=5637 | velocity=70.9★/day | https://github.com/drona23/claude-token-efficient\n- GitHub Discussions: 🚀 COMPREHENSIVE PRODUCTION DEPLOYMENT READINESS PLAN | repo=Aries-Serpent/_codex_ | comments=17 | upvotes=1 | https://github.com/Aries-Serpent/_codex_/discussions/4872",
+      "citations": [
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/github/gh-aw/discussions/39691",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/orgs/neomjs/discussions/13441",
+        "https://github.com/JuliusBrussee/caveman",
+        "https://github.com/nklisch/skills/discussions/12",
+        "https://github.com/drona23/claude-token-efficient",
+        "https://github.com/Aries-Serpent/_codex_/discussions/4872"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\n### Codex (official release: 2026-06-14)\n- Direct source counts: GitHub Discussions=0\n- No direct GitHub Discussions posts found in current search results. Community reaction remains unconfirmed.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "OpenAI",
+      "model": "Codex",
+      "released_at": "2026-06-14",
+      "source_url": "https://openai.com/index/introducing-openai-partner-network",
+      "note": "Official OpenAI release post"
+    },
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 4.8",
+      "released_at": "2026-06-09",
+      "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "note": "Official Anthropic news post"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "stars": 32026,
+      "forks": 1447,
+      "language": "JavaScript",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "created_at": "2026-06-12T00:52:37Z",
+      "days_old": 6.1,
+      "star_velocity": 5287.0,
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "cursor-rules",
+        "developer-tools",
+        "llm",
+        "prompt-engineering",
+        "yagni"
+      ]
+    },
+    {
+      "name": "Plaer1/junction",
+      "description": "VS Code chat sidebar for local AI coding agents",
+      "stars": 500,
+      "forks": 2,
+      "language": "TypeScript",
+      "url": "https://github.com/Plaer1/junction",
+      "created_at": "2026-06-17T05:27:09Z",
+      "days_old": 0.9,
+      "star_velocity": 576.8,
+      "topics": []
+    },
+    {
+      "name": "tamnd/kage",
+      "description": "Shadow any website for offline viewing, with the JavaScript stripped out",
+      "stars": 1864,
+      "forks": 58,
+      "language": "Go",
+      "url": "https://github.com/tamnd/kage",
+      "created_at": "2026-06-14T11:21:55Z",
+      "days_old": 3.6,
+      "star_velocity": 514.8,
+      "topics": []
+    },
+    {
+      "name": "vercel/eve",
+      "description": "The Framework for Building Agents",
+      "stars": 714,
+      "forks": 31,
+      "language": "TypeScript",
+      "url": "https://github.com/vercel/eve",
+      "created_at": "2026-06-16T10:51:20Z",
+      "days_old": 1.6,
+      "star_velocity": 434.9,
+      "topics": [
+        "agent",
+        "framework",
+        "harness",
+        "javascript",
+        "markdown",
+        "sandbox",
+        "typescript",
+        "vercel",
+        "workflows"
+      ]
+    },
+    {
+      "name": "lenucksi/aur-malware-check",
+      "description": "Detection tools for the June 2026 atomic-lockfile AUR supply-chain attack. Consolidated from community Gists.",
+      "stars": 1463,
+      "forks": 32,
+      "language": "Shell",
+      "url": "https://github.com/lenucksi/aur-malware-check",
+      "created_at": "2026-06-12T13:17:07Z",
+      "days_old": 5.5,
+      "star_velocity": 264.1,
+      "topics": []
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [],
+    "weekly_top5": [
+      {
+        "name": "Plaer1/junction",
+        "stars": 500,
+        "star_velocity": 576.8,
+        "url": "https://github.com/Plaer1/junction",
+        "description": "VS Code chat sidebar for local AI coding agents",
+        "language": "TypeScript",
+        "created_at": "2026-06-17T05:27:09Z"
+      },
+      {
+        "name": "vercel/eve",
+        "stars": 714,
+        "star_velocity": 434.9,
+        "url": "https://github.com/vercel/eve",
+        "description": "The Framework for Building Agents",
+        "language": "TypeScript",
+        "created_at": "2026-06-16T10:51:20Z"
+      },
+      {
+        "name": "lenucksi/aur-malware-check",
+        "stars": 1463,
+        "star_velocity": 264.1,
+        "url": "https://github.com/lenucksi/aur-malware-check",
+        "description": "Detection tools for the June 2026 atomic-lockfile AUR supply-chain attack. Consolidated from community Gists.",
+        "language": "Shell",
+        "created_at": "2026-06-12T13:17:07Z"
+      },
+      {
+        "name": "EEliberto/IPA-Download",
+        "stars": 1017,
+        "star_velocity": 214.6,
+        "url": "https://github.com/EEliberto/IPA-Download",
+        "description": "一款用于安装 IPA 历史版本的工具，适用于获取旧版应用并自动捕获数据包。下载后，可直接通过 AirDrop 传输至 iPhone、iPad 上并安装并使用。",
+        "language": "Swift",
+        "created_at": "2026-06-13T08:32:39Z"
+      },
+      {
+        "name": "orange2ai/renwei-writing",
+        "stars": 770,
+        "star_velocity": 148.4,
+        "url": "https://github.com/orange2ai/renwei-writing",
+        "description": "人味儿写作 · An AI agent skill: edit people's words without erasing the person behind them",
+        "language": "Unknown",
+        "created_at": "2026-06-12T21:45:48Z"
+      }
+    ],
+    "excluded_yesterday_count": 5
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "harnessevalpatterns",
+        "label": "Harness / Eval Patterns",
+        "terms": [
+          "Harness / Eval Patterns",
+          "harness"
+        ],
+        "source": "dynamic",
+        "discovery_score": 442.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "harness",
+            "group_id": "harnessevalpatterns",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 217331,
+            "forks": 33359,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-06-18T02:13:01Z",
+            "star_velocity": 1438.7
+          },
+          {
+            "source": "github_repo",
+            "term": "harness",
+            "group_id": "harnessevalpatterns",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 62590,
+            "forks": 5069,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-06-18T02:15:20Z",
+            "star_velocity": 317.7
+          },
+          {
+            "source": "github_repo",
+            "term": "harness",
+            "group_id": "harnessevalpatterns",
+            "name": "Hmbown/CodeWhale",
+            "title": "Hmbown/CodeWhale",
+            "description": "Open-source, community-driven agent harness",
+            "url": "https://github.com/Hmbown/CodeWhale",
+            "stars": 38585,
+            "forks": 3317,
+            "topics": [
+              "cli",
+              "deepseek",
+              "llm",
+              "rust",
+              "terminal",
+              "tui"
+            ],
+            "created_at": "2026-01-19T18:21:01Z",
+            "updated_at": "2026-06-18T02:02:42Z",
+            "star_velocity": 258.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "harness",
+            "group_id": "harnessevalpatterns",
+            "title": "[audit-workflows] 🔍 Agentic Workflow Audit — 2026-06-16 (prod-main 84.4%; day-10 sdk-lockout + NEW upload_assets false-red)",
+            "url": "https://github.com/github/gh-aw/discussions/39691",
+            "repository": "github/gh-aw",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-06-16T22:17:34Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "harness",
+            "group_id": "harnessevalpatterns",
+            "title": "Stress-testing the autorouter on 30 real-world open-source boards",
+            "url": "https://github.com/drandyhaas/KiCadRoutingTools/discussions/117",
+            "repository": "drandyhaas/KiCadRoutingTools",
+            "comments": 0,
+            "upvotes": 2,
+            "author": "drandyhaas",
+            "created_at": "2026-06-14T20:44:49Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "harness",
+            "group_id": "harnessevalpatterns",
+            "title": "Myco Brain is live: self-hosted, source-traceable memory for AI agents",
+            "url": "https://github.com/thegoodguysla/myco-brain/discussions/1",
+            "repository": "thegoodguysla/myco-brain",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "thegoodguysla",
+            "created_at": "2026-06-18T00:07:38Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 217331,
+            "forks": 33359,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-06-18T02:13:01Z",
+            "star_velocity": 1438.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 62590,
+            "forks": 5069,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-06-18T02:15:20Z",
+            "star_velocity": 317.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "Hmbown/CodeWhale",
+            "title": "Hmbown/CodeWhale",
+            "description": "Open-source, community-driven agent harness",
+            "url": "https://github.com/Hmbown/CodeWhale",
+            "stars": 38585,
+            "forks": 3317,
+            "topics": [
+              "cli",
+              "deepseek",
+              "llm",
+              "rust",
+              "terminal",
+              "tui"
+            ],
+            "created_at": "2026-01-19T18:21:01Z",
+            "updated_at": "2026-06-18T02:02:42Z",
+            "star_velocity": 258.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "The Institution Cockpit: the Agent Harness as a Team-of-Teams common operating picture (post-v13.1 vision + design language)",
+            "url": "https://github.com/orgs/neomjs/discussions/13441",
+            "repository": "neomjs/neo",
+            "comments": 15,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-06-16T15:13:35Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "v13.1 Agent Harness cockpit: UX/IA convergence (first-open, navigation, widget decomposition)",
+            "url": "https://github.com/orgs/neomjs/discussions/13436",
+            "repository": "neomjs/neo",
+            "comments": 15,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-06-16T12:15:39Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Idea: add LSP (language-server) tooling to the dev-lead / pr-review agent harness",
+            "url": "https://github.com/petry-projects/.github-private/discussions/578",
+            "repository": "petry-projects/.github-private",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "don-petry",
+            "created_at": "2026-06-11T22:26:24Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "name": "JuliusBrussee/caveman",
+            "title": "JuliusBrussee/caveman",
+            "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "stars": 74114,
+            "forks": 4174,
+            "topics": [
+              "ai",
+              "anthropic",
+              "caveman",
+              "claude",
+              "claude-code",
+              "llm",
+              "meme",
+              "prompt-engineering",
+              "skill",
+              "tokens"
+            ],
+            "created_at": "2026-04-04T10:03:00Z",
+            "updated_at": "2026-06-18T02:12:04Z",
+            "star_velocity": 992.5
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 231157,
+            "forks": 20544,
+            "topics": [],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-06-18T02:14:36Z",
+            "star_velocity": 920.0
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 152195,
+            "forks": 17943,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-06-18T02:15:14Z",
+            "star_velocity": 567.0
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "Agent Coordination Ledger",
+            "url": "https://github.com/nklisch/skills/discussions/12",
+            "repository": "nklisch/skills",
+            "comments": 12,
+            "upvotes": 1,
+            "author": "nklisch",
+            "created_at": "2026-06-11T14:53:02Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "MCP External Tool Execution on Windows (Custom MCP Server)",
+            "url": "https://github.com/pewdiepie-archdaemon/odysseus/discussions/4511",
+            "repository": "pewdiepie-archdaemon/odysseus",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "steveartur",
+            "created_at": "2026-06-17T20:24:27Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "title": "Feature Request: Support user-level SKILL.md path (~/.github/skills/)",
+            "url": "https://github.com/orgs/community/discussions/199293",
+            "repository": "community/community",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "ricky-theseus",
+            "created_at": "2026-06-17T14:44:29Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "drona23/claude-token-efficient",
+            "title": "drona23/claude-token-efficient",
+            "description": "One CLAUDE.md file. Keeps Claude responses terse. Reduces output verbosity on heavy workflows. Drop-in, no code changes.",
+            "url": "https://github.com/drona23/claude-token-efficient",
+            "stars": 5637,
+            "forks": 433,
+            "topics": [],
+            "created_at": "2026-03-30T12:59:07Z",
+            "updated_at": "2026-06-17T20:19:35Z",
+            "star_velocity": 70.9
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agent0ai/dox",
+            "title": "agent0ai/dox",
+            "description": "Self-documenting AGENTS.md",
+            "url": "https://github.com/agent0ai/dox",
+            "stars": 895,
+            "forks": 120,
+            "topics": [
+              "agents-md",
+              "ai",
+              "ai-agents",
+              "documentation"
+            ],
+            "created_at": "2026-06-01T08:25:21Z",
+            "updated_at": "2026-06-18T00:53:56Z",
+            "star_velocity": 53.5
+          },
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 11183,
+            "forks": 1944,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-06-18T02:07:51Z",
+            "star_velocity": 52.9
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "🚀 COMPREHENSIVE PRODUCTION DEPLOYMENT READINESS PLAN",
+            "url": "https://github.com/Aries-Serpent/_codex_/discussions/4872",
+            "repository": "Aries-Serpent/_codex_",
+            "comments": 17,
+            "upvotes": 1,
+            "author": "mbaetiong",
+            "created_at": "2026-06-13T00:17:10Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "AI usage in Renderide",
+            "url": "https://github.com/Yellow-Dog-Man/Renderite.Candidates/discussions/21",
+            "repository": "Yellow-Dog-Man/Renderite.Candidates",
+            "comments": 6,
+            "upvotes": 5,
+            "author": "brecert",
+            "created_at": "2026-06-17T16:25:13Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "goose Rust API: crate organization",
+            "url": "https://github.com/aaif-goose/goose/discussions/9848",
+            "repository": "aaif-goose/goose",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "jamadeo",
+            "created_at": "2026-06-17T21:32:03Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [],
+  "community_release_reactions": {
+    "Codex": []
+  }
+}
