@@ -1,0 +1,687 @@
+{
+  "date": "2026-06-26",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **Anthropic — Claude Opus 4.8** | latest known official release outside lookback: **2026-06-09** | source: https://www.anthropic.com/news/claude-fable-5-mythos-5\n- **OpenAI — GPT-5.5** | latest known official release outside lookback: **2026-04-23** | source: https://openai.com/index/introducing-gpt-5-5\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        "https://openai.com/index/introducing-gpt-5-5"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Harness / Eval Patterns\n- Tracked queries: Harness / Eval Patterns, agent evaluation\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: canwhite/AgentEval | stars=307 | velocity=9.7★/day | https://github.com/canwhite/AgentEval\n- GitHub Discussions: [Task Proposal #196] Crosswell Seismic Full-Waveform Inversion — image an inter-well velocity anomaly | repo=harbor-framework/terminal-bench-science | comments=3 | upvotes=1 | https://github.com/harbor-framework/terminal-bench-science/discussions/375\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=221767 | velocity=1394.3★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: [Task Proposal #197] fss-resonance-design — inverse-design a frequency-selective surface so its transmission resonance lands on a specified target frequency | repo=harbor-framework/terminal-bench-science | comments=4 | upvotes=1 | https://github.com/harbor-framework/terminal-bench-science/discussions/377\n\n### AI Agent Skills\n- Tracked queries: agent skills, claude code skill, codex skill, subagents\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: JuliusBrussee/caveman | stars=76945 | velocity=930.8★/day | https://github.com/JuliusBrussee/caveman\n- GitHub Discussions: [audit-workflows] 🛰️ Agentic Workflow Audit — 2026-06-24 (fleet 92.7%; Avenger streak resumed) | repo=github/gh-aw | comments=2 | upvotes=0 | https://github.com/github/gh-aw/discussions/41308\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: drona23/claude-token-efficient | stars=5704 | velocity=65.2★/day | https://github.com/drona23/claude-token-efficient\n- GitHub Discussions: Adopt `just` as the default command runner across our repositories | repo=home-assistant/architecture | comments=3 | upvotes=5 | https://github.com/home-assistant/architecture/discussions/1416",
+      "citations": [
+        "https://github.com/canwhite/AgentEval",
+        "https://github.com/harbor-framework/terminal-bench-science/discussions/375",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/harbor-framework/terminal-bench-science/discussions/377",
+        "https://github.com/JuliusBrussee/caveman",
+        "https://github.com/github/gh-aw/discussions/41308",
+        "https://github.com/drona23/claude-token-efficient",
+        "https://github.com/home-assistant/architecture/discussions/1416"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 4.8",
+      "released_at": "2026-06-09",
+      "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "note": "Official Anthropic news post"
+    },
+    {
+      "company": "OpenAI",
+      "model": "GPT-5.5",
+      "released_at": "2026-04-23",
+      "source_url": "https://openai.com/index/introducing-gpt-5-5",
+      "note": "Official OpenAI release post"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "bozhouDev/codex-orange-book",
+      "description": "Codex 橙皮书：从安装到实战案例的全链路 Codex 使用指南（非官方开源，含可下载 PDF）",
+      "stars": 1966,
+      "forks": 198,
+      "language": "HTML",
+      "url": "https://github.com/bozhouDev/codex-orange-book",
+      "created_at": "2026-06-23T02:36:54Z",
+      "days_old": 3.0,
+      "star_velocity": 660.6,
+      "topics": []
+    },
+    {
+      "name": "lyra81604/zhengxi-views",
+      "description": "可溯源的郑希(易方达基金经理)投研 Agent Skill——基于他全部公开观点原文 + 有原话佐证的投资方法 + 全市场基金真实数据，能溯源问答、按他框架给基金打分，绝不杜撰。⚠️仅研究学习辅助，不构成投资建议‼️website是郑希主页！",
+      "stars": 1037,
+      "forks": 124,
+      "language": "Python",
+      "url": "https://github.com/lyra81604/zhengxi-views",
+      "created_at": "2026-06-20T04:27:07Z",
+      "days_old": 5.9,
+      "star_velocity": 175.8,
+      "topics": [
+        "agent-skill",
+        "chinese-funds",
+        "funds",
+        "investing"
+      ]
+    },
+    {
+      "name": "kanavtwtgg/birds.cafe",
+      "description": "",
+      "stars": 788,
+      "forks": 2,
+      "language": "JavaScript",
+      "url": "https://github.com/kanavtwtgg/birds.cafe",
+      "created_at": "2026-06-21T13:57:28Z",
+      "days_old": 4.5,
+      "star_velocity": 175.0,
+      "topics": []
+    },
+    {
+      "name": "Yu9191/wloc",
+      "description": "修改 Apple 网络定位（gs-loc）返回坐标 · 支持 Surge / Quantumult X / Loon / Stash · 快捷指令一键设置/恢复定位",
+      "stars": 317,
+      "forks": 48,
+      "language": "JavaScript",
+      "url": "https://github.com/Yu9191/wloc",
+      "created_at": "2026-06-24T06:15:30Z",
+      "days_old": 1.8,
+      "star_velocity": 173.8,
+      "topics": []
+    },
+    {
+      "name": "benchflow-ai/awesome-evals",
+      "description": "A curated, non-BS library of the best resources for building and evaluating AI agents — papers, blogs, talks, tools, benchmarks. Maintained by BenchFlow.",
+      "stars": 298,
+      "forks": 19,
+      "language": "Unknown",
+      "url": "https://github.com/benchflow-ai/awesome-evals",
+      "created_at": "2026-06-24T08:10:33Z",
+      "days_old": 1.7,
+      "star_velocity": 170.8,
+      "topics": [
+        "agent-evaluation",
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "benchmarks",
+        "evals",
+        "llm",
+        "llm-evaluation",
+        "rl-environments"
+      ]
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [
+      {
+        "name": "xiaohuailabs/xiaohu-ip-studio",
+        "stars": 13,
+        "star_velocity": 130.0,
+        "url": "https://github.com/xiaohuailabs/xiaohu-ip-studio",
+        "description": "开源中文配图技能 + IP 角色库:用「挑认知锚点→现编隐喻→反PPT自检」为中文深度文生成固定角色出演的正文配图",
+        "language": "HTML",
+        "created_at": "2026-06-26T00:49:42Z"
+      }
+    ],
+    "weekly_top5": [
+      {
+        "name": "bozhouDev/codex-orange-book",
+        "stars": 1966,
+        "star_velocity": 660.6,
+        "url": "https://github.com/bozhouDev/codex-orange-book",
+        "description": "Codex 橙皮书：从安装到实战案例的全链路 Codex 使用指南（非官方开源，含可下载 PDF）",
+        "language": "HTML",
+        "created_at": "2026-06-23T02:36:54Z"
+      },
+      {
+        "name": "lyra81604/zhengxi-views",
+        "stars": 1037,
+        "star_velocity": 175.8,
+        "url": "https://github.com/lyra81604/zhengxi-views",
+        "description": "可溯源的郑希(易方达基金经理)投研 Agent Skill——基于他全部公开观点原文 + 有原话佐证的投资方法 + 全市场基金真实数据，能溯源问答、按他框架给基金打分，绝不杜撰。⚠️仅研究学习辅助，不构成投资建议‼️website是郑希主页！",
+        "language": "Python",
+        "created_at": "2026-06-20T04:27:07Z"
+      },
+      {
+        "name": "PMTraderAdam/pm-adam-trader",
+        "stars": 251,
+        "star_velocity": 175.5,
+        "url": "https://github.com/PMTraderAdam/pm-adam-trader",
+        "description": "",
+        "language": "TypeScript",
+        "created_at": "2026-06-24T15:42:58Z"
+      },
+      {
+        "name": "benchflow-ai/awesome-evals",
+        "stars": 298,
+        "star_velocity": 170.8,
+        "url": "https://github.com/benchflow-ai/awesome-evals",
+        "description": "A curated, non-BS library of the best resources for building and evaluating AI agents — papers, blogs, talks, tools, benchmarks. Maintained by BenchFlow.",
+        "language": "Unknown",
+        "created_at": "2026-06-24T08:10:33Z"
+      },
+      {
+        "name": "BohemiaInteractive/CWR",
+        "stars": 494,
+        "star_velocity": 139.3,
+        "url": "https://github.com/BohemiaInteractive/CWR",
+        "description": "Arma: Cold War Assault Remastered Source Code Repository.",
+        "language": "C++",
+        "created_at": "2026-06-22T12:56:54Z"
+      }
+    ],
+    "excluded_yesterday_count": 5
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "harnessevalpatterns",
+        "label": "Harness / Eval Patterns",
+        "terms": [
+          "Harness / Eval Patterns",
+          "agent evaluation"
+        ],
+        "source": "dynamic",
+        "discovery_score": 173.8,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "name": "canwhite/AgentEval",
+            "title": "canwhite/AgentEval",
+            "description": "The agent responsible for conducting the agent evaluation",
+            "url": "https://github.com/canwhite/AgentEval",
+            "stars": 307,
+            "forks": 5,
+            "topics": [],
+            "created_at": "2026-05-25T07:16:06Z",
+            "updated_at": "2026-06-26T01:43:09Z",
+            "star_velocity": 9.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "name": "UniPat-AI/SaaS-Bench",
+            "title": "UniPat-AI/SaaS-Bench",
+            "description": "Official repository for SaaS-Bench: realistic, locally deployable SaaS workflows for GUI agent evaluation.",
+            "url": "https://github.com/UniPat-AI/SaaS-Bench",
+            "stars": 85,
+            "forks": 10,
+            "topics": [],
+            "created_at": "2026-05-11T12:59:44Z",
+            "updated_at": "2026-06-25T11:10:03Z",
+            "star_velocity": 1.9
+          },
+          {
+            "source": "github_repo",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "name": "ZJU-REAL/KnowU-Bench",
+            "title": "ZJU-REAL/KnowU-Bench",
+            "description": "Official code for \"KnowU-Bench: Towards Interactive, Proactive, and Personalized Mobile Agent Evaluation\"",
+            "url": "https://github.com/ZJU-REAL/KnowU-Bench",
+            "stars": 72,
+            "forks": 2,
+            "topics": [],
+            "created_at": "2026-04-09T15:00:28Z",
+            "updated_at": "2026-06-13T07:16:42Z",
+            "star_velocity": 0.9
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "title": "[Task Proposal #196] Crosswell Seismic Full-Waveform Inversion — image an inter-well velocity anomaly",
+            "url": "https://github.com/harbor-framework/terminal-bench-science/discussions/375",
+            "repository": "harbor-framework/terminal-bench-science",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "StevenDillmann",
+            "created_at": "2026-06-25T01:35:41Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "title": "ADLC SIG Agenda, 24 Jun 2026",
+            "url": "https://github.com/cosai-oasis/ws4-secure-design-agentic-systems/discussions/128",
+            "repository": "cosai-oasis/ws4-secure-design-agentic-systems",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "husky-parul",
+            "created_at": "2026-06-24T09:22:24Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "title": "Dory Roadmap",
+            "url": "https://github.com/dorylab/dory/discussions/299",
+            "repository": "dorylab/dory",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "dory-finn",
+            "created_at": "2026-06-25T03:09:51Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 221767,
+            "forks": 33953,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-06-26T01:59:49Z",
+            "star_velocity": 1394.3
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 63624,
+            "forks": 5199,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-06-26T02:00:47Z",
+            "star_velocity": 310.3
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "Hmbown/CodeWhale",
+            "title": "Hmbown/CodeWhale",
+            "description": "Open-source, community-driven agent harness",
+            "url": "https://github.com/Hmbown/CodeWhale",
+            "stars": 39013,
+            "forks": 3361,
+            "topics": [
+              "cli",
+              "deepseek",
+              "llm",
+              "rust",
+              "terminal",
+              "tui"
+            ],
+            "created_at": "2026-01-19T18:21:01Z",
+            "updated_at": "2026-06-26T01:57:04Z",
+            "star_velocity": 248.0
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "[Task Proposal #197] fss-resonance-design — inverse-design a frequency-selective surface so its transmission resonance lands on a specified target frequency",
+            "url": "https://github.com/harbor-framework/terminal-bench-science/discussions/377",
+            "repository": "harbor-framework/terminal-bench-science",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "StevenDillmann",
+            "created_at": "2026-06-25T15:50:46Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "Plan: refactor agents to shared core, ADK 2.x, planner, quality improvements",
+            "url": "https://github.com/talukspa/agro_extension_digital_project/discussions/44",
+            "repository": "talukspa/agro_extension_digital_project",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "robertosolargallardo",
+            "created_at": "2026-06-19T12:49:23Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "zzolbot_eval_harness/",
+            "url": "https://github.com/theminjunchoi/theminjunchoi.github.io/discussions/13",
+            "repository": "theminjunchoi/theminjunchoi.github.io",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "giscus",
+            "created_at": "2026-06-23T12:31:30Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "name": "JuliusBrussee/caveman",
+            "title": "JuliusBrussee/caveman",
+            "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "stars": 76945,
+            "forks": 4354,
+            "topics": [
+              "ai",
+              "anthropic",
+              "caveman",
+              "claude",
+              "claude-code",
+              "llm",
+              "meme",
+              "prompt-engineering",
+              "skill",
+              "tokens"
+            ],
+            "created_at": "2026-04-04T10:03:00Z",
+            "updated_at": "2026-06-26T01:59:36Z",
+            "star_velocity": 930.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 238734,
+            "forks": 21177,
+            "topics": [
+              "ai",
+              "brainstorming",
+              "coding",
+              "obra",
+              "sdlc",
+              "skills",
+              "subagent-driven-development",
+              "superpowers"
+            ],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-06-26T02:02:30Z",
+            "star_velocity": 920.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 155207,
+            "forks": 18268,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-06-26T02:01:59Z",
+            "star_velocity": 561.5
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "[audit-workflows] 🛰️ Agentic Workflow Audit — 2026-06-24 (fleet 92.7%; Avenger streak resumed)",
+            "url": "https://github.com/github/gh-aw/discussions/41308",
+            "repository": "github/gh-aw",
+            "comments": 2,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-06-24T22:07:01Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "Why does pip install fastapi include a SKILL.md under .agents/skills/?",
+            "url": "https://github.com/fastapi/fastapi/discussions/15843",
+            "repository": "fastapi/fastapi",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "RashmiJK",
+            "created_at": "2026-06-25T17:40:22Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "👋 What’s your agent stack?",
+            "url": "https://github.com/thousandflowers/skillreaper/discussions/12",
+            "repository": "thousandflowers/skillreaper",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "thousandflowers",
+            "created_at": "2026-06-25T10:38:12Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "drona23/claude-token-efficient",
+            "title": "drona23/claude-token-efficient",
+            "description": "One CLAUDE.md file. Keeps Claude responses terse. Reduces output verbosity on heavy workflows. Drop-in, no code changes.",
+            "url": "https://github.com/drona23/claude-token-efficient",
+            "stars": 5704,
+            "forks": 436,
+            "topics": [],
+            "created_at": "2026-03-30T12:59:07Z",
+            "updated_at": "2026-06-26T01:48:50Z",
+            "star_velocity": 65.2
+          },
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 11392,
+            "forks": 1970,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-06-26T01:49:00Z",
+            "star_velocity": 52.0
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agent0ai/dox",
+            "title": "agent0ai/dox",
+            "description": "Self-documenting AGENTS.md",
+            "url": "https://github.com/agent0ai/dox",
+            "stars": 985,
+            "forks": 132,
+            "topics": [
+              "agents-md",
+              "ai",
+              "ai-agents",
+              "documentation"
+            ],
+            "created_at": "2026-06-01T08:25:21Z",
+            "updated_at": "2026-06-25T22:17:40Z",
+            "star_velocity": 39.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Adopt `just` as the default command runner across our repositories",
+            "url": "https://github.com/home-assistant/architecture/discussions/1416",
+            "repository": "home-assistant/architecture",
+            "comments": 3,
+            "upvotes": 5,
+            "author": "frenck",
+            "created_at": "2026-06-19T07:40:43Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "Proposal: add a .gitallow allowlist for AI-generated repo artifacts",
+            "url": "https://github.com/orgs/community/discussions/200163",
+            "repository": "community/community",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "Vijay431",
+            "created_at": "2026-06-25T17:58:21Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "発見と生産 —— LLM協働のモード選択",
+            "url": "https://github.com/shuji-bonji/ai-agent-architecture/discussions/84",
+            "repository": "shuji-bonji/ai-agent-architecture",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "shuji-bonji",
+            "created_at": "2026-06-25T01:21:15Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [],
+  "community_release_reactions": {}
+}
