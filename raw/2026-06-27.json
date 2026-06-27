@@ -1,0 +1,712 @@
+{
+  "date": "2026-06-27",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **Anthropic — Claude Opus 4.8** | latest known official release outside lookback: **2026-06-09** | source: https://www.anthropic.com/news/claude-fable-5-mythos-5\n- **OpenAI — GPT-5.5** | latest known official release outside lookback: **2026-04-23** | source: https://openai.com/index/introducing-gpt-5-5\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+        "https://openai.com/index/introducing-gpt-5-5"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Model Context Protocol\n- Tracked queries: Model Context Protocol, mcp\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=222200 | velocity=1388.4★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: Show and tell: Agent Execution Proof — structured audit records for tool calls | repo=WasmAgent/wasmagent | comments=6 | upvotes=1 | https://github.com/orgs/WasmAgent/discussions/1\n\n### Harness / Eval Patterns\n- Tracked queries: Harness / Eval Patterns, agent evaluation\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: canwhite/AgentEval | stars=320 | velocity=9.8★/day | https://github.com/canwhite/AgentEval\n- GitHub Discussions: [Task Proposal #198] A spectral stability solver for plane channel flow with uniform cross flow (modified Orr-Sommerfeld) | repo=harbor-framework/terminal-bench-science | comments=3 | upvotes=1 | https://github.com/harbor-framework/terminal-bench-science/discussions/380\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=222200 | velocity=1388.4★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: Cross-harness portable agent wake for hybrid/cloud deployments (event-driven dormancy via an outbound wake-stream + per-harness re-invoke hook) | repo=neomjs/neo | comments=3 | upvotes=1 | https://github.com/orgs/neomjs/discussions/14145\n\n### AI Agent Skills\n- Tracked queries: agent skills, claude code skill, codex skill, subagents\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: JuliusBrussee/caveman | stars=77254 | velocity=923.4★/day | https://github.com/JuliusBrussee/caveman\n- GitHub Discussions: [audit-workflows] 🛰️ Agentic Workflow Audit — 2026-06-24 (fleet 92.7%; Avenger streak resumed) | repo=github/gh-aw | comments=2 | upvotes=0 | https://github.com/github/gh-aw/discussions/41308",
+      "citations": [
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/orgs/WasmAgent/discussions/1",
+        "https://github.com/canwhite/AgentEval",
+        "https://github.com/harbor-framework/terminal-bench-science/discussions/380",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/orgs/neomjs/discussions/14145",
+        "https://github.com/JuliusBrussee/caveman",
+        "https://github.com/github/gh-aw/discussions/41308"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 4.8",
+      "released_at": "2026-06-09",
+      "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "note": "Official Anthropic news post"
+    },
+    {
+      "company": "OpenAI",
+      "model": "GPT-5.5",
+      "released_at": "2026-04-23",
+      "source_url": "https://openai.com/index/introducing-gpt-5-5",
+      "note": "Official OpenAI release post"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "bozhouDev/codex-orange-book",
+      "description": "Codex 橙皮书：从安装到实战案例的全链路 Codex 使用指南（非官方开源，含可下载 PDF）",
+      "stars": 2143,
+      "forks": 218,
+      "language": "HTML",
+      "url": "https://github.com/bozhouDev/codex-orange-book",
+      "created_at": "2026-06-23T02:36:54Z",
+      "days_old": 4.0,
+      "star_velocity": 539.5,
+      "topics": []
+    },
+    {
+      "name": "winsznx/theeleven",
+      "description": "Eleven autonomous AI agents open live football prop markets on X Layer — custom Uniswap v4 hook, gasless USDT0 staking.",
+      "stars": 458,
+      "forks": 0,
+      "language": "TypeScript",
+      "url": "https://github.com/winsznx/theeleven",
+      "created_at": "2026-06-25T07:42:50Z",
+      "days_old": 1.8,
+      "star_velocity": 260.3,
+      "topics": [
+        "ai-agents",
+        "defi",
+        "eip-3009",
+        "erc-8257",
+        "football",
+        "foundry",
+        "gasless",
+        "mcp",
+        "nextjs",
+        "okx",
+        "prediction-markets",
+        "solidity",
+        "uniswap-hooks",
+        "uniswap-v4",
+        "usdt0",
+        "web3",
+        "x-layer"
+      ]
+    },
+    {
+      "name": "benchflow-ai/awesome-evals",
+      "description": "A curated, non-BS library of the best resources for building and evaluating AI agents — papers, blogs, talks, tools, benchmarks. Maintained by BenchFlow.",
+      "stars": 465,
+      "forks": 33,
+      "language": "Unknown",
+      "url": "https://github.com/benchflow-ai/awesome-evals",
+      "created_at": "2026-06-24T08:10:33Z",
+      "days_old": 2.7,
+      "star_velocity": 169.7,
+      "topics": [
+        "agent-evaluation",
+        "ai-agents",
+        "awesome",
+        "awesome-list",
+        "benchmarks",
+        "evals",
+        "llm",
+        "llm-evaluation",
+        "rl-environments"
+      ]
+    },
+    {
+      "name": "Yu9191/wloc",
+      "description": "修改 Apple 网络定位（gs-loc）返回坐标 · 支持 Surge / Quantumult X / Loon / Stash · 快捷指令一键设置/恢复定位",
+      "stars": 462,
+      "forks": 71,
+      "language": "JavaScript",
+      "url": "https://github.com/Yu9191/wloc",
+      "created_at": "2026-06-24T06:15:30Z",
+      "days_old": 2.8,
+      "star_velocity": 163.8,
+      "topics": []
+    },
+    {
+      "name": "BohemiaInteractive/CWR",
+      "description": "Arma: Cold War Assault Remastered Source Code Repository.",
+      "stars": 624,
+      "forks": 71,
+      "language": "C++",
+      "url": "https://github.com/BohemiaInteractive/CWR",
+      "created_at": "2026-06-22T12:56:54Z",
+      "days_old": 4.5,
+      "star_velocity": 137.4,
+      "topics": []
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [],
+    "weekly_top5": [
+      {
+        "name": "winsznx/theeleven",
+        "stars": 458,
+        "star_velocity": 260.3,
+        "url": "https://github.com/winsznx/theeleven",
+        "description": "Eleven autonomous AI agents open live football prop markets on X Layer — custom Uniswap v4 hook, gasless USDT0 staking.",
+        "language": "TypeScript",
+        "created_at": "2026-06-25T07:42:50Z"
+      },
+      {
+        "name": "Yu9191/wloc",
+        "stars": 462,
+        "star_velocity": 163.8,
+        "url": "https://github.com/Yu9191/wloc",
+        "description": "修改 Apple 网络定位（gs-loc）返回坐标 · 支持 Surge / Quantumult X / Loon / Stash · 快捷指令一键设置/恢复定位",
+        "language": "JavaScript",
+        "created_at": "2026-06-24T06:15:30Z"
+      },
+      {
+        "name": "kanavtwtgg/birds.cafe",
+        "stars": 735,
+        "star_velocity": 133.6,
+        "url": "https://github.com/kanavtwtgg/birds.cafe",
+        "description": "",
+        "language": "JavaScript",
+        "created_at": "2026-06-21T13:57:28Z"
+      },
+      {
+        "name": "QwenLM/Qwen-AgentWorld",
+        "stars": 568,
+        "star_velocity": 126.1,
+        "url": "https://github.com/QwenLM/Qwen-AgentWorld",
+        "description": "Qwen-AgentWorld: Language World Models for General Agents",
+        "language": "Python",
+        "created_at": "2026-06-22T13:48:37Z"
+      },
+      {
+        "name": "amplifthq/opentag",
+        "stars": 297,
+        "star_velocity": 108.2,
+        "url": "https://github.com/amplifthq/opentag",
+        "description": "Open-source @agent mentions for Slack and GitHub. OpenTag routes tagged requests to Codex, Claude Code, then returns results in thread.",
+        "language": "TypeScript",
+        "created_at": "2026-06-24T08:05:12Z"
+      }
+    ],
+    "excluded_yesterday_count": 6
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "modelcontextprotocol",
+        "label": "Model Context Protocol",
+        "terms": [
+          "Model Context Protocol",
+          "mcp"
+        ],
+        "source": "dynamic",
+        "discovery_score": 264.9,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 222200,
+            "forks": 34026,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-06-27T01:54:24Z",
+            "star_velocity": 1388.4
+          },
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "name": "farion1231/cc-switch",
+            "title": "farion1231/cc-switch",
+            "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
+            "url": "https://github.com/farion1231/cc-switch",
+            "stars": 109036,
+            "forks": 7209,
+            "topics": [
+              "ai-tools",
+              "claude-code",
+              "codex",
+              "desktop-app",
+              "hermes",
+              "hermes-agent",
+              "mcp",
+              "minimax",
+              "omo",
+              "open-source",
+              "openclaw",
+              "openclaw-ui",
+              "opencode",
+              "provider-management",
+              "rust",
+              "skills",
+              "skills-management",
+              "tauri",
+              "typescript",
+              "wsl-support"
+            ],
+            "created_at": "2025-08-04T14:16:16Z",
+            "updated_at": "2026-06-27T01:54:08Z",
+            "star_velocity": 334.0
+          },
+          {
+            "source": "github_repo",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "name": "punkpeye/awesome-mcp-servers",
+            "title": "punkpeye/awesome-mcp-servers",
+            "description": "A collection of MCP servers.",
+            "url": "https://github.com/punkpeye/awesome-mcp-servers",
+            "stars": 89844,
+            "forks": 12124,
+            "topics": [
+              "ai",
+              "mcp"
+            ],
+            "created_at": "2024-11-30T04:49:10Z",
+            "updated_at": "2026-06-27T01:49:11Z",
+            "star_velocity": 156.6
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "title": "Show and tell: Agent Execution Proof — structured audit records for tool calls",
+            "url": "https://github.com/orgs/WasmAgent/discussions/1",
+            "repository": "WasmAgent/wasmagent",
+            "comments": 6,
+            "upvotes": 1,
+            "author": "telleroutlook",
+            "created_at": "2026-06-26T01:23:16Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "title": "Show and tell: MCP Trust Pack — policy, scope leases, and approval receipts for MCP tool calls",
+            "url": "https://github.com/orgs/WasmAgent/discussions/2",
+            "repository": "WasmAgent/wasmagent",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "telleroutlook",
+            "created_at": "2026-06-26T01:48:26Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "mcp",
+            "group_id": "modelcontextprotocol",
+            "title": "Cross-harness portable agent wake for hybrid/cloud deployments (event-driven dormancy via an outbound wake-stream + per-harness re-invoke hook)",
+            "url": "https://github.com/orgs/neomjs/discussions/14145",
+            "repository": "neomjs/neo",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-06-26T20:53:51Z"
+          }
+        ]
+      },
+      {
+        "id": "harnessevalpatterns",
+        "label": "Harness / Eval Patterns",
+        "terms": [
+          "Harness / Eval Patterns",
+          "agent evaluation"
+        ],
+        "source": "dynamic",
+        "discovery_score": 174.3,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "name": "canwhite/AgentEval",
+            "title": "canwhite/AgentEval",
+            "description": "The agent responsible for conducting the agent evaluation",
+            "url": "https://github.com/canwhite/AgentEval",
+            "stars": 320,
+            "forks": 5,
+            "topics": [],
+            "created_at": "2026-05-25T07:16:06Z",
+            "updated_at": "2026-06-27T00:27:37Z",
+            "star_velocity": 9.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "name": "UniPat-AI/SaaS-Bench",
+            "title": "UniPat-AI/SaaS-Bench",
+            "description": "Official repository for SaaS-Bench: realistic, locally deployable SaaS workflows for GUI agent evaluation.",
+            "url": "https://github.com/UniPat-AI/SaaS-Bench",
+            "stars": 85,
+            "forks": 10,
+            "topics": [],
+            "created_at": "2026-05-11T12:59:44Z",
+            "updated_at": "2026-06-25T11:10:03Z",
+            "star_velocity": 1.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "name": "ZJU-REAL/KnowU-Bench",
+            "title": "ZJU-REAL/KnowU-Bench",
+            "description": "Official code for \"KnowU-Bench: Towards Interactive, Proactive, and Personalized Mobile Agent Evaluation\"",
+            "url": "https://github.com/ZJU-REAL/KnowU-Bench",
+            "stars": 72,
+            "forks": 2,
+            "topics": [],
+            "created_at": "2026-04-09T15:00:28Z",
+            "updated_at": "2026-06-13T07:16:42Z",
+            "star_velocity": 0.9
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "title": "[Task Proposal #198] A spectral stability solver for plane channel flow with uniform cross flow (modified Orr-Sommerfeld)",
+            "url": "https://github.com/harbor-framework/terminal-bench-science/discussions/380",
+            "repository": "harbor-framework/terminal-bench-science",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "StevenDillmann",
+            "created_at": "2026-06-26T11:49:01Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "title": "[Task Proposal #196] Crosswell Seismic Full-Waveform Inversion — image an inter-well velocity anomaly",
+            "url": "https://github.com/harbor-framework/terminal-bench-science/discussions/375",
+            "repository": "harbor-framework/terminal-bench-science",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "StevenDillmann",
+            "created_at": "2026-06-25T01:35:41Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent evaluation",
+            "group_id": "harnessevalpatterns",
+            "title": "ADLC SIG Agenda, 24 Jun 2026",
+            "url": "https://github.com/cosai-oasis/ws4-secure-design-agentic-systems/discussions/128",
+            "repository": "cosai-oasis/ws4-secure-design-agentic-systems",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "husky-parul",
+            "created_at": "2026-06-24T09:22:24Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 222200,
+            "forks": 34026,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-06-27T01:54:24Z",
+            "star_velocity": 1388.4
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 63729,
+            "forks": 5213,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-06-27T01:52:51Z",
+            "star_velocity": 309.3
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "Hmbown/CodeWhale",
+            "title": "Hmbown/CodeWhale",
+            "description": "Open-source, community-driven agent harness",
+            "url": "https://github.com/Hmbown/CodeWhale",
+            "stars": 39065,
+            "forks": 3366,
+            "topics": [
+              "cli",
+              "deepseek",
+              "llm",
+              "rust",
+              "terminal",
+              "tui"
+            ],
+            "created_at": "2026-01-19T18:21:01Z",
+            "updated_at": "2026-06-27T01:40:57Z",
+            "star_velocity": 246.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Cross-harness portable agent wake for hybrid/cloud deployments (event-driven dormancy via an outbound wake-stream + per-harness re-invoke hook)",
+            "url": "https://github.com/orgs/neomjs/discussions/14145",
+            "repository": "neomjs/neo",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-06-26T20:53:51Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "[daily-team-evolution] 🌱 Daily Team Evolution Insights - 2026-06-25",
+            "url": "https://github.com/github/gh-aw/discussions/41535",
+            "repository": "github/gh-aw",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-06-25T20:56:20Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "zzolbot_eval_harness/",
+            "url": "https://github.com/theminjunchoi/theminjunchoi.github.io/discussions/13",
+            "repository": "theminjunchoi/theminjunchoi.github.io",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "giscus",
+            "created_at": "2026-06-23T12:31:30Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "name": "JuliusBrussee/caveman",
+            "title": "JuliusBrussee/caveman",
+            "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
+            "url": "https://github.com/JuliusBrussee/caveman",
+            "stars": 77254,
+            "forks": 4372,
+            "topics": [
+              "ai",
+              "anthropic",
+              "caveman",
+              "claude",
+              "claude-code",
+              "llm",
+              "meme",
+              "prompt-engineering",
+              "skill",
+              "tokens"
+            ],
+            "created_at": "2026-04-04T10:03:00Z",
+            "updated_at": "2026-06-27T01:55:55Z",
+            "star_velocity": 923.4
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 239454,
+            "forks": 21243,
+            "topics": [
+              "ai",
+              "brainstorming",
+              "coding",
+              "obra",
+              "sdlc",
+              "skills",
+              "subagent-driven-development",
+              "superpowers"
+            ],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-06-27T01:53:35Z",
+            "star_velocity": 920.1
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 155584,
+            "forks": 18323,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-06-27T01:55:13Z",
+            "star_velocity": 560.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "title": "[audit-workflows] 🛰️ Agentic Workflow Audit — 2026-06-24 (fleet 92.7%; Avenger streak resumed)",
+            "url": "https://github.com/github/gh-aw/discussions/41308",
+            "repository": "github/gh-aw",
+            "comments": 2,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-06-24T22:07:01Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "👋 What’s your agent stack?",
+            "url": "https://github.com/thousandflowers/skillreaper/discussions/12",
+            "repository": "thousandflowers/skillreaper",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "thousandflowers",
+            "created_at": "2026-06-25T10:38:12Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "Skills e MCP e memoria para agentes de ai",
+            "url": "https://github.com/psygreg/linuxtoys/discussions/739",
+            "repository": "psygreg/linuxtoys",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "pdl-clay",
+            "created_at": "2026-06-21T14:47:28Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [],
+  "community_release_reactions": {}
+}
