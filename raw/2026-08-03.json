@@ -1,0 +1,766 @@
+{
+  "date": "2026-08-03",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **Anthropic — Claude Opus 5** | release date: **2026-07-24** | source: https://www.anthropic.com/news/claude-opus-5\n- **OpenAI — gpt-5.6-terra** | latest known official release outside lookback: **2026-06-23** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://www.anthropic.com/news/claude-opus-5",
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### AI Agent Skills\n- Tracked queries: AI Agent Skills, claude skill, codex skill\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: ComposioHQ/awesome-claude-skills | stars=71616 | velocity=247.2★/day | https://github.com/ComposioHQ/awesome-claude-skills\n- GitHub Discussions: Unified AI System v0.4.0: install the Codex plugin, MCP gateway, or agent skill | repo=happy520ai/unified-ai-system | comments=6 | upvotes=1 | https://github.com/happy520ai/unified-ai-system/discussions/6\n\n### Harness / Eval Patterns\n- Tracked queries: Harness / Eval Patterns, agent harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: xai-org/grok-build | stars=23914 | velocity=1244.0★/day | https://github.com/xai-org/grok-build\n- GitHub Discussions: How does a contributor provision the Docker-canonical Agent OS from a fork? (IaC options, and why the tool choice is the second question) | repo=neomjs/neo | comments=5 | upvotes=1 | https://github.com/orgs/neomjs/discussions/16193\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: xai-org/grok-build | stars=23914 | velocity=1244.0★/day | https://github.com/xai-org/grok-build\n- GitHub Discussions: How does a contributor provision the Docker-canonical Agent OS from a fork? (IaC options, and why the tool choice is the second question) | repo=neomjs/neo | comments=5 | upvotes=1 | https://github.com/orgs/neomjs/discussions/16193\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: Piebald-AI/claude-code-system-prompts | stars=12145 | velocity=47.2★/day | https://github.com/Piebald-AI/claude-code-system-prompts\n- GitHub Discussions: No-blame correction economics: does the falsification flywheel need a named map-tier value — and where does it live? | repo=neomjs/neo | comments=16 | upvotes=1 | https://github.com/orgs/neomjs/discussions/16408",
+      "citations": [
+        "https://github.com/ComposioHQ/awesome-claude-skills",
+        "https://github.com/happy520ai/unified-ai-system/discussions/6",
+        "https://github.com/xai-org/grok-build",
+        "https://github.com/orgs/neomjs/discussions/16193",
+        "https://github.com/xai-org/grok-build",
+        "https://github.com/orgs/neomjs/discussions/16193",
+        "https://github.com/Piebald-AI/claude-code-system-prompts",
+        "https://github.com/orgs/neomjs/discussions/16408"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 5",
+      "released_at": "2026-07-24",
+      "source_url": "https://www.anthropic.com/news/claude-opus-5",
+      "note": "Official Anthropic news post"
+    },
+    {
+      "company": "OpenAI",
+      "model": "gpt-5.6-terra",
+      "released_at": "2026-06-23",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "yc-software/qm",
+      "description": "Multiplayer agent harness for work",
+      "stars": 7273,
+      "forks": 765,
+      "language": "TypeScript",
+      "url": "https://github.com/yc-software/qm",
+      "created_at": "2026-07-29T20:03:08Z",
+      "days_old": 4.2,
+      "star_velocity": 1721.7,
+      "topics": []
+    },
+    {
+      "name": "bashalarmistalt/decimen-optical-transfer",
+      "description": "",
+      "stars": 3691,
+      "forks": 424,
+      "language": "TypeScript",
+      "url": "https://github.com/bashalarmistalt/decimen-optical-transfer",
+      "created_at": "2026-07-30T18:17:54Z",
+      "days_old": 3.3,
+      "star_velocity": 1119.4,
+      "topics": []
+    },
+    {
+      "name": "trycompai/crm",
+      "description": "An open-source, agentic-first CRM.",
+      "stars": 1839,
+      "forks": 220,
+      "language": "TypeScript",
+      "url": "https://github.com/trycompai/crm",
+      "created_at": "2026-07-31T21:38:51Z",
+      "days_old": 2.2,
+      "star_velocity": 852.3,
+      "topics": []
+    },
+    {
+      "name": "DannyMac180/sol-advisor",
+      "description": "Codex-native architect orchestration with Luna and Terra implementation lanes and mandatory fresh Sol review.",
+      "stars": 674,
+      "forks": 42,
+      "language": "Shell",
+      "url": "https://github.com/DannyMac180/sol-advisor",
+      "created_at": "2026-08-01T13:56:43Z",
+      "days_old": 1.5,
+      "star_velocity": 455.8,
+      "topics": []
+    },
+    {
+      "name": "0xwilliamortiz/humanizer-cli",
+      "description": "33 ways to spot AI-written text, right in your terminal. Before/after examples, draft checker, zero dependencies.",
+      "stars": 541,
+      "forks": 68,
+      "language": "JavaScript",
+      "url": "https://github.com/0xwilliamortiz/humanizer-cli",
+      "created_at": "2026-08-01T20:36:27Z",
+      "days_old": 1.2,
+      "star_velocity": 450.4,
+      "topics": [
+        "ai-slop",
+        "ai-slop-detection",
+        "ai-slop-detector",
+        "ai-slop-fixer",
+        "ai-slop-remover",
+        "claude-code-plugin",
+        "claude-skills",
+        "codex",
+        "codex-cli",
+        "codex-plugin",
+        "codex-skill",
+        "human",
+        "humanization",
+        "humanize",
+        "humanize-ai",
+        "humanize-ai-text",
+        "humanize-text",
+        "humanized",
+        "humanizer"
+      ]
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [
+      {
+        "name": "MasterLocksmithTrim/BoosterX-PRO-Crack",
+        "stars": 14,
+        "star_velocity": 140.0,
+        "url": "https://github.com/MasterLocksmithTrim/BoosterX-PRO-Crack",
+        "description": "Windows optimization utility featuring gaming tweaks, FPS improvements, latency reduction, startup management, privacy controls, backup & restore, and advanced performance optimization tools.",
+        "language": "C++",
+        "created_at": "2026-08-03T00:24:36Z"
+      }
+    ],
+    "weekly_top5": [
+      {
+        "name": "yc-software/qm",
+        "stars": 7273,
+        "star_velocity": 1721.7,
+        "url": "https://github.com/yc-software/qm",
+        "description": "Multiplayer agent harness for work",
+        "language": "TypeScript",
+        "created_at": "2026-07-29T20:03:08Z"
+      },
+      {
+        "name": "bashalarmistalt/decimen-optical-transfer",
+        "stars": 3691,
+        "star_velocity": 1119.4,
+        "url": "https://github.com/bashalarmistalt/decimen-optical-transfer",
+        "description": "",
+        "language": "TypeScript",
+        "created_at": "2026-07-30T18:17:54Z"
+      },
+      {
+        "name": "DannyMac180/sol-advisor",
+        "stars": 674,
+        "star_velocity": 455.8,
+        "url": "https://github.com/DannyMac180/sol-advisor",
+        "description": "Codex-native architect orchestration with Luna and Terra implementation lanes and mandatory fresh Sol review.",
+        "language": "Shell",
+        "created_at": "2026-08-01T13:56:43Z"
+      },
+      {
+        "name": "0xwilliamortiz/humanizer-cli",
+        "stars": 541,
+        "star_velocity": 450.4,
+        "url": "https://github.com/0xwilliamortiz/humanizer-cli",
+        "description": "33 ways to spot AI-written text, right in your terminal. Before/after examples, draft checker, zero dependencies.",
+        "language": "JavaScript",
+        "created_at": "2026-08-01T20:36:27Z"
+      },
+      {
+        "name": "WilonityDev/WilonityLoader",
+        "stars": 1215,
+        "star_velocity": 445.0,
+        "url": "https://github.com/WilonityDev/WilonityLoader",
+        "description": "Wilonity Loader – cheat lib w/ spoofer, driver bypass, undetected injector for 20+ games (RUST, CS2, Valorant, Tarkov, Warzone, PUBG, R6S, ArcRiders, Apex, Roblox, Meccha Chameleon). Kernel spoof, HWID cleaner, AC bypass (EAC/BE/VG). ESP, aimbot, WH, wallhack, triggerbot, radar, no recoil, silent aim, chams, skin changer, unlock all, no spread.",
+        "language": "Unknown",
+        "created_at": "2026-07-31T07:53:54Z"
+      }
+    ],
+    "excluded_yesterday_count": 5
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "aiagentskills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "AI Agent Skills",
+          "claude skill",
+          "codex skill"
+        ],
+        "source": "dynamic",
+        "discovery_score": 911.6,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "claude skill",
+            "group_id": "aiagentskills",
+            "name": "ComposioHQ/awesome-claude-skills",
+            "title": "ComposioHQ/awesome-claude-skills",
+            "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+            "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+            "stars": 71616,
+            "forks": 8076,
+            "topics": [
+              "agent-skills",
+              "ai-agents",
+              "antigravity",
+              "automation",
+              "claude",
+              "claude-code",
+              "codex",
+              "composio",
+              "cursor",
+              "developer-tools",
+              "gemini-cli",
+              "mcp",
+              "openai-codex",
+              "rube",
+              "saas",
+              "skill",
+              "workflow-automation"
+            ],
+            "created_at": "2025-10-17T07:15:01Z",
+            "updated_at": "2026-08-03T00:37:17Z",
+            "star_velocity": 247.2
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "op7418/guizang-ppt-skill",
+            "title": "op7418/guizang-ppt-skill",
+            "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
+            "url": "https://github.com/op7418/guizang-ppt-skill",
+            "stars": 22999,
+            "forks": 1661,
+            "topics": [
+              "ai-agent",
+              "claude-code",
+              "codex",
+              "html-deck",
+              "image-generation",
+              "ppt",
+              "presentation",
+              "skill",
+              "skills",
+              "swiss-design",
+              "web-ppt"
+            ],
+            "created_at": "2026-04-23T13:23:07Z",
+            "updated_at": "2026-08-03T01:21:31Z",
+            "star_velocity": 226.6
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "googleworkspace/cli",
+            "title": "googleworkspace/cli",
+            "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+            "url": "https://github.com/googleworkspace/cli",
+            "stars": 30162,
+            "forks": 1761,
+            "topics": [
+              "agent-skills",
+              "ai-agent",
+              "automation",
+              "cli",
+              "discovery-api",
+              "gemini-cli-extension",
+              "google-admin",
+              "google-api",
+              "google-calendar",
+              "google-chat",
+              "google-docs",
+              "google-drive",
+              "google-sheets",
+              "google-workspace",
+              "oauth2",
+              "rust"
+            ],
+            "created_at": "2026-03-02T19:46:06Z",
+            "updated_at": "2026-08-03T01:09:46Z",
+            "star_velocity": 196.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "Unified AI System v0.4.0: install the Codex plugin, MCP gateway, or agent skill",
+            "url": "https://github.com/happy520ai/unified-ai-system/discussions/6",
+            "repository": "happy520ai/unified-ai-system",
+            "comments": 6,
+            "upvotes": 1,
+            "author": "happy520ai",
+            "created_at": "2026-07-30T12:21:12Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "How to integrate Microsoft Agent Framework Skills into a .NET API?",
+            "url": "https://github.com/microsoft/agent-framework/discussions/7382",
+            "repository": "microsoft/agent-framework",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "hintdesk",
+            "created_at": "2026-07-29T07:52:04Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "@cat-agent-skills/microsoft_ai_platform_advisor",
+            "url": "https://github.com/kody-w/RAR/discussions/474",
+            "repository": "kody-w/RAR",
+            "comments": 2,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-08-02T01:46:31Z"
+          }
+        ]
+      },
+      {
+        "id": "harnessevalpatterns",
+        "label": "Harness / Eval Patterns",
+        "terms": [
+          "Harness / Eval Patterns",
+          "agent harness"
+        ],
+        "source": "dynamic",
+        "discovery_score": 1794.4,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 23914,
+            "forks": 4540,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-08-03T01:19:46Z",
+            "star_velocity": 1244.0
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 237077,
+            "forks": 36038,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-08-03T01:24:29Z",
+            "star_velocity": 1203.3
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 67055,
+            "forks": 5469,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-08-03T01:19:49Z",
+            "star_velocity": 276.0
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "How does a contributor provision the Docker-canonical Agent OS from a fork? (IaC options, and why the tool choice is the second question)",
+            "url": "https://github.com/orgs/neomjs/discussions/16193",
+            "repository": "neomjs/neo",
+            "comments": 5,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-07-30T21:23:31Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "Fleet Manager as the wake-delivery hub for adapter-less harnesses (webhooks for FM; FM-less tier stays independent)",
+            "url": "https://github.com/orgs/neomjs/discussions/16247",
+            "repository": "neomjs/neo",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "neo-kimi-iris",
+            "created_at": "2026-08-01T01:06:11Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "Proposal: an optional reliability mode that improves answers, verifies factual claims, and abstains when evidence is insufficient",
+            "url": "https://github.com/bytedance/deer-flow/discussions/4642",
+            "repository": "bytedance/deer-flow",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "mlpbcn",
+            "created_at": "2026-08-02T09:21:40Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 23914,
+            "forks": 4540,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-08-03T01:19:46Z",
+            "star_velocity": 1244.0
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 237077,
+            "forks": 36038,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-08-03T01:24:29Z",
+            "star_velocity": 1203.3
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 67055,
+            "forks": 5469,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-08-03T01:19:49Z",
+            "star_velocity": 276.0
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "How does a contributor provision the Docker-canonical Agent OS from a fork? (IaC options, and why the tool choice is the second question)",
+            "url": "https://github.com/orgs/neomjs/discussions/16193",
+            "repository": "neomjs/neo",
+            "comments": 5,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-07-30T21:23:31Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "Proposal: eval-infra — Shared Eval Tooling for Token Efficiency and Efficacy",
+            "url": "https://github.com/orgs/unbound-force/discussions/399",
+            "repository": "unbound-force/unbound-force",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "jflowers",
+            "created_at": "2026-07-31T15:42:21Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Fleet Manager as the wake-delivery hub for adapter-less harnesses (webhooks for FM; FM-less tier stays independent)",
+            "url": "https://github.com/orgs/neomjs/discussions/16247",
+            "repository": "neomjs/neo",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "neo-kimi-iris",
+            "created_at": "2026-08-01T01:06:11Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12145,
+            "forks": 2026,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-08-02T22:25:08Z",
+            "star_velocity": 47.2
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agent0ai/dox",
+            "title": "agent0ai/dox",
+            "description": "Self-documenting AGENTS.md",
+            "url": "https://github.com/agent0ai/dox",
+            "stars": 1375,
+            "forks": 177,
+            "topics": [
+              "agents-md",
+              "ai",
+              "ai-agents",
+              "documentation"
+            ],
+            "created_at": "2026-06-01T08:25:21Z",
+            "updated_at": "2026-08-02T11:01:34Z",
+            "star_velocity": 21.9
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "wasp-lang/open-saas",
+            "title": "wasp-lang/open-saas",
+            "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+            "url": "https://github.com/wasp-lang/open-saas",
+            "stars": 15125,
+            "forks": 1808,
+            "topics": [
+              "ai",
+              "authentication",
+              "aws-s3",
+              "boilerplate",
+              "chatgpt",
+              "full-stack",
+              "google-auth",
+              "hacktoberfest",
+              "nodejs",
+              "open-source",
+              "openai-api",
+              "postgresql",
+              "prisma",
+              "react",
+              "saas",
+              "saas-boilerplate",
+              "saas-starter",
+              "saas-template",
+              "typesafe",
+              "typescript"
+            ],
+            "created_at": "2023-12-01T13:54:36Z",
+            "updated_at": "2026-08-03T00:34:49Z",
+            "star_velocity": 15.5
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "No-blame correction economics: does the falsification flywheel need a named map-tier value — and where does it live?",
+            "url": "https://github.com/orgs/neomjs/discussions/16408",
+            "repository": "neomjs/neo",
+            "comments": 16,
+            "upvotes": 1,
+            "author": "neo-fable-clio",
+            "created_at": "2026-08-02T21:15:58Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "全体の流れをguidelineとして整理したい",
+            "url": "https://github.com/mitonattou919/dev-standards-mcp/discussions/33",
+            "repository": "mitonattou919/dev-standards-mcp",
+            "comments": 5,
+            "upvotes": 1,
+            "author": "mitonattou919",
+            "created_at": "2026-08-02T02:10:10Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "エージェント駆動開発モデルを軸としたリポジトリ再構成の検討",
+            "url": "https://github.com/mitonattou919/dev-standards-mcp/discussions/32",
+            "repository": "mitonattou919/dev-standards-mcp",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "mitonattou919",
+            "created_at": "2026-08-02T01:51:52Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "Show HN: What should the GUI for AI agents look like?",
+      "url": "https://marbleos.com/demo",
+      "hn_url": "https://news.ycombinator.com/item?id=49119274",
+      "points": 134,
+      "comments": 79,
+      "author": "akbabu",
+      "created_at": "2026-07-31T05:17:29Z",
+      "score": 292
+    }
+  ],
+  "community_release_reactions": {}
+}
