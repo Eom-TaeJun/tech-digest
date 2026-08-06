@@ -1,0 +1,790 @@
+{
+  "date": "2026-08-06",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **Anthropic — Claude Opus 5** | release date: **2026-07-24** | source: https://www.anthropic.com/news/claude-opus-5\n- **OpenAI — gpt-5.6-terra** | latest known official release outside lookback: **2026-06-23** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://www.anthropic.com/news/claude-opus-5",
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### AI Agent Skills\n- Tracked queries: AI Agent Skills, writing skill\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: op7418/guizang-ppt-skill | stars=23283 | velocity=222.8★/day | https://github.com/op7418/guizang-ppt-skill\n- GitHub Discussions: Unified AI System v0.4.0: install the Codex plugin, MCP gateway, or agent skill | repo=happy520ai/unified-ai-system | comments=6 | upvotes=1 | https://github.com/happy520ai/unified-ai-system/discussions/6\n\n### Context Engineering\n- Tracked queries: Context Engineering, memory efficient\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: muratcankoylan/Agent-Skills-for-Context-Engineering | stars=17598 | velocity=77.2★/day | https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering\n- GitHub Discussions: エージェント駆動開発モデルを軸としたリポジトリ再構成の検討 | repo=mitonattou919/dev-standards-mcp | comments=2 | upvotes=1 | https://github.com/mitonattou919/dev-standards-mcp/discussions/32\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=238025 | velocity=1190.0★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: Proposal: eval-infra — Shared Eval Tooling for Token Efficiency and Efficacy | repo=unbound-force/unbound-force | comments=10 | upvotes=1 | https://github.com/orgs/unbound-force/discussions/399\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: Piebald-AI/claude-code-system-prompts | stars=12194 | velocity=46.9★/day | https://github.com/Piebald-AI/claude-code-system-prompts\n- GitHub Discussions: [idea] Add Muse (Muse Spark by Meta, dev.meta.ai) support | repo=herdrdev/herdr | comments=2 | upvotes=1 | https://github.com/herdrdev/herdr/discussions/2390",
+      "citations": [
+        "https://github.com/op7418/guizang-ppt-skill",
+        "https://github.com/happy520ai/unified-ai-system/discussions/6",
+        "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+        "https://github.com/mitonattou919/dev-standards-mcp/discussions/32",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/orgs/unbound-force/discussions/399",
+        "https://github.com/Piebald-AI/claude-code-system-prompts",
+        "https://github.com/herdrdev/herdr/discussions/2390"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 5",
+      "released_at": "2026-07-24",
+      "source_url": "https://www.anthropic.com/news/claude-opus-5",
+      "note": "Official Anthropic news post"
+    },
+    {
+      "company": "OpenAI",
+      "model": "gpt-5.6-terra",
+      "released_at": "2026-06-23",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "firecrawl/anydoc",
+      "description": "Convert Word, PowerPoint, Excel, OpenDocument, RTF, EPUB, CSV, and PDF to clean Markdown. Built in Rust, with Node.js and Python bindings.",
+      "stars": 5101,
+      "forks": 218,
+      "language": "Rust",
+      "url": "https://github.com/firecrawl/anydoc",
+      "created_at": "2026-08-03T16:36:14Z",
+      "days_old": 2.4,
+      "star_velocity": 2160.1,
+      "topics": []
+    },
+    {
+      "name": "trycompai/crm",
+      "description": "An open-source, agentic-first CRM.",
+      "stars": 6274,
+      "forks": 643,
+      "language": "TypeScript",
+      "url": "https://github.com/trycompai/crm",
+      "created_at": "2026-07-31T21:38:51Z",
+      "days_old": 5.2,
+      "star_velocity": 1217.9,
+      "topics": []
+    },
+    {
+      "name": "KKKKhazix/human-writing",
+      "description": "让 AI 写的中文读起来像一个具体的人在说话。通用创作与改稿 Skill，开箱即用。",
+      "stars": 1071,
+      "forks": 99,
+      "language": "Python",
+      "url": "https://github.com/KKKKhazix/human-writing",
+      "created_at": "2026-08-05T01:19:41Z",
+      "days_old": 1.0,
+      "star_velocity": 1073.1,
+      "topics": [
+        "agent-skills",
+        "chinese-writing",
+        "creative-writing",
+        "writing-skill"
+      ]
+    },
+    {
+      "name": "Binaryify/open-kimi-ppt-skill",
+      "description": "非官方 Kimi Slides Skill：让 AI Agent 生成可编辑 PPTD + PPTX，并附带本地浏览器编辑器 Unofficial Kimi Slides skill for AI agents — generate editable PPTD + PPTX with a local browser editor",
+      "stars": 627,
+      "forks": 180,
+      "language": "Python",
+      "url": "https://github.com/Binaryify/open-kimi-ppt-skill",
+      "created_at": "2026-08-05T07:30:56Z",
+      "days_old": 0.7,
+      "star_velocity": 847.1,
+      "topics": []
+    },
+    {
+      "name": "FareedKhan-dev/kimi-k3-in-c",
+      "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+      "stars": 2577,
+      "forks": 428,
+      "language": "C",
+      "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+      "created_at": "2026-08-01T09:29:38Z",
+      "days_old": 4.7,
+      "star_velocity": 553.3,
+      "topics": [
+        "avx2",
+        "c99",
+        "cpu-inference",
+        "deep-learning",
+        "from-scratch",
+        "inference-engine",
+        "kimi-k3",
+        "linear-attention",
+        "llm",
+        "llm-inference",
+        "machine-learning",
+        "memory-efficient",
+        "mixture-of-experts",
+        "moe",
+        "mxfp4",
+        "quantization",
+        "simd",
+        "systems-programming",
+        "transformer",
+        "zero-dependencies"
+      ]
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [],
+    "weekly_top5": [
+      {
+        "name": "trycompai/crm",
+        "stars": 6274,
+        "star_velocity": 1217.9,
+        "url": "https://github.com/trycompai/crm",
+        "description": "An open-source, agentic-first CRM.",
+        "language": "TypeScript",
+        "created_at": "2026-07-31T21:38:51Z"
+      },
+      {
+        "name": "KKKKhazix/human-writing",
+        "stars": 1071,
+        "star_velocity": 1073.1,
+        "url": "https://github.com/KKKKhazix/human-writing",
+        "description": "让 AI 写的中文读起来像一个具体的人在说话。通用创作与改稿 Skill，开箱即用。",
+        "language": "Python",
+        "created_at": "2026-08-05T01:19:41Z"
+      },
+      {
+        "name": "Binaryify/open-kimi-ppt-skill",
+        "stars": 627,
+        "star_velocity": 847.1,
+        "url": "https://github.com/Binaryify/open-kimi-ppt-skill",
+        "description": "非官方 Kimi Slides Skill：让 AI Agent 生成可编辑 PPTD + PPTX，并附带本地浏览器编辑器 Unofficial Kimi Slides skill for AI agents — generate editable PPTD + PPTX with a local browser editor",
+        "language": "Python",
+        "created_at": "2026-08-05T07:30:56Z"
+      },
+      {
+        "name": "FareedKhan-dev/kimi-k3-in-c",
+        "stars": 2577,
+        "star_velocity": 553.3,
+        "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+        "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+        "language": "C",
+        "created_at": "2026-08-01T09:29:38Z"
+      },
+      {
+        "name": "imsai-sh/zhuzhiliao",
+        "stars": 2035,
+        "star_velocity": 469.9,
+        "url": "https://github.com/imsai-sh/zhuzhiliao",
+        "description": "竹知了 —— 一转就哇哇叫的传统玩具，Web 模拟版。零依赖单文件，真实录音采样，移动端优先。",
+        "language": "HTML",
+        "created_at": "2026-08-01T17:20:54Z"
+      }
+    ],
+    "excluded_yesterday_count": 9
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "aiagentskills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "AI Agent Skills",
+          "writing skill"
+        ],
+        "source": "dynamic",
+        "discovery_score": 1083.8,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "op7418/guizang-ppt-skill",
+            "title": "op7418/guizang-ppt-skill",
+            "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
+            "url": "https://github.com/op7418/guizang-ppt-skill",
+            "stars": 23283,
+            "forks": 1678,
+            "topics": [
+              "ai-agent",
+              "claude-code",
+              "codex",
+              "html-deck",
+              "image-generation",
+              "ppt",
+              "presentation",
+              "skill",
+              "skills",
+              "swiss-design",
+              "web-ppt"
+            ],
+            "created_at": "2026-04-23T13:23:07Z",
+            "updated_at": "2026-08-06T01:14:40Z",
+            "star_velocity": 222.8
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "googleworkspace/cli",
+            "title": "googleworkspace/cli",
+            "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+            "url": "https://github.com/googleworkspace/cli",
+            "stars": 30220,
+            "forks": 1768,
+            "topics": [
+              "agent-skills",
+              "ai-agent",
+              "automation",
+              "cli",
+              "discovery-api",
+              "gemini-cli-extension",
+              "google-admin",
+              "google-api",
+              "google-calendar",
+              "google-chat",
+              "google-docs",
+              "google-drive",
+              "google-sheets",
+              "google-workspace",
+              "oauth2",
+              "rust"
+            ],
+            "created_at": "2026-03-02T19:46:06Z",
+            "updated_at": "2026-08-05T21:34:44Z",
+            "star_velocity": 193.4
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "larksuite/cli",
+            "title": "larksuite/cli",
+            "description": "The official Lark/飞书 CLI tool, maintained by the larksuite team — built for humans and AI Agents. Covers core business domains including Messenger, Docs, Base, Sheets, Calendar, Mail, Tasks, Meetings, and more, with 200+ commands and 20+ AI Agent Skills.",
+            "url": "https://github.com/larksuite/cli",
+            "stars": 16194,
+            "forks": 1285,
+            "topics": [],
+            "created_at": "2026-03-25T07:13:30Z",
+            "updated_at": "2026-08-06T00:01:41Z",
+            "star_velocity": 121.1
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "Unified AI System v0.4.0: install the Codex plugin, MCP gateway, or agent skill",
+            "url": "https://github.com/happy520ai/unified-ai-system/discussions/6",
+            "repository": "happy520ai/unified-ai-system",
+            "comments": 6,
+            "upvotes": 1,
+            "author": "happy520ai",
+            "created_at": "2026-07-30T12:21:12Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "writing skill",
+            "group_id": "aiagentskills",
+            "title": "@cat-agent-skills/wikipedia_human_style_writing",
+            "url": "https://github.com/kody-w/RAR/discussions/501",
+            "repository": "kody-w/RAR",
+            "comments": 2,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-08-02T14:44:51Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "@cat-agent-skills/brand_voice_pass",
+            "url": "https://github.com/kody-w/RAR/discussions/437",
+            "repository": "kody-w/RAR",
+            "comments": 2,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-08-01T09:11:06Z"
+          }
+        ]
+      },
+      {
+        "id": "contextengineering",
+        "label": "Context Engineering",
+        "terms": [
+          "Context Engineering",
+          "memory efficient"
+        ],
+        "source": "dynamic",
+        "discovery_score": 579.1,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "name": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "title": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+            "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "stars": 17598,
+            "forks": 1450,
+            "topics": [],
+            "created_at": "2025-12-21T02:43:42Z",
+            "updated_at": "2026-08-06T01:02:02Z",
+            "star_velocity": 77.2
+          },
+          {
+            "source": "github_repo",
+            "term": "memory efficient",
+            "group_id": "contextengineering",
+            "name": "vllm-project/vllm",
+            "title": "vllm-project/vllm",
+            "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+            "url": "https://github.com/vllm-project/vllm",
+            "stars": 88283,
+            "forks": 20320,
+            "topics": [
+              "amd",
+              "blackwell",
+              "cuda",
+              "deepseek",
+              "deepseek-v3",
+              "gpt",
+              "gpt-oss",
+              "inference",
+              "kimi",
+              "llama",
+              "llm",
+              "llm-serving",
+              "model-serving",
+              "moe",
+              "openai",
+              "pytorch",
+              "qwen",
+              "qwen3",
+              "tpu",
+              "transformer"
+            ],
+            "created_at": "2023-02-09T11:23:20Z",
+            "updated_at": "2026-08-06T01:13:17Z",
+            "star_velocity": 69.3
+          },
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "name": "Windy3f3f3f3f/how-claude-code-works",
+            "title": "Windy3f3f3f3f/how-claude-code-works",
+            "description": "Deep dive into Claude Code internals — architecture, agent loop, context engineering, and more. / 深入解析 Claude Code 源码：架构、Agent 循环、上下文工程、工具系统等",
+            "url": "https://github.com/Windy3f3f3f3f/how-claude-code-works",
+            "stars": 3369,
+            "forks": 690,
+            "topics": [
+              "ai",
+              "ai-agent",
+              "anthropic",
+              "architecture",
+              "claude",
+              "claude-code",
+              "coding-agent",
+              "deep-dive",
+              "llm",
+              "source-code-analysis"
+            ],
+            "created_at": "2026-03-31T12:25:40Z",
+            "updated_at": "2026-08-05T09:00:50Z",
+            "star_velocity": 26.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "title": "エージェント駆動開発モデルを軸としたリポジトリ再構成の検討",
+            "url": "https://github.com/mitonattou919/dev-standards-mcp/discussions/32",
+            "repository": "mitonattou919/dev-standards-mcp",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "mitonattou919",
+            "created_at": "2026-08-02T01:51:52Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "memory efficient",
+            "group_id": "contextengineering",
+            "title": "Default the budget optimizer scipy method to `trust-constr`",
+            "url": "https://github.com/pymc-labs/pymc-marketing/discussions/2774",
+            "repository": "pymc-labs/pymc-marketing",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "lucianopaz",
+            "created_at": "2026-07-30T07:47:23Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "memory efficient",
+            "group_id": "contextengineering",
+            "title": "[Task Proposal #429] Implement Zero Shot Unifed Symmetry for RFDiffusion2",
+            "url": "https://github.com/harbor-framework/terminal-bench-science/discussions/807",
+            "repository": "harbor-framework/terminal-bench-science",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "StevenDillmann",
+            "created_at": "2026-08-04T18:36:28Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 238025,
+            "forks": 36149,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-08-06T01:14:28Z",
+            "star_velocity": 1190.0
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 24221,
+            "forks": 4593,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-08-06T01:12:01Z",
+            "star_velocity": 1090.2
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 67307,
+            "forks": 5494,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-08-06T01:02:12Z",
+            "star_velocity": 273.6
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Proposal: eval-infra — Shared Eval Tooling for Token Efficiency and Efficacy",
+            "url": "https://github.com/orgs/unbound-force/discussions/399",
+            "repository": "unbound-force/unbound-force",
+            "comments": 10,
+            "upvotes": 1,
+            "author": "jflowers",
+            "created_at": "2026-07-31T15:42:21Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "Independent technical review: ran the suite, the evals, and probed the core (v1.2.5)",
+            "url": "https://github.com/Coding-Dev-Tools/engraphis/discussions/106",
+            "repository": "Coding-Dev-Tools/engraphis",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "rugbyvet",
+            "created_at": "2026-07-31T19:28:39Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Proposal: organize contributions and ideas around eight agent-development pillars",
+            "url": "https://github.com/curie-eng/curie/discussions/1176",
+            "repository": "curie-eng/curie",
+            "comments": 1,
+            "upvotes": 2,
+            "author": "athusoo",
+            "created_at": "2026-07-31T14:29:28Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12194,
+            "forks": 2027,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-08-06T00:53:12Z",
+            "star_velocity": 46.9
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agent0ai/dox",
+            "title": "agent0ai/dox",
+            "description": "Self-documenting AGENTS.md",
+            "url": "https://github.com/agent0ai/dox",
+            "stars": 1382,
+            "forks": 183,
+            "topics": [
+              "agents-md",
+              "ai",
+              "ai-agents",
+              "documentation"
+            ],
+            "created_at": "2026-06-01T08:25:21Z",
+            "updated_at": "2026-08-05T22:29:13Z",
+            "star_velocity": 21.0
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "wasp-lang/open-saas",
+            "title": "wasp-lang/open-saas",
+            "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+            "url": "https://github.com/wasp-lang/open-saas",
+            "stars": 15166,
+            "forks": 1811,
+            "topics": [
+              "ai",
+              "authentication",
+              "aws-s3",
+              "boilerplate",
+              "chatgpt",
+              "full-stack",
+              "google-auth",
+              "hacktoberfest",
+              "nodejs",
+              "open-source",
+              "openai-api",
+              "postgresql",
+              "prisma",
+              "react",
+              "saas",
+              "saas-boilerplate",
+              "saas-starter",
+              "saas-template",
+              "typesafe",
+              "typescript"
+            ],
+            "created_at": "2023-12-01T13:54:36Z",
+            "updated_at": "2026-08-05T23:52:53Z",
+            "star_velocity": 15.5
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "[idea] Add Muse (Muse Spark by Meta, dev.meta.ai) support",
+            "url": "https://github.com/herdrdev/herdr/discussions/2390",
+            "repository": "herdrdev/herdr",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "ulises-jeremias",
+            "created_at": "2026-08-05T23:04:10Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "[Ideation Sandbox] A full-read mandate over a World Atlas: what a skill payload owes the seat that must read all of it",
+            "url": "https://github.com/orgs/neomjs/discussions/16529",
+            "repository": "neomjs/neo",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-08-04T23:00:57Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "[copilot-agent-analysis] Daily Copilot Agent Analysis - 2026-08-04",
+            "url": "https://github.com/github/gh-aw/discussions/50367",
+            "repository": "github/gh-aw",
+            "comments": 1,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-08-04T18:54:07Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "hn_url": "https://news.ycombinator.com/item?id=49150470",
+      "points": 1110,
+      "comments": 608,
+      "author": "ai2027",
+      "created_at": "2026-08-03T02:16:09Z",
+      "score": 2326
+    },
+    {
+      "title": "Launch HN: Hoplite (YC S26) – Effortlessly deploy cloud coding agents",
+      "url": "https://hoplite.sh",
+      "hn_url": "https://news.ycombinator.com/item?id=49157997",
+      "points": 79,
+      "comments": 63,
+      "author": "BenceRed",
+      "created_at": "2026-08-03T16:32:06Z",
+      "score": 205
+    },
+    {
+      "title": "Agent skills that bring team coding standards to Claude Code and Codex",
+      "url": "https://github.com/tikalk/adlc-team-skills",
+      "hn_url": "https://news.ycombinator.com/item?id=49169640",
+      "points": 75,
+      "comments": 38,
+      "author": "kanfilior",
+      "created_at": "2026-08-04T14:38:31Z",
+      "score": 151
+    },
+    {
+      "title": "Prime Agent: A self-improving RLM agent",
+      "url": "https://www.primeintellect.ai/blog/prime-agent",
+      "hn_url": "https://news.ycombinator.com/item?id=49189075",
+      "points": 94,
+      "comments": 17,
+      "author": "Xeophon",
+      "created_at": "2026-08-05T21:11:57Z",
+      "score": 128
+    },
+    {
+      "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
+      "url": "https://arxiv.org/abs/2607.29377",
+      "hn_url": "https://news.ycombinator.com/item?id=49178608",
+      "points": 92,
+      "comments": 12,
+      "author": "theanonymousone",
+      "created_at": "2026-08-05T04:36:44Z",
+      "score": 116
+    }
+  ],
+  "community_release_reactions": {}
+}
