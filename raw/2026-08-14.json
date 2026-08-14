@@ -1,0 +1,800 @@
+{
+  "date": "2026-08-14",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **Anthropic — Claude Opus 5** | latest known official release outside lookback: **2026-07-24** | source: https://www.anthropic.com/news/claude-opus-5\n- **OpenAI — gpt-5.6-terra** | latest known official release outside lookback: **2026-06-23** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://www.anthropic.com/news/claude-opus-5",
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### AI Agent Skills\n- Tracked queries: AI Agent Skills, claude skill, skill generator\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: ComposioHQ/awesome-claude-skills | stars=72437 | velocity=240.9★/day | https://github.com/ComposioHQ/awesome-claude-skills\n- GitHub Discussions: claude_to_dsh: sync Claude Code conversation history into dsh by session ID | repo=deepseek-ai/deepseek-harness | comments=4 | upvotes=1 | https://github.com/deepseek-ai/deepseek-harness/discussions/308\n\n### Context Engineering\n- Tracked queries: Context Engineering, agent memory\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: TencentCloud/TencentDB-Agent-Memory | stars=21217 | velocity=164.8★/day | https://github.com/TencentCloud/TencentDB-Agent-Memory\n- GitHub Discussions: 🛰️ Agent Fleet HQ v2 — coordination room (all agents introduce yourself here) | repo=elizaOS/eliza | comments=661 | upvotes=1 | https://github.com/orgs/elizaOS/discussions/18309\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=239977 | velocity=1153.7★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: 🛰️ Agent Fleet HQ v2 — coordination room (all agents introduce yourself here) | repo=elizaOS/eliza | comments=661 | upvotes=1 | https://github.com/orgs/elizaOS/discussions/18309\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: Piebald-AI/claude-code-system-prompts | stars=12293 | velocity=45.8★/day | https://github.com/Piebald-AI/claude-code-system-prompts\n- GitHub Discussions: Substrate must thin as models sharpen: re-pricing every Agent OS gate against frontier capability | repo=neomjs/neo | comments=2 | upvotes=1 | https://github.com/orgs/neomjs/discussions/17085",
+      "citations": [
+        "https://github.com/ComposioHQ/awesome-claude-skills",
+        "https://github.com/deepseek-ai/deepseek-harness/discussions/308",
+        "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+        "https://github.com/orgs/elizaOS/discussions/18309",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/orgs/elizaOS/discussions/18309",
+        "https://github.com/Piebald-AI/claude-code-system-prompts",
+        "https://github.com/orgs/neomjs/discussions/17085"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 5",
+      "released_at": "2026-07-24",
+      "source_url": "https://www.anthropic.com/news/claude-opus-5",
+      "note": "Official Anthropic news post"
+    },
+    {
+      "company": "OpenAI",
+      "model": "gpt-5.6-terra",
+      "released_at": "2026-06-23",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "stars": 44576,
+      "forks": 3505,
+      "language": "TypeScript",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "created_at": "2026-08-13T11:56:32Z",
+      "days_old": 0.5,
+      "star_velocity": 82577.7,
+      "topics": [
+        "cordis",
+        "dsh",
+        "dsh-plugin"
+      ]
+    },
+    {
+      "name": "guillaumemeyer/watermarks-remover",
+      "description": "Strip multi-vendor AI provenance marks: Unicode text hygiene, statistical rewrite hooks, and C2PA/metadata from PNG/JPEG/SVG/PDF/DOCX/HTML/MD",
+      "stars": 5417,
+      "forks": 558,
+      "language": "Python",
+      "url": "https://github.com/guillaumemeyer/watermarks-remover",
+      "created_at": "2026-08-11T16:32:38Z",
+      "days_old": 2.3,
+      "star_velocity": 2307.0,
+      "topics": [
+        "agent-skill",
+        "ai",
+        "c2pa",
+        "claude",
+        "provenance",
+        "synthid",
+        "watermark"
+      ]
+    },
+    {
+      "name": "Leutenegger/book-to-skill",
+      "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+      "stars": 1027,
+      "forks": 131,
+      "language": "Python",
+      "url": "https://github.com/Leutenegger/book-to-skill",
+      "created_at": "2026-08-13T13:15:23Z",
+      "days_old": 0.5,
+      "star_velocity": 2117.3,
+      "topics": [
+        "agent",
+        "agent-memory",
+        "agent-skill",
+        "agent-skills",
+        "agentic",
+        "agentic-ai",
+        "agents",
+        "ai-agents",
+        "claude",
+        "claude-code",
+        "claude-code-plugin",
+        "claude-skills",
+        "github-copilot",
+        "pdf",
+        "pdf-document",
+        "pdf-generation",
+        "pdf-parser",
+        "pdf-tools",
+        "pdf-viewer",
+        "skill-generator"
+      ]
+    },
+    {
+      "name": "xoreaxeaxeax/skitter-creek-bath-salts",
+      "description": "Unlocking _everything_ on the CPU with DRAM scrambling",
+      "stars": 969,
+      "forks": 96,
+      "language": "C",
+      "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
+      "created_at": "2026-08-13T13:50:42Z",
+      "days_old": 0.5,
+      "star_velocity": 2104.1,
+      "topics": []
+    },
+    {
+      "name": "cordiverse/paper",
+      "description": "A Programming Paradigm for Spatiotemporal Composability",
+      "stars": 680,
+      "forks": 14,
+      "language": "Unknown",
+      "url": "https://github.com/cordiverse/paper",
+      "created_at": "2026-08-13T09:53:33Z",
+      "days_old": 0.6,
+      "star_velocity": 1087.6,
+      "topics": []
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [],
+    "weekly_top5": [
+      {
+        "name": "deepseek-ai/deepseek-harness",
+        "stars": 44576,
+        "star_velocity": 82575.6,
+        "url": "https://github.com/deepseek-ai/deepseek-harness",
+        "description": "DeepSeek Harness: Everything is a Plugin.",
+        "language": "TypeScript",
+        "created_at": "2026-08-13T11:56:32Z"
+      },
+      {
+        "name": "Leutenegger/book-to-skill",
+        "stars": 1027,
+        "star_velocity": 2117.2,
+        "url": "https://github.com/Leutenegger/book-to-skill",
+        "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+        "language": "Python",
+        "created_at": "2026-08-13T13:15:23Z"
+      },
+      {
+        "name": "xoreaxeaxeax/skitter-creek-bath-salts",
+        "stars": 969,
+        "star_velocity": 2104.1,
+        "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
+        "description": "Unlocking _everything_ on the CPU with DRAM scrambling",
+        "language": "C",
+        "created_at": "2026-08-13T13:50:42Z"
+      },
+      {
+        "name": "cordiverse/paper",
+        "stars": 680,
+        "star_velocity": 1087.6,
+        "url": "https://github.com/cordiverse/paper",
+        "description": "A Programming Paradigm for Spatiotemporal Composability",
+        "language": "Unknown",
+        "created_at": "2026-08-13T09:53:33Z"
+      },
+      {
+        "name": "dmmulroy/anti-slop",
+        "stars": 602,
+        "star_velocity": 411.8,
+        "url": "https://github.com/dmmulroy/anti-slop",
+        "description": "Opinionated Oxlint rules for rejecting low-evidence TypeScript and JavaScript patterns",
+        "language": "TypeScript",
+        "created_at": "2026-08-12T13:48:50Z"
+      }
+    ],
+    "excluded_yesterday_count": 8
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "aiagentskills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "AI Agent Skills",
+          "claude skill",
+          "skill generator"
+        ],
+        "source": "dynamic",
+        "discovery_score": 4255.1,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "claude skill",
+            "group_id": "aiagentskills",
+            "name": "ComposioHQ/awesome-claude-skills",
+            "title": "ComposioHQ/awesome-claude-skills",
+            "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+            "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+            "stars": 72437,
+            "forks": 8252,
+            "topics": [
+              "agent-skills",
+              "ai-agents",
+              "antigravity",
+              "automation",
+              "claude",
+              "claude-code",
+              "codex",
+              "composio",
+              "cursor",
+              "developer-tools",
+              "gemini-cli",
+              "mcp",
+              "openai-codex",
+              "rube",
+              "saas",
+              "skill",
+              "workflow-automation"
+            ],
+            "created_at": "2025-10-17T07:15:01Z",
+            "updated_at": "2026-08-14T00:42:00Z",
+            "star_velocity": 240.9
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "op7418/guizang-ppt-skill",
+            "title": "op7418/guizang-ppt-skill",
+            "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
+            "url": "https://github.com/op7418/guizang-ppt-skill",
+            "stars": 23951,
+            "forks": 1716,
+            "topics": [
+              "ai-agent",
+              "claude-code",
+              "codex",
+              "html-deck",
+              "image-generation",
+              "ppt",
+              "presentation",
+              "skill",
+              "skills",
+              "swiss-design",
+              "web-ppt"
+            ],
+            "created_at": "2026-04-23T13:23:07Z",
+            "updated_at": "2026-08-13T20:23:27Z",
+            "star_velocity": 212.9
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "googleworkspace/cli",
+            "title": "googleworkspace/cli",
+            "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+            "url": "https://github.com/googleworkspace/cli",
+            "stars": 30379,
+            "forks": 1779,
+            "topics": [
+              "agent-skills",
+              "ai-agent",
+              "automation",
+              "cli",
+              "discovery-api",
+              "gemini-cli-extension",
+              "google-admin",
+              "google-api",
+              "google-calendar",
+              "google-chat",
+              "google-docs",
+              "google-drive",
+              "google-sheets",
+              "google-workspace",
+              "oauth2",
+              "rust"
+            ],
+            "created_at": "2026-03-02T19:46:06Z",
+            "updated_at": "2026-08-13T23:28:30Z",
+            "star_velocity": 185.0
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "claude skill",
+            "group_id": "aiagentskills",
+            "title": "claude_to_dsh: sync Claude Code conversation history into dsh by session ID",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/308",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "hanasite",
+            "created_at": "2026-08-13T15:37:54Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "Some thoughts on automatic x agent setup and uninstall cleanup",
+            "url": "https://github.com/x-cmd/x-cmd/discussions/459",
+            "repository": "x-cmd/x-cmd",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "curlykay",
+            "created_at": "2026-08-11T09:28:39Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "🙏 Help us shape 7.0  This is a beta — your feedback is essential! Try it out, and report bugs or share ideas here in Discussions or in the Issues tab.",
+            "url": "https://github.com/Power-Components/livewire-powergrid/discussions/2121",
+            "repository": "Power-Components/livewire-powergrid",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "luanfreitasdev",
+            "created_at": "2026-08-10T18:00:03Z"
+          }
+        ]
+      },
+      {
+        "id": "contextengineering",
+        "label": "Context Engineering",
+        "terms": [
+          "Context Engineering",
+          "agent memory"
+        ],
+        "source": "dynamic",
+        "discovery_score": 2127.6,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent memory",
+            "group_id": "contextengineering",
+            "name": "TencentCloud/TencentDB-Agent-Memory",
+            "title": "TencentCloud/TencentDB-Agent-Memory",
+            "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+            "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+            "stars": 21217,
+            "forks": 1930,
+            "topics": [
+              "agent",
+              "ai-agent",
+              "embedding",
+              "llm",
+              "local-first",
+              "long-term-memory",
+              "memory",
+              "openclaw-plugin",
+              "vector-search"
+            ],
+            "created_at": "2026-04-07T06:34:26Z",
+            "updated_at": "2026-08-14T00:53:33Z",
+            "star_velocity": 164.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent memory",
+            "group_id": "contextengineering",
+            "name": "volcengine/OpenViking",
+            "title": "volcengine/OpenViking",
+            "description": "Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.",
+            "url": "https://github.com/volcengine/OpenViking",
+            "stars": 28389,
+            "forks": 2242,
+            "topics": [
+              "agent-memory",
+              "agent-plugins",
+              "agentic-rag",
+              "context-database",
+              "self-evolving"
+            ],
+            "created_at": "2026-01-05T07:11:17Z",
+            "updated_at": "2026-08-14T00:35:10Z",
+            "star_velocity": 128.6
+          },
+          {
+            "source": "github_repo",
+            "term": "Context Engineering",
+            "group_id": "contextengineering",
+            "name": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "title": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "description": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+            "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+            "stars": 17719,
+            "forks": 1465,
+            "topics": [],
+            "created_at": "2025-12-21T02:43:42Z",
+            "updated_at": "2026-08-13T23:05:58Z",
+            "star_velocity": 75.1
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent memory",
+            "group_id": "contextengineering",
+            "title": "🛰️ Agent Fleet HQ v2 — coordination room (all agents introduce yourself here)",
+            "url": "https://github.com/orgs/elizaOS/discussions/18309",
+            "repository": "elizaOS/eliza",
+            "comments": 661,
+            "upvotes": 1,
+            "author": "NubsCarson",
+            "created_at": "2026-08-10T19:11:55Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent memory",
+            "group_id": "contextengineering",
+            "title": "[Plugin] Editable, session-isolated memory governance",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/516",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "Spirtxiaoqi7",
+            "created_at": "2026-08-13T20:32:22Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent memory",
+            "group_id": "contextengineering",
+            "title": "dsh-plugins: bounded cross-session memory (MEMORY.md/USER.md) and skill lifecycle curation, ported from hermes-agent",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/525",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "hyls9527",
+            "created_at": "2026-08-13T21:35:07Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 239977,
+            "forks": 36428,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-08-14T00:53:40Z",
+            "star_velocity": 1153.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 25053,
+            "forks": 4746,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-08-14T00:49:32Z",
+            "star_velocity": 829.5
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 67832,
+            "forks": 5545,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-08-14T00:24:05Z",
+            "star_velocity": 267.1
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "🛰️ Agent Fleet HQ v2 — coordination room (all agents introduce yourself here)",
+            "url": "https://github.com/orgs/elizaOS/discussions/18309",
+            "repository": "elizaOS/eliza",
+            "comments": 661,
+            "upvotes": 1,
+            "author": "NubsCarson",
+            "created_at": "2026-08-10T19:11:55Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "强烈建议 Harness 也来个 Plus / Pro，别让大家边跑 Agent 边心算 API 账单",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/520",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 3,
+            "upvotes": 2,
+            "author": "awmaure",
+            "created_at": "2026-08-13T21:14:04Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "CUDA generation fix",
+            "url": "https://github.com/orgs/mflux-community/discussions/562",
+            "repository": "mflux-community/mflux",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "ianscrivener",
+            "created_at": "2026-08-11T09:12:54Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12293,
+            "forks": 2027,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-08-13T22:45:26Z",
+            "star_velocity": 45.8
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agent0ai/dox",
+            "title": "agent0ai/dox",
+            "description": "Self-documenting AGENTS.md",
+            "url": "https://github.com/agent0ai/dox",
+            "stars": 1396,
+            "forks": 186,
+            "topics": [
+              "agents-md",
+              "ai",
+              "ai-agents",
+              "documentation"
+            ],
+            "created_at": "2026-06-01T08:25:21Z",
+            "updated_at": "2026-08-14T00:18:24Z",
+            "star_velocity": 18.9
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "wasp-lang/open-saas",
+            "title": "wasp-lang/open-saas",
+            "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+            "url": "https://github.com/wasp-lang/open-saas",
+            "stars": 15296,
+            "forks": 1829,
+            "topics": [
+              "ai",
+              "authentication",
+              "aws-s3",
+              "boilerplate",
+              "chatgpt",
+              "full-stack",
+              "google-auth",
+              "hacktoberfest",
+              "nodejs",
+              "open-source",
+              "openai-api",
+              "postgresql",
+              "prisma",
+              "react",
+              "saas",
+              "saas-boilerplate",
+              "saas-starter",
+              "saas-template",
+              "typesafe",
+              "typescript"
+            ],
+            "created_at": "2023-12-01T13:54:36Z",
+            "updated_at": "2026-08-13T23:35:18Z",
+            "star_velocity": 15.5
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Substrate must thin as models sharpen: re-pricing every Agent OS gate against frontier capability",
+            "url": "https://github.com/orgs/neomjs/discussions/17085",
+            "repository": "neomjs/neo",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-08-13T23:52:51Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "做了一套桥接插件，把 Claude Code / Codex / OpenCode / Pi 的配置和技能迁到 dsh",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/272",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 1,
+            "upvotes": 3,
+            "author": "YYTbit",
+            "created_at": "2026-08-13T15:18:16Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Bug: tool calls are dropped against servers that send null in continuation deltas (id/name overwritten, every call becomes UNKNOWN_TOOL)",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/161",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 1,
+            "upvotes": 2,
+            "author": "zhoukuncheng",
+            "created_at": "2026-08-13T14:16:41Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
+      "url": "https://discoveredmaterials.com/research/",
+      "hn_url": "https://news.ycombinator.com/item?id=49269090",
+      "points": 155,
+      "comments": 35,
+      "author": "advaith08",
+      "created_at": "2026-08-12T07:51:20Z",
+      "score": 225
+    },
+    {
+      "title": "Launch HN: Bullet (YC S26) – A Faster Coding Agent",
+      "url": "https://www.codewithbullet.com",
+      "hn_url": "https://news.ycombinator.com/item?id=49283063",
+      "points": 81,
+      "comments": 51,
+      "author": "adi1",
+      "created_at": "2026-08-13T08:14:30Z",
+      "score": 183
+    },
+    {
+      "title": "Claude Code is leaking real email address as a User-Agent string in curl command",
+      "url": "https://github.com/anthropics/claude-code/issues/78431",
+      "hn_url": "https://news.ycombinator.com/item?id=49258881",
+      "points": 38,
+      "comments": 29,
+      "author": "matada_",
+      "created_at": "2026-08-11T14:21:47Z",
+      "score": 96
+    },
+    {
+      "title": "How to organize Claude Code for product work",
+      "url": "https://www.theaithinker.com/p/how-to-organize-claude-code-for-product",
+      "hn_url": "https://news.ycombinator.com/item?id=49256258",
+      "points": 35,
+      "comments": 27,
+      "author": "adamfaik",
+      "created_at": "2026-08-11T11:02:34Z",
+      "score": 89
+    },
+    {
+      "title": "Claude Code pricing: same tokens, same model, up to 40x the price",
+      "url": "https://quesma.com/blog/claude-code-pricing-for-enterprise/",
+      "hn_url": "https://news.ycombinator.com/item?id=49254999",
+      "points": 31,
+      "comments": 10,
+      "author": "jakozaur",
+      "created_at": "2026-08-11T08:34:54Z",
+      "score": 51
+    }
+  ],
+  "community_release_reactions": {}
+}
