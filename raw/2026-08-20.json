@@ -1,0 +1,801 @@
+{
+  "date": "2026-08-20",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **Anthropic — Claude Opus 5** | latest known official release outside lookback: **2026-07-24** | source: https://www.anthropic.com/news/claude-opus-5\n- **OpenAI — gpt-5.6-terra** | latest known official release outside lookback: **2026-06-23** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://www.anthropic.com/news/claude-opus-5",
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### AI Agent Skills\n- Tracked queries: AI Agent Skills, claude skill, codex skill\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: ComposioHQ/awesome-claude-skills | stars=72830 | velocity=237.4★/day | https://github.com/ComposioHQ/awesome-claude-skills\n- GitHub Discussions: Best practice to write and manage the Golden datasets | repo=langfuse/langfuse | comments=6 | upvotes=1 | https://github.com/orgs/langfuse/discussions/16218\n\n### Harness / Eval Patterns\n- Tracked queries: Harness / Eval Patterns, deepseek harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: deepseek-ai/deepseek-harness | stars=167208 | velocity=25631.2★/day | https://github.com/deepseek-ai/deepseek-harness\n- GitHub Discussions: [插件生态] 提案：市场识别层插件开发规范 STANDARD.md——仓库怎么写才能被市场正确收录/安装（欢迎社区讨论） | repo=deepseek-ai/deepseek-harness | comments=28 | upvotes=5 | https://github.com/deepseek-ai/deepseek-harness/discussions/2269\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=241189 | velocity=1127.1★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: OpenCode zen 免费模型（big-pickle）在 DSH 中必现 429 FreeUsageLimitError（附修复补丁） | repo=deepseek-ai/deepseek-harness | comments=4 | upvotes=3 | https://github.com/deepseek-ai/deepseek-harness/discussions/1455\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: Piebald-AI/claude-code-system-prompts | stars=12382 | velocity=45.2★/day | https://github.com/Piebald-AI/claude-code-system-prompts\n- GitHub Discussions: v1.6.0rc | repo=crosspoint-reader/crosspoint-reader | comments=5 | upvotes=5 | https://github.com/crosspoint-reader/crosspoint-reader/discussions/3099",
+      "citations": [
+        "https://github.com/ComposioHQ/awesome-claude-skills",
+        "https://github.com/orgs/langfuse/discussions/16218",
+        "https://github.com/deepseek-ai/deepseek-harness",
+        "https://github.com/deepseek-ai/deepseek-harness/discussions/2269",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/deepseek-ai/deepseek-harness/discussions/1455",
+        "https://github.com/Piebald-AI/claude-code-system-prompts",
+        "https://github.com/crosspoint-reader/crosspoint-reader/discussions/3099"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 5",
+      "released_at": "2026-07-24",
+      "source_url": "https://www.anthropic.com/news/claude-opus-5",
+      "note": "Official Anthropic news post"
+    },
+    {
+      "company": "OpenAI",
+      "model": "gpt-5.6-terra",
+      "released_at": "2026-06-23",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "Leutenegger/watermarks-remover",
+      "description": "Remove multi-vendor AI provenance traces: Unicode text sanitization, statistical rewriting techniques, and C2PA/metadata stripping from PNG/JPEG/SVG/PDF/DOCX/HTML/MD files",
+      "stars": 911,
+      "forks": 94,
+      "language": "Python",
+      "url": "https://github.com/Leutenegger/watermarks-remover",
+      "created_at": "2026-08-19T15:20:24Z",
+      "days_old": 0.4,
+      "star_velocity": 2385.0,
+      "topics": [
+        "claude",
+        "claude-code",
+        "claude-skills",
+        "codex",
+        "codex-cli",
+        "codex-desktop",
+        "codex-plugin",
+        "codex-skill",
+        "codex-skills",
+        "grok",
+        "grok-45",
+        "grok-ai",
+        "grok-build",
+        "grok-cli",
+        "watermark",
+        "watermark-detection",
+        "watermark-tools",
+        "watermarks"
+      ]
+    },
+    {
+      "name": "s1dashu/ip-as-logo-skill",
+      "description": "A compact Agent Skill for highly simplified, rounded, subtly neo-skeuomorphic IP mascot logos.",
+      "stars": 2077,
+      "forks": 93,
+      "language": "Unknown",
+      "url": "https://github.com/s1dashu/ip-as-logo-skill",
+      "created_at": "2026-08-18T13:59:23Z",
+      "days_old": 1.4,
+      "star_velocity": 1444.1,
+      "topics": [
+        "codex",
+        "codex-skill",
+        "image-generation",
+        "logo-design",
+        "mascot-design"
+      ]
+    },
+    {
+      "name": "yjh051108/dsh-routing-suite",
+      "description": "dsh-routing-suite — injector + router-standard kit: install the runtime injector first, then the task-aware reasoning-mode router preset (measured P1-P23).",
+      "stars": 6298,
+      "forks": 112,
+      "language": "PowerShell",
+      "url": "https://github.com/yjh051108/dsh-routing-suite",
+      "created_at": "2026-08-14T21:20:55Z",
+      "days_old": 5.1,
+      "star_velocity": 1227.3,
+      "topics": []
+    },
+    {
+      "name": "yetone/cumora",
+      "description": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-own (Claude Code / Codex) brains.",
+      "stars": 2683,
+      "forks": 307,
+      "language": "TypeScript",
+      "url": "https://github.com/yetone/cumora",
+      "created_at": "2026-08-17T09:13:52Z",
+      "days_old": 2.6,
+      "star_velocity": 1017.6,
+      "topics": []
+    },
+    {
+      "name": "xiaobright/dsh-anchored-standard",
+      "description": "Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard tools (Project2 98/99)",
+      "stars": 3639,
+      "forks": 109,
+      "language": "JavaScript",
+      "url": "https://github.com/xiaobright/dsh-anchored-standard",
+      "created_at": "2026-08-14T14:06:39Z",
+      "days_old": 5.4,
+      "star_velocity": 669.8,
+      "topics": [
+        "deepseek",
+        "deepseek-harness",
+        "dsh-plugin",
+        "llm-agent"
+      ]
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [],
+    "weekly_top5": [
+      {
+        "name": "Leutenegger/watermarks-remover",
+        "stars": 911,
+        "star_velocity": 2384.9,
+        "url": "https://github.com/Leutenegger/watermarks-remover",
+        "description": "Remove multi-vendor AI provenance traces: Unicode text sanitization, statistical rewriting techniques, and C2PA/metadata stripping from PNG/JPEG/SVG/PDF/DOCX/HTML/MD files",
+        "language": "Python",
+        "created_at": "2026-08-19T15:20:24Z"
+      },
+      {
+        "name": "s1dashu/ip-as-logo-skill",
+        "stars": 2077,
+        "star_velocity": 1444.1,
+        "url": "https://github.com/s1dashu/ip-as-logo-skill",
+        "description": "A compact Agent Skill for highly simplified, rounded, subtly neo-skeuomorphic IP mascot logos.",
+        "language": "Unknown",
+        "created_at": "2026-08-18T13:59:23Z"
+      },
+      {
+        "name": "yjh051108/dsh-routing-suite",
+        "stars": 6298,
+        "star_velocity": 1227.3,
+        "url": "https://github.com/yjh051108/dsh-routing-suite",
+        "description": "dsh-routing-suite — injector + router-standard kit: install the runtime injector first, then the task-aware reasoning-mode router preset (measured P1-P23).",
+        "language": "PowerShell",
+        "created_at": "2026-08-14T21:20:55Z"
+      },
+      {
+        "name": "yetone/cumora",
+        "stars": 2683,
+        "star_velocity": 1017.6,
+        "url": "https://github.com/yetone/cumora",
+        "description": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates — with cloud or bring-your-own (Claude Code / Codex) brains.",
+        "language": "TypeScript",
+        "created_at": "2026-08-17T09:13:52Z"
+      },
+      {
+        "name": "xiaobright/dsh-anchored-standard",
+        "stars": 3639,
+        "star_velocity": 669.8,
+        "url": "https://github.com/xiaobright/dsh-anchored-standard",
+        "description": "Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard tools (Project2 98/99)",
+        "language": "JavaScript",
+        "created_at": "2026-08-14T14:06:39Z"
+      }
+    ],
+    "excluded_yesterday_count": 5
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "aiagentskills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "AI Agent Skills",
+          "claude skill",
+          "codex skill"
+        ],
+        "source": "dynamic",
+        "discovery_score": 6253.1,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "claude skill",
+            "group_id": "aiagentskills",
+            "name": "ComposioHQ/awesome-claude-skills",
+            "title": "ComposioHQ/awesome-claude-skills",
+            "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+            "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+            "stars": 72830,
+            "forks": 8329,
+            "topics": [
+              "agent-skills",
+              "ai-agents",
+              "antigravity",
+              "automation",
+              "claude",
+              "claude-code",
+              "codex",
+              "composio",
+              "cursor",
+              "developer-tools",
+              "gemini-cli",
+              "mcp",
+              "openai-codex",
+              "rube",
+              "saas",
+              "skill",
+              "workflow-automation"
+            ],
+            "created_at": "2025-10-17T07:15:01Z",
+            "updated_at": "2026-08-20T00:29:23Z",
+            "star_velocity": 237.4
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "op7418/guizang-ppt-skill",
+            "title": "op7418/guizang-ppt-skill",
+            "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
+            "url": "https://github.com/op7418/guizang-ppt-skill",
+            "stars": 24427,
+            "forks": 1740,
+            "topics": [
+              "ai-agent",
+              "claude-code",
+              "codex",
+              "html-deck",
+              "image-generation",
+              "ppt",
+              "presentation",
+              "skill",
+              "skills",
+              "swiss-design",
+              "web-ppt"
+            ],
+            "created_at": "2026-04-23T13:23:07Z",
+            "updated_at": "2026-08-19T22:30:53Z",
+            "star_velocity": 206.2
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "googleworkspace/cli",
+            "title": "googleworkspace/cli",
+            "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+            "url": "https://github.com/googleworkspace/cli",
+            "stars": 30463,
+            "forks": 1782,
+            "topics": [
+              "agent-skills",
+              "ai-agent",
+              "automation",
+              "cli",
+              "discovery-api",
+              "gemini-cli-extension",
+              "google-admin",
+              "google-api",
+              "google-calendar",
+              "google-chat",
+              "google-docs",
+              "google-drive",
+              "google-sheets",
+              "google-workspace",
+              "oauth2",
+              "rust"
+            ],
+            "created_at": "2026-03-02T19:46:06Z",
+            "updated_at": "2026-08-19T23:44:19Z",
+            "star_velocity": 179.0
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "claude skill",
+            "group_id": "aiagentskills",
+            "title": "Best practice to write and manage the Golden datasets",
+            "url": "https://github.com/orgs/langfuse/discussions/16218",
+            "repository": "langfuse/langfuse",
+            "comments": 6,
+            "upvotes": 1,
+            "author": "goelsunny87",
+            "created_at": "2026-08-17T22:07:14Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "Splitting neomjs/neo into six repositories: what each contains, what it costs, and what must be true first",
+            "url": "https://github.com/orgs/neomjs/discussions/17247",
+            "repository": "neomjs/neo",
+            "comments": 6,
+            "upvotes": 1,
+            "author": "neo-opus-grace",
+            "created_at": "2026-08-16T19:56:45Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "[Feature]: Skill Evaluation Metrics",
+            "url": "https://github.com/intuit/fasteval/discussions/37",
+            "repository": "intuit/fasteval",
+            "comments": 4,
+            "upvotes": 2,
+            "author": "Saavrm26",
+            "created_at": "2026-08-14T15:29:08Z"
+          }
+        ]
+      },
+      {
+        "id": "harnessevalpatterns",
+        "label": "Harness / Eval Patterns",
+        "terms": [
+          "Harness / Eval Patterns",
+          "deepseek harness"
+        ],
+        "source": "dynamic",
+        "discovery_score": 706.2,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "deepseek harness",
+            "group_id": "harnessevalpatterns",
+            "name": "deepseek-ai/deepseek-harness",
+            "title": "deepseek-ai/deepseek-harness",
+            "description": "DeepSeek Harness: Everything is a Plugin.",
+            "url": "https://github.com/deepseek-ai/deepseek-harness",
+            "stars": 167208,
+            "forks": 17863,
+            "topics": [
+              "ai-agents",
+              "cordis",
+              "dsh",
+              "dsh-plugin"
+            ],
+            "created_at": "2026-08-13T11:56:32Z",
+            "updated_at": "2026-08-20T00:29:49Z",
+            "star_velocity": 25631.2
+          },
+          {
+            "source": "github_repo",
+            "term": "deepseek harness",
+            "group_id": "harnessevalpatterns",
+            "name": "anywhere-labs/deepseek-harness-desktop",
+            "title": "anywhere-labs/deepseek-harness-desktop",
+            "description": "为 DeepSeek Harness (DSH) 插件生态打造的现代化桌面端解决方案。万物皆「插件」，桌面本身也是「插件」。",
+            "url": "https://github.com/anywhere-labs/deepseek-harness-desktop",
+            "stars": 15153,
+            "forks": 719,
+            "topics": [
+              "cordis",
+              "cordis-plugin",
+              "deepseek",
+              "deepseek-harness",
+              "desktop",
+              "dsh",
+              "dsh-plugin",
+              "dsh-plugin-desktop"
+            ],
+            "created_at": "2026-08-13T16:30:50Z",
+            "updated_at": "2026-08-20T00:29:02Z",
+            "star_velocity": 2392.7
+          },
+          {
+            "source": "github_repo",
+            "term": "deepseek harness",
+            "group_id": "harnessevalpatterns",
+            "name": "awesome-dsh-plugin/awesome-dsh-plugin",
+            "title": "awesome-dsh-plugin/awesome-dsh-plugin",
+            "description": "A curated list of plugins for DeepSeek Harness (dsh) · DeepSeek Harness 插件精选列表",
+            "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+            "stars": 10041,
+            "forks": 1478,
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "deepseek-harness",
+              "dsh",
+              "dsh-plugin"
+            ],
+            "created_at": "2026-08-13T13:55:31Z",
+            "updated_at": "2026-08-20T00:29:06Z",
+            "star_velocity": 1558.9
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "deepseek harness",
+            "group_id": "harnessevalpatterns",
+            "title": "[插件生态] 提案：市场识别层插件开发规范 STANDARD.md——仓库怎么写才能被市场正确收录/安装（欢迎社区讨论）",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/2269",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 28,
+            "upvotes": 5,
+            "author": "bradeGithub",
+            "created_at": "2026-08-16T06:11:34Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "deepseek harness",
+            "group_id": "harnessevalpatterns",
+            "title": "I hit this while building tooling that edits overlays, and I think it is worth stating plainly, because the failure is much larger than it looks.",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/3473",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "taltara",
+            "created_at": "2026-08-19T23:46:53Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "deepseek harness",
+            "group_id": "harnessevalpatterns",
+            "title": "[Docs] Generated persistence catalog omits the packed chunk rows that packChunks writes to the log",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/3458",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "doctutor",
+            "created_at": "2026-08-19T18:48:59Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 241189,
+            "forks": 36574,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-08-20T00:17:26Z",
+            "star_velocity": 1127.1
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 25708,
+            "forks": 4836,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-08-19T23:50:21Z",
+            "star_velocity": 710.5
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 68114,
+            "forks": 5563,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-08-20T00:13:44Z",
+            "star_velocity": 262.0
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "OpenCode zen 免费模型（big-pickle）在 DSH 中必现 429 FreeUsageLimitError（附修复补丁）",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/1455",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 4,
+            "upvotes": 3,
+            "author": "Liyuntong123",
+            "created_at": "2026-08-14T15:20:46Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Compose bootstrap resources from multiple selected config roots",
+            "url": "https://github.com/jdx/mise/discussions/12099",
+            "repository": "jdx/mise",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "Guria",
+            "created_at": "2026-08-17T17:23:35Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "[Showcase / 展示] SandBase Harness — 在 DSH 中管理持久化 Agent 会话",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/1918",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "denial123789",
+            "created_at": "2026-08-15T11:57:38Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12382,
+            "forks": 2036,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-08-19T17:49:23Z",
+            "star_velocity": 45.2
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agent0ai/dox",
+            "title": "agent0ai/dox",
+            "description": "Self-documenting AGENTS.md",
+            "url": "https://github.com/agent0ai/dox",
+            "stars": 1404,
+            "forks": 190,
+            "topics": [
+              "agents-md",
+              "ai",
+              "ai-agents",
+              "documentation"
+            ],
+            "created_at": "2026-06-01T08:25:21Z",
+            "updated_at": "2026-08-18T14:25:36Z",
+            "star_velocity": 17.6
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "wasp-lang/open-saas",
+            "title": "wasp-lang/open-saas",
+            "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+            "url": "https://github.com/wasp-lang/open-saas",
+            "stars": 15521,
+            "forks": 1854,
+            "topics": [
+              "ai",
+              "authentication",
+              "aws-s3",
+              "boilerplate",
+              "chatgpt",
+              "full-stack",
+              "google-auth",
+              "hacktoberfest",
+              "nodejs",
+              "open-source",
+              "openai-api",
+              "postgresql",
+              "prisma",
+              "react",
+              "saas",
+              "saas-boilerplate",
+              "saas-starter",
+              "saas-template",
+              "typesafe",
+              "typescript"
+            ],
+            "created_at": "2023-12-01T13:54:36Z",
+            "updated_at": "2026-08-19T22:27:54Z",
+            "star_velocity": 15.6
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "v1.6.0rc",
+            "url": "https://github.com/crosspoint-reader/crosspoint-reader/discussions/3099",
+            "repository": "crosspoint-reader/crosspoint-reader",
+            "comments": 5,
+            "upvotes": 5,
+            "author": "Uri-Tauber",
+            "created_at": "2026-08-17T21:08:01Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Compose bootstrap resources from multiple selected config roots",
+            "url": "https://github.com/jdx/mise/discussions/12099",
+            "repository": "jdx/mise",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "Guria",
+            "created_at": "2026-08-17T17:23:35Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "Looking for collaborators 🤝 — help build the ServiceNow MCP?",
+            "url": "https://github.com/sukhmal/servicenow-mcp/discussions/42",
+            "repository": "sukhmal/servicenow-mcp",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "sukhmal",
+            "created_at": "2026-08-16T00:38:27Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "Claude Code May–August 2026 weekly limits promotion",
+      "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+      "hn_url": "https://news.ycombinator.com/item?id=49348751",
+      "points": 292,
+      "comments": 259,
+      "author": "tyre",
+      "created_at": "2026-08-18T17:02:15Z",
+      "score": 810
+    },
+    {
+      "title": "Opus 5.0 drives incoherence into the stratosphere",
+      "url": "https://github.com/anthropics/claude-code/issues/77136",
+      "hn_url": "https://news.ycombinator.com/item?id=49364658",
+      "points": 167,
+      "comments": 152,
+      "author": "Bluestein",
+      "created_at": "2026-08-19T17:40:06Z",
+      "score": 471
+    },
+    {
+      "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
+      "url": "https://speko.ai/",
+      "hn_url": "https://news.ycombinator.com/item?id=49332751",
+      "points": 117,
+      "comments": 67,
+      "author": "abdik",
+      "created_at": "2026-08-17T15:36:18Z",
+      "score": 251
+    },
+    {
+      "title": "Feature Request: Support AGENTS.md",
+      "url": "https://github.com/anthropics/claude-code/issues/6235",
+      "hn_url": "https://news.ycombinator.com/item?id=49367350",
+      "points": 115,
+      "comments": 60,
+      "author": "fg137",
+      "created_at": "2026-08-19T21:19:50Z",
+      "score": 235
+    },
+    {
+      "title": "Launch HN: machine0 (YC S26) – Persistent CPU and GPU VMs from the CLI",
+      "url": "https://machine0.io",
+      "hn_url": "https://news.ycombinator.com/item?id=49348136",
+      "points": 80,
+      "comments": 44,
+      "author": "bwm",
+      "created_at": "2026-08-18T16:26:42Z",
+      "score": 168
+    }
+  ],
+  "community_release_reactions": {}
+}
