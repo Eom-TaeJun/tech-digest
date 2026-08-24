@@ -1,0 +1,860 @@
+{
+  "date": "2026-08-24",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **Anthropic — Claude Opus 5** | latest known official release outside lookback: **2026-07-24** | source: https://www.anthropic.com/news/claude-opus-5\n- **OpenAI — gpt-5.6-terra** | latest known official release outside lookback: **2026-06-23** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://www.anthropic.com/news/claude-opus-5",
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com",
+          "www.anthropic.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Model Context Protocol\n- Tracked queries: Model Context Protocol, MCP, MCP \n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=242552 | velocity=1112.7★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: [Ideation] Post-split session start: one root folder must carry substrate, but the organization is not a repository | repo=neomjs/neo | comments=14 | upvotes=1 | https://github.com/orgs/neomjs/discussions/17644\n\n### AI Agent Skills\n- Tracked queries: AI Agent Skills, claude skill, codex skill\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: ComposioHQ/awesome-claude-skills | stars=73104 | velocity=235.3★/day | https://github.com/ComposioHQ/awesome-claude-skills\n- GitHub Discussions: [Ideation] Post-split session start: one root folder must carry substrate, but the organization is not a repository | repo=neomjs/neo | comments=14 | upvotes=1 | https://github.com/orgs/neomjs/discussions/17644\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=242552 | velocity=1112.7★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: AgentOS extraction wave: one repository or separate Cloud + Edge repositories? | repo=neomjs/neo | comments=17 | upvotes=1 | https://github.com/orgs/neomjs/discussions/17489\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: Piebald-AI/claude-code-system-prompts | stars=12435 | velocity=44.7★/day | https://github.com/Piebald-AI/claude-code-system-prompts\n- GitHub Discussions: [Ideation] Post-split session start: one root folder must carry substrate, but the organization is not a repository | repo=neomjs/neo | comments=14 | upvotes=1 | https://github.com/orgs/neomjs/discussions/17644",
+      "citations": [
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/orgs/neomjs/discussions/17644",
+        "https://github.com/ComposioHQ/awesome-claude-skills",
+        "https://github.com/orgs/neomjs/discussions/17644",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/orgs/neomjs/discussions/17489",
+        "https://github.com/Piebald-AI/claude-code-system-prompts",
+        "https://github.com/orgs/neomjs/discussions/17644"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "Anthropic",
+      "model": "Claude Opus 5",
+      "released_at": "2026-07-24",
+      "source_url": "https://www.anthropic.com/news/claude-opus-5",
+      "note": "Official Anthropic news post"
+    },
+    {
+      "company": "OpenAI",
+      "model": "gpt-5.6-terra",
+      "released_at": "2026-06-23",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "ShadowAqueduct/watermark-remover",
+      "description": "Purge multi-vendor AI watermarks: clean Unicode text, apply statistical rewrite hooks, and clear C2PA plus metadata from PNG, JPEG, SVG, PDF, DOCX, HTML, and MD.",
+      "stars": 759,
+      "forks": 72,
+      "language": "Python",
+      "url": "https://github.com/ShadowAqueduct/watermark-remover",
+      "created_at": "2026-08-23T21:14:28Z",
+      "days_old": 0.1,
+      "star_velocity": 5541.0,
+      "topics": [
+        "claude-ai",
+        "claude-code",
+        "claude-code-plugin",
+        "claude-skills",
+        "codex",
+        "codex-cli",
+        "codex-skill",
+        "codex-skills",
+        "watermark"
+      ]
+    },
+    {
+      "name": "MengTo/threeui",
+      "description": "Open-source ThreeUI Community catalog with live interactive components and complete Community source.",
+      "stars": 2882,
+      "forks": 289,
+      "language": "HTML",
+      "url": "https://github.com/MengTo/threeui",
+      "created_at": "2026-08-21T11:56:39Z",
+      "days_old": 2.5,
+      "star_velocity": 1141.7,
+      "topics": [
+        "react",
+        "shaders",
+        "threejs",
+        "ui-components",
+        "webgl"
+      ]
+    },
+    {
+      "name": "s1dashu/ip-as-logo-skill",
+      "description": "A compact Agent Skill for highly simplified, rounded, subtly neo-skeuomorphic IP mascot logos.",
+      "stars": 3899,
+      "forks": 190,
+      "language": "Unknown",
+      "url": "https://github.com/s1dashu/ip-as-logo-skill",
+      "created_at": "2026-08-18T13:59:23Z",
+      "days_old": 5.4,
+      "star_velocity": 716.8,
+      "topics": [
+        "codex",
+        "codex-skill",
+        "image-generation",
+        "logo-design",
+        "mascot-design"
+      ]
+    },
+    {
+      "name": "duty1g/x64dbg-mcp-server",
+      "description": "x64dbg-MCP Server is a native MCP (Model Context Protocol) plugin for x64dbg that exposes the debugger's full functionality over HTTP. Connect any MCP-compatible AI assistant and control x64dbg programmatically: set breakpoints, step through code, read memory, dump registers, and more.  Built with Zig — zero dependencies, single-binary output, cros",
+      "stars": 860,
+      "forks": 86,
+      "language": "Zig",
+      "url": "https://github.com/duty1g/x64dbg-mcp-server",
+      "created_at": "2026-08-22T14:28:41Z",
+      "days_old": 1.4,
+      "star_velocity": 606.2,
+      "topics": [
+        "ai-agents",
+        "ai-debugging",
+        "binary-analysis",
+        "claude",
+        "claude-code",
+        "malware-analysis",
+        "malware-research",
+        "malware-scanner",
+        "mcp",
+        "mcp-server",
+        "mcp-servers",
+        "x64dbg",
+        "x64dbg-mcp",
+        "x64dbg-plugin",
+        "x64dbg-tools",
+        "xdbg",
+        "zig",
+        "zig-lang",
+        "ziglang"
+      ]
+    },
+    {
+      "name": "nateherkai/scroll-craft",
+      "description": "Claude Code skill for premium scroll-driven websites. Scroll becomes the timeline, on a real design floor, verified by screenshotting its own scroll.",
+      "stars": 482,
+      "forks": 86,
+      "language": "JavaScript",
+      "url": "https://github.com/nateherkai/scroll-craft",
+      "created_at": "2026-08-22T15:25:08Z",
+      "days_old": 1.4,
+      "star_velocity": 349.4,
+      "topics": [
+        "accessibility",
+        "agent-skills",
+        "ai-web-design",
+        "anthropic",
+        "claude-code",
+        "claude-code-plugin",
+        "creative-coding",
+        "design-system",
+        "frontend",
+        "interaction-design",
+        "landing-page",
+        "scroll-animation",
+        "scrollytelling",
+        "typography",
+        "web-design"
+      ]
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [],
+    "weekly_top5": [
+      {
+        "name": "ShadowAqueduct/watermark-remover",
+        "stars": 759,
+        "star_velocity": 5540.4,
+        "url": "https://github.com/ShadowAqueduct/watermark-remover",
+        "description": "Purge multi-vendor AI watermarks: clean Unicode text, apply statistical rewrite hooks, and clear C2PA plus metadata from PNG, JPEG, SVG, PDF, DOCX, HTML, and MD.",
+        "language": "Python",
+        "created_at": "2026-08-23T21:14:28Z"
+      },
+      {
+        "name": "MengTo/threeui",
+        "stars": 2882,
+        "star_velocity": 1141.7,
+        "url": "https://github.com/MengTo/threeui",
+        "description": "Open-source ThreeUI Community catalog with live interactive components and complete Community source.",
+        "language": "HTML",
+        "created_at": "2026-08-21T11:56:39Z"
+      },
+      {
+        "name": "s1dashu/ip-as-logo-skill",
+        "stars": 3899,
+        "star_velocity": 716.8,
+        "url": "https://github.com/s1dashu/ip-as-logo-skill",
+        "description": "A compact Agent Skill for highly simplified, rounded, subtly neo-skeuomorphic IP mascot logos.",
+        "language": "Unknown",
+        "created_at": "2026-08-18T13:59:23Z"
+      },
+      {
+        "name": "duty1g/x64dbg-mcp-server",
+        "stars": 860,
+        "star_velocity": 606.2,
+        "url": "https://github.com/duty1g/x64dbg-mcp-server",
+        "description": "x64dbg-MCP Server is a native MCP (Model Context Protocol) plugin for x64dbg that exposes the debugger's full functionality over HTTP. Connect any MCP-compatible AI assistant and control x64dbg programmatically: set breakpoints, step through code, read memory, dump registers, and more.  Built with Zig — zero dependencies, single-binary output, cros",
+        "language": "Zig",
+        "created_at": "2026-08-22T14:28:41Z"
+      },
+      {
+        "name": "nateherkai/scroll-craft",
+        "stars": 482,
+        "star_velocity": 349.4,
+        "url": "https://github.com/nateherkai/scroll-craft",
+        "description": "Claude Code skill for premium scroll-driven websites. Scroll becomes the timeline, on a real design floor, verified by screenshotting its own scroll.",
+        "language": "JavaScript",
+        "created_at": "2026-08-22T15:25:08Z"
+      }
+    ],
+    "excluded_yesterday_count": 5
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "modelcontextprotocol",
+        "label": "Model Context Protocol",
+        "terms": [
+          "Model Context Protocol",
+          "MCP",
+          "MCP "
+        ],
+        "source": "dynamic",
+        "discovery_score": 4303.6,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "MCP",
+            "group_id": "modelcontextprotocol",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 242552,
+            "forks": 36719,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-08-24T00:25:53Z",
+            "star_velocity": 1112.7
+          },
+          {
+            "source": "github_repo",
+            "term": "MCP",
+            "group_id": "modelcontextprotocol",
+            "name": "Graphify-Labs/graphify",
+            "title": "Graphify-Labs/graphify",
+            "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+            "url": "https://github.com/Graphify-Labs/graphify",
+            "stars": 109832,
+            "forks": 10677,
+            "topics": [
+              "ai-agents",
+              "antigravity",
+              "ast",
+              "claude-code",
+              "code-analysis",
+              "code-search",
+              "codex",
+              "cursor",
+              "developer-tools",
+              "gemini",
+              "graphrag",
+              "knowledge-graph",
+              "leiden",
+              "llm",
+              "mcp",
+              "openclaw",
+              "rag",
+              "skills",
+              "tree-sitter"
+            ],
+            "created_at": "2026-04-03T15:49:07Z",
+            "updated_at": "2026-08-24T00:30:46Z",
+            "star_velocity": 771.5
+          },
+          {
+            "source": "github_repo",
+            "term": "MCP",
+            "group_id": "modelcontextprotocol",
+            "name": "farion1231/cc-switch",
+            "title": "farion1231/cc-switch",
+            "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Grok Build & Hermes Agent. Only official website: ccswitch.io",
+            "url": "https://github.com/farion1231/cc-switch",
+            "stars": 128992,
+            "forks": 8836,
+            "topics": [
+              "ai-tools",
+              "claude-code",
+              "codex",
+              "desktop-app",
+              "grok",
+              "grokbuild",
+              "hermes",
+              "hermes-agent",
+              "mcp",
+              "open-source",
+              "openclaw",
+              "openclaw-ui",
+              "opencode",
+              "pi",
+              "provider-management",
+              "rust",
+              "skills",
+              "skills-management",
+              "tauri",
+              "wsl-support"
+            ],
+            "created_at": "2025-08-04T14:16:16Z",
+            "updated_at": "2026-08-24T00:31:19Z",
+            "star_velocity": 335.5
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "MCP",
+            "group_id": "modelcontextprotocol",
+            "title": "[Ideation] Post-split session start: one root folder must carry substrate, but the organization is not a repository",
+            "url": "https://github.com/orgs/neomjs/discussions/17644",
+            "repository": "neomjs/neo",
+            "comments": 14,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-08-23T18:57:00Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "MCP",
+            "group_id": "modelcontextprotocol",
+            "title": "issue: Tool loading error, previously proposed correct fix rejected",
+            "url": "https://github.com/open-webui/open-webui/discussions/28763",
+            "repository": "open-webui/open-webui",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "chrisdewar",
+            "created_at": "2026-08-19T03:39:01Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "group_id": "modelcontextprotocol",
+            "title": "RFC: Modular agent runtime integration packages",
+            "url": "https://github.com/NVIDIA/NemoClaw/discussions/9909",
+            "repository": "NVIDIA/NemoClaw",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "ericksoa",
+            "created_at": "2026-08-21T16:29:52Z"
+          }
+        ]
+      },
+      {
+        "id": "aiagentskills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "AI Agent Skills",
+          "claude skill",
+          "codex skill"
+        ],
+        "source": "dynamic",
+        "discovery_score": 11853.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "claude skill",
+            "group_id": "aiagentskills",
+            "name": "ComposioHQ/awesome-claude-skills",
+            "title": "ComposioHQ/awesome-claude-skills",
+            "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+            "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+            "stars": 73104,
+            "forks": 8384,
+            "topics": [
+              "agent-skills",
+              "ai-agents",
+              "antigravity",
+              "automation",
+              "claude",
+              "claude-code",
+              "codex",
+              "composio",
+              "cursor",
+              "developer-tools",
+              "gemini-cli",
+              "mcp",
+              "openai-codex",
+              "rube",
+              "saas",
+              "skill",
+              "workflow-automation"
+            ],
+            "created_at": "2025-10-17T07:15:01Z",
+            "updated_at": "2026-08-24T00:25:42Z",
+            "star_velocity": 235.3
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "op7418/guizang-ppt-skill",
+            "title": "op7418/guizang-ppt-skill",
+            "description": "AI-agent Skill for generating polished HTML slide decks: editorial magazine and Swiss layouts, image prompts, social covers, and a WebGL/low-power presentation runtime.",
+            "url": "https://github.com/op7418/guizang-ppt-skill",
+            "stars": 24689,
+            "forks": 1754,
+            "topics": [
+              "ai-agent",
+              "claude-code",
+              "codex",
+              "html-deck",
+              "image-generation",
+              "ppt",
+              "presentation",
+              "skill",
+              "skills",
+              "swiss-design",
+              "web-ppt"
+            ],
+            "created_at": "2026-04-23T13:23:07Z",
+            "updated_at": "2026-08-23T21:55:44Z",
+            "star_velocity": 201.6
+          },
+          {
+            "source": "github_repo",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "name": "googleworkspace/cli",
+            "title": "googleworkspace/cli",
+            "description": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+            "url": "https://github.com/googleworkspace/cli",
+            "stars": 30523,
+            "forks": 1787,
+            "topics": [
+              "agent-skills",
+              "ai-agent",
+              "automation",
+              "cli",
+              "discovery-api",
+              "gemini-cli-extension",
+              "google-admin",
+              "google-api",
+              "google-calendar",
+              "google-chat",
+              "google-docs",
+              "google-drive",
+              "google-sheets",
+              "google-workspace",
+              "oauth2",
+              "rust"
+            ],
+            "created_at": "2026-03-02T19:46:06Z",
+            "updated_at": "2026-08-23T23:40:42Z",
+            "star_velocity": 175.2
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "claude skill",
+            "group_id": "aiagentskills",
+            "title": "[Ideation] Post-split session start: one root folder must carry substrate, but the organization is not a repository",
+            "url": "https://github.com/orgs/neomjs/discussions/17644",
+            "repository": "neomjs/neo",
+            "comments": 14,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-08-23T18:57:00Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AI Agent Skills",
+            "group_id": "aiagentskills",
+            "title": "Enable the kapa.ai MCP endpoint for the OpenFGA docs (like opentelemetry.mcp.kapa.ai)",
+            "url": "https://github.com/orgs/openfga/discussions/560",
+            "repository": "openfga/community",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "jensholdgaard",
+            "created_at": "2026-08-17T10:06:03Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "claude skill",
+            "group_id": "aiagentskills",
+            "title": "Teach: Your teach skill, but every lesson opens as a poster",
+            "url": "https://github.com/mattpocock/skills/discussions/945",
+            "repository": "mattpocock/skills",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "VictorMarri",
+            "created_at": "2026-08-23T20:52:16Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 242552,
+            "forks": 36719,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-08-24T00:25:53Z",
+            "star_velocity": 1112.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 25941,
+            "forks": 4876,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-08-24T00:07:28Z",
+            "star_velocity": 645.5
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "code-yeongyu/oh-my-openagent",
+            "title": "code-yeongyu/oh-my-openagent",
+            "description": "omo/lazycodex: The coding agent for tokenmaxxers;the one and only agent harness for complex codebases. For your Codex, for your OpenCode",
+            "url": "https://github.com/code-yeongyu/oh-my-openagent",
+            "stars": 68297,
+            "forks": 5583,
+            "topics": [
+              "ai",
+              "ai-agents",
+              "anthropic",
+              "chatgpt",
+              "claude",
+              "claude-skills",
+              "codex",
+              "cursor",
+              "gemini",
+              "ide",
+              "openai",
+              "opencode",
+              "orchestration",
+              "tui",
+              "typescript"
+            ],
+            "created_at": "2025-12-03T01:40:05Z",
+            "updated_at": "2026-08-24T00:09:48Z",
+            "star_velocity": 258.7
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "AgentOS extraction wave: one repository or separate Cloud + Edge repositories?",
+            "url": "https://github.com/orgs/neomjs/discussions/17489",
+            "repository": "neomjs/neo",
+            "comments": 17,
+            "upvotes": 1,
+            "author": "neo-gpt-emmy",
+            "created_at": "2026-08-21T17:39:42Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "RFC: Shorter project identity, launcher language, and the path to 1.0",
+            "url": "https://github.com/emsi/myCodex/discussions/15",
+            "repository": "emsi/myCodex",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "emsi",
+            "created_at": "2026-08-23T18:36:10Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "dsh-codex-shell@0.1.2` 已经开源并发布！🎉",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/3181",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 2,
+            "upvotes": 3,
+            "author": "yifanxuaaa",
+            "created_at": "2026-08-18T16:43:29Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12435,
+            "forks": 2036,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-08-23T23:41:01Z",
+            "star_velocity": 44.7
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agent0ai/dox",
+            "title": "agent0ai/dox",
+            "description": "Self-documenting AGENTS.md",
+            "url": "https://github.com/agent0ai/dox",
+            "stars": 1415,
+            "forks": 190,
+            "topics": [
+              "agents-md",
+              "ai",
+              "ai-agents",
+              "documentation"
+            ],
+            "created_at": "2026-06-01T08:25:21Z",
+            "updated_at": "2026-08-23T05:35:31Z",
+            "star_velocity": 16.9
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "wasp-lang/open-saas",
+            "title": "wasp-lang/open-saas",
+            "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+            "url": "https://github.com/wasp-lang/open-saas",
+            "stars": 15590,
+            "forks": 1863,
+            "topics": [
+              "ai",
+              "authentication",
+              "aws-s3",
+              "boilerplate",
+              "chatgpt",
+              "full-stack",
+              "google-auth",
+              "hacktoberfest",
+              "nodejs",
+              "open-source",
+              "openai-api",
+              "postgresql",
+              "prisma",
+              "react",
+              "saas",
+              "saas-boilerplate",
+              "saas-starter",
+              "saas-template",
+              "typesafe",
+              "typescript"
+            ],
+            "created_at": "2023-12-01T13:54:36Z",
+            "updated_at": "2026-08-24T00:31:26Z",
+            "star_velocity": 15.6
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "[Ideation] Post-split session start: one root folder must carry substrate, but the organization is not a repository",
+            "url": "https://github.com/orgs/neomjs/discussions/17644",
+            "repository": "neomjs/neo",
+            "comments": 14,
+            "upvotes": 1,
+            "author": "neo-opus-vega",
+            "created_at": "2026-08-23T18:57:00Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "[插件] dsh-personal-center · 个人中心:统计 + 自定义指令 + 成本估算",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/3449",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "PolinniZhong",
+            "created_at": "2026-08-19T17:31:48Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Agent: Generalize tool-conditional prompt sections — and extend them to user rules",
+            "url": "https://github.com/zed-industries/zed/discussions/63117",
+            "repository": "zed-industries/zed",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "Prohect",
+            "created_at": "2026-08-23T21:31:58Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "A week of using Codex more than Claude",
+      "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
+      "hn_url": "https://news.ycombinator.com/item?id=49393051",
+      "points": 230,
+      "comments": 244,
+      "author": "speckx",
+      "created_at": "2026-08-21T19:51:48Z",
+      "score": 718
+    },
+    {
+      "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
+      "url": "https://twitter.com/argofowl/status/2091150597374537729",
+      "hn_url": "https://news.ycombinator.com/item?id=49401549",
+      "points": 196,
+      "comments": 175,
+      "author": "matthieu_bl",
+      "created_at": "2026-08-22T16:58:49Z",
+      "score": 546
+    },
+    {
+      "title": "Show HN: Make your logo extra bright on HDR screens",
+      "url": "https://www.soverybright.com/",
+      "hn_url": "https://news.ycombinator.com/item?id=49402521",
+      "points": 64,
+      "comments": 85,
+      "author": "telecuda",
+      "created_at": "2026-08-22T18:43:03Z",
+      "score": 234
+    },
+    {
+      "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+      "url": "https://ozbrain.com",
+      "hn_url": "https://news.ycombinator.com/item?id=49394827",
+      "points": 85,
+      "comments": 50,
+      "author": "dariusmonsef",
+      "created_at": "2026-08-21T23:09:06Z",
+      "score": 185
+    },
+    {
+      "title": "Coding Agents killed my identity. How do you feel?",
+      "url": "https://news.ycombinator.com/item?id=49389408",
+      "hn_url": "https://news.ycombinator.com/item?id=49389408",
+      "points": 22,
+      "comments": 35,
+      "author": "bah9",
+      "created_at": "2026-08-21T15:15:14Z",
+      "score": 92
+    }
+  ],
+  "community_release_reactions": {}
+}
