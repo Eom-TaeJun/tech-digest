@@ -1,0 +1,725 @@
+{
+  "date": "2026-09-22",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **OpenAI — gpt-6-astra** | latest known official release outside lookback: **2026-08-27** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 1,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Harness / Eval Patterns\n- Tracked queries: Harness / Eval Patterns, agent harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=264777 | velocity=1071.7★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: [Task Proposal #1008] Converge a sign-free quantum Monte Carlo energy of the square-lattice Heisenberg antiferromagnet, with an error bar that holds up | repo=harbor-framework/terminal-bench-science | comments=2 | upvotes=1 | https://github.com/harbor-framework/terminal-bench-science/discussions/1854\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=264777 | velocity=1071.7★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: 【榜单研究10】harness | repo=link-seek/so101-sim-pipeline | comments=8 | upvotes=1 | https://github.com/link-seek/so101-sim-pipeline/discussions/58\n\n### AI Agent Skills\n- Tracked queries: agent skills, claude code skill, codex skill, subagents\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: obra/superpowers | stars=289746 | velocity=834.4★/day | https://github.com/obra/superpowers\n- GitHub Discussions: Rakitsu v0.3.0-alpha.8 — Jev tool type + 8 worked examples, security hardening since alpha.1 | repo=SK-ENT/rakitsu | comments=1 | upvotes=1 | https://github.com/SK-ENT/rakitsu/discussions/98\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: agentsmd/agents.md | stars=24537 | velocity=61.6★/day | https://github.com/agentsmd/agents.md\n- GitHub Discussions: Agentic AI Foundation Standards in Embabel | repo=embabel/embabel-agent | comments=7 | upvotes=1 | https://github.com/embabel/embabel-agent/discussions/2026",
+      "citations": [
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/harbor-framework/terminal-bench-science/discussions/1854",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/link-seek/so101-sim-pipeline/discussions/58",
+        "https://github.com/obra/superpowers",
+        "https://github.com/SK-ENT/rakitsu/discussions/98",
+        "https://github.com/agentsmd/agents.md",
+        "https://github.com/embabel/embabel-agent/discussions/2026"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "OpenAI",
+      "model": "gpt-6-astra",
+      "released_at": "2026-08-27",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "zai-org/ZCode",
+      "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
+      "stars": 5709,
+      "forks": 1629,
+      "language": "TypeScript",
+      "url": "https://github.com/zai-org/ZCode",
+      "created_at": "2026-09-20T12:01:16Z",
+      "days_old": 1.6,
+      "star_velocity": 3597.5,
+      "topics": []
+    },
+    {
+      "name": "browser-use/jev-ultrafast",
+      "description": "Fastest and cheapest web agent",
+      "stars": 15937,
+      "forks": 998,
+      "language": "Python",
+      "url": "https://github.com/browser-use/jev-ultrafast",
+      "created_at": "2026-09-16T21:30:12Z",
+      "days_old": 5.2,
+      "star_velocity": 3069.6,
+      "topics": []
+    },
+    {
+      "name": "NandhaKishorM/laya",
+      "description": "",
+      "stars": 10742,
+      "forks": 877,
+      "language": "Python",
+      "url": "https://github.com/NandhaKishorM/laya",
+      "created_at": "2026-09-18T04:46:33Z",
+      "days_old": 3.9,
+      "star_velocity": 2762.3,
+      "topics": []
+    },
+    {
+      "name": "jev-chat/jev-chat-jarvis",
+      "description": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+      "stars": 1256,
+      "forks": 479,
+      "language": "Kotlin",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis",
+      "created_at": "2026-09-21T11:12:53Z",
+      "days_old": 0.6,
+      "star_velocity": 2024.1,
+      "topics": [
+        "accessibility-service",
+        "android",
+        "chat-assistant",
+        "llm",
+        "qq",
+        "wechat"
+      ]
+    },
+    {
+      "name": "mizorewww/laya-mlx",
+      "description": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
+      "stars": 3964,
+      "forks": 240,
+      "language": "Python",
+      "url": "https://github.com/mizorewww/laya-mlx",
+      "created_at": "2026-09-19T13:50:26Z",
+      "days_old": 2.5,
+      "star_velocity": 1578.6,
+      "topics": [
+        "apple-silicon",
+        "decision-model",
+        "inference",
+        "laya",
+        "local-ai",
+        "machine-learning",
+        "mlx",
+        "modernbert",
+        "system-one",
+        "typed-decisions"
+      ]
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [],
+    "weekly_top5": [
+      {
+        "name": "browser-use/jev-ultrafast",
+        "stars": 15937,
+        "star_velocity": 3069.6,
+        "url": "https://github.com/browser-use/jev-ultrafast",
+        "description": "Fastest and cheapest web agent",
+        "language": "Python",
+        "created_at": "2026-09-16T21:30:12Z"
+      },
+      {
+        "name": "NandhaKishorM/laya",
+        "stars": 10742,
+        "star_velocity": 2762.3,
+        "url": "https://github.com/NandhaKishorM/laya",
+        "description": "",
+        "language": "Python",
+        "created_at": "2026-09-18T04:46:33Z"
+      },
+      {
+        "name": "jev-chat/jev-chat-jarvis",
+        "stars": 1256,
+        "star_velocity": 2024.1,
+        "url": "https://github.com/jev-chat/jev-chat-jarvis",
+        "description": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+        "language": "Kotlin",
+        "created_at": "2026-09-21T11:12:53Z"
+      },
+      {
+        "name": "tamaratran/fast-jev-compaction",
+        "stars": 5996,
+        "star_velocity": 1238.9,
+        "url": "https://github.com/tamaratran/fast-jev-compaction",
+        "description": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim.",
+        "language": "TypeScript",
+        "created_at": "2026-09-17T05:57:20Z"
+      },
+      {
+        "name": "jaredpalmer/kev",
+        "stars": 2525,
+        "star_velocity": 598.3,
+        "url": "https://github.com/jaredpalmer/kev",
+        "description": "tiny Jev-like family of decision models built on top of Qwen3.5 you can train and run on your own",
+        "language": "Python",
+        "created_at": "2026-09-17T20:49:39Z"
+      }
+    ],
+    "excluded_yesterday_count": 5
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "harnessevalpatterns",
+        "label": "Harness / Eval Patterns",
+        "terms": [
+          "Harness / Eval Patterns",
+          "agent harness"
+        ],
+        "source": "dynamic",
+        "discovery_score": 3654.6,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 264777,
+            "forks": 39567,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-09-22T02:03:54Z",
+            "star_velocity": 1071.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 26989,
+            "forks": 5086,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-09-22T02:03:03Z",
+            "star_velocity": 389.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "tinyhumansai/openhuman",
+            "title": "tinyhumansai/openhuman",
+            "description": "OpenHuman is an open source agent harness with local-first memory, agent orchestration, and workflows",
+            "url": "https://github.com/tinyhumansai/openhuman",
+            "stars": 40019,
+            "forks": 3952,
+            "topics": [
+              "agent-orchestration",
+              "ai-agents",
+              "ai-assistant",
+              "desktop",
+              "llm",
+              "local-first",
+              "mcp",
+              "personal-ai",
+              "privacy",
+              "rust",
+              "second-brain",
+              "tauri"
+            ],
+            "created_at": "2026-02-18T20:01:27Z",
+            "updated_at": "2026-09-22T01:51:57Z",
+            "star_velocity": 185.9
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "[Task Proposal #1008] Converge a sign-free quantum Monte Carlo energy of the square-lattice Heisenberg antiferromagnet, with an error bar that holds up",
+            "url": "https://github.com/harbor-framework/terminal-bench-science/discussions/1854",
+            "repository": "harbor-framework/terminal-bench-science",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "StevenDillmann",
+            "created_at": "2026-09-21T16:03:44Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "[Task Proposal #1007] Converge a sign-free quantum Monte Carlo energy of the square-lattice Heisenberg antiferromagnet to the exact value, with an error bar that holds up",
+            "url": "https://github.com/harbor-framework/terminal-bench-science/discussions/1852",
+            "repository": "harbor-framework/terminal-bench-science",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "StevenDillmann",
+            "created_at": "2026-09-21T12:04:21Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "Issue Triage Proposal",
+            "url": "https://github.com/GenAI-Security-Project/agent-control-standard/discussions/161",
+            "repository": "GenAI-Security-Project/agent-control-standard",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "victorm-hernandez",
+            "created_at": "2026-09-19T01:55:58Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 264777,
+            "forks": 39567,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-09-22T02:03:54Z",
+            "star_velocity": 1071.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 26989,
+            "forks": 5086,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-09-22T02:03:03Z",
+            "star_velocity": 389.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "tinyhumansai/openhuman",
+            "title": "tinyhumansai/openhuman",
+            "description": "OpenHuman is an open source agent harness with local-first memory, agent orchestration, and workflows",
+            "url": "https://github.com/tinyhumansai/openhuman",
+            "stars": 40019,
+            "forks": 3952,
+            "topics": [
+              "agent-orchestration",
+              "ai-agents",
+              "ai-assistant",
+              "desktop",
+              "llm",
+              "local-first",
+              "mcp",
+              "personal-ai",
+              "privacy",
+              "rust",
+              "second-brain",
+              "tauri"
+            ],
+            "created_at": "2026-02-18T20:01:27Z",
+            "updated_at": "2026-09-22T01:51:57Z",
+            "star_velocity": 185.9
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "【榜单研究10】harness",
+            "url": "https://github.com/link-seek/so101-sim-pipeline/discussions/58",
+            "repository": "link-seek/so101-sim-pipeline",
+            "comments": 8,
+            "upvotes": 1,
+            "author": "xieyucheng123",
+            "created_at": "2026-09-15T15:24:41Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "Vouch request: jwm4",
+            "url": "https://github.com/fullsend-ai/fullsend/discussions/7425",
+            "repository": "fullsend-ai/fullsend",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "jwm4",
+            "created_at": "2026-09-17T21:00:33Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "[Task Proposal #1008] Converge a sign-free quantum Monte Carlo energy of the square-lattice Heisenberg antiferromagnet, with an error bar that holds up",
+            "url": "https://github.com/harbor-framework/terminal-bench-science/discussions/1854",
+            "repository": "harbor-framework/terminal-bench-science",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "StevenDillmann",
+            "created_at": "2026-09-21T16:03:44Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 289746,
+            "forks": 25934,
+            "topics": [
+              "ai",
+              "brainstorming",
+              "coding",
+              "obra",
+              "sdlc",
+              "skills",
+              "subagent-driven-development",
+              "superpowers"
+            ],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-09-22T02:04:53Z",
+            "star_velocity": 834.4
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 177495,
+            "forks": 21027,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-09-22T02:05:50Z",
+            "star_velocity": 487.1
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "addyosmani/agent-skills",
+            "title": "addyosmani/agent-skills",
+            "description": "Production-grade engineering skills for AI coding agents.",
+            "url": "https://github.com/addyosmani/agent-skills",
+            "stars": 98158,
+            "forks": 10321,
+            "topics": [
+              "agent-skills",
+              "antigravity",
+              "claude-code",
+              "codex",
+              "cursor",
+              "skills"
+            ],
+            "created_at": "2026-02-15T20:20:26Z",
+            "updated_at": "2026-09-22T02:00:29Z",
+            "star_velocity": 449.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "Rakitsu v0.3.0-alpha.8 — Jev tool type + 8 worked examples, security hardening since alpha.1",
+            "url": "https://github.com/SK-ENT/rakitsu/discussions/98",
+            "repository": "SK-ENT/rakitsu",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "paupawsan",
+            "created_at": "2026-09-21T22:48:09Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "title": "Welcome to Claude-Code-CyberSecurity-Skill Discussions!",
+            "url": "https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill/discussions/12",
+            "repository": "Masriyan/Claude-Code-CyberSecurity-Skill",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "Masriyan",
+            "created_at": "2026-09-21T11:50:58Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "title": "Mixpanel Tracking Skill v0.1.0 is now available",
+            "url": "https://github.com/Praveeng0823/mixpanel-tracking-skill/discussions/1",
+            "repository": "Praveeng0823/mixpanel-tracking-skill",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "Praveeng0823",
+            "created_at": "2026-09-21T14:53:01Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agentsmd/agents.md",
+            "title": "agentsmd/agents.md",
+            "description": "AGENTS.md — a simple, open format for guiding coding agents",
+            "url": "https://github.com/agentsmd/agents.md",
+            "stars": 24537,
+            "forks": 1871,
+            "topics": [],
+            "created_at": "2025-08-19T17:22:54Z",
+            "updated_at": "2026-09-22T01:38:12Z",
+            "star_velocity": 61.6
+          },
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12735,
+            "forks": 2041,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-09-22T00:23:01Z",
+            "star_velocity": 41.5
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "kunchenguid/backpass",
+            "title": "kunchenguid/backpass",
+            "description": "You don't write AGENTS.md. You train it with gradient descent.",
+            "url": "https://github.com/kunchenguid/backpass",
+            "stars": 1068,
+            "forks": 80,
+            "topics": [],
+            "created_at": "2026-08-21T21:12:31Z",
+            "updated_at": "2026-09-22T01:28:47Z",
+            "star_velocity": 34.2
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Agentic AI Foundation Standards in Embabel",
+            "url": "https://github.com/embabel/embabel-agent/discussions/2026",
+            "repository": "embabel/embabel-agent",
+            "comments": 7,
+            "upvotes": 1,
+            "author": "neilchaudhuri",
+            "created_at": "2026-09-17T02:04:08Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Per-agent scoping for workspace instruction injection (dsh-agent-instructions)",
+            "url": "https://github.com/deepseek-ai/deepseek-harness/discussions/7361",
+            "repository": "deepseek-ai/deepseek-harness",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "phyliuxin",
+            "created_at": "2026-09-21T11:02:14Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Make instruction loading, available capabilities, and execution evidence visible and auditable",
+            "url": "https://github.com/openai/codex/discussions/47058",
+            "repository": "openai/codex",
+            "comments": 1,
+            "upvotes": 1,
+            "author": "mattwilkinsphoto",
+            "created_at": "2026-09-21T16:01:44Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "If AI coding is lowering your code quality, you're not managing quality right",
+      "url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code",
+      "hn_url": "https://news.ycombinator.com/item?id=49774795",
+      "points": 119,
+      "comments": 165,
+      "author": "bucket2015",
+      "created_at": "2026-09-20T11:37:10Z",
+      "score": 449
+    },
+    {
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
+      "hn_url": "https://news.ycombinator.com/item?id=49792067",
+      "points": 143,
+      "comments": 143,
+      "author": "julian_digital",
+      "created_at": "2026-09-21T19:23:33Z",
+      "score": 429
+    },
+    {
+      "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
+      "url": "https://github.com/volotat/mini-AGI/",
+      "hn_url": "https://news.ycombinator.com/item?id=49783133",
+      "points": 254,
+      "comments": 56,
+      "author": "volotat",
+      "created_at": "2026-09-21T04:42:37Z",
+      "score": 366
+    },
+    {
+      "title": "Ask HN: How do you interview devs in a post-AI world?",
+      "url": "https://news.ycombinator.com/item?id=49768826",
+      "hn_url": "https://news.ycombinator.com/item?id=49768826",
+      "points": 44,
+      "comments": 36,
+      "author": "mdwelsh",
+      "created_at": "2026-09-19T18:10:34Z",
+      "score": 116
+    },
+    {
+      "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
+      "url": "https://github.com/trycua/cua",
+      "hn_url": "https://news.ycombinator.com/item?id=49767564",
+      "points": 90,
+      "comments": 10,
+      "author": "frabonacci",
+      "created_at": "2026-09-19T15:52:51Z",
+      "score": 110
+    }
+  ],
+  "community_release_reactions": {}
+}
