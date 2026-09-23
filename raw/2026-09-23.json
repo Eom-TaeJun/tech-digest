@@ -1,0 +1,763 @@
+{
+  "date": "2026-09-23",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **OpenAI — gpt-6-sol** | release date: **2026-09-14** | source: https://api.openai.com/v1/models\n- **OpenAI — gpt-6-luna** | release date: **2026-09-14** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://api.openai.com/v1/models",
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 2,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Harness / Eval Patterns\n- Tracked queries: Harness / Eval Patterns, agent harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=265482 | velocity=1070.3★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: RFC: beacon-style memory loop — external evaluator hook, review gate, and Agent Skills output | repo=doobidoo/mcp-memory-service | comments=3 | upvotes=1 | https://github.com/doobidoo/mcp-memory-service/discussions/1287\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=265482 | velocity=1070.3★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: RFC: beacon-style memory loop — external evaluator hook, review gate, and Agent Skills output | repo=doobidoo/mcp-memory-service | comments=3 | upvotes=1 | https://github.com/doobidoo/mcp-memory-service/discussions/1287\n\n### AI Agent Skills\n- Tracked queries: agent skills, claude code skill, codex skill, subagents\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: obra/superpowers | stars=290230 | velocity=833.4★/day | https://github.com/obra/superpowers\n- GitHub Discussions: Agentic AI Foundation Standards in Embabel | repo=embabel/embabel-agent | comments=7 | upvotes=1 | https://github.com/embabel/embabel-agent/discussions/2026\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: agentsmd/agents.md | stars=24567 | velocity=61.5★/day | https://github.com/agentsmd/agents.md\n- GitHub Discussions: Agentic AI Foundation Standards in Embabel | repo=embabel/embabel-agent | comments=7 | upvotes=1 | https://github.com/embabel/embabel-agent/discussions/2026",
+      "citations": [
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/doobidoo/mcp-memory-service/discussions/1287",
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/doobidoo/mcp-memory-service/discussions/1287",
+        "https://github.com/obra/superpowers",
+        "https://github.com/embabel/embabel-agent/discussions/2026",
+        "https://github.com/agentsmd/agents.md",
+        "https://github.com/embabel/embabel-agent/discussions/2026"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "OpenAI",
+      "model": "gpt-6-sol",
+      "released_at": "2026-09-14",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    },
+    {
+      "company": "OpenAI",
+      "model": "gpt-6-luna",
+      "released_at": "2026-09-14",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "NandhaKishorM/laya",
+      "description": "",
+      "stars": 16841,
+      "forks": 1411,
+      "language": "Python",
+      "url": "https://github.com/NandhaKishorM/laya",
+      "created_at": "2026-09-18T04:46:33Z",
+      "days_old": 4.9,
+      "star_velocity": 3445.6,
+      "topics": []
+    },
+    {
+      "name": "zai-org/ZCode",
+      "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
+      "stars": 6324,
+      "forks": 1847,
+      "language": "TypeScript",
+      "url": "https://github.com/zai-org/ZCode",
+      "created_at": "2026-09-20T12:01:16Z",
+      "days_old": 2.6,
+      "star_velocity": 2445.7,
+      "topics": []
+    },
+    {
+      "name": "jev-chat/jev-chat-jarvis",
+      "description": "装在手机上的对话副驾：在微信 / QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+      "stars": 3949,
+      "forks": 866,
+      "language": "Kotlin",
+      "url": "https://github.com/jev-chat/jev-chat-jarvis",
+      "created_at": "2026-09-21T11:12:53Z",
+      "days_old": 1.6,
+      "star_velocity": 2438.6,
+      "topics": [
+        "accessibility-service",
+        "android",
+        "chat-assistant",
+        "llm",
+        "qq",
+        "wechat"
+      ]
+    },
+    {
+      "name": "mizorewww/laya-mlx",
+      "description": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
+      "stars": 5493,
+      "forks": 394,
+      "language": "Python",
+      "url": "https://github.com/mizorewww/laya-mlx",
+      "created_at": "2026-09-19T13:50:26Z",
+      "days_old": 3.5,
+      "star_velocity": 1565.0,
+      "topics": [
+        "apple-silicon",
+        "decision-model",
+        "inference",
+        "laya",
+        "local-ai",
+        "machine-learning",
+        "mlx",
+        "modernbert",
+        "system-one",
+        "typed-decisions"
+      ]
+    },
+    {
+      "name": "tamaratran/fast-jev-compaction",
+      "description": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim.",
+      "stars": 6322,
+      "forks": 359,
+      "language": "TypeScript",
+      "url": "https://github.com/tamaratran/fast-jev-compaction",
+      "created_at": "2026-09-17T05:57:20Z",
+      "days_old": 5.8,
+      "star_velocity": 1082.8,
+      "topics": []
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [
+      {
+        "name": "joinboatwrightcheer/graveyard-keeper-2-modkit",
+        "stars": 30,
+        "star_velocity": 300.0,
+        "url": "https://github.com/joinboatwrightcheer/graveyard-keeper-2-modkit",
+        "description": "39-module cheat/trainer for Graveyard Keeper 2 — crafting and resources, zombie automation, combat tools, town progression and world utilities.",
+        "language": "Unknown",
+        "created_at": "2026-09-23T01:40:05Z"
+      }
+    ],
+    "weekly_top5": [
+      {
+        "name": "zai-org/ZCode",
+        "stars": 6324,
+        "star_velocity": 2445.7,
+        "url": "https://github.com/zai-org/ZCode",
+        "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
+        "language": "TypeScript",
+        "created_at": "2026-09-20T12:01:16Z"
+      },
+      {
+        "name": "mizorewww/laya-mlx",
+        "stars": 5493,
+        "star_velocity": 1565.0,
+        "url": "https://github.com/mizorewww/laya-mlx",
+        "description": "Native MLX runtime for Laya typed decision models — 7–14 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
+        "language": "Python",
+        "created_at": "2026-09-19T13:50:26Z"
+      },
+      {
+        "name": "unreallabsai/unreal-agent",
+        "stars": 1002,
+        "star_velocity": 895.8,
+        "url": "https://github.com/unreallabsai/unreal-agent",
+        "description": "Async-first agent harness",
+        "language": "Go",
+        "created_at": "2026-09-21T23:14:02Z"
+      },
+      {
+        "name": "mizorewww/laya-coreml",
+        "stars": 1295,
+        "star_velocity": 415.3,
+        "url": "https://github.com/mizorewww/laya-coreml",
+        "description": "Local Laya typed decisions on Apple Core ML and Neural Engine. Validated ports, ~5 ms short decisions on M3 Max, reproducible speed and energy benchmarks.",
+        "language": "Python",
+        "created_at": "2026-09-19T23:14:13Z"
+      },
+      {
+        "name": "TianyuCodings/NanoJev",
+        "stars": 2009,
+        "star_velocity": 371.1,
+        "url": "https://github.com/TianyuCodings/NanoJev",
+        "description": "A nano replica of Jev: parallel decisions, dynamic candidates, and an end-to-end training pipeline.",
+        "language": "Python",
+        "created_at": "2026-09-17T16:08:30Z"
+      }
+    ],
+    "excluded_yesterday_count": 5
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "harnessevalpatterns",
+        "label": "Harness / Eval Patterns",
+        "terms": [
+          "Harness / Eval Patterns",
+          "agent harness"
+        ],
+        "source": "dynamic",
+        "discovery_score": 2508.9,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 265482,
+            "forks": 39671,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-09-23T02:03:30Z",
+            "star_velocity": 1070.3
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 27027,
+            "forks": 5097,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-09-23T01:57:04Z",
+            "star_velocity": 384.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "name": "tinyhumansai/openhuman",
+            "title": "tinyhumansai/openhuman",
+            "description": "OpenHuman is an open source agent harness with local-first memory, agent orchestration, and workflows",
+            "url": "https://github.com/tinyhumansai/openhuman",
+            "stars": 40046,
+            "forks": 3954,
+            "topics": [
+              "agent-orchestration",
+              "ai-agents",
+              "ai-assistant",
+              "desktop",
+              "llm",
+              "local-first",
+              "mcp",
+              "personal-ai",
+              "privacy",
+              "rust",
+              "second-brain",
+              "tauri"
+            ],
+            "created_at": "2026-02-18T20:01:27Z",
+            "updated_at": "2026-09-23T00:47:33Z",
+            "star_velocity": 185.2
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "RFC: beacon-style memory loop — external evaluator hook, review gate, and Agent Skills output",
+            "url": "https://github.com/doobidoo/mcp-memory-service/discussions/1287",
+            "repository": "doobidoo/mcp-memory-service",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "doobidoo",
+            "created_at": "2026-09-22T07:09:25Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "Issue Triage Proposal",
+            "url": "https://github.com/GenAI-Security-Project/agent-control-standard/discussions/161",
+            "repository": "GenAI-Security-Project/agent-control-standard",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "victorm-hernandez",
+            "created_at": "2026-09-19T01:55:58Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harnessevalpatterns",
+            "title": "v0.21.0",
+            "url": "https://github.com/vshulcz/deja-vu/discussions/3926",
+            "repository": "vshulcz/deja-vu",
+            "comments": 0,
+            "upvotes": 1,
+            "author": "github-actions",
+            "created_at": "2026-09-22T19:59:47Z"
+          }
+        ]
+      },
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 265482,
+            "forks": 39671,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-09-23T02:03:30Z",
+            "star_velocity": 1070.3
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 27027,
+            "forks": 5097,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-09-23T01:57:04Z",
+            "star_velocity": 384.7
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "tinyhumansai/openhuman",
+            "title": "tinyhumansai/openhuman",
+            "description": "OpenHuman is an open source agent harness with local-first memory, agent orchestration, and workflows",
+            "url": "https://github.com/tinyhumansai/openhuman",
+            "stars": 40046,
+            "forks": 3954,
+            "topics": [
+              "agent-orchestration",
+              "ai-agents",
+              "ai-assistant",
+              "desktop",
+              "llm",
+              "local-first",
+              "mcp",
+              "personal-ai",
+              "privacy",
+              "rust",
+              "second-brain",
+              "tauri"
+            ],
+            "created_at": "2026-02-18T20:01:27Z",
+            "updated_at": "2026-09-23T00:47:33Z",
+            "star_velocity": 185.2
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "RFC: beacon-style memory loop — external evaluator hook, review gate, and Agent Skills output",
+            "url": "https://github.com/doobidoo/mcp-memory-service/discussions/1287",
+            "repository": "doobidoo/mcp-memory-service",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "doobidoo",
+            "created_at": "2026-09-22T07:09:25Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "Vouch request: jwm4",
+            "url": "https://github.com/fullsend-ai/fullsend/discussions/7425",
+            "repository": "fullsend-ai/fullsend",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "jwm4",
+            "created_at": "2026-09-17T21:00:33Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Issue Triage Proposal",
+            "url": "https://github.com/GenAI-Security-Project/agent-control-standard/discussions/161",
+            "repository": "GenAI-Security-Project/agent-control-standard",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "victorm-hernandez",
+            "created_at": "2026-09-19T01:55:58Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 290230,
+            "forks": 25966,
+            "topics": [
+              "ai",
+              "brainstorming",
+              "coding",
+              "obra",
+              "sdlc",
+              "skills",
+              "subagent-driven-development",
+              "superpowers"
+            ],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-09-23T02:03:29Z",
+            "star_velocity": 833.4
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 177662,
+            "forks": 21043,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-09-23T01:59:21Z",
+            "star_velocity": 486.2
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "addyosmani/agent-skills",
+            "title": "addyosmani/agent-skills",
+            "description": "Production-grade engineering skills for AI coding agents.",
+            "url": "https://github.com/addyosmani/agent-skills",
+            "stars": 98478,
+            "forks": 10343,
+            "topics": [
+              "agent-skills",
+              "antigravity",
+              "claude-code",
+              "codex",
+              "cursor",
+              "skills"
+            ],
+            "created_at": "2026-02-15T20:20:26Z",
+            "updated_at": "2026-09-23T02:01:51Z",
+            "star_velocity": 449.2
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "Agentic AI Foundation Standards in Embabel",
+            "url": "https://github.com/embabel/embabel-agent/discussions/2026",
+            "repository": "embabel/embabel-agent",
+            "comments": 7,
+            "upvotes": 1,
+            "author": "neilchaudhuri",
+            "created_at": "2026-09-17T02:04:08Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "[Ideation Sandbox] What the portal renders after the split — which origins, which learn/ trees, and how the engine stops carrying the mirror",
+            "url": "https://github.com/orgs/neomjs/discussions/19051",
+            "repository": "neomjs/neo",
+            "comments": 6,
+            "upvotes": 1,
+            "author": "neo-opus-grace",
+            "created_at": "2026-09-22T22:11:32Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "RFC: beacon-style memory loop — external evaluator hook, review gate, and Agent Skills output",
+            "url": "https://github.com/doobidoo/mcp-memory-service/discussions/1287",
+            "repository": "doobidoo/mcp-memory-service",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "doobidoo",
+            "created_at": "2026-09-22T07:09:25Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "agentsmd/agents.md",
+            "title": "agentsmd/agents.md",
+            "description": "AGENTS.md — a simple, open format for guiding coding agents",
+            "url": "https://github.com/agentsmd/agents.md",
+            "stars": 24567,
+            "forks": 1872,
+            "topics": [],
+            "created_at": "2025-08-19T17:22:54Z",
+            "updated_at": "2026-09-22T23:38:22Z",
+            "star_velocity": 61.5
+          },
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12742,
+            "forks": 2043,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-09-23T01:50:17Z",
+            "star_velocity": 41.3
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "ciembor/agent-rules-books",
+            "title": "ciembor/agent-rules-books",
+            "description": "AGENTS.md rules / skills for AI coding agents: Codex, Cursor & Claude Code. Inspired by Clean Code, Refactoring, DDD, Clean Architecture and DDIA programming books.",
+            "url": "https://github.com/ciembor/agent-rules-books",
+            "stars": 2844,
+            "forks": 504,
+            "topics": [
+              "agent-rules",
+              "agent-skills",
+              "agent-skills-manager",
+              "agents-md",
+              "agents-rules",
+              "agents-skills",
+              "agentsmd",
+              "ai-agent",
+              "ai-skills",
+              "claude-code",
+              "claude-code-skills",
+              "code-quality",
+              "codex",
+              "codex-skills",
+              "cursor-rules",
+              "cursor-skills",
+              "domain-driven-design",
+              "programming-books",
+              "refactoring"
+            ],
+            "created_at": "2026-04-16T16:58:19Z",
+            "updated_at": "2026-09-22T22:59:07Z",
+            "star_velocity": 17.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Agentic AI Foundation Standards in Embabel",
+            "url": "https://github.com/embabel/embabel-agent/discussions/2026",
+            "repository": "embabel/embabel-agent",
+            "comments": 7,
+            "upvotes": 1,
+            "author": "neilchaudhuri",
+            "created_at": "2026-09-17T02:04:08Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Spec: Capability statements across the extension lifecycle",
+            "url": "https://github.com/finos/morphir/discussions/921",
+            "repository": "finos/morphir",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "DamianReeves",
+            "created_at": "2026-09-22T22:24:54Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "[Ideation Sandbox] v13.2 deployment topology — one pinned pages build, per-repo sites under one domain, or devindex back inside the engine?",
+            "url": "https://github.com/orgs/neomjs/discussions/19050",
+            "repository": "neomjs/neo",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "neo-opus-ada",
+            "created_at": "2026-09-22T22:07:05Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+      "url": "https://linear.app/now/ci-bottleneck-reworked",
+      "hn_url": "https://news.ycombinator.com/item?id=49792067",
+      "points": 309,
+      "comments": 384,
+      "author": "julian_digital",
+      "created_at": "2026-09-21T19:23:33Z",
+      "score": 1077
+    },
+    {
+      "title": "If AI coding is lowering your code quality, you're not managing quality right",
+      "url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code",
+      "hn_url": "https://news.ycombinator.com/item?id=49774795",
+      "points": 127,
+      "comments": 169,
+      "author": "bucket2015",
+      "created_at": "2026-09-20T11:37:10Z",
+      "score": 465
+    },
+    {
+      "title": "Tell HN: Claude Code just accepted and signed a contract for me. Without asking",
+      "url": "https://news.ycombinator.com/item?id=49798257",
+      "hn_url": "https://news.ycombinator.com/item?id=49798257",
+      "points": 47,
+      "comments": 93,
+      "author": "franze",
+      "created_at": "2026-09-22T08:49:13Z",
+      "score": 233
+    },
+    {
+      "title": "The End Of Upward Mobility – AI is coming for the meritocracy",
+      "url": "https://www.noemamag.com/the-end-of-upward-mobility/",
+      "hn_url": "https://news.ycombinator.com/item?id=49786210",
+      "points": 63,
+      "comments": 44,
+      "author": "meep_meep_meep",
+      "created_at": "2026-09-21T12:07:16Z",
+      "score": 151
+    },
+    {
+      "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
+      "url": "https://www.coveragecat.com/",
+      "hn_url": "https://news.ycombinator.com/item?id=49804931",
+      "points": 44,
+      "comments": 27,
+      "author": "botacode",
+      "created_at": "2026-09-22T17:26:36Z",
+      "score": 98
+    }
+  ],
+  "community_release_reactions": {}
+}
