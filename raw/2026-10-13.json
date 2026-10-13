@@ -1,0 +1,815 @@
+{
+  "date": "2026-10-13",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **OpenAI — gpt-6.1-sol** | latest known official release outside lookback: **2026-09-27** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 1,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=278016 | velocity=1036.8★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: 伙伴模型评测方案 v1：harness 统一执行，RobotWin + LIBERO + CALVIN 三件套 | repo=link-seek/partner-vla-eval | comments=39 | upvotes=1 | https://github.com/link-seek/partner-vla-eval/discussions/1\n\n### AI Agent Skills\n- Tracked queries: agent skills, claude code skill, codex skill, subagents\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: obra/superpowers | stars=298277 | velocity=809.8★/day | https://github.com/obra/superpowers\n- GitHub Discussions: Updating from 1.2.3 to 1.3.x | repo=mattpocock/skills | comments=4 | upvotes=2 | https://github.com/mattpocock/skills/discussions/1239\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: Piebald-AI/claude-code-system-prompts | stars=12893 | velocity=39.3★/day | https://github.com/Piebald-AI/claude-code-system-prompts\n- GitHub Discussions: Discussion 4: Leaving Lovable: Cloudflare Workers, our own Supabase, and the machine (architecture v5) | repo=ibrahimjaved12/crypto-watcher | comments=3 | upvotes=1 | https://github.com/ibrahimjaved12/crypto-watcher/discussions/280\n\n### Model Context Protocol\n- Tracked queries: Model Context Protocol, MCP server, MCP\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: headroomlabs-ai/headroom | stars=75153 | velocity=270.0★/day | https://github.com/headroomlabs-ai/headroom\n- GitHub Discussions: Proposal: built-in MCP server (Model Context Protocol) for Wavelog | repo=wavelog/wavelog | comments=4 | upvotes=1 | https://github.com/wavelog/wavelog/discussions/3947",
+      "citations": [
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/link-seek/partner-vla-eval/discussions/1",
+        "https://github.com/obra/superpowers",
+        "https://github.com/mattpocock/skills/discussions/1239",
+        "https://github.com/Piebald-AI/claude-code-system-prompts",
+        "https://github.com/ibrahimjaved12/crypto-watcher/discussions/280",
+        "https://github.com/headroomlabs-ai/headroom",
+        "https://github.com/wavelog/wavelog/discussions/3947"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "OpenAI",
+      "model": "gpt-6.1-sol",
+      "released_at": "2026-09-27",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "storytold/wordcraft",
+      "description": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust",
+      "stars": 9452,
+      "forks": 2473,
+      "language": "Rust",
+      "url": "https://github.com/storytold/wordcraft",
+      "created_at": "2026-10-07T08:34:24Z",
+      "days_old": 5.8,
+      "star_velocity": 1625.0,
+      "topics": []
+    },
+    {
+      "name": "wheresryan22/anatomy",
+      "description": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
+      "stars": 6576,
+      "forks": 474,
+      "language": "JavaScript",
+      "url": "https://github.com/wheresryan22/anatomy",
+      "created_at": "2026-10-08T10:12:49Z",
+      "days_old": 4.7,
+      "star_velocity": 1384.9,
+      "topics": [
+        "agent-skill",
+        "open-source",
+        "svg",
+        "vizualization"
+      ]
+    },
+    {
+      "name": "liseami/CCBaga",
+      "description": "",
+      "stars": 1744,
+      "forks": 167,
+      "language": "Rust",
+      "url": "https://github.com/liseami/CCBaga",
+      "created_at": "2026-10-11T03:47:06Z",
+      "days_old": 2.0,
+      "star_velocity": 865.0,
+      "topics": []
+    },
+    {
+      "name": "mhtsec/ARTEX",
+      "description": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目",
+      "stars": 3647,
+      "forks": 6040,
+      "language": "Go",
+      "url": "https://github.com/mhtsec/ARTEX",
+      "created_at": "2026-10-08T05:33:06Z",
+      "days_old": 4.9,
+      "star_velocity": 737.9,
+      "topics": []
+    },
+    {
+      "name": "storytold/gridcraft",
+      "description": "GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.",
+      "stars": 3926,
+      "forks": 1705,
+      "language": "Rust",
+      "url": "https://github.com/storytold/gridcraft",
+      "created_at": "2026-10-07T05:18:16Z",
+      "days_old": 6.0,
+      "star_velocity": 659.5,
+      "topics": []
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [
+      {
+        "name": "JuniverseLi/minidance",
+        "stars": 20,
+        "star_velocity": 200.0,
+        "url": "https://github.com/JuniverseLi/minidance",
+        "description": "Train a small text-to-video model from scratch on nature scenery (WIP)",
+        "language": "Python",
+        "created_at": "2026-10-13T03:08:39Z"
+      },
+      {
+        "name": "ns2250225/guangzhou",
+        "stars": 27,
+        "star_velocity": 178.0,
+        "url": "https://github.com/ns2250225/guangzhou",
+        "description": "广州旅游观光小游戏",
+        "language": "JavaScript",
+        "created_at": "2026-10-13T00:32:10Z"
+      },
+      {
+        "name": "youyinchenxi/mcd-tablemate",
+        "stars": 12,
+        "star_velocity": 75.5,
+        "url": "https://github.com/youyinchenxi/mcd-tablemate",
+        "description": "麦桌搭子：协调2–6人的口味和预算，用麦当劳MCP核验整单价格，改单后重新规划。",
+        "language": "Python",
+        "created_at": "2026-10-13T00:21:42Z"
+      }
+    ],
+    "weekly_top5": [
+      {
+        "name": "storytold/wordcraft",
+        "stars": 9452,
+        "star_velocity": 1624.9,
+        "url": "https://github.com/storytold/wordcraft",
+        "description": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust",
+        "language": "Rust",
+        "created_at": "2026-10-07T08:34:24Z"
+      },
+      {
+        "name": "liseami/CCBaga",
+        "stars": 1744,
+        "star_velocity": 864.9,
+        "url": "https://github.com/liseami/CCBaga",
+        "description": "",
+        "language": "Rust",
+        "created_at": "2026-10-11T03:47:06Z"
+      },
+      {
+        "name": "mhtsec/ARTEX",
+        "stars": 3647,
+        "star_velocity": 737.9,
+        "url": "https://github.com/mhtsec/ARTEX",
+        "description": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目",
+        "language": "Go",
+        "created_at": "2026-10-08T05:33:06Z"
+      },
+      {
+        "name": "t4t5/omdrop-owl",
+        "stars": 2463,
+        "star_velocity": 502.9,
+        "url": "https://github.com/t4t5/omdrop-owl",
+        "description": "airdrop for non-apple devices",
+        "language": "Shell",
+        "created_at": "2026-10-08T06:38:33Z"
+      },
+      {
+        "name": "nullmoth/nvidia-macos-driver",
+        "stars": 2774,
+        "star_velocity": 475.7,
+        "url": "https://github.com/nullmoth/nvidia-macos-driver",
+        "description": "Metal driver for NVIDIA GeForce RTX cards on macOS 15 Sequoia (Intel / OpenCore). Free, source included.",
+        "language": "Rust",
+        "created_at": "2026-10-07T08:13:12Z"
+      }
+    ],
+    "excluded_yesterday_count": 7
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 278016,
+            "forks": 41441,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-10-13T04:08:46Z",
+            "star_velocity": 1036.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 27332,
+            "forks": 5146,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-10-13T03:28:56Z",
+            "star_velocity": 302.6
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "tinyhumansai/openhuman",
+            "title": "tinyhumansai/openhuman",
+            "description": "The fastest, cheapest, most efficient open-source agent harness. Run more than 500 agents on a $10 VPS.",
+            "url": "https://github.com/tinyhumansai/openhuman",
+            "stars": 41922,
+            "forks": 4125,
+            "topics": [
+              "agent-orchestration",
+              "ai-agents",
+              "ai-assistant",
+              "desktop",
+              "llm",
+              "local-first",
+              "mcp",
+              "personal-ai",
+              "privacy",
+              "rust",
+              "second-brain",
+              "tauri"
+            ],
+            "created_at": "2026-02-18T20:01:27Z",
+            "updated_at": "2026-10-13T03:36:28Z",
+            "star_velocity": 177.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "伙伴模型评测方案 v1：harness 统一执行，RobotWin + LIBERO + CALVIN 三件套",
+            "url": "https://github.com/link-seek/partner-vla-eval/discussions/1",
+            "repository": "link-seek/partner-vla-eval",
+            "comments": 39,
+            "upvotes": 1,
+            "author": "xieyucheng123",
+            "created_at": "2026-10-11T09:11:04Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Evidence-Grounded Browser Playtesting of AI-Generated Games",
+            "url": "https://github.com/OpenRSI-Foundation/OpenRSI-Index/discussions/209",
+            "repository": "OpenRSI-Foundation/OpenRSI-Index",
+            "comments": 15,
+            "upvotes": 1,
+            "author": "haot3x",
+            "created_at": "2026-10-10T11:42:08Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "Budgeted Evidence Gathering for Frozen Molmo2-8B on Video-Index",
+            "url": "https://github.com/OpenRSI-Foundation/OpenRSI-Index/discussions/196",
+            "repository": "OpenRSI-Foundation/OpenRSI-Index",
+            "comments": 10,
+            "upvotes": 1,
+            "author": "Espere-1119-Song",
+            "created_at": "2026-10-08T04:35:11Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 298277,
+            "forks": 26659,
+            "topics": [
+              "ai",
+              "brainstorming",
+              "coding",
+              "obra",
+              "sdlc",
+              "skills",
+              "subagent-driven-development",
+              "superpowers"
+            ],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-10-13T04:06:52Z",
+            "star_velocity": 809.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 180765,
+            "forks": 21421,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-10-13T04:02:25Z",
+            "star_velocity": 468.9
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "tt-a1i/archify",
+            "title": "tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "url": "https://github.com/tt-a1i/archify",
+            "stars": 82639,
+            "forks": 5574,
+            "topics": [
+              "agent-skills",
+              "ai-agents",
+              "architecture-diagram",
+              "claude-code",
+              "claude-skills",
+              "codex",
+              "coding-agents",
+              "deepseek-harness",
+              "developer-tools",
+              "diagrams",
+              "diagrams-as-code",
+              "dsh-plugin",
+              "flowchart",
+              "llm",
+              "mermaid",
+              "opencode",
+              "sequence-diagram",
+              "software-architecture",
+              "system-design",
+              "visualization"
+            ],
+            "created_at": "2026-04-15T05:27:37Z",
+            "updated_at": "2026-10-13T04:08:52Z",
+            "star_velocity": 456.7
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "title": "Updating from 1.2.3 to 1.3.x",
+            "url": "https://github.com/mattpocock/skills/discussions/1239",
+            "repository": "mattpocock/skills",
+            "comments": 4,
+            "upvotes": 2,
+            "author": "steveharman",
+            "created_at": "2026-10-09T09:41:10Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "Skill Quality Report — 2026-10-13",
+            "url": "https://github.com/github/awesome-copilot/discussions/5045",
+            "repository": "github/awesome-copilot",
+            "comments": 4,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-10-13T03:23:53Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "Skill Quality Report — 2026-10-08",
+            "url": "https://github.com/github/awesome-copilot/discussions/4636",
+            "repository": "github/awesome-copilot",
+            "comments": 4,
+            "upvotes": 0,
+            "author": "github-actions",
+            "created_at": "2026-10-08T03:21:43Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12893,
+            "forks": 2041,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-10-13T02:22:06Z",
+            "star_velocity": 39.3
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "kunchenguid/backpass",
+            "title": "kunchenguid/backpass",
+            "description": "You don't write AGENTS.md. You train it with gradient descent.",
+            "url": "https://github.com/kunchenguid/backpass",
+            "stars": 1384,
+            "forks": 108,
+            "topics": [],
+            "created_at": "2026-08-21T21:12:31Z",
+            "updated_at": "2026-10-13T02:12:05Z",
+            "star_velocity": 26.5
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "wasp-lang/open-saas",
+            "title": "wasp-lang/open-saas",
+            "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+            "url": "https://github.com/wasp-lang/open-saas",
+            "stars": 16092,
+            "forks": 1952,
+            "topics": [
+              "ai",
+              "authentication",
+              "aws-s3",
+              "boilerplate",
+              "chatgpt",
+              "full-stack",
+              "google-auth",
+              "hacktoberfest",
+              "nodejs",
+              "open-source",
+              "openai-api",
+              "postgresql",
+              "prisma",
+              "react",
+              "saas",
+              "saas-boilerplate",
+              "saas-starter",
+              "saas-template",
+              "typesafe",
+              "typescript"
+            ],
+            "created_at": "2023-12-01T13:54:36Z",
+            "updated_at": "2026-10-13T02:57:47Z",
+            "star_velocity": 15.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Discussion 4: Leaving Lovable: Cloudflare Workers, our own Supabase, and the machine (architecture v5)",
+            "url": "https://github.com/ibrahimjaved12/crypto-watcher/discussions/280",
+            "repository": "ibrahimjaved12/crypto-watcher",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "ibrahimjaved12",
+            "created_at": "2026-10-11T13:49:32Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "What the lab changed in the skills it took from mattpocock/skills and pstack",
+            "url": "https://github.com/liuhlab/liulab-skills/discussions/113",
+            "repository": "liuhlab/liulab-skills",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "lhqing",
+            "created_at": "2026-10-13T04:08:14Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "Working rules for this fork — do not merge upstream/main",
+            "url": "https://github.com/madmedicnl/sdroxide-brown/discussions/73",
+            "repository": "madmedicnl/sdroxide-brown",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "madmedicnl",
+            "created_at": "2026-10-12T20:13:42Z"
+          }
+        ]
+      },
+      {
+        "id": "mcp_patterns",
+        "label": "Model Context Protocol",
+        "terms": [
+          "Model Context Protocol",
+          "MCP server",
+          "MCP"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "MCP server",
+            "group_id": "mcp_patterns",
+            "name": "headroomlabs-ai/headroom",
+            "title": "headroomlabs-ai/headroom",
+            "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+            "url": "https://github.com/headroomlabs-ai/headroom",
+            "stars": 75153,
+            "forks": 5829,
+            "topics": [
+              "agent",
+              "ai",
+              "anthropic",
+              "claude-code",
+              "compression",
+              "context-engineering",
+              "context-window",
+              "cursor",
+              "fastapi",
+              "langchain",
+              "llm",
+              "mcp",
+              "openai",
+              "prompt-engineering",
+              "proxy",
+              "python",
+              "rag",
+              "token-optimization",
+              "tokens",
+              "typescript"
+            ],
+            "created_at": "2026-01-07T19:58:51Z",
+            "updated_at": "2026-10-13T04:02:57Z",
+            "star_velocity": 270.0
+          },
+          {
+            "source": "github_repo",
+            "term": "MCP server",
+            "group_id": "mcp_patterns",
+            "name": "DeusData/codebase-memory-mcp",
+            "title": "DeusData/codebase-memory-mcp",
+            "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+            "url": "https://github.com/DeusData/codebase-memory-mcp",
+            "stars": 46456,
+            "forks": 3819,
+            "topics": [
+              "aider",
+              "ast",
+              "claude-code",
+              "code-analysis",
+              "code-intelligence",
+              "codex",
+              "cursor",
+              "cypher",
+              "developer-tools",
+              "gemini-cli",
+              "graph-visualization",
+              "kilocode",
+              "knowledge-graph",
+              "mcp",
+              "mcp-server",
+              "model-context-protocol",
+              "opencode",
+              "sqlite",
+              "tree-sitter",
+              "windsurf"
+            ],
+            "created_at": "2026-02-24T22:01:00Z",
+            "updated_at": "2026-10-13T04:03:18Z",
+            "star_velocity": 201.8
+          },
+          {
+            "source": "github_repo",
+            "term": "MCP server",
+            "group_id": "mcp_patterns",
+            "name": "t8y2/dbx",
+            "title": "t8y2/dbx",
+            "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+            "url": "https://github.com/t8y2/dbx",
+            "stars": 26023,
+            "forks": 2369,
+            "topics": [
+              "ai",
+              "cli",
+              "clickhouse",
+              "database",
+              "database-client",
+              "database-management",
+              "docker",
+              "gui",
+              "mcp",
+              "mongodb",
+              "mysql",
+              "postgresql",
+              "redis",
+              "rust",
+              "sql-server",
+              "sqlite",
+              "tauri",
+              "vue"
+            ],
+            "created_at": "2026-04-29T03:00:36Z",
+            "updated_at": "2026-10-13T04:03:51Z",
+            "star_velocity": 155.8
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "group_id": "mcp_patterns",
+            "title": "Proposal: built-in MCP server (Model Context Protocol) for Wavelog",
+            "url": "https://github.com/wavelog/wavelog/discussions/3947",
+            "repository": "wavelog/wavelog",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "ok1cdj",
+            "created_at": "2026-10-11T10:41:06Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "group_id": "mcp_patterns",
+            "title": "Serving a remote MCP server from a Next.js App Router route handler (Streamable HTTP, stateless)",
+            "url": "https://github.com/vercel/next.js/discussions/99974",
+            "repository": "vercel/next.js",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "matrixagentsocial",
+            "created_at": "2026-10-10T09:02:25Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "group_id": "mcp_patterns",
+            "title": "Integrating MCP into a Multi-Agent AI Travel Agent",
+            "url": "https://github.com/Jyotir2004/baso/discussions/7",
+            "repository": "Jyotir2004/baso",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "Jyotir2004",
+            "created_at": "2026-10-11T08:59:23Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "AI coding agents generate more code, but not more software",
+      "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+      "hn_url": "https://news.ycombinator.com/item?id=50059523",
+      "points": 319,
+      "comments": 276,
+      "author": "gumby",
+      "created_at": "2026-10-12T17:14:01Z",
+      "score": 871
+    },
+    {
+      "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+      "url": "https://news.ycombinator.com/item?id=50059096",
+      "hn_url": "https://news.ycombinator.com/item?id=50059096",
+      "points": 120,
+      "comments": 79,
+      "author": "vishnukool",
+      "created_at": "2026-10-12T16:46:34Z",
+      "score": 278
+    },
+    {
+      "title": "There's little that's \"inevitable\" about AI",
+      "url": "https://deadsimpletech.com/blog/llms-arent-inevitable",
+      "hn_url": "https://news.ycombinator.com/item?id=50032064",
+      "points": 41,
+      "comments": 98,
+      "author": "rizsyed1",
+      "created_at": "2026-10-10T12:04:04Z",
+      "score": 237
+    },
+    {
+      "title": "Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p",
+      "url": "https://github.com/SaarthurR/atticus-mac",
+      "hn_url": "https://news.ycombinator.com/item?id=50049588",
+      "points": 85,
+      "comments": 13,
+      "author": "SaarthRanka",
+      "created_at": "2026-10-12T00:15:12Z",
+      "score": 111
+    },
+    {
+      "title": "Linus Torvalds Working on a Hefty Linux Kernel Improvement with Claude Code",
+      "url": "https://www.phoronix.com/news/Linus-Torvalds-Claude-Code",
+      "hn_url": "https://news.ycombinator.com/item?id=50050367",
+      "points": 28,
+      "comments": 1,
+      "author": "mdp2021",
+      "created_at": "2026-10-12T01:57:00Z",
+      "score": 30
+    }
+  ],
+  "community_release_reactions": {}
+}
