@@ -1,0 +1,784 @@
+{
+  "date": "2026-10-26",
+  "results": {
+    "model_release_official_watch": {
+      "id": "model_release_official_watch",
+      "title": "공식 모델 릴리즈 체크 — 최신 버전/날짜 확인",
+      "query": "Official sources direct fetch",
+      "answer": "Verified official model releases from configured vendor pages:\n\n- **OpenAI — gpt-6.1-sol** | latest known official release outside lookback: **2026-09-27** | source: https://api.openai.com/v1/models\n\nUse these official releases as source of truth for latest model/version names. Treat later benchmark chatter and third-party recaps separately.",
+      "citations": [
+        "https://api.openai.com/v1/models"
+      ],
+      "model": "direct-official-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "api.openai.com"
+        ],
+        "community_source_count": 0,
+        "official_source_count": 1,
+        "other_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": true
+      },
+      "usage": {},
+      "source": "official-direct"
+    },
+    "community_practice_signals": {
+      "id": "community_practice_signals",
+      "title": "직접 커뮤니티 방법론 신호",
+      "query": "Direct GitHub/GitHub Discussions signals for AI engineering methodologies",
+      "answer": "Direct practice/methodology signals from GitHub repos and GitHub Discussions.\n\n### Harness Engineering\n- Tracked queries: agent harness, eval harness, coding harness, test harness\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: affaan-m/ECC | stars=288897 | velocity=1027.9★/day | https://github.com/affaan-m/ECC\n- GitHub Discussions: Adapting Chronos-2 to GIFT-Eval: What to Update, What Data to Share, and When to Fall Back to Zero-Shot | repo=OpenRSI-Foundation/OpenRSI-Index | comments=8 | upvotes=1 | https://github.com/OpenRSI-Foundation/OpenRSI-Index/discussions/294\n\n### AI Agent Skills\n- Tracked queries: agent skills, claude code skill, codex skill, subagents\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: obra/superpowers | stars=305075 | velocity=800.2★/day | https://github.com/obra/superpowers\n- GitHub Discussions: AI新闻动态（2026-10-19到2026-10-25) | repo=ikaijua/Awesome-AITools | comments=33 | upvotes=1 | https://github.com/ikaijua/Awesome-AITools/discussions/1342\n\n### AGENTS.md / CLAUDE.md Patterns\n- Tracked queries: AGENTS.md, CLAUDE.md, agents md, claude md\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: Piebald-AI/claude-code-system-prompts | stars=12998 | velocity=38.1★/day | https://github.com/Piebald-AI/claude-code-system-prompts\n- GitHub Discussions: peer_27b results: Needle K4-C24 over 8 seeds (p=0.004) and K8-C48 | repo=MaySong-Mei/ctxmgr | comments=12 | upvotes=1 | https://github.com/MaySong-Mei/ctxmgr/discussions/6\n\n### Model Context Protocol\n- Tracked queries: Model Context Protocol, MCP server, MCP\n- Signal counts: GitHub repos=3, GitHub Discussions=3\n- Repo: headroomlabs-ai/headroom | stars=77820 | velocity=267.2★/day | https://github.com/headroomlabs-ai/headroom\n- GitHub Discussions: Black October: A Blue Team Field Guide | repo=aegisgatesecurity/aegisgate-platform | comments=4 | upvotes=1 | https://github.com/aegisgatesecurity/aegisgate-platform/discussions/149",
+      "citations": [
+        "https://github.com/affaan-m/ECC",
+        "https://github.com/OpenRSI-Foundation/OpenRSI-Index/discussions/294",
+        "https://github.com/obra/superpowers",
+        "https://github.com/ikaijua/Awesome-AITools/discussions/1342",
+        "https://github.com/Piebald-AI/claude-code-system-prompts",
+        "https://github.com/MaySong-Mei/ctxmgr/discussions/6",
+        "https://github.com/headroomlabs-ai/headroom",
+        "https://github.com/aegisgatesecurity/aegisgate-platform/discussions/149"
+      ],
+      "model": "direct-practice-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [
+          "github.com"
+        ],
+        "community_source_count": 24,
+        "official_source_count": 0,
+        "has_direct_community_sources": true,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-practice"
+    },
+    "model_new_release": {
+      "id": "model_new_release",
+      "title": "신규 모델 릴리즈 — 커뮤니티 즉각 반응",
+      "query": "Direct community fetch from GitHub Discussions",
+      "answer": "Direct community reactions collected from GitHub Discussions.\n\nUse this direct community list for first-impression evidence. If counts are low, state that reaction coverage is weak.",
+      "citations": [],
+      "model": "direct-community-fetch",
+      "recency": "week",
+      "evidence": {
+        "domains": [],
+        "community_source_count": 0,
+        "official_source_count": 0,
+        "has_direct_community_sources": false,
+        "has_official_sources": false
+      },
+      "usage": {},
+      "source": "direct-community"
+    }
+  },
+  "official_releases": [
+    {
+      "company": "OpenAI",
+      "model": "gpt-6.1-sol",
+      "released_at": "2026-09-27",
+      "source_url": "https://api.openai.com/v1/models",
+      "note": "Official OpenAI models API listing"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "JustAResearcher/gpu-unlock-ada",
+      "description": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally",
+      "stars": 2697,
+      "forks": 348,
+      "language": "C",
+      "url": "https://github.com/JustAResearcher/gpu-unlock-ada",
+      "created_at": "2026-10-23T21:00:53Z",
+      "days_old": 2.2,
+      "star_velocity": 1221.4,
+      "topics": []
+    },
+    {
+      "name": "pengchujin/aerial-tv",
+      "description": "给国产电视的一块干净桌面：参照 tvOS 设计的开源 Android TV 桌面，没有广告，开机自动接管。A tvOS-style launcher for Xiaomi, TCL and other China-market TVs.",
+      "stars": 5064,
+      "forks": 402,
+      "language": "Kotlin",
+      "url": "https://github.com/pengchujin/aerial-tv",
+      "created_at": "2026-10-20T09:13:06Z",
+      "days_old": 5.7,
+      "star_velocity": 888.5,
+      "topics": []
+    },
+    {
+      "name": "rddmwmddr/android-ad-cleaner",
+      "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
+      "stars": 865,
+      "forks": 68,
+      "language": "Python",
+      "url": "https://github.com/rddmwmddr/android-ad-cleaner",
+      "created_at": "2026-10-24T05:35:47Z",
+      "days_old": 1.9,
+      "star_velocity": 467.4,
+      "topics": [
+        "adb",
+        "ai-agent",
+        "android",
+        "coloros",
+        "debloat",
+        "hyperos",
+        "magicos",
+        "originos"
+      ]
+    },
+    {
+      "name": "wesbos/3d-model-anything",
+      "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+      "stars": 1934,
+      "forks": 286,
+      "language": "Swift",
+      "url": "https://github.com/wesbos/3d-model-anything",
+      "created_at": "2026-10-21T19:38:50Z",
+      "days_old": 4.3,
+      "star_velocity": 453.4,
+      "topics": []
+    },
+    {
+      "name": "xevrion/hatchzip",
+      "description": "HatchZip is a free, open-source archive extractor for Windows, macOS and Linux that extracts ZIP, 7z, RAR, tar and split archives in place, so it needs free space for the extracted files only. Desktop app and CLI.",
+      "stars": 1943,
+      "forks": 51,
+      "language": "Rust",
+      "url": "https://github.com/xevrion/hatchzip",
+      "created_at": "2026-10-21T17:29:28Z",
+      "days_old": 4.4,
+      "star_velocity": 446.2,
+      "topics": [
+        "7z",
+        "7zip",
+        "archive",
+        "archive-extractor",
+        "cli",
+        "crash-safe",
+        "disk-space",
+        "extract",
+        "extractor",
+        "gui",
+        "in-place",
+        "linux",
+        "macos",
+        "rar",
+        "rust",
+        "tar",
+        "unrar",
+        "unzip",
+        "windows",
+        "zip"
+      ]
+    }
+  ],
+  "trending_ranked": {
+    "daily_top5": [
+      {
+        "name": "l0l-tools/Leauge-Of-Legends-Cheats",
+        "stars": 16,
+        "star_velocity": 160.0,
+        "url": "https://github.com/l0l-tools/Leauge-Of-Legends-Cheats",
+        "description": "🎯 league-of-legends-cheats-lol-mod-menu-with-hacks-and-cheat 🎯",
+        "language": "HTML",
+        "created_at": "2026-10-26T01:50:20Z"
+      }
+    ],
+    "weekly_top5": [
+      {
+        "name": "designfuchen/word-atlas",
+        "stars": 637,
+        "star_velocity": 870.8,
+        "url": "https://github.com/designfuchen/word-atlas",
+        "description": "词光 · 一词一画，点亮雅思 — 7,298 IELTS words, each with an original illustration, UK/US audio, 14,596 example sentences and FSRS review. Free, open source, no login. Dataset CC BY 4.0.",
+        "language": "TypeScript",
+        "created_at": "2026-10-25T08:27:22Z"
+      },
+      {
+        "name": "rddmwmddr/android-ad-cleaner",
+        "stars": 865,
+        "star_velocity": 467.4,
+        "url": "https://github.com/rddmwmddr/android-ad-cleaner",
+        "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。",
+        "language": "Python",
+        "created_at": "2026-10-24T05:35:47Z"
+      },
+      {
+        "name": "wesbos/3d-model-anything",
+        "stars": 1934,
+        "star_velocity": 453.4,
+        "url": "https://github.com/wesbos/3d-model-anything",
+        "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+        "language": "Swift",
+        "created_at": "2026-10-21T19:38:50Z"
+      },
+      {
+        "name": "xevrion/hatchzip",
+        "stars": 1943,
+        "star_velocity": 446.2,
+        "url": "https://github.com/xevrion/hatchzip",
+        "description": "HatchZip is a free, open-source archive extractor for Windows, macOS and Linux that extracts ZIP, 7z, RAR, tar and split archives in place, so it needs free space for the extracted files only. Desktop app and CLI.",
+        "language": "Rust",
+        "created_at": "2026-10-21T17:29:28Z"
+      },
+      {
+        "name": "oosexgang/hackios-xnu-kernel",
+        "stars": 1465,
+        "star_velocity": 383.5,
+        "url": "https://github.com/oosexgang/hackios-xnu-kernel",
+        "description": "",
+        "language": "C",
+        "created_at": "2026-10-22T06:20:11Z"
+      }
+    ],
+    "excluded_yesterday_count": 7
+  },
+  "practice_signals": {
+    "groups": [
+      {
+        "id": "harness_engineering",
+        "label": "Harness Engineering",
+        "terms": [
+          "agent harness",
+          "eval harness",
+          "coding harness",
+          "test harness"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "affaan-m/ECC",
+            "title": "affaan-m/ECC",
+            "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "url": "https://github.com/affaan-m/ECC",
+            "stars": 288897,
+            "forks": 42831,
+            "topics": [
+              "ai-agents",
+              "anthropic",
+              "claude",
+              "claude-code",
+              "developer-tools",
+              "llm",
+              "mcp",
+              "productivity"
+            ],
+            "created_at": "2026-01-18T00:51:51Z",
+            "updated_at": "2026-10-26T01:58:36Z",
+            "star_velocity": 1027.9
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "xai-org/grok-build",
+            "title": "xai-org/grok-build",
+            "description": "SpaceXAI's coding agent harness and TUI. Fullscreen, mouse interactive, extensible.",
+            "url": "https://github.com/xai-org/grok-build",
+            "stars": 27543,
+            "forks": 5199,
+            "topics": [],
+            "created_at": "2026-07-14T20:04:23Z",
+            "updated_at": "2026-10-25T22:49:42Z",
+            "star_velocity": 266.8
+          },
+          {
+            "source": "github_repo",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "name": "tinyhumansai/openhuman",
+            "title": "tinyhumansai/openhuman",
+            "description": "The fastest, cheapest, most efficient open-source agent harness. Run more than 500 agents on a $10 VPS.",
+            "url": "https://github.com/tinyhumansai/openhuman",
+            "stars": 42340,
+            "forks": 4184,
+            "topics": [
+              "agent-orchestration",
+              "ai-agents",
+              "ai-assistant",
+              "desktop",
+              "llm",
+              "local-first",
+              "mcp",
+              "personal-ai",
+              "privacy",
+              "rust",
+              "second-brain",
+              "tauri"
+            ],
+            "created_at": "2026-02-18T20:01:27Z",
+            "updated_at": "2026-10-26T01:11:15Z",
+            "star_velocity": 169.9
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "eval harness",
+            "group_id": "harness_engineering",
+            "title": "Adapting Chronos-2 to GIFT-Eval: What to Update, What Data to Share, and When to Fall Back to Zero-Shot",
+            "url": "https://github.com/OpenRSI-Foundation/OpenRSI-Index/discussions/294",
+            "repository": "OpenRSI-Foundation/OpenRSI-Index",
+            "comments": 8,
+            "upvotes": 1,
+            "author": "WinstonLiyt",
+            "created_at": "2026-10-25T21:25:30Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "`aube add` omits `hasInstallScript` on new npm lock entries, so `npm ci` silently skips postinstall",
+            "url": "https://github.com/aubepkg/aube/discussions/1824",
+            "repository": "aubepkg/aube",
+            "comments": 6,
+            "upvotes": 1,
+            "author": "mwolson",
+            "created_at": "2026-10-25T01:07:10Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent harness",
+            "group_id": "harness_engineering",
+            "title": "Tarball dependencies cannot resolve absolute `file:` children even with exotic subdependencies allowed",
+            "url": "https://github.com/aubepkg/aube/discussions/1830",
+            "repository": "aubepkg/aube",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "mwolson",
+            "created_at": "2026-10-25T01:07:17Z"
+          }
+        ]
+      },
+      {
+        "id": "agent_skills",
+        "label": "AI Agent Skills",
+        "terms": [
+          "agent skills",
+          "claude code skill",
+          "codex skill",
+          "subagents"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "obra/superpowers",
+            "title": "obra/superpowers",
+            "description": "An agentic skills framework & software development methodology that works.",
+            "url": "https://github.com/obra/superpowers",
+            "stars": 305075,
+            "forks": 27180,
+            "topics": [
+              "ai",
+              "brainstorming",
+              "coding",
+              "obra",
+              "sdlc",
+              "skills",
+              "subagent-driven-development",
+              "superpowers"
+            ],
+            "created_at": "2025-10-09T19:45:18Z",
+            "updated_at": "2026-10-26T01:59:27Z",
+            "star_velocity": 800.2
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "anthropics/skills",
+            "title": "anthropics/skills",
+            "description": "Public repository for Agent Skills",
+            "url": "https://github.com/anthropics/skills",
+            "stars": 183770,
+            "forks": 21749,
+            "topics": [
+              "agent-skills"
+            ],
+            "created_at": "2025-09-22T15:53:31Z",
+            "updated_at": "2026-10-26T01:58:55Z",
+            "star_velocity": 461.2
+          },
+          {
+            "source": "github_repo",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "name": "tt-a1i/archify",
+            "title": "tt-a1i/archify",
+            "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
+            "url": "https://github.com/tt-a1i/archify",
+            "stars": 89213,
+            "forks": 6032,
+            "topics": [
+              "agent-skills",
+              "ai-agents",
+              "architecture-diagram",
+              "claude-code",
+              "claude-skills",
+              "codex",
+              "coding-agents",
+              "deepseek-harness",
+              "developer-tools",
+              "diagrams",
+              "diagrams-as-code",
+              "dsh-plugin",
+              "flowchart",
+              "llm",
+              "mermaid",
+              "opencode",
+              "sequence-diagram",
+              "software-architecture",
+              "system-design",
+              "visualization"
+            ],
+            "created_at": "2026-04-15T05:27:37Z",
+            "updated_at": "2026-10-26T02:00:08Z",
+            "star_velocity": 460.2
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "AI新闻动态（2026-10-19到2026-10-25)",
+            "url": "https://github.com/ikaijua/Awesome-AITools/discussions/1342",
+            "repository": "ikaijua/Awesome-AITools",
+            "comments": 33,
+            "upvotes": 1,
+            "author": "ikaijua",
+            "created_at": "2026-10-19T08:11:09Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "agent skills",
+            "group_id": "agent_skills",
+            "title": "One install that makes a coding agent neo-capable: skills, scaffold, Neural Link, the engine's docs",
+            "url": "https://github.com/orgs/neomjs/discussions/20113",
+            "repository": "neomjs/neo",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "neo-opus-grace",
+            "created_at": "2026-10-25T23:31:05Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "claude code skill",
+            "group_id": "agent_skills",
+            "title": "Re-evaluating AI for guiding contributors",
+            "url": "https://github.com/mesa/mesa/discussions/3977",
+            "repository": "mesa/mesa",
+            "comments": 2,
+            "upvotes": 2,
+            "author": "EwoutH",
+            "created_at": "2026-10-23T09:50:07Z"
+          }
+        ]
+      },
+      {
+        "id": "agents_md",
+        "label": "AGENTS.md / CLAUDE.md Patterns",
+        "terms": [
+          "AGENTS.md",
+          "CLAUDE.md",
+          "agents md",
+          "claude md"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "name": "Piebald-AI/claude-code-system-prompts",
+            "title": "Piebald-AI/claude-code-system-prompts",
+            "description": "All parts of Claude Code's system prompt, 27 builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact,  statusline, magic docs, WebFetch, Bash cmd, security review, agent creation).  Updated for each Claude Code version.",
+            "url": "https://github.com/Piebald-AI/claude-code-system-prompts",
+            "stars": 12998,
+            "forks": 2042,
+            "topics": [
+              "claude-code",
+              "claude-code-system-prompts",
+              "system-prompts"
+            ],
+            "created_at": "2025-11-18T21:26:33Z",
+            "updated_at": "2026-10-26T00:58:54Z",
+            "star_velocity": 38.1
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "kunchenguid/backpass",
+            "title": "kunchenguid/backpass",
+            "description": "You don't write AGENTS.md. You train it with gradient descent.",
+            "url": "https://github.com/kunchenguid/backpass",
+            "stars": 1417,
+            "forks": 114,
+            "topics": [],
+            "created_at": "2026-08-21T21:12:31Z",
+            "updated_at": "2026-10-25T19:03:56Z",
+            "star_velocity": 21.7
+          },
+          {
+            "source": "github_repo",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "name": "wasp-lang/open-saas",
+            "title": "wasp-lang/open-saas",
+            "description": "A 100% free modern JS SaaS boilerplate (React, NodeJS, Prisma). Full-featured: Auth (email, google, github, slack, MS), Email sending, Background jobs, Landing page, Payments (Stripe, Polar.sh), Shadcn UI, S3 file upload. AI-ready with tailored AGENTS.md, skills, and Claude Code plugin. One cmd deploy. Powered by Wasp full-stack framework.",
+            "url": "https://github.com/wasp-lang/open-saas",
+            "stars": 16154,
+            "forks": 1959,
+            "topics": [
+              "ai",
+              "authentication",
+              "aws-s3",
+              "boilerplate",
+              "chatgpt",
+              "full-stack",
+              "google-auth",
+              "hacktoberfest",
+              "nodejs",
+              "open-source",
+              "openai-api",
+              "postgresql",
+              "prisma",
+              "react",
+              "saas",
+              "saas-boilerplate",
+              "saas-starter",
+              "saas-template",
+              "typesafe",
+              "typescript"
+            ],
+            "created_at": "2023-12-01T13:54:36Z",
+            "updated_at": "2026-10-25T22:05:29Z",
+            "star_velocity": 15.2
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "peer_27b results: Needle K4-C24 over 8 seeds (p=0.004) and K8-C48",
+            "url": "https://github.com/MaySong-Mei/ctxmgr/discussions/6",
+            "repository": "MaySong-Mei/ctxmgr",
+            "comments": 12,
+            "upvotes": 1,
+            "author": "MaySong-Mei",
+            "created_at": "2026-10-19T21:52:50Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "CLAUDE.md",
+            "group_id": "agents_md",
+            "title": "Black October: A Blue Team Field Guide",
+            "url": "https://github.com/aegisgatesecurity/aegisgate-platform/discussions/149",
+            "repository": "aegisgatesecurity/aegisgate-platform",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "jcolvin1056",
+            "created_at": "2026-10-22T16:27:37Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "AGENTS.md",
+            "group_id": "agents_md",
+            "title": "One install that makes a coding agent neo-capable: skills, scaffold, Neural Link, the engine's docs",
+            "url": "https://github.com/orgs/neomjs/discussions/20113",
+            "repository": "neomjs/neo",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "neo-opus-grace",
+            "created_at": "2026-10-25T23:31:05Z"
+          }
+        ]
+      },
+      {
+        "id": "mcp_patterns",
+        "label": "Model Context Protocol",
+        "terms": [
+          "Model Context Protocol",
+          "MCP server",
+          "MCP"
+        ],
+        "source": "fallback",
+        "discovery_score": 0.0,
+        "github_repos": [
+          {
+            "source": "github_repo",
+            "term": "MCP server",
+            "group_id": "mcp_patterns",
+            "name": "headroomlabs-ai/headroom",
+            "title": "headroomlabs-ai/headroom",
+            "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+            "url": "https://github.com/headroomlabs-ai/headroom",
+            "stars": 77820,
+            "forks": 6045,
+            "topics": [
+              "agent",
+              "ai",
+              "anthropic",
+              "claude-code",
+              "compression",
+              "context-engineering",
+              "context-window",
+              "cursor",
+              "fastapi",
+              "langchain",
+              "llm",
+              "mcp",
+              "openai",
+              "prompt-engineering",
+              "proxy",
+              "python",
+              "rag",
+              "token-optimization",
+              "tokens",
+              "typescript"
+            ],
+            "created_at": "2026-01-07T19:58:51Z",
+            "updated_at": "2026-10-26T01:47:06Z",
+            "star_velocity": 267.2
+          },
+          {
+            "source": "github_repo",
+            "term": "MCP server",
+            "group_id": "mcp_patterns",
+            "name": "t8y2/dbx",
+            "title": "t8y2/dbx",
+            "description": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。",
+            "url": "https://github.com/t8y2/dbx",
+            "stars": 27749,
+            "forks": 2484,
+            "topics": [
+              "ai",
+              "cli",
+              "clickhouse",
+              "database",
+              "database-client",
+              "database-management",
+              "docker",
+              "gui",
+              "mcp",
+              "mongodb",
+              "mysql",
+              "postgresql",
+              "redis",
+              "rust",
+              "sql-server",
+              "sqlite",
+              "tauri",
+              "vue"
+            ],
+            "created_at": "2026-04-29T03:00:36Z",
+            "updated_at": "2026-10-26T01:55:24Z",
+            "star_velocity": 154.2
+          },
+          {
+            "source": "github_repo",
+            "term": "MCP server",
+            "group_id": "mcp_patterns",
+            "name": "punkpeye/awesome-mcp-servers",
+            "title": "punkpeye/awesome-mcp-servers",
+            "description": "A collection of MCP servers.",
+            "url": "https://github.com/punkpeye/awesome-mcp-servers",
+            "stars": 96869,
+            "forks": 18478,
+            "topics": [
+              "ai",
+              "mcp"
+            ],
+            "created_at": "2024-11-30T04:49:10Z",
+            "updated_at": "2026-10-26T01:45:44Z",
+            "star_velocity": 139.4
+          }
+        ],
+        "github_discussions": [
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "group_id": "mcp_patterns",
+            "title": "Black October: A Blue Team Field Guide",
+            "url": "https://github.com/aegisgatesecurity/aegisgate-platform/discussions/149",
+            "repository": "aegisgatesecurity/aegisgate-platform",
+            "comments": 4,
+            "upvotes": 1,
+            "author": "jcolvin1056",
+            "created_at": "2026-10-22T16:27:37Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "MCP server",
+            "group_id": "mcp_patterns",
+            "title": "One install that makes a coding agent neo-capable: skills, scaffold, Neural Link, the engine's docs",
+            "url": "https://github.com/orgs/neomjs/discussions/20113",
+            "repository": "neomjs/neo",
+            "comments": 3,
+            "upvotes": 1,
+            "author": "neo-opus-grace",
+            "created_at": "2026-10-25T23:31:05Z"
+          },
+          {
+            "source": "github_discussion",
+            "term": "Model Context Protocol",
+            "group_id": "mcp_patterns",
+            "title": "RFC / Design Review: scramkd Native Supervisor Console Architecture — Layout Archetypes & Anti-AI Visual Calibration",
+            "url": "https://github.com/spetro511/scramkd/discussions/5",
+            "repository": "spetro511/scramkd",
+            "comments": 2,
+            "upvotes": 1,
+            "author": "spetro511",
+            "created_at": "2026-10-25T12:50:36Z"
+          }
+        ]
+      }
+    ],
+    "configured_groups": []
+  },
+  "hackernews_trending": [
+    {
+      "title": "R/open source bans all solo projects and projects using LLMs",
+      "url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai",
+      "hn_url": "https://news.ycombinator.com/item?id=50231722",
+      "points": 80,
+      "comments": 108,
+      "author": "schleck8",
+      "created_at": "2026-10-25T14:05:03Z",
+      "score": 296
+    },
+    {
+      "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+      "url": "https://corgi.computer/",
+      "hn_url": "https://news.ycombinator.com/item?id=50214373",
+      "points": 137,
+      "comments": 46,
+      "author": "eiopa",
+      "created_at": "2026-10-23T19:46:38Z",
+      "score": 229
+    },
+    {
+      "title": "Claude Code slyly adding users' emails to outbound HTTP",
+      "url": "https://twitter.com/chrislakin/status/2113358733548081528",
+      "hn_url": "https://news.ycombinator.com/item?id=50219875",
+      "points": 21,
+      "comments": 5,
+      "author": "gojomo",
+      "created_at": "2026-10-24T10:26:30Z",
+      "score": 31
+    }
+  ],
+  "community_release_reactions": {}
+}
